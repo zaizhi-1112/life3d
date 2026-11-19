@@ -1,0 +1,77 @@
+#people-manager {
+  --paper: #f3ebdc;
+  --soft: #c1b3a6;
+  width: min(92vw, 900px);
+  height: min(84dvh, 710px);
+  max-width: none;
+  max-height: none;
+  padding: 0;
+  color: var(--paper);
+  background: #28232c;
+  color-scheme: dark;
+  scrollbar-color: #78675e #28232c;
+  border: 1px solid #736158;
+  border-radius: 16px;
+  box-shadow: 0 20px 80px #110f196e;
+}
+#people-manager[open] { display: flex; flex-direction: column; }
+#people-manager::backdrop { background: #1915209c; }
+#people-manager button, #people-manager input, #people-manager textarea {
+  color: inherit; font: inherit;
+}
+#people-manager button {
+  cursor: pointer; border: 1px solid #675957; border-radius: 7px;
+  background: transparent; padding: 7px 13px; line-height: 1.4; font-size: 14px;
+}
+#people-manager button:disabled { opacity: .45; cursor: default; }
+#people-manager button:hover:enabled { border-color: #d2ac86; color: #ffe0b7; }
+#people-manager :focus-visible { outline: 2px solid #e6b884; outline-offset: 2px; }
+.people-header { display: flex; align-items: center; justify-content: space-between; padding: 16px 22px; border-bottom: 1px solid #51444b; }
+.people-header h2 { font-size: 21px; font-weight: 500; margin: 0; letter-spacing: .08em; }
+.people-workspace { display: grid; grid-template-columns: minmax(205px, 29%) minmax(0, 1fr); flex: 1; min-height: 0; }
+.people-directory { display: flex; flex-direction: column; gap: 12px; min-height: 0; padding: 18px 14px; background: #211e26; border-right: 1px solid #51444b; }
+.people-scopes { display: flex; gap: 4px; }
+#people-manager .people-scopes button { flex: 1; padding: 5px 8px; color: var(--soft); border-color: transparent; white-space: nowrap; }
+#people-manager .people-scopes button[aria-pressed=true] { border-color: #89705a; background: #443932; color: #ffe0b7; }
+#people-manager input, #people-manager textarea {
+  width: 100%; padding: 8px 10px; border-radius: 5px;
+  border: 1px solid #64545c; background: #211e27; line-height: 1.55;
+}
+#people-manager #people-search { font-size: 14px; flex: none; }
+.people-list { display: flex; flex-direction: column; gap: 3px; overflow-y: auto; scrollbar-width: thin; padding: 2px; }
+#people-manager .people-entry {
+  flex: none; text-align: left; border: 0; padding: 8px 10px; text-overflow: ellipsis;
+  overflow: hidden; white-space: nowrap;
+}
+#people-manager .people-entry[aria-current=true] { background: #514237; color: #ffe2b9; }
+.people-detail { padding: 20px 24px; min-width: 0; overflow: auto; }
+#people-fields { min-width: 0; padding: 0; margin: 0; border: 0; display: grid; gap: 12px; }
+#people-fields label { display: grid; gap: 4px; font-size: 13px; color: var(--soft); }
+#people-fields input, #people-fields textarea { font-size: 15px; color: var(--paper); }
+#people-fields .people-title-field input { font-size: 19px; }
+#people-fields textarea { resize: vertical; min-height: 50px; }
+.people-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+#people-manager .people-save { background: #e8bc8a; color: #342b24; border-color: #ebc49b; }
+#people-manager .people-save:hover:enabled { color: #291b11; background: #f7cf9f; }
+#people-status, .people-empty { color: var(--soft); font-size: 13px; line-height: 1.5; }
+#people-status:empty { display: none; }
+body:has(#people-manager[open]) .crosshair { display: none; }
+@media (max-width: 650px) {
+  #people-manager { width: 96vw; height: 94dvh; }
+  .people-header { padding: 10px 14px; }
+  .people-header h2 { font-size: 19px; }
+  .people-workspace { display: flex; flex-direction: column; }
+  .people-directory { flex: none; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 7px; padding: 10px; border: 0; border-bottom: 1px solid #51444b; }
+  .people-list { grid-column: 1 / -1; flex-direction: row; overflow-x: auto; padding-bottom: 4px; }
+  #people-manager .people-entry { max-width: 13em; }
+  .people-detail { flex: 1; padding: 12px 15px; }
+  #people-fields { gap: 8px; }
+  #people-fields textarea[name=text] { height: 6em; }
+  #people-fields textarea[name=aside] { height: 3.5em; }
+  #people-form { display: flex; min-height: 100%; flex-direction: column; }
+  .people-actions { position: sticky; bottom: -12px; background: #28232c; padding: 8px 0; margin-top: 8px; }
+}
+#people-form[hidden] { display: none; }
+@media (max-width: 440px) {
+  .card { top: 119px; max-height: calc(100dvh - 130px); }
+}

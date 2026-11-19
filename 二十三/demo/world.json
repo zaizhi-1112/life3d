@@ -1,0 +1,8152 @@
+{
+ "eras": [
+  {
+   "period": "2022 年夏",
+   "start": "2022-06",
+   "title": "高考之后，第一次有人请我帮忙选电脑",
+   "text": "高考后，我一边盘算上大学的学费，一边给阿乐挑电脑。同一个暑假，我也在地瓜群整理大家的自我介绍。帮一个人选东西，和替一群人把信息放在一起，是后来几年一直在做的两种事。",
+   "scene_hint": "半开的笔记本电脑，旁边一摞手写索引卡",
+   "safe_for_inspiration": true,
+   "card_id": "era:2022-06",
+   "card": {
+    "kicker": "2022 年夏",
+    "title": "高考之后，第一次有人请我帮忙选电脑",
+    "text": "高考后，我一边盘算上大学的学费，一边给阿乐挑电脑。同一个暑假，我也在地瓜群整理大家的自我介绍。帮一个人选东西，和替一群人把信息放在一起，是后来几年一直在做的两种事。",
+    "aside": ""
+   }
+  },
+  {
+   "period": "2022 年秋至 2023 年初夏",
+   "start": "2022-09",
+   "title": "宿舍里的账本，广播台的深夜",
+   "text": "入住宿舍后，电费和门锁都有人要张罗，我成了其中一个。春天在广播台认识小语，许多话留到深夜才说。课堂、宿舍和广播台，把同一年里的我分给了几群不同的人。",
+   "scene_hint": "双层床，热水瓶，小话筒与圆形防喷网",
+   "safe_for_inspiration": false,
+   "card_id": "era:2022-09",
+   "card": {
+    "kicker": "2022 年秋至 2023 年初夏",
+    "title": "宿舍里的账本，广播台的深夜",
+    "text": "入住宿舍后，电费和门锁都有人要张罗，我成了其中一个。春天在广播台认识小语，许多话留到深夜才说。课堂、宿舍和广播台，把同一年里的我分给了几群不同的人。",
+    "aside": ""
+   }
+  },
+  {
+   "period": "2023 年暑假",
+   "start": "2023-07",
+   "title": "从等学长回话，到给新生答疑",
+   "text": "暑假要去做家纺销售，朋友先替我问这份实习靠不靠谱。等下一届新生来问开学的事，我也开始当那个接问题的人。前面有人替我操心，后面也有人等我回一句。",
+   "scene_hint": "叠好的床品，拉杆箱和摊开的入学指南",
+   "safe_for_inspiration": true,
+   "card_id": "era:2023-07",
+   "card": {
+    "kicker": "2023 年暑假",
+    "title": "从等学长回话，到给新生答疑",
+    "text": "暑假要去做家纺销售，朋友先替我问这份实习靠不靠谱。等下一届新生来问开学的事，我也开始当那个接问题的人。前面有人替我操心，后面也有人等我回一句。",
+    "aside": ""
+   }
+  },
+  {
+   "period": "2023 年秋至 2024 年初夏",
+   "start": "2023-09",
+   "title": "校园卡摊边，还有一张手绘地图",
+   "text": "新生群里反复有人问路和军训日期，我把校园图标好发出去。迎新时要办卡、发水卡，也要记得先回答人家原本的问题。到了合作结算的时候，我开始把自己的理由一条条说清。",
+   "scene_hint": "折叠摊位、画着手绘路线的展板、收据夹",
+   "safe_for_inspiration": false,
+   "card_id": "era:2023-09",
+   "card": {
+    "kicker": "2023 年秋至 2024 年初夏",
+    "title": "校园卡摊边，还有一张手绘地图",
+    "text": "新生群里反复有人问路和军训日期，我把校园图标好发出去。迎新时要办卡、发水卡，也要记得先回答人家原本的问题。到了合作结算的时候，我开始把自己的理由一条条说清。",
+    "aside": ""
+   }
+  },
+  {
+   "period": "2024 年暑假至 2025 年夏",
+   "start": "2024-07",
+   "title": "在合肥生活，也在寝室间跑单",
+   "text": "木子哥介绍我做校园配送平台，我跑寝室、送东西，再回群里讲订单和补贴。那年夏天也认识了小鱼。同一座城里，有人关心今天出了几单，也有人关心今天回不回家。",
+   "scene_hint": "带车筐的小单车，窗边两只杯子，配送纸箱",
+   "safe_for_inspiration": false,
+   "card_id": "era:2024-07",
+   "card": {
+    "kicker": "2024 年暑假至 2025 年夏",
+    "title": "在合肥生活，也在寝室间跑单",
+    "text": "木子哥介绍我做校园配送平台，我跑寝室、送东西，再回群里讲订单和补贴。那年夏天也认识了小鱼。同一座城里，有人关心今天出了几单，也有人关心今天回不回家。",
+    "aside": ""
+   }
+  },
+  {
+   "period": "2025 年秋冬",
+   "start": "2025-09",
+   "title": "把简历带到北京",
+   "text": "去北京的头几天，面试怎么讲，先跟木子哥在深夜捋过一遍。等有了通勤和工位，阿禾会在早上喊我起床。一座陌生城市，也是这样靠几件小事变得可以过日子。",
+   "scene_hint": "地铁出入口、简历夹、靠窗的两把椅子",
+   "safe_for_inspiration": false,
+   "card_id": "era:2025-09",
+   "card": {
+    "kicker": "2025 年秋冬",
+    "title": "把简历带到北京",
+    "text": "去北京的头几天，面试怎么讲，先跟木子哥在深夜捋过一遍。等有了通勤和工位，阿禾会在早上喊我起床。一座陌生城市，也是这样靠几件小事变得可以过日子。",
+    "aside": ""
+   }
+  },
+  {
+   "period": "2026 年冬春至初夏",
+   "start": "2026-01",
+   "title": "开始上台，也把讲稿留给别人",
+   "text": "进公司后，我和同事做 AI 工具相关的工作。四月讲完开放麦，我把幻灯片、讲稿和翻页指引发在群里，让同事能对着一页来问。六月人在外地，毕业证靠阿岳帮忙代领。",
+   "scene_hint": "工位、翻页笔、话筒和卷起的纸筒",
+   "safe_for_inspiration": false,
+   "card_id": "era:2026-01",
+   "card": {
+    "kicker": "2026 年冬春至初夏",
+    "title": "开始上台，也把讲稿留给别人",
+    "text": "进公司后，我和同事做 AI 工具相关的工作。四月讲完开放麦，我把幻灯片、讲稿和翻页指引发在群里，让同事能对着一页来问。六月人在外地，毕业证靠阿岳帮忙代领。",
+    "aside": ""
+   }
+  },
+  {
+   "period": "2026 年夏至 11 月 12 日",
+   "start": "2026-07",
+   "title": "工位旁的打印机也能派上用场",
+   "text": "工作转到社群和内容，我要带实习生，也得想怎么把消息讲给别的部门。十一月和同事讨论新闻时，我想到了办公室的打印机，提议试一张 A3 手抄报。记录留下了这个念头，成品有没有贴出来，还得另找证据。",
+   "scene_hint": "桌面打印机，一叠未折的报纸，手工排版尺",
+   "safe_for_inspiration": true,
+   "card_id": "era:2026-07",
+   "card": {
+    "kicker": "2026 年夏至 11 月 12 日",
+    "title": "工位旁的打印机也能派上用场",
+    "text": "工作转到社群和内容，我要带实习生，也得想怎么把消息讲给别的部门。十一月和同事讨论新闻时，我想到了办公室的打印机，提议试一张 A3 手抄报。记录留下了这个念头，成品有没有贴出来，还得另找证据。",
+    "aside": ""
+   }
+  }
+ ],
+ "people": [
+  {
+   "id": "x4ea974baa98b",
+   "name": "小鱼",
+   "line": "我的女朋友。",
+   "weight": 185529,
+   "layer": 1,
+   "from": "2024-07",
+   "to": "2026-11",
+   "house_style": "home-pink",
+   "card_id": "person:x4ea974baa98b",
+   "card": {
+    "kicker": "2024-07 — 2026-11",
+    "title": "小鱼",
+    "text": "我的女朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x5c4924007331",
+   "name": "小语",
+   "line": "大一时在广播台认识的朋友，那几个月常聊到很晚。",
+   "weight": 34164,
+   "layer": 1,
+   "from": "2023-04",
+   "to": "2026-04",
+   "house_style": "home-common",
+   "card_id": "person:x5c4924007331",
+   "card": {
+    "kicker": "2023-04 — 2026-04",
+    "title": "小语",
+    "text": "大一时在广播台认识的朋友，那几个月常聊到很晚。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "xac85d451f6da",
+   "name": "木子哥",
+   "line": "学长，也是一路带我做事、骂我最狠也拉我最多的老大哥。",
+   "weight": 20860,
+   "layer": 1,
+   "from": "2023-09",
+   "to": "2026-11",
+   "house_style": "home-ink",
+   "card_id": "person:xac85d451f6da",
+   "card": {
+    "kicker": "2023-09 — 2026-11",
+    "title": "木子哥",
+    "text": "学长，也是一路带我做事、骂我最狠也拉我最多的老大哥。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x7fbb6690bd51",
+   "name": "小苒",
+   "line": "大一时常聊到深夜的学妹，后来是朋友。",
+   "weight": 20252,
+   "layer": 1,
+   "from": "2023-07",
+   "to": "2026-04",
+   "house_style": "home-common",
+   "card_id": "person:x7fbb6690bd51",
+   "card": {
+    "kicker": "2023-07 — 2026-04",
+    "title": "小苒",
+    "text": "大一时常聊到深夜的学妹，后来是朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "xa88183b392ca",
+   "name": "阿岳",
+   "line": "大学四年的室友兼游戏搭子，毕业手续也是他帮我跑完的。",
+   "weight": 20140,
+   "layer": 1,
+   "from": "2022-10",
+   "to": "2026-11",
+   "house_style": "home-common",
+   "card_id": "person:xa88183b392ca",
+   "card": {
+    "kicker": "2022-10 — 2026-11",
+    "title": "阿岳",
+    "text": "大学四年的室友兼游戏搭子，毕业手续也是他帮我跑完的。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x9df34ad38e33",
+   "name": "小满",
+   "line": "这几年里认识的朋友。",
+   "weight": 19519,
+   "layer": 1,
+   "from": "2023-09",
+   "to": "2026-08",
+   "house_style": "home-common",
+   "card_id": "person:x9df34ad38e33",
+   "card": {
+    "kicker": "2023-09 — 2026-08",
+    "title": "小满",
+    "text": "这几年里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x37b74a4e505b",
+   "name": "阿柚",
+   "line": "大学里认识的学弟。",
+   "weight": 15454,
+   "layer": 1,
+   "from": "2024-07",
+   "to": "2026-07",
+   "house_style": "home-common",
+   "card_id": "person:x37b74a4e505b",
+   "card": {
+    "kicker": "2024-07 — 2026-07",
+    "title": "阿柚",
+    "text": "大学里认识的学弟。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "xf6bb21ca4272",
+   "name": "青禾",
+   "line": "这几年里认识的朋友。",
+   "weight": 14716,
+   "layer": 1,
+   "from": "2023-08",
+   "to": "2026-04",
+   "house_style": "home-common",
+   "card_id": "person:xf6bb21ca4272",
+   "card": {
+    "kicker": "2023-08 — 2026-04",
+    "title": "青禾",
+    "text": "这几年里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x63e629f6025f",
+   "name": "栗子",
+   "line": "这几年里认识的朋友。",
+   "weight": 12809,
+   "layer": 1,
+   "from": "2022-09",
+   "to": "2026-11",
+   "house_style": "home-common",
+   "card_id": "person:x63e629f6025f",
+   "card": {
+    "kicker": "2022-09 — 2026-11",
+    "title": "栗子",
+    "text": "这几年里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x048188768bde",
+   "name": "小棠",
+   "line": "这几年里认识的朋友。",
+   "weight": 10285,
+   "layer": 1,
+   "from": "2019-06",
+   "to": "2026-09",
+   "house_style": "home-common",
+   "card_id": "person:x048188768bde",
+   "card": {
+    "kicker": "2019-06 — 2026-09",
+    "title": "小棠",
+    "text": "这几年里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "xb7e69104849f",
+   "name": "阿杏",
+   "line": "这几年里认识的朋友。",
+   "weight": 9404,
+   "layer": 1,
+   "from": "2023-07",
+   "to": "2026-04",
+   "house_style": "home-common",
+   "card_id": "person:xb7e69104849f",
+   "card": {
+    "kicker": "2023-07 — 2026-04",
+    "title": "阿杏",
+    "text": "这几年里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x741380244d96",
+   "name": "妈妈",
+   "line": "一直撑着家的人，后来也把我当成能说真话的人。",
+   "weight": 9070,
+   "layer": 1,
+   "from": "2019-06",
+   "to": "2026-11",
+   "house_style": "home-family",
+   "home_group": "family",
+   "card_id": "person:x741380244d96",
+   "card": {
+    "kicker": "2019-06 — 2026-11",
+    "title": "妈妈",
+    "text": "一直撑着家的人，后来也把我当成能说真话的人。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x15830f5e2dc0",
+   "name": "阿禾",
+   "line": "在北京实习时最近的同事，每天早上叫我起床。",
+   "weight": 8918,
+   "layer": 1,
+   "from": "2025-10",
+   "to": "2026-09",
+   "house_style": "home-common",
+   "card_id": "person:x15830f5e2dc0",
+   "card": {
+    "kicker": "2025-10 — 2026-09",
+    "title": "阿禾",
+    "text": "在北京实习时最近的同事，每天早上叫我起床。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x205b4690463a",
+   "name": "阿乐",
+   "line": "说要在我这里买电脑，算我第一单。",
+   "weight": 8902,
+   "layer": 1,
+   "from": "2019-08",
+   "to": "2026-07",
+   "house_style": "home-common",
+   "card_id": "person:x205b4690463a",
+   "card": {
+    "kicker": "2019-08 — 2026-07",
+    "title": "阿乐",
+    "text": "说要在我这里买电脑，算我第一单。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x7685093e1b59",
+   "name": "苇苇",
+   "line": "这几年里认识的朋友。",
+   "weight": 7994,
+   "layer": 1,
+   "from": "2024-07",
+   "to": "2026-08",
+   "house_style": "home-common",
+   "card_id": "person:x7685093e1b59",
+   "card": {
+    "kicker": "2024-07 — 2026-08",
+    "title": "苇苇",
+    "text": "这几年里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "xe0367d66f980",
+   "name": "暖暖",
+   "line": "低烧上班时，提醒我吃药早点回家。",
+   "weight": 7650,
+   "layer": 1,
+   "from": "2026-02",
+   "to": "2026-11",
+   "house_style": "home-common",
+   "card_id": "person:xe0367d66f980",
+   "card": {
+    "kicker": "2026-02 — 2026-11",
+    "title": "暖暖",
+    "text": "低烧上班时，提醒我吃药早点回家。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x569616427e0c",
+   "name": "萤火",
+   "line": "这几年里认识的朋友。",
+   "weight": 7196,
+   "layer": 1,
+   "from": "2022-11",
+   "to": "2026-10",
+   "house_style": "home-common",
+   "card_id": "person:x569616427e0c",
+   "card": {
+    "kicker": "2022-11 — 2026-10",
+    "title": "萤火",
+    "text": "这几年里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x70a437a3eeb1",
+   "name": "阿岚",
+   "line": "这几年里认识的朋友。",
+   "weight": 6847,
+   "layer": 1,
+   "from": "2022-09",
+   "to": "2026-07",
+   "house_style": "home-common",
+   "card_id": "person:x70a437a3eeb1",
+   "card": {
+    "kicker": "2022-09 — 2026-07",
+    "title": "阿岚",
+    "text": "这几年里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x2ac4dd20ef61",
+   "name": "小溪",
+   "line": "大学里认识的学妹。",
+   "weight": 6598,
+   "layer": 1,
+   "from": "2024-07",
+   "to": "2026-08",
+   "house_style": "home-common",
+   "card_id": "person:x2ac4dd20ef61",
+   "card": {
+    "kicker": "2024-07 — 2026-08",
+    "title": "小溪",
+    "text": "大学里认识的学妹。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x61c3fc9d2286",
+   "name": "澄澄",
+   "line": "常找的学长。",
+   "weight": 6575,
+   "layer": 1,
+   "from": "2023-04",
+   "to": "2026-07",
+   "house_style": "home-common",
+   "card_id": "person:x61c3fc9d2286",
+   "card": {
+    "kicker": "2023-04 — 2026-07",
+    "title": "澄澄",
+    "text": "常找的学长。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x6273dfe79cbc",
+   "name": "朗月",
+   "line": "常找的学长。",
+   "weight": 6554,
+   "layer": 1,
+   "from": "2023-12",
+   "to": "2026-01",
+   "house_style": "home-common",
+   "card_id": "person:x6273dfe79cbc",
+   "card": {
+    "kicker": "2023-12 — 2026-01",
+    "title": "朗月",
+    "text": "常找的学长。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x744daef03e95",
+   "name": "阿砚",
+   "line": "这几年里认识的朋友。",
+   "weight": 6055,
+   "layer": 1,
+   "from": "2024-07",
+   "to": "2026-09",
+   "house_style": "home-common",
+   "card_id": "person:x744daef03e95",
+   "card": {
+    "kicker": "2024-07 — 2026-09",
+    "title": "阿砚",
+    "text": "这几年里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x3982ef2b1872",
+   "name": "小葵",
+   "line": "校园生意里认识的朋友。",
+   "weight": 5936,
+   "layer": 1,
+   "from": "2023-07",
+   "to": "2026-05",
+   "house_style": "home-common",
+   "card_id": "person:x3982ef2b1872",
+   "card": {
+    "kicker": "2023-07 — 2026-05",
+    "title": "小葵",
+    "text": "校园生意里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "xd6603c7288d1",
+   "name": "芸芸",
+   "line": "这几年里认识的朋友。",
+   "weight": 5780,
+   "layer": 1,
+   "from": "2022-08",
+   "to": "2026-04",
+   "house_style": "home-common",
+   "card_id": "person:xd6603c7288d1",
+   "card": {
+    "kicker": "2022-08 — 2026-04",
+    "title": "芸芸",
+    "text": "这几年里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x5d042143fce7",
+   "name": "菱角",
+   "line": "这几年里认识的朋友。",
+   "weight": 5768,
+   "layer": 1,
+   "from": "2025-10",
+   "to": "2026-09",
+   "house_style": "home-common",
+   "card_id": "person:x5d042143fce7",
+   "card": {
+    "kicker": "2025-10 — 2026-09",
+    "title": "菱角",
+    "text": "这几年里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x2dfc27347fde",
+   "name": "阿梨",
+   "line": "这几年里认识的朋友。",
+   "weight": 5617,
+   "layer": 1,
+   "from": "2023-06",
+   "to": "2026-04",
+   "house_style": "home-common",
+   "card_id": "person:x2dfc27347fde",
+   "card": {
+    "kicker": "2023-06 — 2026-04",
+    "title": "阿梨",
+    "text": "这几年里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x55f77cb63708",
+   "name": "小枣",
+   "line": "这几年里认识的朋友。",
+   "weight": 5371,
+   "layer": 1,
+   "from": "2019-06",
+   "to": "2026-09",
+   "house_style": "home-common",
+   "card_id": "person:x55f77cb63708",
+   "card": {
+    "kicker": "2019-06 — 2026-09",
+    "title": "小枣",
+    "text": "这几年里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x08627fb2ef0a",
+   "name": "莓莓",
+   "line": "这几年里认识的朋友。",
+   "weight": 5009,
+   "layer": 1,
+   "from": "2023-06",
+   "to": "2026-04",
+   "house_style": "home-common",
+   "card_id": "person:x08627fb2ef0a",
+   "card": {
+    "kicker": "2023-06 — 2026-04",
+    "title": "莓莓",
+    "text": "这几年里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x2a34e3145c57",
+   "name": "阿芽",
+   "line": "这几年里认识的朋友。",
+   "weight": 5002,
+   "layer": 1,
+   "from": "2023-08",
+   "to": "2026-04",
+   "house_style": "home-common",
+   "card_id": "person:x2a34e3145c57",
+   "card": {
+    "kicker": "2023-08 — 2026-04",
+    "title": "阿芽",
+    "text": "这几年里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x559b35c75aeb",
+   "name": "小橙",
+   "line": "这几年里认识的朋友。",
+   "weight": 4947,
+   "layer": 1,
+   "from": "2022-09",
+   "to": "2026-06",
+   "house_style": "home-common",
+   "card_id": "person:x559b35c75aeb",
+   "card": {
+    "kicker": "2022-09 — 2026-06",
+    "title": "小橙",
+    "text": "这几年里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x5cc8d9886927",
+   "name": "阿桃",
+   "line": "这几年里认识的朋友。",
+   "weight": 8990,
+   "layer": 4,
+   "from": "2026-07",
+   "to": "2026-11",
+   "house_style": null,
+   "card_id": "person:x5cc8d9886927",
+   "card": {
+    "kicker": "2026-07 — 2026-11",
+    "title": "阿桃",
+    "text": "这几年里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x595b1580031e",
+   "name": "哥哥",
+   "line": "我上大学时，哥哥怕我缺钱，换下来的手机也寄给我。",
+   "weight": 5254,
+   "layer": 4,
+   "from": "2019-06",
+   "to": "2026-11",
+   "house_style": "home-family",
+   "home_group": "family",
+   "card_id": "person:x595b1580031e",
+   "card": {
+    "kicker": "2019-06 — 2026-11",
+    "title": "哥哥",
+    "text": "我上大学时，哥哥怕我缺钱，换下来的手机也寄给我。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "xf3ff30c66ca4",
+   "name": "秋秋",
+   "line": "做校园推广时认识的朋友。",
+   "weight": 4949,
+   "layer": 4,
+   "from": "2024-06",
+   "to": "2026-10",
+   "house_style": null,
+   "card_id": "person:xf3ff30c66ca4",
+   "card": {
+    "kicker": "2024-06 — 2026-10",
+    "title": "秋秋",
+    "text": "做校园推广时认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x25e70fa0b17f",
+   "name": "冬冬",
+   "line": "工作里认识的同事。",
+   "weight": 4840,
+   "layer": 4,
+   "from": "2026-01",
+   "to": "2026-11",
+   "house_style": null,
+   "card_id": "person:x25e70fa0b17f",
+   "card": {
+    "kicker": "2026-01 — 2026-11",
+    "title": "冬冬",
+    "text": "工作里认识的同事。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x285aac584748",
+   "name": "小夏",
+   "line": "大学里认识的学弟。",
+   "weight": 4805,
+   "layer": 4,
+   "from": "2023-07",
+   "to": "2026-08",
+   "house_style": null,
+   "card_id": "person:x285aac584748",
+   "card": {
+    "kicker": "2023-07 — 2026-08",
+    "title": "小夏",
+    "text": "大学里认识的学弟。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x4077c6cd1e43",
+   "name": "爸爸",
+   "line": "高中时我和爸爸一起算学费。",
+   "weight": 4678,
+   "layer": 4,
+   "from": "2019-06",
+   "to": "2026-11",
+   "house_style": "home-family",
+   "home_group": "family",
+   "card_id": "person:x4077c6cd1e43",
+   "card": {
+    "kicker": "2019-06 — 2026-11",
+    "title": "爸爸",
+    "text": "高中时我和爸爸一起算学费。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x9d26eb225746",
+   "name": "阿春",
+   "line": "这几年里认识的朋友。",
+   "weight": 4613,
+   "layer": 4,
+   "from": "2022-06",
+   "to": "2025-11",
+   "house_style": null,
+   "card_id": "person:x9d26eb225746",
+   "card": {
+    "kicker": "2022-06 — 2025-11",
+    "title": "阿春",
+    "text": "这几年里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x24956b4d9388",
+   "name": "北北",
+   "line": "大学里认识的学妹。",
+   "weight": 4471,
+   "layer": 4,
+   "from": "2023-08",
+   "to": "2025-08",
+   "house_style": null,
+   "card_id": "person:x24956b4d9388",
+   "card": {
+    "kicker": "2023-08 — 2025-08",
+    "title": "北北",
+    "text": "大学里认识的学妹。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "xb5024ef69965",
+   "name": "南南",
+   "line": "校园生意里认识的朋友。",
+   "weight": 4431,
+   "layer": 4,
+   "from": "2024-05",
+   "to": "2026-05",
+   "house_style": null,
+   "card_id": "person:xb5024ef69965",
+   "card": {
+    "kicker": "2024-05 — 2026-05",
+    "title": "南南",
+    "text": "校园生意里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x072fba503dae",
+   "name": "小舟",
+   "line": "这几年里认识的朋友。",
+   "weight": 4386,
+   "layer": 4,
+   "from": "2022-08",
+   "to": "2023-01",
+   "house_style": null,
+   "card_id": "person:x072fba503dae",
+   "card": {
+    "kicker": "2022-08 — 2023-01",
+    "title": "小舟",
+    "text": "这几年里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "xc4176230f0cd",
+   "name": "阿帆",
+   "line": "这几年里认识的朋友。",
+   "weight": 4376,
+   "layer": 4,
+   "from": "2024-09",
+   "to": "2026-06",
+   "house_style": null,
+   "card_id": "person:xc4176230f0cd",
+   "card": {
+    "kicker": "2024-09 — 2026-06",
+    "title": "阿帆",
+    "text": "这几年里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x6c6b577c241c",
+   "name": "小岛",
+   "line": "常找的学长。",
+   "weight": 4351,
+   "layer": 4,
+   "from": "2023-09",
+   "to": "2026-04",
+   "house_style": null,
+   "card_id": "person:x6c6b577c241c",
+   "card": {
+    "kicker": "2023-09 — 2026-04",
+    "title": "小岛",
+    "text": "常找的学长。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x67137944e29c",
+   "name": "阿峰",
+   "line": "给初到北京、还没找好房的我留过一张床。",
+   "weight": 4150,
+   "layer": 4,
+   "from": "2025-08",
+   "to": "2026-08",
+   "house_style": "home-studio",
+   "card_id": "person:x67137944e29c",
+   "card": {
+    "kicker": "2025-08 — 2026-08",
+    "title": "阿峰",
+    "text": "给初到北京、还没找好房的我留过一张床。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "xea06a832ce48",
+   "name": "阿屿",
+   "line": "这几年里认识的朋友。",
+   "weight": 4134,
+   "layer": 4,
+   "from": "2023-08",
+   "to": "2026-04",
+   "house_style": null,
+   "card_id": "person:xea06a832ce48",
+   "card": {
+    "kicker": "2023-08 — 2026-04",
+    "title": "阿屿",
+    "text": "这几年里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x26cc2609b755",
+   "name": "小山",
+   "line": "大学里认识的学弟。",
+   "weight": 4042,
+   "layer": 4,
+   "from": "2024-07",
+   "to": "2025-09",
+   "house_style": null,
+   "card_id": "person:x26cc2609b755",
+   "card": {
+    "kicker": "2024-07 — 2025-09",
+    "title": "小山",
+    "text": "大学里认识的学弟。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "xebb6b7a229c4",
+   "name": "阿川",
+   "line": "大学里认识的学妹。",
+   "weight": 3988,
+   "layer": 4,
+   "from": "2024-07",
+   "to": "2026-08",
+   "house_style": null,
+   "card_id": "person:xebb6b7a229c4",
+   "card": {
+    "kicker": "2024-07 — 2026-08",
+    "title": "阿川",
+    "text": "大学里认识的学妹。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x17b565cb8db7",
+   "name": "小原",
+   "line": "大学里认识的学妹。",
+   "weight": 3940,
+   "layer": 4,
+   "from": "2023-09",
+   "to": "2026-10",
+   "house_style": null,
+   "card_id": "person:x17b565cb8db7",
+   "card": {
+    "kicker": "2023-09 — 2026-10",
+    "title": "小原",
+    "text": "大学里认识的学妹。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "xc2c1c3cf9a5b",
+   "name": "阿野",
+   "line": "这几年里认识的朋友。",
+   "weight": 3879,
+   "layer": 4,
+   "from": "2024-08",
+   "to": "2026-04",
+   "house_style": null,
+   "card_id": "person:xc2c1c3cf9a5b",
+   "card": {
+    "kicker": "2024-08 — 2026-04",
+    "title": "阿野",
+    "text": "这几年里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x319fcdb2b645",
+   "name": "小麦",
+   "line": "带过我的学姐。",
+   "weight": 3793,
+   "layer": 4,
+   "from": "2023-09",
+   "to": "2025-09",
+   "house_style": null,
+   "card_id": "person:x319fcdb2b645",
+   "card": {
+    "kicker": "2023-09 — 2025-09",
+    "title": "小麦",
+    "text": "带过我的学姐。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x1cf087e8a4d4",
+   "name": "阿稻",
+   "line": "这几年里认识的朋友。",
+   "weight": 3778,
+   "layer": 4,
+   "from": "2022-08",
+   "to": "2025-10",
+   "house_style": null,
+   "card_id": "person:x1cf087e8a4d4",
+   "card": {
+    "kicker": "2022-08 — 2025-10",
+    "title": "阿稻",
+    "text": "这几年里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "xb5ab223b0dbd",
+   "name": "小米",
+   "line": "这几年里认识的朋友。",
+   "weight": 3707,
+   "layer": 4,
+   "from": "2023-07",
+   "to": "2026-04",
+   "house_style": null,
+   "card_id": "person:xb5ab223b0dbd",
+   "card": {
+    "kicker": "2023-07 — 2026-04",
+    "title": "小米",
+    "text": "这几年里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "xe0c195ede7fa",
+   "name": "阿豆",
+   "line": "这几年里认识的朋友。",
+   "weight": 3662,
+   "layer": 4,
+   "from": "2022-06",
+   "to": "2025-11",
+   "house_style": null,
+   "card_id": "person:xe0c195ede7fa",
+   "card": {
+    "kicker": "2022-06 — 2025-11",
+    "title": "阿豆",
+    "text": "这几年里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x50eea4049d08",
+   "name": "小松",
+   "line": "大学里认识的学妹。",
+   "weight": 3639,
+   "layer": 4,
+   "from": "2024-08",
+   "to": "2026-04",
+   "house_style": null,
+   "card_id": "person:x50eea4049d08",
+   "card": {
+    "kicker": "2024-08 — 2026-04",
+    "title": "小松",
+    "text": "大学里认识的学妹。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x65222de11e20",
+   "name": "阿柏",
+   "line": "这几年里认识的朋友。",
+   "weight": 3601,
+   "layer": 4,
+   "from": "2024-09",
+   "to": "2026-04",
+   "house_style": null,
+   "card_id": "person:x65222de11e20",
+   "card": {
+    "kicker": "2024-09 — 2026-04",
+    "title": "阿柏",
+    "text": "这几年里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "xae3b1e7e9055",
+   "name": "小樟",
+   "line": "大学里认识的学妹。",
+   "weight": 3590,
+   "layer": 4,
+   "from": "2023-08",
+   "to": "2026-11",
+   "house_style": null,
+   "card_id": "person:xae3b1e7e9055",
+   "card": {
+    "kicker": "2023-08 — 2026-11",
+    "title": "小樟",
+    "text": "大学里认识的学妹。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x6ee1b65c9f9c",
+   "name": "阿榕",
+   "line": "这几年里认识的朋友。",
+   "weight": 3579,
+   "layer": 4,
+   "from": "2023-05",
+   "to": "2025-09",
+   "house_style": null,
+   "card_id": "person:x6ee1b65c9f9c",
+   "card": {
+    "kicker": "2023-05 — 2025-09",
+    "title": "阿榕",
+    "text": "这几年里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x90d2c1f781d5",
+   "name": "小竹",
+   "line": "这几年里认识的朋友。",
+   "weight": 3578,
+   "layer": 4,
+   "from": "2023-07",
+   "to": "2025-09",
+   "house_style": null,
+   "card_id": "person:x90d2c1f781d5",
+   "card": {
+    "kicker": "2023-07 — 2025-09",
+    "title": "小竹",
+    "text": "这几年里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "xa2ea96e5df9b",
+   "name": "阿兰",
+   "line": "喊我师傅的学弟学妹。",
+   "weight": 3572,
+   "layer": 4,
+   "from": "2023-11",
+   "to": "2026-06",
+   "house_style": null,
+   "card_id": "person:xa2ea96e5df9b",
+   "card": {
+    "kicker": "2023-11 — 2026-06",
+    "title": "阿兰",
+    "text": "喊我师傅的学弟学妹。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x2416f93b71f7",
+   "name": "小荷",
+   "line": "这几年里认识的朋友。",
+   "weight": 3414,
+   "layer": 4,
+   "from": "2022-09",
+   "to": "2025-11",
+   "house_style": null,
+   "card_id": "person:x2416f93b71f7",
+   "card": {
+    "kicker": "2022-09 — 2025-11",
+    "title": "小荷",
+    "text": "这几年里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "xa339c39c4d41",
+   "name": "阿莲",
+   "line": "这几年里认识的朋友。",
+   "weight": 3382,
+   "layer": 4,
+   "from": "2022-09",
+   "to": "2026-02",
+   "house_style": null,
+   "card_id": "person:xa339c39c4d41",
+   "card": {
+    "kicker": "2022-09 — 2026-02",
+    "title": "阿莲",
+    "text": "这几年里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x11257a6d22a3",
+   "name": "小菊",
+   "line": "这几年里认识的朋友。",
+   "weight": 3371,
+   "layer": 4,
+   "from": "2025-10",
+   "to": "2026-08",
+   "house_style": null,
+   "card_id": "person:x11257a6d22a3",
+   "card": {
+    "kicker": "2025-10 — 2026-08",
+    "title": "小菊",
+    "text": "这几年里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x17cdfff081d6",
+   "name": "阿梅",
+   "line": "校园生意里认识的朋友。",
+   "weight": 3290,
+   "layer": 4,
+   "from": "2023-07",
+   "to": "2026-10",
+   "house_style": null,
+   "card_id": "person:x17cdfff081d6",
+   "card": {
+    "kicker": "2023-07 — 2026-10",
+    "title": "阿梅",
+    "text": "校园生意里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x46cd99ded2ba",
+   "name": "小雪",
+   "line": "这几年里认识的朋友。",
+   "weight": 3218,
+   "layer": 4,
+   "from": "2026-07",
+   "to": "2026-11",
+   "house_style": null,
+   "card_id": "person:x46cd99ded2ba",
+   "card": {
+    "kicker": "2026-07 — 2026-11",
+    "title": "小雪",
+    "text": "这几年里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x5fda3821d700",
+   "name": "阿霜",
+   "line": "大学班长。",
+   "weight": 3194,
+   "layer": 4,
+   "from": "2022-10",
+   "to": "2026-05",
+   "house_style": null,
+   "card_id": "person:x5fda3821d700",
+   "card": {
+    "kicker": "2022-10 — 2026-05",
+    "title": "阿霜",
+    "text": "大学班长。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x4bcc471e9f55",
+   "name": "小雨",
+   "line": "大学里认识的学弟。",
+   "weight": 3151,
+   "layer": 4,
+   "from": "2024-03",
+   "to": "2026-11",
+   "house_style": null,
+   "card_id": "person:x4bcc471e9f55",
+   "card": {
+    "kicker": "2024-03 — 2026-11",
+    "title": "小雨",
+    "text": "大学里认识的学弟。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x25db04554651",
+   "name": "阿露",
+   "line": "这几年里认识的朋友。",
+   "weight": 3144,
+   "layer": 4,
+   "from": "2023-10",
+   "to": "2025-11",
+   "house_style": null,
+   "card_id": "person:x25db04554651",
+   "card": {
+    "kicker": "2023-10 — 2025-11",
+    "title": "阿露",
+    "text": "这几年里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x293915016cc1",
+   "name": "小云",
+   "line": "这几年里认识的朋友。",
+   "weight": 2997,
+   "layer": 4,
+   "from": "2023-09",
+   "to": "2026-04",
+   "house_style": null,
+   "card_id": "person:x293915016cc1",
+   "card": {
+    "kicker": "2023-09 — 2026-04",
+    "title": "小云",
+    "text": "这几年里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "xd3fbf8448b74",
+   "name": "阿雾",
+   "line": "大学里认识的学妹。",
+   "weight": 2972,
+   "layer": 4,
+   "from": "2024-07",
+   "to": "2026-04",
+   "house_style": null,
+   "card_id": "person:xd3fbf8448b74",
+   "card": {
+    "kicker": "2024-07 — 2026-04",
+    "title": "阿雾",
+    "text": "大学里认识的学妹。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x37d3357e12b1",
+   "name": "小星",
+   "line": "这几年里认识的朋友。",
+   "weight": 2868,
+   "layer": 4,
+   "from": "2024-07",
+   "to": "2026-04",
+   "house_style": null,
+   "card_id": "person:x37d3357e12b1",
+   "card": {
+    "kicker": "2024-07 — 2026-04",
+    "title": "小星",
+    "text": "这几年里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x1b7acb73f0af",
+   "name": "阿辰",
+   "line": "大学同学。",
+   "weight": 2845,
+   "layer": 4,
+   "from": "2022-07",
+   "to": "2025-08",
+   "house_style": null,
+   "card_id": "person:x1b7acb73f0af",
+   "card": {
+    "kicker": "2022-07 — 2025-08",
+    "title": "阿辰",
+    "text": "大学同学。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "xef989c506ae8",
+   "name": "小晴",
+   "line": "大学里认识的学妹。",
+   "weight": 2841,
+   "layer": 4,
+   "from": "2023-07",
+   "to": "2026-04",
+   "house_style": null,
+   "card_id": "person:xef989c506ae8",
+   "card": {
+    "kicker": "2023-07 — 2026-04",
+    "title": "小晴",
+    "text": "大学里认识的学妹。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x62f23753b201",
+   "name": "阿晨",
+   "line": "这几年里认识的朋友。",
+   "weight": 2780,
+   "layer": 4,
+   "from": "2026-01",
+   "to": "2026-11",
+   "house_style": null,
+   "card_id": "person:x62f23753b201",
+   "card": {
+    "kicker": "2026-01 — 2026-11",
+    "title": "阿晨",
+    "text": "这几年里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x6b316e6787da",
+   "name": "小昼",
+   "line": "这几年里认识的朋友。",
+   "weight": 2705,
+   "layer": 4,
+   "from": "2025-07",
+   "to": "2025-10",
+   "house_style": null,
+   "card_id": "person:x6b316e6787da",
+   "card": {
+    "kicker": "2025-07 — 2025-10",
+    "title": "小昼",
+    "text": "这几年里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x465ff1ac7de3",
+   "name": "阿夕",
+   "line": "大学里认识的学妹。",
+   "weight": 2665,
+   "layer": 4,
+   "from": "2024-08",
+   "to": "2026-04",
+   "house_style": null,
+   "card_id": "person:x465ff1ac7de3",
+   "card": {
+    "kicker": "2024-08 — 2026-04",
+    "title": "阿夕",
+    "text": "大学里认识的学妹。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x49d5ca4d4a30",
+   "name": "小晚",
+   "line": "这几年里认识的朋友。",
+   "weight": 2629,
+   "layer": 4,
+   "from": "2026-09",
+   "to": "2026-11",
+   "house_style": null,
+   "card_id": "person:x49d5ca4d4a30",
+   "card": {
+    "kicker": "2026-09 — 2026-11",
+    "title": "小晚",
+    "text": "这几年里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "xd258a2ba911b",
+   "name": "阿暮",
+   "line": "大学里认识的学妹。",
+   "weight": 2605,
+   "layer": 4,
+   "from": "2023-07",
+   "to": "2026-07",
+   "house_style": null,
+   "card_id": "person:xd258a2ba911b",
+   "card": {
+    "kicker": "2023-07 — 2026-07",
+    "title": "阿暮",
+    "text": "大学里认识的学妹。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "xdb19b6e9404a",
+   "name": "小光",
+   "line": "这几年里认识的朋友。",
+   "weight": 2593,
+   "layer": 4,
+   "from": "2025-08",
+   "to": "2025-11",
+   "house_style": null,
+   "card_id": "person:xdb19b6e9404a",
+   "card": {
+    "kicker": "2025-08 — 2025-11",
+    "title": "小光",
+    "text": "这几年里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "xc61b94d2424f",
+   "name": "阿影",
+   "line": "这几年里认识的朋友。",
+   "weight": 2563,
+   "layer": 4,
+   "from": "2023-08",
+   "to": "2023-08",
+   "house_style": null,
+   "card_id": "person:xc61b94d2424f",
+   "card": {
+    "kicker": "2023-08 — 2023-08",
+    "title": "阿影",
+    "text": "这几年里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x4f20a8c4b73d",
+   "name": "小石",
+   "line": "这几年里认识的朋友。",
+   "weight": 2519,
+   "layer": 4,
+   "from": "2025-12",
+   "to": "2026-11",
+   "house_style": null,
+   "card_id": "person:x4f20a8c4b73d",
+   "card": {
+    "kicker": "2025-12 — 2026-11",
+    "title": "小石",
+    "text": "这几年里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x1a534996227d",
+   "name": "阿岩",
+   "line": "大学班长。",
+   "weight": 2487,
+   "layer": 4,
+   "from": "2023-07",
+   "to": "2026-04",
+   "house_style": null,
+   "card_id": "person:x1a534996227d",
+   "card": {
+    "kicker": "2023-07 — 2026-04",
+    "title": "阿岩",
+    "text": "大学班长。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "xc28588570ac5",
+   "name": "小沙",
+   "line": "这几年里认识的朋友。",
+   "weight": 2482,
+   "layer": 4,
+   "from": "2024-09",
+   "to": "2025-11",
+   "house_style": null,
+   "card_id": "person:xc28588570ac5",
+   "card": {
+    "kicker": "2024-09 — 2025-11",
+    "title": "小沙",
+    "text": "这几年里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x80aab55a7095",
+   "name": "阿泥",
+   "line": "大学同学。",
+   "weight": 2465,
+   "layer": 4,
+   "from": "2023-05",
+   "to": "2026-04",
+   "house_style": null,
+   "card_id": "person:x80aab55a7095",
+   "card": {
+    "kicker": "2023-05 — 2026-04",
+    "title": "阿泥",
+    "text": "大学同学。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x43f6ce75e015",
+   "name": "小陶",
+   "line": "这几年里认识的朋友。",
+   "weight": 2419,
+   "layer": 4,
+   "from": "2025-08",
+   "to": "2026-09",
+   "house_style": null,
+   "card_id": "person:x43f6ce75e015",
+   "card": {
+    "kicker": "2025-08 — 2026-09",
+    "title": "小陶",
+    "text": "这几年里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x0bbf9e8a1b75",
+   "name": "阿瓷",
+   "line": "这几年里认识的朋友。",
+   "weight": 2360,
+   "layer": 4,
+   "from": "2023-06",
+   "to": "2024-11",
+   "house_style": null,
+   "card_id": "person:x0bbf9e8a1b75",
+   "card": {
+    "kicker": "2023-06 — 2024-11",
+    "title": "阿瓷",
+    "text": "这几年里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x15f97851e705",
+   "name": "小纸",
+   "line": "这几年里认识的朋友。",
+   "weight": 2339,
+   "layer": 4,
+   "from": "2025-10",
+   "to": "2026-06",
+   "house_style": null,
+   "card_id": "person:x15f97851e705",
+   "card": {
+    "kicker": "2025-10 — 2026-06",
+    "title": "小纸",
+    "text": "这几年里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "xdb98be0f17a1",
+   "name": "阿墨",
+   "line": "大学里认识的学弟。",
+   "weight": 2287,
+   "layer": 4,
+   "from": "2023-09",
+   "to": "2026-04",
+   "house_style": null,
+   "card_id": "person:xdb98be0f17a1",
+   "card": {
+    "kicker": "2023-09 — 2026-04",
+    "title": "阿墨",
+    "text": "大学里认识的学弟。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x35198256f476",
+   "name": "小笔",
+   "line": "同届的朋友。",
+   "weight": 2270,
+   "layer": 4,
+   "from": "2026-03",
+   "to": "2026-11",
+   "house_style": null,
+   "card_id": "person:x35198256f476",
+   "card": {
+    "kicker": "2026-03 — 2026-11",
+    "title": "小笔",
+    "text": "同届的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "xcac4805cf942",
+   "name": "阿砚砚",
+   "line": "这几年里认识的朋友。",
+   "weight": 2264,
+   "layer": 4,
+   "from": "2023-07",
+   "to": "2026-04",
+   "house_style": null,
+   "card_id": "person:xcac4805cf942",
+   "card": {
+    "kicker": "2023-07 — 2026-04",
+    "title": "阿砚砚",
+    "text": "这几年里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "xf76769470be2",
+   "name": "小书",
+   "line": "大学同学。",
+   "weight": 2248,
+   "layer": 4,
+   "from": "2022-10",
+   "to": "2026-05",
+   "house_style": null,
+   "card_id": "person:xf76769470be2",
+   "card": {
+    "kicker": "2022-10 — 2026-05",
+    "title": "小书",
+    "text": "大学同学。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "xf7221cac38e4",
+   "name": "阿页",
+   "line": "这几年里认识的朋友。",
+   "weight": 2215,
+   "layer": 4,
+   "from": "2023-07",
+   "to": "2026-04",
+   "house_style": null,
+   "card_id": "person:xf7221cac38e4",
+   "card": {
+    "kicker": "2023-07 — 2026-04",
+    "title": "阿页",
+    "text": "这几年里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "xa12b27c3a7d7",
+   "name": "小灯",
+   "line": "这几年里认识的朋友。",
+   "weight": 2204,
+   "layer": 4,
+   "from": "2023-06",
+   "to": "2026-05",
+   "house_style": null,
+   "card_id": "person:xa12b27c3a7d7",
+   "card": {
+    "kicker": "2023-06 — 2026-05",
+    "title": "小灯",
+    "text": "这几年里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "xbbe52a27e15d",
+   "name": "阿烛",
+   "line": "工作里认识的同事。",
+   "weight": 2162,
+   "layer": 4,
+   "from": "2026-06",
+   "to": "2026-10",
+   "house_style": null,
+   "card_id": "person:xbbe52a27e15d",
+   "card": {
+    "kicker": "2026-06 — 2026-10",
+    "title": "阿烛",
+    "text": "工作里认识的同事。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "xc3028553da9c",
+   "name": "小钟",
+   "line": "这几年里认识的朋友。",
+   "weight": 2137,
+   "layer": 4,
+   "from": "2024-03",
+   "to": "2026-04",
+   "house_style": null,
+   "card_id": "person:xc3028553da9c",
+   "card": {
+    "kicker": "2024-03 — 2026-04",
+    "title": "小钟",
+    "text": "这几年里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "xc3263ff24865",
+   "name": "阿铃",
+   "line": "这几年里认识的朋友。",
+   "weight": 2134,
+   "layer": 4,
+   "from": "2022-10",
+   "to": "2026-07",
+   "house_style": null,
+   "card_id": "person:xc3263ff24865",
+   "card": {
+    "kicker": "2022-10 — 2026-07",
+    "title": "阿铃",
+    "text": "这几年里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "xf78e56063a4b",
+   "name": "小鼓",
+   "line": "这几年里认识的朋友。",
+   "weight": 2120,
+   "layer": 4,
+   "from": "2022-08",
+   "to": "2023-01",
+   "house_style": null,
+   "card_id": "person:xf78e56063a4b",
+   "card": {
+    "kicker": "2022-08 — 2023-01",
+    "title": "小鼓",
+    "text": "这几年里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x1e6e476805df",
+   "name": "阿笛",
+   "line": "大学室友。",
+   "weight": 2086,
+   "layer": 4,
+   "from": "2022-09",
+   "to": "2026-06",
+   "house_style": null,
+   "card_id": "person:x1e6e476805df",
+   "card": {
+    "kicker": "2022-09 — 2026-06",
+    "title": "阿笛",
+    "text": "大学室友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x3fff5349afd3",
+   "name": "小琴",
+   "line": "这几年里认识的朋友。",
+   "weight": 2058,
+   "layer": 4,
+   "from": "2025-09",
+   "to": "2026-07",
+   "house_style": null,
+   "card_id": "person:x3fff5349afd3",
+   "card": {
+    "kicker": "2025-09 — 2026-07",
+    "title": "小琴",
+    "text": "这几年里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "xa5dad0fc4222",
+   "name": "引路人",
+   "line": "我最早跟着他的文章学 AI。",
+   "weight": 2036,
+   "layer": 4,
+   "from": "2025-12",
+   "to": "2026-11",
+   "house_style": "home-observatory",
+   "card_id": "person:xa5dad0fc4222",
+   "card": {
+    "kicker": "2025-12 — 2026-11",
+    "title": "引路人",
+    "text": "我最早跟着他的文章学 AI。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x3a7d7ac493be",
+   "name": "阿弦",
+   "line": "大学里认识的学妹。",
+   "weight": 2020,
+   "layer": 4,
+   "from": "2024-07",
+   "to": "2026-04",
+   "house_style": null,
+   "card_id": "person:x3a7d7ac493be",
+   "card": {
+    "kicker": "2024-07 — 2026-04",
+    "title": "阿弦",
+    "text": "大学里认识的学妹。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "xa69a707cf825",
+   "name": "小鹿",
+   "line": "喊我师傅的学弟学妹。",
+   "weight": 2009,
+   "layer": 4,
+   "from": "2023-12",
+   "to": "2026-04",
+   "house_style": null,
+   "card_id": "person:xa69a707cf825",
+   "card": {
+    "kicker": "2023-12 — 2026-04",
+    "title": "小鹿",
+    "text": "喊我师傅的学弟学妹。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x783c8f5d59ce",
+   "name": "阿獭",
+   "line": "校园生意里认识的朋友。",
+   "weight": 2008,
+   "layer": 4,
+   "from": "2023-05",
+   "to": "2025-07",
+   "house_style": null,
+   "card_id": "person:x783c8f5d59ce",
+   "card": {
+    "kicker": "2023-05 — 2025-07",
+    "title": "阿獭",
+    "text": "校园生意里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x53f2877de42a",
+   "name": "小狐",
+   "line": "这几年里认识的朋友。",
+   "weight": 1967,
+   "layer": 4,
+   "from": "2023-07",
+   "to": "2025-04",
+   "house_style": null,
+   "card_id": "person:x53f2877de42a",
+   "card": {
+    "kicker": "2023-07 — 2025-04",
+    "title": "小狐",
+    "text": "这几年里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x0bb460f3184f",
+   "name": "阿熊",
+   "line": "做校园推广时认识的朋友。",
+   "weight": 1962,
+   "layer": 4,
+   "from": "2023-07",
+   "to": "2026-07",
+   "house_style": null,
+   "card_id": "person:x0bb460f3184f",
+   "card": {
+    "kicker": "2023-07 — 2026-07",
+    "title": "阿熊",
+    "text": "做校园推广时认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x248a8ed91ae0",
+   "name": "小猫",
+   "line": "这几年里认识的朋友。",
+   "weight": 1954,
+   "layer": 4,
+   "from": "2024-08",
+   "to": "2026-09",
+   "house_style": null,
+   "card_id": "person:x248a8ed91ae0",
+   "card": {
+    "kicker": "2024-08 — 2026-09",
+    "title": "小猫",
+    "text": "这几年里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x66e889689256",
+   "name": "阿狸",
+   "line": "这几年里认识的朋友。",
+   "weight": 1947,
+   "layer": 4,
+   "from": "2023-06",
+   "to": "2025-03",
+   "house_style": null,
+   "card_id": "person:x66e889689256",
+   "card": {
+    "kicker": "2023-06 — 2025-03",
+    "title": "阿狸",
+    "text": "这几年里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x8fba53ee4937",
+   "name": "小兔",
+   "line": "这几年里认识的朋友。",
+   "weight": 1921,
+   "layer": 4,
+   "from": "2023-07",
+   "to": "2026-04",
+   "house_style": null,
+   "card_id": "person:x8fba53ee4937",
+   "card": {
+    "kicker": "2023-07 — 2026-04",
+    "title": "小兔",
+    "text": "这几年里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x19bf85298544",
+   "name": "阿鹊",
+   "line": "这几年里认识的朋友。",
+   "weight": 1914,
+   "layer": 4,
+   "from": "2023-09",
+   "to": "2025-10",
+   "house_style": null,
+   "card_id": "person:x19bf85298544",
+   "card": {
+    "kicker": "2023-09 — 2025-10",
+    "title": "阿鹊",
+    "text": "这几年里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x3da170861bbe",
+   "name": "小燕",
+   "line": "这几年里认识的朋友。",
+   "weight": 1897,
+   "layer": 4,
+   "from": "2024-08",
+   "to": "2026-08",
+   "house_style": null,
+   "card_id": "person:x3da170861bbe",
+   "card": {
+    "kicker": "2024-08 — 2026-08",
+    "title": "小燕",
+    "text": "这几年里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "xc97cc550a035",
+   "name": "阿雀",
+   "line": "这几年里认识的朋友。",
+   "weight": 1890,
+   "layer": 4,
+   "from": "2022-08",
+   "to": "2024-06",
+   "house_style": null,
+   "card_id": "person:xc97cc550a035",
+   "card": {
+    "kicker": "2022-08 — 2024-06",
+    "title": "阿雀",
+    "text": "这几年里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x2c64d20e989f",
+   "name": "小鲸",
+   "line": "大学里认识的学妹。",
+   "weight": 1886,
+   "layer": 4,
+   "from": "2024-07",
+   "to": "2026-04",
+   "house_style": null,
+   "card_id": "person:x2c64d20e989f",
+   "card": {
+    "kicker": "2024-07 — 2026-04",
+    "title": "小鲸",
+    "text": "大学里认识的学妹。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "xf4236a6e5526",
+   "name": "阿鲤",
+   "line": "校园生意里认识的朋友。",
+   "weight": 1885,
+   "layer": 4,
+   "from": "2025-07",
+   "to": "2026-01",
+   "house_style": null,
+   "card_id": "person:xf4236a6e5526",
+   "card": {
+    "kicker": "2025-07 — 2026-01",
+    "title": "阿鲤",
+    "text": "校园生意里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x26c51d605c6a",
+   "name": "小虾",
+   "line": "大学里认识的学妹。",
+   "weight": 1859,
+   "layer": 4,
+   "from": "2023-08",
+   "to": "2026-04",
+   "house_style": null,
+   "card_id": "person:x26c51d605c6a",
+   "card": {
+    "kicker": "2023-08 — 2026-04",
+    "title": "小虾",
+    "text": "大学里认识的学妹。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "xd1cd64d7f0fb",
+   "name": "阿贝",
+   "line": "常找的学长。",
+   "weight": 1836,
+   "layer": 4,
+   "from": "2023-11",
+   "to": "2026-10",
+   "house_style": null,
+   "card_id": "person:xd1cd64d7f0fb",
+   "card": {
+    "kicker": "2023-11 — 2026-10",
+    "title": "阿贝",
+    "text": "常找的学长。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x5dbdf5055e4e",
+   "name": "小橘",
+   "line": "这几年里认识的朋友。",
+   "weight": 1824,
+   "layer": 4,
+   "from": "2022-07",
+   "to": "2025-11",
+   "house_style": null,
+   "card_id": "person:x5dbdf5055e4e",
+   "card": {
+    "kicker": "2022-07 — 2025-11",
+    "title": "小橘",
+    "text": "这几年里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x6b1dceb0cb63",
+   "name": "阿柠",
+   "line": "这几年里认识的朋友。",
+   "weight": 1801,
+   "layer": 4,
+   "from": "2024-08",
+   "to": "2026-08",
+   "house_style": null,
+   "card_id": "person:x6b1dceb0cb63",
+   "card": {
+    "kicker": "2024-08 — 2026-08",
+    "title": "阿柠",
+    "text": "这几年里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x95a91077b30a",
+   "name": "小桔",
+   "line": "做校园推广时认识的朋友。",
+   "weight": 1774,
+   "layer": 4,
+   "from": "2023-07",
+   "to": "2026-04",
+   "house_style": null,
+   "card_id": "person:x95a91077b30a",
+   "card": {
+    "kicker": "2023-07 — 2026-04",
+    "title": "小桔",
+    "text": "做校园推广时认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x6bb1407b8867",
+   "name": "阿蕉",
+   "line": "这几年里认识的朋友。",
+   "weight": 1768,
+   "layer": 4,
+   "from": "2025-09",
+   "to": "2026-07",
+   "house_style": null,
+   "card_id": "person:x6bb1407b8867",
+   "card": {
+    "kicker": "2025-09 — 2026-07",
+    "title": "阿蕉",
+    "text": "这几年里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "xe63aee0a6e2c",
+   "name": "小椰",
+   "line": "这几年里认识的朋友。",
+   "weight": 1767,
+   "layer": 4,
+   "from": "2022-07",
+   "to": "2025-11",
+   "house_style": null,
+   "card_id": "person:xe63aee0a6e2c",
+   "card": {
+    "kicker": "2022-07 — 2025-11",
+    "title": "小椰",
+    "text": "这几年里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x9fec8acc63c2",
+   "name": "阿桑",
+   "line": "这几年里认识的朋友。",
+   "weight": 1758,
+   "layer": 4,
+   "from": "2023-04",
+   "to": "2023-08",
+   "house_style": null,
+   "card_id": "person:x9fec8acc63c2",
+   "card": {
+    "kicker": "2023-04 — 2023-08",
+    "title": "阿桑",
+    "text": "这几年里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x92b448ac1c59",
+   "name": "小榛",
+   "line": "工作上的直属上级。",
+   "weight": 1755,
+   "layer": 4,
+   "from": "2026-01",
+   "to": "2026-08",
+   "house_style": null,
+   "card_id": "person:x92b448ac1c59",
+   "card": {
+    "kicker": "2026-01 — 2026-08",
+    "title": "小榛",
+    "text": "工作上的直属上级。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x875239848da6",
+   "name": "阿栗",
+   "line": "这几年里认识的朋友。",
+   "weight": 1755,
+   "layer": 4,
+   "from": "2025-09",
+   "to": "2026-11",
+   "house_style": null,
+   "card_id": "person:x875239848da6",
+   "card": {
+    "kicker": "2025-09 — 2026-11",
+    "title": "阿栗",
+    "text": "这几年里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x9c04cd1fe8ec",
+   "name": "小核",
+   "line": "大学里认识的学弟。",
+   "weight": 1753,
+   "layer": 4,
+   "from": "2023-07",
+   "to": "2026-04",
+   "house_style": null,
+   "card_id": "person:x9c04cd1fe8ec",
+   "card": {
+    "kicker": "2023-07 — 2026-04",
+    "title": "小核",
+    "text": "大学里认识的学弟。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x20f28ced947a",
+   "name": "阿杉",
+   "line": "大学里认识的学弟。",
+   "weight": 1667,
+   "layer": 4,
+   "from": "2023-07",
+   "to": "2026-05",
+   "house_style": null,
+   "card_id": "person:x20f28ced947a",
+   "card": {
+    "kicker": "2023-07 — 2026-05",
+    "title": "阿杉",
+    "text": "大学里认识的学弟。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "xd951831a3da3",
+   "name": "小枫",
+   "line": "这几年里认识的朋友。",
+   "weight": 1644,
+   "layer": 4,
+   "from": "2023-05",
+   "to": "2026-05",
+   "house_style": null,
+   "card_id": "person:xd951831a3da3",
+   "card": {
+    "kicker": "2023-05 — 2026-05",
+    "title": "小枫",
+    "text": "这几年里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x0a82e2d6c3a4",
+   "name": "阿桦",
+   "line": "这几年里认识的朋友。",
+   "weight": 1637,
+   "layer": 4,
+   "from": "2025-09",
+   "to": "2026-07",
+   "house_style": null,
+   "card_id": "person:x0a82e2d6c3a4",
+   "card": {
+    "kicker": "2025-09 — 2026-07",
+    "title": "阿桦",
+    "text": "这几年里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x05a7b433e7f9",
+   "name": "小桐",
+   "line": "这几年里认识的朋友。",
+   "weight": 1625,
+   "layer": 4,
+   "from": "2024-08",
+   "to": "2026-04",
+   "house_style": null,
+   "card_id": "person:x05a7b433e7f9",
+   "card": {
+    "kicker": "2024-08 — 2026-04",
+    "title": "小桐",
+    "text": "这几年里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x6fecf21f55af",
+   "name": "阿槐",
+   "line": "大学里认识的学妹。",
+   "weight": 1623,
+   "layer": 4,
+   "from": "2023-07",
+   "to": "2026-04",
+   "house_style": null,
+   "card_id": "person:x6fecf21f55af",
+   "card": {
+    "kicker": "2023-07 — 2026-04",
+    "title": "阿槐",
+    "text": "大学里认识的学妹。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x3b50541fd5e8",
+   "name": "小柳",
+   "line": "大学里认识的学妹。",
+   "weight": 1617,
+   "layer": 4,
+   "from": "2024-07",
+   "to": "2026-11",
+   "house_style": null,
+   "card_id": "person:x3b50541fd5e8",
+   "card": {
+    "kicker": "2024-07 — 2026-11",
+    "title": "小柳",
+    "text": "大学里认识的学妹。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x5974b4059382",
+   "name": "阿芦",
+   "line": "这几年里认识的朋友。",
+   "weight": 1580,
+   "layer": 4,
+   "from": "2022-10",
+   "to": "2026-07",
+   "house_style": null,
+   "card_id": "person:x5974b4059382",
+   "card": {
+    "kicker": "2022-10 — 2026-07",
+    "title": "阿芦",
+    "text": "这几年里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x5fac08179a40",
+   "name": "小萱",
+   "line": "这几年里认识的朋友。",
+   "weight": 1576,
+   "layer": 4,
+   "from": "2023-07",
+   "to": "2026-04",
+   "house_style": null,
+   "card_id": "person:x5fac08179a40",
+   "card": {
+    "kicker": "2023-07 — 2026-04",
+    "title": "小萱",
+    "text": "这几年里认识的朋友。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "xc121d16eb14a",
+   "name": "山风",
+   "from": "",
+   "to": "",
+   "line": "我遇到的贵人之一。",
+   "weight": 0,
+   "layer": null,
+   "house_style": "home-grove",
+   "card_id": "person:xc121d16eb14a",
+   "card": {
+    "kicker": "人物小传",
+    "title": "山风",
+    "text": "我遇到的贵人之一。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x46b51d754d36",
+   "name": "远舟",
+   "from": "2026-05",
+   "to": "2026-11",
+   "line": "我遇到的贵人之一。",
+   "weight": 0,
+   "layer": null,
+   "house_style": "home-lantern",
+   "card_id": "person:x46b51d754d36",
+   "card": {
+    "kicker": "2026-05 — 2026-11",
+    "title": "远舟",
+    "text": "我遇到的贵人之一。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "x8ea55e1590f6",
+   "name": "北岸",
+   "from": "2025-10",
+   "to": "2026-10",
+   "line": "我遇到的贵人之一。",
+   "weight": 0,
+   "layer": null,
+   "house_style": "home-bridge",
+   "card_id": "person:x8ea55e1590f6",
+   "card": {
+    "kicker": "2025-10 — 2026-10",
+    "title": "北岸",
+    "text": "我遇到的贵人之一。",
+    "aside": ""
+   }
+  }
+ ],
+ "circles": [
+  {
+   "id": "xf3d19fa5f62f",
+   "name": "我的家",
+   "type": "家庭",
+   "from": "2019-09",
+   "to": "2026-11",
+   "role": "在外上学的小儿子，给家人看食堂，和哥哥商量回家前能不能晒被子。",
+   "mine": 1018,
+   "card_id": "circle:xf3d19fa5f62f",
+   "card": {
+    "kicker": "2019-09 — 2026-11",
+    "title": "我的家",
+    "text": "在外上学的小儿子，给家人看食堂，和哥哥商量回家前能不能晒被子。",
+    "aside": "家庭"
+   }
+  },
+  {
+   "id": "x2fc1bc11c5b5",
+   "name": "大学兴趣群",
+   "type": "兴趣/成长",
+   "from": "2022-06",
+   "to": "2026-02",
+   "role": "活跃接话者和信息整合者",
+   "mine": 3297,
+   "card_id": "circle:x2fc1bc11c5b5",
+   "card": {
+    "kicker": "2022-06 — 2026-02",
+    "title": "大学兴趣群",
+    "text": "活跃接话者和信息整合者",
+    "aside": "兴趣/成长"
+   }
+  },
+  {
+   "id": "x1b1be5d51230",
+   "name": "活动小组",
+   "type": "兴趣",
+   "from": "2022-08",
+   "to": "2023-06",
+   "role": "组织者：整理记录、发起打卡、策划活动、发布音频",
+   "mine": 4100,
+   "card_id": "circle:x1b1be5d51230",
+   "card": {
+    "kicker": "2022-08 — 2023-06",
+    "title": "活动小组",
+    "text": "组织者：整理记录、发起打卡、策划活动、发布音频",
+    "aside": "兴趣"
+   }
+  },
+  {
+   "id": "x6f75a50ddbe5",
+   "name": "宿舍群",
+   "type": "宿舍",
+   "from": "2022-09",
+   "to": "2026-06",
+   "role": "组织协调者、信息传递者、资料整理者",
+   "mine": 2587,
+   "card_id": "circle:x6f75a50ddbe5",
+   "card": {
+    "kicker": "2022-09 — 2026-06",
+    "title": "宿舍群",
+    "text": "组织协调者、信息传递者、资料整理者",
+    "aside": "宿舍"
+   }
+  },
+  {
+   "id": "xd39cd61e7d16",
+   "name": "2023 级新生交友群",
+   "type": "班级",
+   "from": "2023-07",
+   "to": "2026-09",
+   "role": "迎新组织者、校园信息解答人、小服务创业者",
+   "mine": 9892,
+   "card_id": "circle:xd39cd61e7d16",
+   "card": {
+    "kicker": "2023-07 — 2026-09",
+    "title": "2023 级新生交友群",
+    "text": "迎新组织者、校园信息解答人、小服务创业者",
+    "aside": "班级"
+   }
+  },
+  {
+   "id": "xad486f1edd3e",
+   "name": "校园推广项目群",
+   "type": "项目",
+   "from": "2023-11",
+   "to": "2024-09",
+   "role": "2023年11月，大家商量怎么让同学愿意填表认证。",
+   "mine": 3495,
+   "card_id": "circle:xad486f1edd3e",
+   "card": {
+    "kicker": "2023-11 — 2024-09",
+    "title": "校园推广项目群",
+    "text": "2023年11月，大家商量怎么让同学愿意填表认证。",
+    "aside": "项目"
+   }
+  },
+  {
+   "id": "x604bbe8d2edd",
+   "name": "2024 级新生群",
+   "type": "其他（新生服务/社群运营）",
+   "from": "2024-07",
+   "to": "2026-09",
+   "role": "群主兼学长答疑人，核验身份、发布信息、处理违规",
+   "mine": 5727,
+   "card_id": "circle:x604bbe8d2edd",
+   "card": {
+    "kicker": "2024-07 — 2026-09",
+    "title": "2024 级新生群",
+    "text": "群主兼学长答疑人，核验身份、发布信息、处理违规",
+    "aside": "其他（新生服务/社群运营）"
+   }
+  },
+  {
+   "id": "x98056928144b",
+   "name": "测试组",
+   "type": "工作",
+   "from": "2024-09",
+   "to": "2025-04",
+   "role": "一线推广和测试反馈者，负责跑寝室、配送、汇报订单并提出推广路径。",
+   "mine": 4198,
+   "card_id": "circle:x98056928144b",
+   "card": {
+    "kicker": "2024-09 — 2025-04",
+    "title": "测试组",
+    "text": "一线推广和测试反馈者，负责跑寝室、配送、汇报订单并提出推广路径。",
+    "aside": "工作"
+   }
+  },
+  {
+   "id": "xd6a50f04f142",
+   "name": "AI 学习共创群",
+   "type": "兴趣",
+   "from": "2025-09",
+   "to": "2026-11",
+   "role": "2025年9月，我得一遍遍跟新进群的人解释为什么不能顺手加好友。",
+   "mine": 4141,
+   "card_id": "circle:xd6a50f04f142",
+   "card": {
+    "kicker": "2025-09 — 2026-11",
+    "title": "AI 学习共创群",
+    "text": "2025年9月，我得一遍遍跟新进群的人解释为什么不能顺手加好友。",
+    "aside": "兴趣"
+   }
+  },
+  {
+   "id": "xd9e94cd9aeeb",
+   "name": "AI 同龄人群",
+   "type": "兴趣",
+   "from": "2025-09",
+   "to": "2026-11",
+   "role": "刚来北京的运营实习生，在这里试学习工具、讲求职经历，也把父亲和豆包的故事写给征集活动。",
+   "mine": 2576,
+   "card_id": "circle:xd9e94cd9aeeb",
+   "card": {
+    "kicker": "2025-09 — 2026-11",
+    "title": "AI 同龄人群",
+    "text": "刚来北京的运营实习生，在这里试学习工具、讲求职经历，也把父亲和豆包的故事写给征集活动。",
+    "aside": "兴趣"
+   }
+  },
+  {
+   "id": "xff1ef5391885",
+   "name": "兴趣小组",
+   "type": "兴趣",
+   "from": "2025-10",
+   "to": "2026-06",
+   "role": "新人、话题发起者",
+   "mine": 2464,
+   "card_id": "circle:xff1ef5391885",
+   "card": {
+    "kicker": "2025-10 — 2026-06",
+    "title": "兴趣小组",
+    "text": "新人、话题发起者",
+    "aside": "兴趣"
+   }
+  },
+  {
+   "id": "xaf26cc3617ee",
+   "name": "内容组",
+   "type": "工作",
+   "from": "2026-02",
+   "to": "2026-11",
+   "role": "写教程、采春晚素材，和同事一起做采访，也要解释自己先前的判断哪里出了错。",
+   "mine": 2116,
+   "card_id": "circle:xaf26cc3617ee",
+   "card": {
+    "kicker": "2026-02 — 2026-11",
+    "title": "内容组",
+    "text": "写教程、采春晚素材，和同事一起做采访，也要解释自己先前的判断哪里出了错。",
+    "aside": "工作"
+   }
+  },
+  {
+   "id": "x7e482928db4f",
+   "name": "Skill 交流群",
+   "type": "工作",
+   "from": "2026-03",
+   "to": "2026-10",
+   "role": "三月我邀请一位朋友进群。",
+   "mine": 4464,
+   "card_id": "circle:x7e482928db4f",
+   "card": {
+    "kicker": "2026-03 — 2026-10",
+    "title": "Skill 交流群",
+    "text": "三月我邀请一位朋友进群。",
+    "aside": "工作"
+   }
+  },
+  {
+   "id": "x8302892e2363",
+   "name": "内容团队群",
+   "type": "工作",
+   "from": "2026-07",
+   "to": "2026-11",
+   "role": "七月底，我还在群里玩笑说新同事一来选题就有救了。",
+   "mine": 2479,
+   "card_id": "circle:x8302892e2363",
+   "card": {
+    "kicker": "2026-07 — 2026-11",
+    "title": "内容团队群",
+    "text": "七月底，我还在群里玩笑说新同事一来选题就有救了。",
+    "aside": "工作"
+   }
+  }
+ ],
+ "moments": [
+  {
+   "date": "2022-06-23",
+   "title": "整理群友的自我介绍",
+   "text": "群里信息很快就会被下一条盖过去，我把大家的自我介绍收到一起。",
+   "kind": "joy",
+   "safe_for_inspiration": true,
+   "id": "5fcf6b542192583f7f9c",
+   "card_id": "moment:5fcf6b542192583f7f9c",
+   "card": {
+    "kicker": "2022-06-23",
+    "title": "整理群友的自我介绍",
+    "text": "群里信息很快就会被下一条盖过去，我把大家的自我介绍收到一起。",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2022-07-24",
+   "title": "帮朋友挑电脑",
+   "text": "阿乐请我帮忙选电脑，选购这件小事也成了两个人之间的一笔人情。",
+   "kind": "help",
+   "safe_for_inspiration": true,
+   "id": "90121de048838529a7b6",
+   "card_id": "moment:90121de048838529a7b6",
+   "card": {
+    "kicker": "2022-07-24",
+    "title": "帮朋友挑电脑",
+    "text": "阿乐请我帮忙选电脑，选购这件小事也成了两个人之间的一笔人情。",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2022-08-03",
+   "title": "交换照片和滤镜",
+   "text": "我们交换照片，聊滤镜和发型。",
+   "kind": "joy",
+   "date_basis": "这段对话的证据日期",
+   "safe_for_inspiration": true,
+   "id": "f605bd9b8f062848d442",
+   "card_id": "moment:f605bd9b8f062848d442",
+   "card": {
+    "kicker": "2022-08-03",
+    "title": "交换照片和滤镜",
+    "text": "我们交换照片，聊滤镜和发型。",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2022-08-04",
+   "title": "线上放映大鱼",
+   "text": "组织2群线上观影《大鱼》，从工具试错到最终放映完成",
+   "kind": "joy",
+   "date_basis": "这段对话的证据日期",
+   "safe_for_inspiration": true,
+   "id": "466ae5c469a451b5fc49",
+   "card_id": "moment:466ae5c469a451b5fc49",
+   "card": {
+    "kicker": "2022-08-04",
+    "title": "线上放映大鱼",
+    "text": "组织2群线上观影《大鱼》，从工具试错到最终放映完成",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2022-08-08",
+   "title": "把音频和活动资料收好",
+   "text": "在大家一起办活动的群里，我参与了记录和整理，把散落的材料放到一处。",
+   "kind": "joy",
+   "safe_for_inspiration": true,
+   "id": "6dbdd5f806718f9130ee",
+   "card_id": "moment:6dbdd5f806718f9130ee",
+   "card": {
+    "kicker": "2022-08-08",
+    "title": "把音频和活动资料收好",
+    "text": "在大家一起办活动的群里，我参与了记录和整理，把散落的材料放到一处。",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2022-08-08",
+   "title": "新电脑里的思维导图",
+   "text": "朋友刚拿到电脑，我远程帮他用工具，他回说思维导图软件已登录。",
+   "kind": "joy",
+   "date_basis": "这段对话的证据日期",
+   "safe_for_inspiration": true,
+   "id": "fb5afb7b23e581702c52",
+   "card_id": "moment:fb5afb7b23e581702c52",
+   "card": {
+    "kicker": "2022-08-08",
+    "title": "新电脑里的思维导图",
+    "text": "朋友刚拿到电脑，我远程帮他用工具，他回说思维导图软件已登录。",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2022-08-26",
+   "title": "一段没有伴奏的清唱",
+   "text": "清唱和自拍视频发出后，一位群友说原有印象被完全打破，群里给出鼓励",
+   "kind": "joy",
+   "date_basis": "这段对话的证据日期",
+   "safe_for_inspiration": true,
+   "id": "d528523d32cb326460be",
+   "card_id": "moment:d528523d32cb326460be",
+   "card": {
+    "kicker": "2022-08-26",
+    "title": "一段没有伴奏的清唱",
+    "text": "清唱和自拍视频发出后，一位群友说原有印象被完全打破，群里给出鼓励",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2022-09-02",
+   "title": "放映前试画质和声音",
+   "text": "组织失控玩家线上观影，测试画质声音、正式开场，活动后延伸为歌友会并分享录制链接",
+   "kind": "joy",
+   "date_basis": "这段对话的证据日期",
+   "safe_for_inspiration": true,
+   "id": "539ad8be56d481234453",
+   "card_id": "moment:539ad8be56d481234453",
+   "card": {
+    "kicker": "2022-09-02",
+    "title": "放映前试画质和声音",
+    "text": "组织失控玩家线上观影，测试画质声音、正式开场，活动后延伸为歌友会并分享录制链接",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2022-09-03",
+   "title": "一场歌友会之后",
+   "text": "一位群友在观影歌友会后直接表达感谢，给了很强的正向反馈",
+   "kind": "joy",
+   "date_basis": "这段对话的证据日期",
+   "safe_for_inspiration": true,
+   "id": "1676db8c197d6b8823f0",
+   "card_id": "moment:1676db8c197d6b8823f0",
+   "card": {
+    "kicker": "2022-09-03",
+    "title": "一场歌友会之后",
+    "text": "一位群友在观影歌友会后直接表达感谢，给了很强的正向反馈",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2022-09-04",
+   "title": "用声音讲球赛",
+   "text": "我聊比赛时声音激动，她听出了讲故事的感觉，给我一句很具体的鼓励。",
+   "kind": "joy",
+   "date_basis": "这段对话的证据日期",
+   "safe_for_inspiration": true,
+   "id": "9340095e0cafe5b2e859",
+   "card_id": "moment:9340095e0cafe5b2e859",
+   "card": {
+    "kicker": "2022-09-04",
+    "title": "用声音讲球赛",
+    "text": "我聊比赛时声音激动，她听出了讲故事的感觉，给我一句很具体的鼓励。",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2022-09-12",
+   "title": "宿舍里有人管这些小事",
+   "text": "开学之后，宿舍里的电费、卫生和门锁也进了群聊。",
+   "kind": "joy",
+   "safe_for_inspiration": true,
+   "id": "4137f076658be17f92bf",
+   "card_id": "moment:4137f076658be17f92bf",
+   "card": {
+    "kicker": "2022-09-12",
+    "title": "宿舍里有人管这些小事",
+    "text": "开学之后，宿舍里的电费、卫生和门锁也进了群聊。",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2022-11-17",
+   "title": "给全班录一段操作视频",
+   "text": "从企业微信求助转为录视频指导全班",
+   "kind": "joy",
+   "date_basis": "这段对话的证据日期",
+   "safe_for_inspiration": true,
+   "id": "f7077b7f2628f80991c4",
+   "card_id": "moment:f7077b7f2628f80991c4",
+   "card": {
+    "kicker": "2022-11-17",
+    "title": "给全班录一段操作视频",
+    "text": "从企业微信求助转为录视频指导全班",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2023-04-20",
+   "title": "在表格里找一个名字",
+   "text": "手机上找不到表格的搜索入口，我挨个看了七百多个名字。",
+   "kind": "joy",
+   "date_basis": "这段对话的证据日期",
+   "safe_for_inspiration": true,
+   "id": "f708f910925cdd890dcb",
+   "card_id": "moment:f708f910925cdd890dcb",
+   "card": {
+    "kicker": "2023-04-20",
+    "title": "在表格里找一个名字",
+    "text": "手机上找不到表格的搜索入口，我挨个看了七百多个名字。",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2023-06-01",
+   "title": "朗诵决赛前的鼓励",
+   "text": "朗诵比赛进决赛后的鼓励",
+   "kind": "joy",
+   "date_basis": "这段对话的证据日期",
+   "safe_for_inspiration": true,
+   "id": "9568209bca80dd55267d",
+   "card_id": "moment:9568209bca80dd55267d",
+   "card": {
+    "kicker": "2023-06-01",
+    "title": "朗诵决赛前的鼓励",
+    "text": "朗诵比赛进决赛后的鼓励",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2023-06-28",
+   "title": "深夜发来的复习材料",
+   "text": "深夜集中发近代史押题和英语材料",
+   "kind": "joy",
+   "date_basis": "这段对话的证据日期",
+   "safe_for_inspiration": true,
+   "id": "7acbc3cc0f731211cac0",
+   "card_id": "moment:7acbc3cc0f731211cac0",
+   "card": {
+    "kicker": "2023-06-28",
+    "title": "深夜发来的复习材料",
+    "text": "深夜集中发近代史押题和英语材料",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2023-07-09",
+   "title": "把学习资料留在群里",
+   "text": "除了交日志，我把学习用的聊天资料、目标管理课件和产品介绍放进群。",
+   "kind": "joy",
+   "date_basis": "这段对话的证据日期",
+   "safe_for_inspiration": true,
+   "id": "1cea21cd0fef59900db0",
+   "card_id": "moment:1cea21cd0fef59900db0",
+   "card": {
+    "kicker": "2023-07-09",
+    "title": "把学习资料留在群里",
+    "text": "除了交日志，我把学习用的聊天资料、目标管理课件和产品介绍放进群。",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2023-08-03",
+   "title": "立秋的奶茶和床品",
+   "text": "她替我在QQ群里留心有没有人需要床品，领了立秋的奶茶红包，还答应继续留意。",
+   "kind": "joy",
+   "date_basis": "这段对话的证据日期",
+   "safe_for_inspiration": true,
+   "id": "50be69efdba61615f00c",
+   "card_id": "moment:50be69efdba61615f00c",
+   "card": {
+    "kicker": "2023-08-03",
+    "title": "立秋的奶茶和床品",
+    "text": "她替我在QQ群里留心有没有人需要床品，领了立秋的奶茶红包，还答应继续留意。",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2023-08-29",
+   "title": "课表上的班级数",
+   "text": "我发课表后，同学指出上面不止我说的两个班，帮我发现说错了。",
+   "kind": "joy",
+   "date_basis": "这段对话的证据日期",
+   "safe_for_inspiration": true,
+   "id": "654535c62627c67f98fa",
+   "card_id": "moment:654535c62627c67f98fa",
+   "card": {
+    "kicker": "2023-08-29",
+    "title": "课表上的班级数",
+    "text": "我发课表后，同学指出上面不止我说的两个班，帮我发现说错了。",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2023-09-04",
+   "title": "把校园画给新生看",
+   "text": "迎新时我把校园平面图标出来，让新生问路时有图可看。",
+   "kind": "help",
+   "safe_for_inspiration": true,
+   "id": "467aff35057554128939",
+   "card_id": "moment:467aff35057554128939",
+   "card": {
+    "kicker": "2023-09-04",
+    "title": "把校园画给新生看",
+    "text": "迎新时我把校园平面图标出来，让新生问路时有图可看。",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2023-09-04",
+   "title": "图书馆的自习室在几楼",
+   "text": "图书馆自习室在四楼、团购隔天到等校园实用信息",
+   "kind": "joy",
+   "date_basis": "这段对话的证据日期",
+   "safe_for_inspiration": true,
+   "id": "07b41f22faccbe888ad6",
+   "card_id": "moment:07b41f22faccbe888ad6",
+   "card": {
+    "kicker": "2023-09-04",
+    "title": "图书馆的自习室在几楼",
+    "text": "图书馆自习室在四楼、团购隔天到等校园实用信息",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2023-09-06",
+   "title": "请朋友看看实习简历",
+   "text": "看我的实习简历，给了肯定",
+   "kind": "joy",
+   "date_basis": "这段对话的证据日期",
+   "safe_for_inspiration": true,
+   "id": "6eeda383d5ccbba65645",
+   "card_id": "moment:6eeda383d5ccbba65645",
+   "card": {
+    "kicker": "2023-09-06",
+    "title": "请朋友看看实习简历",
+    "text": "看我的实习简历，给了肯定",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2023-09-10",
+   "title": "竞选结果有人回来报信",
+   "text": "我把竞选材料给她之后，她还记得回来告诉我选上了。",
+   "kind": "joy",
+   "date_basis": "这段对话的证据日期",
+   "safe_for_inspiration": true,
+   "id": "496c7fab68a30df98af6",
+   "card_id": "moment:496c7fab68a30df98af6",
+   "card": {
+    "kicker": "2023-09-10",
+    "title": "竞选结果有人回来报信",
+    "text": "我把竞选材料给她之后，她还记得回来告诉我选上了。",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2023-09-12",
+   "title": "来营业厅时带的奶茶",
+   "text": "来营业厅找我办卡，带了奶茶",
+   "kind": "joy",
+   "date_basis": "这段对话的证据日期",
+   "safe_for_inspiration": true,
+   "id": "67ec5d185a3424568a48",
+   "card_id": "moment:67ec5d185a3424568a48",
+   "card": {
+    "kicker": "2023-09-12",
+    "title": "来营业厅时带的奶茶",
+    "text": "来营业厅找我办卡，带了奶茶",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2023-09-27",
+   "title": "篮球课的一次投篮",
+   "text": "我讲了自己在篮球课上被老师纠正投篮的经历，他后来真的选了那位老师。",
+   "kind": "joy",
+   "date_basis": "这段对话的证据日期",
+   "safe_for_inspiration": true,
+   "id": "1e8e6e840c57c107e1fd",
+   "card_id": "moment:1e8e6e840c57c107e1fd",
+   "card": {
+    "kicker": "2023-09-27",
+    "title": "篮球课的一次投篮",
+    "text": "我讲了自己在篮球课上被老师纠正投篮的经历，他后来真的选了那位老师。",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2024-03-13",
+   "title": "简历辅导的机会",
+   "text": "简历培训时我拿到一次老师单独辅导的机会，想听听简历以外的建议。",
+   "kind": "joy",
+   "date_basis": "这段对话的证据日期",
+   "safe_for_inspiration": true,
+   "id": "b99496df636b236c10cb",
+   "card_id": "moment:b99496df636b236c10cb",
+   "card": {
+    "kicker": "2024-03-13",
+    "title": "简历辅导的机会",
+    "text": "简历培训时我拿到一次老师单独辅导的机会，想听听简历以外的建议。",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2024-03-13",
+   "title": "一段招募同学的视频",
+   "text": "发完视频，有同学表示想来二组。",
+   "kind": "joy",
+   "date_basis": "这段对话的证据日期",
+   "safe_for_inspiration": true,
+   "id": "a67e9bfca43585a89765",
+   "card_id": "moment:a67e9bfca43585a89765",
+   "card": {
+    "kicker": "2024-03-13",
+    "title": "一段招募同学的视频",
+    "text": "发完视频，有同学表示想来二组。",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2024-03-18",
+   "title": "图书馆第五排",
+   "text": "帮我在图书馆占座，我直接赶去第五排。",
+   "kind": "joy",
+   "date_basis": "这段对话的证据日期",
+   "safe_for_inspiration": true,
+   "id": "2c0ab80f7493051ef6f3",
+   "card_id": "moment:2c0ab80f7493051ef6f3",
+   "card": {
+    "kicker": "2024-03-18",
+    "title": "图书馆第五排",
+    "text": "帮我在图书馆占座，我直接赶去第五排。",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2024-03-18",
+   "title": "简历、信息表和自评",
+   "text": "我把简历、信息表和自评分别统计。",
+   "kind": "joy",
+   "date_basis": "这段对话的证据日期",
+   "safe_for_inspiration": true,
+   "id": "aededdd590b155dbba99",
+   "card_id": "moment:aededdd590b155dbba99",
+   "card": {
+    "kicker": "2024-03-18",
+    "title": "简历、信息表和自评",
+    "text": "我把简历、信息表和自评分别统计。",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2024-03-20",
+   "title": "取餐袋上的接龙号码",
+   "text": "我把口味和取餐时间做成模板，又建议老板用马克笔在袋上写接龙序号，出餐时好找人。",
+   "kind": "joy",
+   "date_basis": "这段对话的证据日期",
+   "safe_for_inspiration": true,
+   "id": "f25813e8c0befa94b3af",
+   "card_id": "moment:f25813e8c0befa94b3af",
+   "card": {
+    "kicker": "2024-03-20",
+    "title": "取餐袋上的接龙号码",
+    "text": "我把口味和取餐时间做成模板，又建议老板用马克笔在袋上写接龙序号，出餐时好找人。",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2024-03-26",
+   "title": "比赛的目标清单",
+   "text": "我列完直播电商比赛的目标清单，她直接把信任给到。",
+   "kind": "joy",
+   "date_basis": "这段对话的证据日期",
+   "safe_for_inspiration": true,
+   "id": "864886daa16d311559ce",
+   "card_id": "moment:864886daa16d311559ce",
+   "card": {
+    "kicker": "2024-03-26",
+    "title": "比赛的目标清单",
+    "text": "我列完直播电商比赛的目标清单，她直接把信任给到。",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2024-03-29",
+   "title": "拍给同学看的寻宝线索",
+   "text": "二十九日下午，我把难找的卡片位置拍成照片，分几次往群里放，有人问时间我就回答。",
+   "kind": "joy",
+   "date_basis": "这段对话的证据日期",
+   "safe_for_inspiration": true,
+   "id": "f342b8fa5dbd534bb9cc",
+   "card_id": "moment:f342b8fa5dbd534bb9cc",
+   "card": {
+    "kicker": "2024-03-29",
+    "title": "拍给同学看的寻宝线索",
+    "text": "二十九日下午，我把难找的卡片位置拍成照片，分几次往群里放，有人问时间我就回答。",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2024-04-21",
+   "title": "用地面的线条拍照",
+   "text": "一条摄影建议：地面有线条让照片更有深度",
+   "kind": "joy",
+   "date_basis": "这段对话的证据日期",
+   "safe_for_inspiration": true,
+   "id": "b9ae2d2c740e03e76fcb",
+   "card_id": "moment:b9ae2d2c740e03e76fcb",
+   "card": {
+    "kicker": "2024-04-21",
+    "title": "用地面的线条拍照",
+    "text": "一条摄影建议：地面有线条让照片更有深度",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2024-04-29",
+   "title": "借一辆自行车去郊外",
+   "text": "想一个人去郊外，他肯借车，也提醒雨天骑行小心。",
+   "kind": "joy",
+   "date_basis": "这段对话的证据日期",
+   "safe_for_inspiration": true,
+   "id": "1a6c816b74630ce59ba4",
+   "card_id": "moment:1a6c816b74630ce59ba4",
+   "card": {
+    "kicker": "2024-04-29",
+    "title": "借一辆自行车去郊外",
+    "text": "想一个人去郊外，他肯借车，也提醒雨天骑行小心。",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2024-05-03",
+   "title": "一张角色扮演照片",
+   "text": "看我的 COS 照片，指出眼神管理的问题",
+   "kind": "joy",
+   "date_basis": "这段对话的证据日期",
+   "safe_for_inspiration": true,
+   "id": "77478081ef5936cccd8d",
+   "card_id": "moment:77478081ef5936cccd8d",
+   "card": {
+    "kicker": "2024-05-03",
+    "title": "一张角色扮演照片",
+    "text": "看我的 COS 照片，指出眼神管理的问题",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2024-05-07",
+   "title": "驾考前一起看点位",
+   "text": "科二考前细抠点位技巧，吐槽我写复盘笔记",
+   "kind": "joy",
+   "date_basis": "这段对话的证据日期",
+   "safe_for_inspiration": true,
+   "id": "b79ddcfee5b5e013ec6c",
+   "card_id": "moment:b79ddcfee5b5e013ec6c",
+   "card": {
+    "kicker": "2024-05-07",
+    "title": "驾考前一起看点位",
+    "text": "科二考前细抠点位技巧，吐槽我写复盘笔记",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2024-05-09",
+   "title": "拿着风景照片问构图",
+   "text": "得知她一直在拍照，我挑了手机里的风景照问构图。",
+   "kind": "joy",
+   "date_basis": "这段对话的证据日期",
+   "safe_for_inspiration": true,
+   "id": "9dffab36bd1f9bd7eb26",
+   "card_id": "moment:9dffab36bd1f9bd7eb26",
+   "card": {
+    "kicker": "2024-05-09",
+    "title": "拿着风景照片问构图",
+    "text": "得知她一直在拍照，我挑了手机里的风景照问构图。",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2024-08-01",
+   "title": "开学前量一量宿舍",
+   "text": "返校直播、现场测量宿舍尺寸和浴室收费、视频带看宿舍",
+   "kind": "joy",
+   "date_basis": "这段对话的证据日期",
+   "safe_for_inspiration": true,
+   "id": "3cd6ae2e109069d208d8",
+   "card_id": "moment:3cd6ae2e109069d208d8",
+   "card": {
+    "kicker": "2024-08-01",
+    "title": "开学前量一量宿舍",
+    "text": "返校直播、现场测量宿舍尺寸和浴室收费、视频带看宿舍",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2024-09-12",
+   "title": "从一间寝室跑到下一间",
+   "text": "我把跑寝室推广的进展带回项目群。从报订单开始，大家才能接着讨论下一步。",
+   "kind": "help",
+   "safe_for_inspiration": false,
+   "id": "36a1cd618239ea69ae1a",
+   "card_id": "moment:36a1cd618239ea69ae1a",
+   "card": {
+    "kicker": "2024-09-12",
+    "title": "从一间寝室跑到下一间",
+    "text": "我把跑寝室推广的进展带回项目群。从报订单开始，大家才能接着讨论下一步。",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2024-12-28",
+   "title": "年底带回来的好消息",
+   "text": "年末聊天里，我谈起自己的区域成绩。有人看见之前的忙碌落在了哪里。",
+   "kind": "joy",
+   "safe_for_inspiration": true,
+   "id": "5ff3f22bd54a4c7f094a",
+   "card_id": "moment:5ff3f22bd54a4c7f094a",
+   "card": {
+    "kicker": "2024-12-28",
+    "title": "年底带回来的好消息",
+    "text": "年末聊天里，我谈起自己的区域成绩。有人看见之前的忙碌落在了哪里。",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2025-03-10",
+   "title": "把现场视频留给大家",
+   "text": "分享活动现场视频供群友保存",
+   "kind": "joy",
+   "date_basis": "这段对话的证据日期",
+   "safe_for_inspiration": true,
+   "id": "83ffedbe3419ae64a29a",
+   "card_id": "moment:83ffedbe3419ae64a29a",
+   "card": {
+    "kicker": "2025-03-10",
+    "title": "把现场视频留给大家",
+    "text": "分享活动现场视频供群友保存",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2025-03-14",
+   "title": "从仓库到宿舍的一段路",
+   "text": "我提出通过小程序和宿舍配送处理积存商品。",
+   "kind": "joy",
+   "date_basis": "这段对话的证据日期",
+   "safe_for_inspiration": true,
+   "id": "86d7465ebdfd2924ad0c",
+   "card_id": "moment:86d7465ebdfd2924ad0c",
+   "card": {
+    "kicker": "2025-03-14",
+    "title": "从仓库到宿舍的一段路",
+    "text": "我提出通过小程序和宿舍配送处理积存商品。",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2025-05-25",
+   "title": "三桶羽毛球寄走了",
+   "text": "他帮我卖掉三桶羽毛球，报给我单价、寄走的时间，我们次日晚才核到345元。",
+   "kind": "joy",
+   "date_basis": "这段对话的证据日期",
+   "safe_for_inspiration": true,
+   "id": "6c47a29aef6891bc598b",
+   "card_id": "moment:6c47a29aef6891bc598b",
+   "card": {
+    "kicker": "2025-05-25",
+    "title": "三桶羽毛球寄走了",
+    "text": "他帮我卖掉三桶羽毛球，报给我单价、寄走的时间，我们次日晚才核到345元。",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2025-06-17",
+   "title": "期末的重点文档",
+   "text": "期末发我内容营销重点文档",
+   "kind": "joy",
+   "date_basis": "这段对话的证据日期",
+   "safe_for_inspiration": true,
+   "id": "054c8791887d79411d58",
+   "card_id": "moment:054c8791887d79411d58",
+   "card": {
+    "kicker": "2025-06-17",
+    "title": "期末的重点文档",
+    "text": "期末发我内容营销重点文档",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2025-09-04",
+   "title": "面试前一晚还有人陪我捋",
+   "text": "动身去北京找实习的那几天，木子哥和我一起梳理面试。",
+   "kind": "help",
+   "safe_for_inspiration": true,
+   "id": "976aba0913604e0907f8",
+   "card_id": "moment:976aba0913604e0907f8",
+   "card": {
+    "kicker": "2025-09-04",
+    "title": "面试前一晚还有人陪我捋",
+    "text": "动身去北京找实习的那几天，木子哥和我一起梳理面试。",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2025-09-17",
+   "title": "接机视频该留哪一个表情",
+   "text": "一位同事请大家看接机视频，我具体说了哪些字幕可以补、哪几处可以多给教授的表情。",
+   "kind": "joy",
+   "date_basis": "这段对话的证据日期",
+   "safe_for_inspiration": true,
+   "id": "ad8ef923aa5cba7f7d1f",
+   "card_id": "moment:ad8ef923aa5cba7f7d1f",
+   "card": {
+    "kicker": "2025-09-17",
+    "title": "接机视频该留哪一个表情",
+    "text": "一位同事请大家看接机视频，我具体说了哪些字幕可以补、哪几处可以多给教授的表情。",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2025-09-19",
+   "title": "学拍人像时有人接话",
+   "text": "我说自己拍不好人，他用自己刚学摄影时的经历回应我。",
+   "kind": "joy",
+   "date_basis": "这段对话的证据日期",
+   "safe_for_inspiration": true,
+   "id": "3a397cf992c74da55d76",
+   "card_id": "moment:3a397cf992c74da55d76",
+   "card": {
+    "kicker": "2025-09-19",
+    "title": "学拍人像时有人接话",
+    "text": "我说自己拍不好人，他用自己刚学摄影时的经历回应我。",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2025-09-22",
+   "title": "第一张海报的配色",
+   "text": "教我配色，我做出第一张海报。",
+   "kind": "joy",
+   "date_basis": "这段对话的证据日期",
+   "safe_for_inspiration": true,
+   "id": "c60402732371913d88a3",
+   "card_id": "moment:c60402732371913d88a3",
+   "card": {
+    "kicker": "2025-09-22",
+    "title": "第一张海报的配色",
+    "text": "教我配色，我做出第一张海报。",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2025-09-25",
+   "title": "写词之前先想说什么",
+   "text": "一位朋友提醒我，AI 写的词容易有股相似的味道，先想清楚要讲什么。",
+   "kind": "joy",
+   "date_basis": "这段对话的证据日期",
+   "safe_for_inspiration": true,
+   "id": "19aa7d8b2d41ec2c89f2",
+   "card_id": "moment:19aa7d8b2d41ec2c89f2",
+   "card": {
+    "kicker": "2025-09-25",
+    "title": "写词之前先想说什么",
+    "text": "一位朋友提醒我，AI 写的词容易有股相似的味道，先想清楚要讲什么。",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2025-09-25",
+   "title": "给异地的她做一首歌",
+   "text": "我分享给异地女友做的歌，把分工讲清楚：故事和细节来自我们，想法和修改由我提，词曲和歌词视频用AI生成。",
+   "kind": "joy",
+   "date_basis": "这段对话的证据日期",
+   "safe_for_inspiration": true,
+   "id": "1d6ef2fb893b393cc93a",
+   "card_id": "moment:1d6ef2fb893b393cc93a",
+   "card": {
+    "kicker": "2025-09-25",
+    "title": "给异地的她做一首歌",
+    "text": "我分享给异地女友做的歌，把分工讲清楚：故事和细节来自我们，想法和修改由我提，词曲和歌词视频用AI生成。",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2025-11-05",
+   "title": "通勤路上的早安",
+   "text": "实习时，阿禾早上会叫我起床。一个新城市里也有了熟悉的声音。",
+   "kind": "help",
+   "safe_for_inspiration": false,
+   "id": "95de807e10f6582a5880",
+   "card_id": "moment:95de807e10f6582a5880",
+   "card": {
+    "kicker": "2025-11-05",
+    "title": "通勤路上的早安",
+    "text": "实习时，阿禾早上会叫我起床。一个新城市里也有了熟悉的声音。",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2025-12-26",
+   "title": "初到职场的冬天",
+   "text": "这段先留白。",
+   "kind": "hard",
+   "safe_for_inspiration": false,
+   "id": "3eb2ea1a7e6d14d5add6",
+   "card_id": "moment:3eb2ea1a7e6d14d5add6",
+   "card": {
+    "kicker": "2025-12-26",
+    "title": "初到职场的冬天",
+    "text": "这段先留白。",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2026-01-12",
+   "title": "把视频配上字幕",
+   "text": "分享 OpenCode 提醒器、视频字幕工作流",
+   "kind": "joy",
+   "date_basis": "这段对话的证据日期",
+   "safe_for_inspiration": true,
+   "id": "77d4583d4de1612f8b28",
+   "card_id": "moment:77d4583d4de1612f8b28",
+   "card": {
+    "kicker": "2026-01-12",
+    "title": "把视频配上字幕",
+    "text": "分享 OpenCode 提醒器、视频字幕工作流",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2026-01-12",
+   "title": "从照片到三维文件",
+   "text": "有人解释 Artflo 怎样从照片走到三维文件。",
+   "kind": "joy",
+   "date_basis": "这段对话的证据日期",
+   "safe_for_inspiration": true,
+   "id": "3be3c428fcb440efc520",
+   "card_id": "moment:3be3c428fcb440efc520",
+   "card": {
+    "kicker": "2026-01-12",
+    "title": "从照片到三维文件",
+    "text": "有人解释 Artflo 怎样从照片走到三维文件。",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2026-01-23",
+   "title": "三小时后把东西做出来",
+   "text": "沿着教程继续试，我说自己花了三小时做成，两位群友给了肯定。",
+   "kind": "joy",
+   "date_basis": "这段对话的证据日期",
+   "safe_for_inspiration": true,
+   "id": "6d9724f76f901599f418",
+   "card_id": "moment:6d9724f76f901599f418",
+   "card": {
+    "kicker": "2026-01-23",
+    "title": "三小时后把东西做出来",
+    "text": "沿着教程继续试，我说自己花了三小时做成，两位群友给了肯定。",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2026-01-28",
+   "title": "教程里那张地图",
+   "text": "写教程碰到看不懂的地图配置，两位群友告诉我它管什么，用得上再装。",
+   "kind": "joy",
+   "date_basis": "这段对话的证据日期",
+   "safe_for_inspiration": true,
+   "id": "752f4f420996add83482",
+   "card_id": "moment:752f4f420996add83482",
+   "card": {
+    "kicker": "2026-01-28",
+    "title": "教程里那张地图",
+    "text": "写教程碰到看不懂的地图配置，两位群友告诉我它管什么，用得上再装。",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2026-02-14",
+   "title": "春节比赛的两个赛道",
+   "text": "我帮群友分清春节特别赛和常规赛，看到另一位参赛者的作品有传播，提议一起去比赛群分享。",
+   "kind": "joy",
+   "date_basis": "这段对话的证据日期",
+   "safe_for_inspiration": true,
+   "id": "e40d9c2627b49699dc24",
+   "card_id": "moment:e40d9c2627b49699dc24",
+   "card": {
+    "kicker": "2026-02-14",
+    "title": "春节比赛的两个赛道",
+    "text": "我帮群友分清春节特别赛和常规赛，看到另一位参赛者的作品有传播，提议一起去比赛群分享。",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2026-03-17",
+   "title": "提交了的作品和视频",
+   "text": "我给她们看了已经提交的参赛项目，附上仓库和视频。",
+   "kind": "joy",
+   "date_basis": "这段对话的证据日期",
+   "safe_for_inspiration": true,
+   "id": "0b0dde26705bfe6fe22e",
+   "card_id": "moment:0b0dde26705bfe6fe22e",
+   "card": {
+    "kicker": "2026-03-17",
+    "title": "提交了的作品和视频",
+    "text": "我给她们看了已经提交的参赛项目，附上仓库和视频。",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2026-03-20",
+   "title": "给自己的日常做一个工具",
+   "text": "我把崽子 OS 的开源项目和视频给大家看，讲它为什么围着我的运营、复盘和效率问题来做。",
+   "kind": "joy",
+   "date_basis": "这段对话的证据日期",
+   "safe_for_inspiration": true,
+   "id": "8c1931ce4539e0c4c1ec",
+   "card_id": "moment:8c1931ce4539e0c4c1ec",
+   "card": {
+    "kicker": "2026-03-20",
+    "title": "给自己的日常做一个工具",
+    "text": "我把崽子 OS 的开源项目和视频给大家看，讲它为什么围着我的运营、复盘和效率问题来做。",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2026-04-10",
+   "title": "四月，暂时合上的一页",
+   "text": "这段先留白。",
+   "kind": "hard",
+   "safe_for_inspiration": false,
+   "id": "d17b632e6e81f2f0a145",
+   "card_id": "moment:d17b632e6e81f2f0a145",
+   "card": {
+    "kicker": "2026-04-10",
+    "title": "四月，暂时合上的一页",
+    "text": "这段先留白。",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2026-04-17",
+   "title": "讲完以后，把材料发出来",
+   "text": "做完开放麦，我把演讲资料发给同事，别人可以指着具体的一页来问。",
+   "kind": "help",
+   "safe_for_inspiration": false,
+   "id": "cecb7eeb06ca7bbefabb",
+   "card_id": "moment:cecb7eeb06ca7bbefabb",
+   "card": {
+    "kicker": "2026-04-17",
+    "title": "讲完以后，把材料发出来",
+    "text": "做完开放麦，我把演讲资料发给同事，别人可以指着具体的一页来问。",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2026-06-15",
+   "title": "替我照看毕业的事",
+   "text": "阿岳帮我照应毕业证，毕业季有些事靠留在学校的人接了一把。",
+   "kind": "help",
+   "safe_for_inspiration": true,
+   "id": "2efbaf574ef657b1f68a",
+   "card_id": "moment:2efbaf574ef657b1f68a",
+   "card": {
+    "kicker": "2026-06-15",
+    "title": "替我照看毕业的事",
+    "text": "阿岳帮我照应毕业证，毕业季有些事靠留在学校的人接了一把。",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2026-06-16",
+   "title": "详情页和主图怎么分",
+   "text": "给做设计的朋友提议在电商设计器里生成参考文案，听他解释详情页和主图的差别。",
+   "kind": "joy",
+   "date_basis": "这段对话的证据日期",
+   "safe_for_inspiration": true,
+   "id": "1a205bccfc0b29d6ef04",
+   "card_id": "moment:1a205bccfc0b29d6ef04",
+   "card": {
+    "kicker": "2026-06-16",
+    "title": "详情页和主图怎么分",
+    "text": "给做设计的朋友提议在电商设计器里生成参考文案，听他解释详情页和主图的差别。",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2026-07-18",
+   "title": "一张合影怎么选",
+   "text": "我提供同一张合影的选图结果，提出视频、实况图上传需求。",
+   "kind": "joy",
+   "date_basis": "这段对话的证据日期",
+   "safe_for_inspiration": true,
+   "id": "8a4e3fb5c96762528594",
+   "card_id": "moment:8a4e3fb5c96762528594",
+   "card": {
+    "kicker": "2026-07-18",
+    "title": "一张合影怎么选",
+    "text": "我提供同一张合影的选图结果，提出视频、实况图上传需求。",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2026-07-21",
+   "title": "照片按时间找",
+   "text": "团队提供诊断包，我用文件选择和照片诊断都看到了新照片，尤其喜欢能按时间和相册找的方式。",
+   "kind": "joy",
+   "date_basis": "这段对话的证据日期",
+   "safe_for_inspiration": true,
+   "id": "ea7c285aaaa4053f6238",
+   "card_id": "moment:ea7c285aaaa4053f6238",
+   "card": {
+    "kicker": "2026-07-21",
+    "title": "照片按时间找",
+    "text": "团队提供诊断包，我用文件选择和照片诊断都看到了新照片，尤其喜欢能按时间和相册找的方式。",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2026-08-24",
+   "title": "散场之后发回相册",
+   "text": "开场前我提醒降温和可能下雨，散场先预告会发照片，随后真的把相册链接发回群里。",
+   "kind": "joy",
+   "date_basis": "这段对话的证据日期",
+   "safe_for_inspiration": true,
+   "id": "dfe27b8b2e9cb16a95b1",
+   "card_id": "moment:dfe27b8b2e9cb16a95b1",
+   "card": {
+    "kicker": "2026-08-24",
+    "title": "散场之后发回相册",
+    "text": "开场前我提醒降温和可能下雨，散场先预告会发照片，随后真的把相册链接发回群里。",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2026-09-10",
+   "title": "有人带我过钢琴关",
+   "text": "一位朋友教我怎么过钢琴关，又告诉我做这个游戏用了大约三天、三张重置卡。",
+   "kind": "joy",
+   "date_basis": "这段对话的证据日期",
+   "safe_for_inspiration": true,
+   "id": "a28fd00806b949c68de8",
+   "card_id": "moment:a28fd00806b949c68de8",
+   "card": {
+    "kicker": "2026-09-10",
+    "title": "有人带我过钢琴关",
+    "text": "一位朋友教我怎么过钢琴关，又告诉我做这个游戏用了大约三天、三张重置卡。",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2026-09-10",
+   "title": "小游戏在笔记本上什么样",
+   "text": "在 Mac Air 上试玩朋友做的游戏，反馈偶尔卡顿、文字遮挡画面。",
+   "kind": "joy",
+   "date_basis": "这段对话的证据日期",
+   "safe_for_inspiration": true,
+   "id": "1c2f5e44f2070dbfc4f6",
+   "card_id": "moment:1c2f5e44f2070dbfc4f6",
+   "card": {
+    "kicker": "2026-09-10",
+    "title": "小游戏在笔记本上什么样",
+    "text": "在 Mac Air 上试玩朋友做的游戏，反馈偶尔卡顿、文字遮挡画面。",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2026-09-18",
+   "title": "打印机的保养提醒",
+   "text": "一位群友提醒我做保养、找维修视频，还说耗材有替代选择。",
+   "kind": "joy",
+   "date_basis": "这段对话的证据日期",
+   "safe_for_inspiration": true,
+   "id": "49b43625b2bfb223a0d0",
+   "card_id": "moment:49b43625b2bfb223a0d0",
+   "card": {
+    "kicker": "2026-09-18",
+    "title": "打印机的保养提醒",
+    "text": "一位群友提醒我做保养、找维修视频，还说耗材有替代选择。",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2026-09-18",
+   "title": "想要一个能打印的外壳",
+   "text": "一位群友问外壳能不能找我打，我答应有空可帮忙，说清材料费、电费和邮费。",
+   "kind": "joy",
+   "date_basis": "这段对话的证据日期",
+   "safe_for_inspiration": true,
+   "id": "adbe0394db21c16a7a5f",
+   "card_id": "moment:adbe0394db21c16a7a5f",
+   "card": {
+    "kicker": "2026-09-18",
+    "title": "想要一个能打印的外壳",
+    "text": "一位群友问外壳能不能找我打，我答应有空可帮忙，说清材料费、电费和邮费。",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2026-10-10",
+   "title": "海报角落的一枚水印",
+   "text": "一次足疗结束，我注意到店里海报角落的豆包水印，回群分享了这件事。",
+   "kind": "joy",
+   "date_basis": "这段对话的证据日期",
+   "safe_for_inspiration": true,
+   "id": "ab854122744985ca88d7",
+   "card_id": "moment:ab854122744985ca88d7",
+   "card": {
+    "kicker": "2026-10-10",
+    "title": "海报角落的一枚水印",
+    "text": "一次足疗结束，我注意到店里海报角落的豆包水印，回群分享了这件事。",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2026-10-19",
+   "title": "短视频的颜色与节奏",
+   "text": "看了新同事的第一次短视频练习，肯定颜色，建议让节奏多一点变化。",
+   "kind": "joy",
+   "date_basis": "这段对话的证据日期",
+   "safe_for_inspiration": true,
+   "id": "92bb6390ebcadd3fe6f4",
+   "card_id": "moment:92bb6390ebcadd3fe6f4",
+   "card": {
+    "kicker": "2026-10-19",
+    "title": "短视频的颜色与节奏",
+    "text": "看了新同事的第一次短视频练习，肯定颜色，建议让节奏多一点变化。",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2026-11-05",
+   "title": "把新闻排成一张纸",
+   "text": "同事们讨论怎么让别的部门也看到新闻，我想到打印一张 A3 手抄报。记录只到提议这一步。",
+   "kind": "joy",
+   "safe_for_inspiration": true,
+   "id": "82fc5aa44ba0001eb475",
+   "card_id": "moment:82fc5aa44ba0001eb475",
+   "card": {
+    "kicker": "2026-11-05",
+    "title": "把新闻排成一张纸",
+    "text": "同事们讨论怎么让别的部门也看到新闻，我想到打印一张 A3 手抄报。记录只到提议这一步。",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2026-11-06",
+   "title": "两台电脑之间的演示",
+   "text": "用截图解释从一台电脑操控另一台，对方回话说自己明白了。",
+   "kind": "joy",
+   "date_basis": "这段对话的证据日期",
+   "safe_for_inspiration": true,
+   "id": "f5d72e4f21a8d1aaf210",
+   "card_id": "moment:f5d72e4f21a8d1aaf210",
+   "card": {
+    "kicker": "2026-11-06",
+    "title": "两台电脑之间的演示",
+    "text": "用截图解释从一台电脑操控另一台，对方回话说自己明白了。",
+    "aside": ""
+   }
+  },
+  {
+   "date": "2026-11-06",
+   "title": "把电脑文件画成集装箱",
+   "text": "一位同学提议把文件当成货物拖到海里；另一位同学则想把数据画成集装箱，在文件写进电脑前先检验。",
+   "kind": "joy",
+   "date_basis": "这段对话的证据日期",
+   "safe_for_inspiration": true,
+   "id": "f4624fda6c6c0bd0f413",
+   "card_id": "moment:f4624fda6c6c0bd0f413",
+   "card": {
+    "kicker": "2026-11-06",
+    "title": "把电脑文件画成集装箱",
+    "text": "一位同学提议把文件当成货物拖到海里；另一位同学则想把数据画成集装箱，在文件写进电脑前先检验。",
+    "aside": ""
+   }
+  }
+ ],
+ "version": 2,
+ "start": "2022-06",
+ "end": "2026-11",
+ "emotions": [
+  {
+   "month": "2022-06",
+   "pos": 41,
+   "neg": 17,
+   "peak_note": "群里信息很快就会被下一条盖过去，我把大家的自我介绍收到一起。",
+   "has_data": true,
+   "card_id": "month:2022-06",
+   "card": {
+    "kicker": "月灯",
+    "title": "2022-06",
+    "text": "整理到 41 处开心、17 处难受的片段。",
+    "aside": "群里信息很快就会被下一条盖过去，我把大家的自我介绍收到一起。"
+   }
+  },
+  {
+   "month": "2022-07",
+   "pos": 65,
+   "neg": 29,
+   "peak_note": "阿乐请我帮忙选电脑，选购这件小事也成了两个人之间的一笔人情。",
+   "has_data": true,
+   "card_id": "month:2022-07",
+   "card": {
+    "kicker": "月灯",
+    "title": "2022-07",
+    "text": "整理到 65 处开心、29 处难受的片段。",
+    "aside": "阿乐请我帮忙选电脑，选购这件小事也成了两个人之间的一笔人情。"
+   }
+  },
+  {
+   "month": "2022-08",
+   "pos": 95,
+   "neg": 13,
+   "peak_note": "在大家一起办活动的群里，我参与了记录和整理，把散落的材料放到一处。",
+   "has_data": true,
+   "card_id": "month:2022-08",
+   "card": {
+    "kicker": "月灯",
+    "title": "2022-08",
+    "text": "整理到 95 处开心、13 处难受的片段。",
+    "aside": "在大家一起办活动的群里，我参与了记录和整理，把散落的材料放到一处。"
+   }
+  },
+  {
+   "month": "2022-09",
+   "pos": 125,
+   "neg": 37,
+   "peak_note": "开学之后，宿舍里的电费、卫生和门锁也进了群聊。",
+   "has_data": true,
+   "card_id": "month:2022-09",
+   "card": {
+    "kicker": "月灯",
+    "title": "2022-09",
+    "text": "整理到 125 处开心、37 处难受的片段。",
+    "aside": "开学之后，宿舍里的电费、卫生和门锁也进了群聊。"
+   }
+  },
+  {
+   "month": "2022-10",
+   "pos": 39,
+   "neg": 32,
+   "peak_note": "",
+   "has_data": true,
+   "card_id": "month:2022-10",
+   "card": {
+    "kicker": "月灯",
+    "title": "2022-10",
+    "text": "整理到 39 处开心、32 处难受的片段。",
+    "aside": ""
+   }
+  },
+  {
+   "month": "2022-11",
+   "pos": 35,
+   "neg": 13,
+   "peak_note": "从企业微信求助转为录视频指导全班",
+   "has_data": true,
+   "card_id": "month:2022-11",
+   "card": {
+    "kicker": "月灯",
+    "title": "2022-11",
+    "text": "整理到 35 处开心、13 处难受的片段。",
+    "aside": "从企业微信求助转为录视频指导全班"
+   }
+  },
+  {
+   "month": "2022-12",
+   "pos": 31,
+   "neg": 27,
+   "peak_note": "",
+   "has_data": true,
+   "card_id": "month:2022-12",
+   "card": {
+    "kicker": "月灯",
+    "title": "2022-12",
+    "text": "整理到 31 处开心、27 处难受的片段。",
+    "aside": ""
+   }
+  },
+  {
+   "month": "2023-01",
+   "pos": 7,
+   "neg": 4,
+   "peak_note": "",
+   "has_data": true,
+   "card_id": "month:2023-01",
+   "card": {
+    "kicker": "月灯",
+    "title": "2023-01",
+    "text": "整理到 7 处开心、4 处难受的片段。",
+    "aside": ""
+   }
+  },
+  {
+   "month": "2023-02",
+   "pos": 11,
+   "neg": 0,
+   "peak_note": "",
+   "has_data": true,
+   "card_id": "month:2023-02",
+   "card": {
+    "kicker": "月灯",
+    "title": "2023-02",
+    "text": "整理到 11 处开心、0 处难受的片段。",
+    "aside": ""
+   }
+  },
+  {
+   "month": "2023-03",
+   "pos": 7,
+   "neg": 5,
+   "peak_note": "这段先留白。",
+   "has_data": true,
+   "card_id": "month:2023-03",
+   "card": {
+    "kicker": "月灯",
+    "title": "2023-03",
+    "text": "整理到 7 处开心、5 处难受的片段。",
+    "aside": "这段先留白。"
+   }
+  },
+  {
+   "month": "2023-04",
+   "pos": 56,
+   "neg": 24,
+   "peak_note": "手机上找不到表格的搜索入口，我挨个看了七百多个名字。",
+   "has_data": true,
+   "card_id": "month:2023-04",
+   "card": {
+    "kicker": "月灯",
+    "title": "2023-04",
+    "text": "整理到 56 处开心、24 处难受的片段。",
+    "aside": "手机上找不到表格的搜索入口，我挨个看了七百多个名字。"
+   }
+  },
+  {
+   "month": "2023-05",
+   "pos": 44,
+   "neg": 40,
+   "peak_note": "",
+   "has_data": true,
+   "card_id": "month:2023-05",
+   "card": {
+    "kicker": "月灯",
+    "title": "2023-05",
+    "text": "整理到 44 处开心、40 处难受的片段。",
+    "aside": ""
+   }
+  },
+  {
+   "month": "2023-06",
+   "pos": 89,
+   "neg": 81,
+   "peak_note": "朗诵比赛进决赛后的鼓励",
+   "has_data": true,
+   "card_id": "month:2023-06",
+   "card": {
+    "kicker": "月灯",
+    "title": "2023-06",
+    "text": "整理到 89 处开心、81 处难受的片段。",
+    "aside": "朗诵比赛进决赛后的鼓励"
+   }
+  },
+  {
+   "month": "2023-07",
+   "pos": 132,
+   "neg": 62,
+   "peak_note": "除了交日志，我把学习用的聊天资料、目标管理课件和产品介绍放进群。",
+   "has_data": true,
+   "card_id": "month:2023-07",
+   "card": {
+    "kicker": "月灯",
+    "title": "2023-07",
+    "text": "整理到 132 处开心、62 处难受的片段。",
+    "aside": "除了交日志，我把学习用的聊天资料、目标管理课件和产品介绍放进群。"
+   }
+  },
+  {
+   "month": "2023-08",
+   "pos": 103,
+   "neg": 83,
+   "peak_note": "她替我在QQ群里留心有没有人需要床品，领了立秋的奶茶红包，还答应继续留意。",
+   "has_data": true,
+   "card_id": "month:2023-08",
+   "card": {
+    "kicker": "月灯",
+    "title": "2023-08",
+    "text": "整理到 103 处开心、83 处难受的片段。",
+    "aside": "她替我在QQ群里留心有没有人需要床品，领了立秋的奶茶红包，还答应继续留意。"
+   }
+  },
+  {
+   "month": "2023-09",
+   "pos": 167,
+   "neg": 125,
+   "peak_note": "迎新时我把校园平面图标出来，让新生问路时有图可看。",
+   "has_data": true,
+   "card_id": "month:2023-09",
+   "card": {
+    "kicker": "月灯",
+    "title": "2023-09",
+    "text": "整理到 167 处开心、125 处难受的片段。",
+    "aside": "迎新时我把校园平面图标出来，让新生问路时有图可看。"
+   }
+  },
+  {
+   "month": "2023-10",
+   "pos": 89,
+   "neg": 99,
+   "peak_note": "",
+   "has_data": true,
+   "card_id": "month:2023-10",
+   "card": {
+    "kicker": "月灯",
+    "title": "2023-10",
+    "text": "整理到 89 处开心、99 处难受的片段。",
+    "aside": ""
+   }
+  },
+  {
+   "month": "2023-11",
+   "pos": 70,
+   "neg": 48,
+   "peak_note": "这段先留白。",
+   "has_data": true,
+   "card_id": "month:2023-11",
+   "card": {
+    "kicker": "月灯",
+    "title": "2023-11",
+    "text": "整理到 70 处开心、48 处难受的片段。",
+    "aside": "这段先留白。"
+   }
+  },
+  {
+   "month": "2023-12",
+   "pos": 44,
+   "neg": 55,
+   "peak_note": "这段先留白。",
+   "has_data": true,
+   "card_id": "month:2023-12",
+   "card": {
+    "kicker": "月灯",
+    "title": "2023-12",
+    "text": "整理到 44 处开心、55 处难受的片段。",
+    "aside": "这段先留白。"
+   }
+  },
+  {
+   "month": "2024-01",
+   "pos": 37,
+   "neg": 36,
+   "peak_note": "这段先留白。",
+   "has_data": true,
+   "card_id": "month:2024-01",
+   "card": {
+    "kicker": "月灯",
+    "title": "2024-01",
+    "text": "整理到 37 处开心、36 处难受的片段。",
+    "aside": "这段先留白。"
+   }
+  },
+  {
+   "month": "2024-02",
+   "pos": 45,
+   "neg": 9,
+   "peak_note": "",
+   "has_data": true,
+   "card_id": "month:2024-02",
+   "card": {
+    "kicker": "月灯",
+    "title": "2024-02",
+    "text": "整理到 45 处开心、9 处难受的片段。",
+    "aside": ""
+   }
+  },
+  {
+   "month": "2024-03",
+   "pos": 67,
+   "neg": 67,
+   "peak_note": "帮我在图书馆占座，我直接赶去第五排。",
+   "has_data": true,
+   "card_id": "month:2024-03",
+   "card": {
+    "kicker": "月灯",
+    "title": "2024-03",
+    "text": "整理到 67 处开心、67 处难受的片段。",
+    "aside": "帮我在图书馆占座，我直接赶去第五排。"
+   }
+  },
+  {
+   "month": "2024-04",
+   "pos": 72,
+   "neg": 35,
+   "peak_note": "一条摄影建议：地面有线条让照片更有深度",
+   "has_data": true,
+   "card_id": "month:2024-04",
+   "card": {
+    "kicker": "月灯",
+    "title": "2024-04",
+    "text": "整理到 72 处开心、35 处难受的片段。",
+    "aside": "一条摄影建议：地面有线条让照片更有深度"
+   }
+  },
+  {
+   "month": "2024-05",
+   "pos": 88,
+   "neg": 100,
+   "peak_note": "看我的 COS 照片，指出眼神管理的问题",
+   "has_data": true,
+   "card_id": "month:2024-05",
+   "card": {
+    "kicker": "月灯",
+    "title": "2024-05",
+    "text": "整理到 88 处开心、100 处难受的片段。",
+    "aside": "看我的 COS 照片，指出眼神管理的问题"
+   }
+  },
+  {
+   "month": "2024-06",
+   "pos": 67,
+   "neg": 59,
+   "peak_note": "这段先留白。",
+   "has_data": true,
+   "card_id": "month:2024-06",
+   "card": {
+    "kicker": "月灯",
+    "title": "2024-06",
+    "text": "整理到 67 处开心、59 处难受的片段。",
+    "aside": "这段先留白。"
+   }
+  },
+  {
+   "month": "2024-07",
+   "pos": 166,
+   "neg": 115,
+   "peak_note": "这段先留白。",
+   "has_data": true,
+   "card_id": "month:2024-07",
+   "card": {
+    "kicker": "月灯",
+    "title": "2024-07",
+    "text": "整理到 166 处开心、115 处难受的片段。",
+    "aside": "这段先留白。"
+   }
+  },
+  {
+   "month": "2024-08",
+   "pos": 127,
+   "neg": 131,
+   "peak_note": "返校直播、现场测量宿舍尺寸和浴室收费、视频带看宿舍",
+   "has_data": true,
+   "card_id": "month:2024-08",
+   "card": {
+    "kicker": "月灯",
+    "title": "2024-08",
+    "text": "整理到 127 处开心、131 处难受的片段。",
+    "aside": "返校直播、现场测量宿舍尺寸和浴室收费、视频带看宿舍"
+   }
+  },
+  {
+   "month": "2024-09",
+   "pos": 85,
+   "neg": 155,
+   "peak_note": "这段先留白。",
+   "has_data": true,
+   "card_id": "month:2024-09",
+   "card": {
+    "kicker": "月灯",
+    "title": "2024-09",
+    "text": "整理到 85 处开心、155 处难受的片段。",
+    "aside": "这段先留白。"
+   }
+  },
+  {
+   "month": "2024-10",
+   "pos": 56,
+   "neg": 113,
+   "peak_note": "这段先留白。",
+   "has_data": true,
+   "card_id": "month:2024-10",
+   "card": {
+    "kicker": "月灯",
+    "title": "2024-10",
+    "text": "整理到 56 处开心、113 处难受的片段。",
+    "aside": "这段先留白。"
+   }
+  },
+  {
+   "month": "2024-11",
+   "pos": 52,
+   "neg": 33,
+   "peak_note": "",
+   "has_data": true,
+   "card_id": "month:2024-11",
+   "card": {
+    "kicker": "月灯",
+    "title": "2024-11",
+    "text": "整理到 52 处开心、33 处难受的片段。",
+    "aside": ""
+   }
+  },
+  {
+   "month": "2024-12",
+   "pos": 53,
+   "neg": 48,
+   "peak_note": "年末聊天里，我谈起自己的区域成绩。有人看见之前的忙碌落在了哪里。",
+   "has_data": true,
+   "card_id": "month:2024-12",
+   "card": {
+    "kicker": "月灯",
+    "title": "2024-12",
+    "text": "整理到 53 处开心、48 处难受的片段。",
+    "aside": "年末聊天里，我谈起自己的区域成绩。有人看见之前的忙碌落在了哪里。"
+   }
+  },
+  {
+   "month": "2025-01",
+   "pos": 66,
+   "neg": 35,
+   "peak_note": "",
+   "has_data": true,
+   "card_id": "month:2025-01",
+   "card": {
+    "kicker": "月灯",
+    "title": "2025-01",
+    "text": "整理到 66 处开心、35 处难受的片段。",
+    "aside": ""
+   }
+  },
+  {
+   "month": "2025-02",
+   "pos": 48,
+   "neg": 28,
+   "peak_note": "",
+   "has_data": true,
+   "card_id": "month:2025-02",
+   "card": {
+    "kicker": "月灯",
+    "title": "2025-02",
+    "text": "整理到 48 处开心、28 处难受的片段。",
+    "aside": ""
+   }
+  },
+  {
+   "month": "2025-03",
+   "pos": 88,
+   "neg": 67,
+   "peak_note": "我提出通过小程序和宿舍配送处理积存商品。",
+   "has_data": true,
+   "card_id": "month:2025-03",
+   "card": {
+    "kicker": "月灯",
+    "title": "2025-03",
+    "text": "整理到 88 处开心、67 处难受的片段。",
+    "aside": "我提出通过小程序和宿舍配送处理积存商品。"
+   }
+  },
+  {
+   "month": "2025-04",
+   "pos": 104,
+   "neg": 130,
+   "peak_note": "这段先留白。",
+   "has_data": true,
+   "card_id": "month:2025-04",
+   "card": {
+    "kicker": "月灯",
+    "title": "2025-04",
+    "text": "整理到 104 处开心、130 处难受的片段。",
+    "aside": "这段先留白。"
+   }
+  },
+  {
+   "month": "2025-05",
+   "pos": 101,
+   "neg": 76,
+   "peak_note": "他帮我卖掉三桶羽毛球，报给我单价、寄走的时间，我们次日晚才核到345元。",
+   "has_data": true,
+   "card_id": "month:2025-05",
+   "card": {
+    "kicker": "月灯",
+    "title": "2025-05",
+    "text": "整理到 101 处开心、76 处难受的片段。",
+    "aside": "他帮我卖掉三桶羽毛球，报给我单价、寄走的时间，我们次日晚才核到345元。"
+   }
+  },
+  {
+   "month": "2025-06",
+   "pos": 61,
+   "neg": 67,
+   "peak_note": "期末发我内容营销重点文档",
+   "has_data": true,
+   "card_id": "month:2025-06",
+   "card": {
+    "kicker": "月灯",
+    "title": "2025-06",
+    "text": "整理到 61 处开心、67 处难受的片段。",
+    "aside": "期末发我内容营销重点文档"
+   }
+  },
+  {
+   "month": "2025-07",
+   "pos": 53,
+   "neg": 75,
+   "peak_note": "这段先留白。",
+   "has_data": true,
+   "card_id": "month:2025-07",
+   "card": {
+    "kicker": "月灯",
+    "title": "2025-07",
+    "text": "整理到 53 处开心、75 处难受的片段。",
+    "aside": "这段先留白。"
+   }
+  },
+  {
+   "month": "2025-08",
+   "pos": 216,
+   "neg": 87,
+   "peak_note": "",
+   "has_data": true,
+   "card_id": "month:2025-08",
+   "card": {
+    "kicker": "月灯",
+    "title": "2025-08",
+    "text": "整理到 216 处开心、87 处难受的片段。",
+    "aside": ""
+   }
+  },
+  {
+   "month": "2025-09",
+   "pos": 280,
+   "neg": 136,
+   "peak_note": "动身去北京找实习的那几天，木子哥和我一起梳理面试。",
+   "has_data": true,
+   "card_id": "month:2025-09",
+   "card": {
+    "kicker": "月灯",
+    "title": "2025-09",
+    "text": "整理到 280 处开心、136 处难受的片段。",
+    "aside": "动身去北京找实习的那几天，木子哥和我一起梳理面试。"
+   }
+  },
+  {
+   "month": "2025-10",
+   "pos": 220,
+   "neg": 97,
+   "peak_note": "这段先留白。",
+   "has_data": true,
+   "card_id": "month:2025-10",
+   "card": {
+    "kicker": "月灯",
+    "title": "2025-10",
+    "text": "整理到 220 处开心、97 处难受的片段。",
+    "aside": "这段先留白。"
+   }
+  },
+  {
+   "month": "2025-11",
+   "pos": 159,
+   "neg": 109,
+   "peak_note": "这段先留白。",
+   "has_data": true,
+   "card_id": "month:2025-11",
+   "card": {
+    "kicker": "月灯",
+    "title": "2025-11",
+    "text": "整理到 159 处开心、109 处难受的片段。",
+    "aside": "这段先留白。"
+   }
+  },
+  {
+   "month": "2025-12",
+   "pos": 104,
+   "neg": 98,
+   "peak_note": "这段先留白。",
+   "has_data": true,
+   "card_id": "month:2025-12",
+   "card": {
+    "kicker": "月灯",
+    "title": "2025-12",
+    "text": "整理到 104 处开心、98 处难受的片段。",
+    "aside": "这段先留白。"
+   }
+  },
+  {
+   "month": "2026-01",
+   "pos": 214,
+   "neg": 85,
+   "peak_note": "写教程碰到看不懂的地图配置，两位群友告诉我它管什么，用得上再装。",
+   "has_data": true,
+   "card_id": "month:2026-01",
+   "card": {
+    "kicker": "月灯",
+    "title": "2026-01",
+    "text": "整理到 214 处开心、85 处难受的片段。",
+    "aside": "写教程碰到看不懂的地图配置，两位群友告诉我它管什么，用得上再装。"
+   }
+  },
+  {
+   "month": "2026-02",
+   "pos": 230,
+   "neg": 80,
+   "peak_note": "我帮群友分清春节特别赛和常规赛，看到另一位参赛者的作品有传播，提议一起去比赛群分享。",
+   "has_data": true,
+   "card_id": "month:2026-02",
+   "card": {
+    "kicker": "月灯",
+    "title": "2026-02",
+    "text": "整理到 230 处开心、80 处难受的片段。",
+    "aside": "我帮群友分清春节特别赛和常规赛，看到另一位参赛者的作品有传播，提议一起去比赛群分享。"
+   }
+  },
+  {
+   "month": "2026-03",
+   "pos": 135,
+   "neg": 89,
+   "peak_note": "我给她们看了已经提交的参赛项目，附上仓库和视频。",
+   "has_data": true,
+   "card_id": "month:2026-03",
+   "card": {
+    "kicker": "月灯",
+    "title": "2026-03",
+    "text": "整理到 135 处开心、89 处难受的片段。",
+    "aside": "我给她们看了已经提交的参赛项目，附上仓库和视频。"
+   }
+  },
+  {
+   "month": "2026-04",
+   "pos": 196,
+   "neg": 122,
+   "peak_note": "这段先留白。",
+   "has_data": true,
+   "card_id": "month:2026-04",
+   "card": {
+    "kicker": "月灯",
+    "title": "2026-04",
+    "text": "整理到 196 处开心、122 处难受的片段。",
+    "aside": "这段先留白。"
+   }
+  },
+  {
+   "month": "2026-05",
+   "pos": 185,
+   "neg": 89,
+   "peak_note": "这段先留白。",
+   "has_data": true,
+   "card_id": "month:2026-05",
+   "card": {
+    "kicker": "月灯",
+    "title": "2026-05",
+    "text": "整理到 185 处开心、89 处难受的片段。",
+    "aside": "这段先留白。"
+   }
+  },
+  {
+   "month": "2026-06",
+   "pos": 247,
+   "neg": 99,
+   "peak_note": "阿岳帮我照应毕业证，毕业季有些事靠留在学校的人接了一把。",
+   "has_data": true,
+   "card_id": "month:2026-06",
+   "card": {
+    "kicker": "月灯",
+    "title": "2026-06",
+    "text": "整理到 247 处开心、99 处难受的片段。",
+    "aside": "阿岳帮我照应毕业证，毕业季有些事靠留在学校的人接了一把。"
+   }
+  },
+  {
+   "month": "2026-07",
+   "pos": 262,
+   "neg": 183,
+   "peak_note": "团队提供诊断包，我用文件选择和照片诊断都看到了新照片，尤其喜欢能按时间和相册找的方式。",
+   "has_data": true,
+   "card_id": "month:2026-07",
+   "card": {
+    "kicker": "月灯",
+    "title": "2026-07",
+    "text": "整理到 262 处开心、183 处难受的片段。",
+    "aside": "团队提供诊断包，我用文件选择和照片诊断都看到了新照片，尤其喜欢能按时间和相册找的方式。"
+   }
+  },
+  {
+   "month": "2026-08",
+   "pos": 210,
+   "neg": 104,
+   "peak_note": "开场前我提醒降温和可能下雨，散场先预告会发照片，随后真的把相册链接发回群里。",
+   "has_data": true,
+   "card_id": "month:2026-08",
+   "card": {
+    "kicker": "月灯",
+    "title": "2026-08",
+    "text": "整理到 210 处开心、104 处难受的片段。",
+    "aside": "开场前我提醒降温和可能下雨，散场先预告会发照片，随后真的把相册链接发回群里。"
+   }
+  },
+  {
+   "month": "2026-09",
+   "pos": 327,
+   "neg": 150,
+   "peak_note": "一位群友提醒我做保养、找维修视频，还说耗材有替代选择。",
+   "has_data": true,
+   "card_id": "month:2026-09",
+   "card": {
+    "kicker": "月灯",
+    "title": "2026-09",
+    "text": "整理到 327 处开心、150 处难受的片段。",
+    "aside": "一位群友提醒我做保养、找维修视频，还说耗材有替代选择。"
+   }
+  },
+  {
+   "month": "2026-10",
+   "pos": 233,
+   "neg": 216,
+   "peak_note": "看了新同事的第一次短视频练习，肯定颜色，建议让节奏多一点变化。",
+   "has_data": true,
+   "card_id": "month:2026-10",
+   "card": {
+    "kicker": "月灯",
+    "title": "2026-10",
+    "text": "整理到 233 处开心、216 处难受的片段。",
+    "aside": "看了新同事的第一次短视频练习，肯定颜色，建议让节奏多一点变化。"
+   }
+  },
+  {
+   "month": "2026-11",
+   "pos": 232,
+   "neg": 16,
+   "peak_note": "同事们讨论怎么让别的部门也看到新闻，我想到打印一张 A3 手抄报。记录只到提议这一步。",
+   "has_data": true,
+   "card_id": "month:2026-11",
+   "card": {
+    "kicker": "月灯",
+    "title": "2026-11",
+    "text": "整理到 232 处开心、16 处难受的片段。",
+    "aside": "同事们讨论怎么让别的部门也看到新闻，我想到打印一张 A3 手抄报。记录只到提议这一步。"
+   }
+  }
+ ],
+ "exhibits": [
+  {
+   "id": "ex-c42025bc6efa2ad96614",
+   "title": "笑眼校书人",
+   "date": "2026-11-18",
+   "summary": "今天整理生日礼物里的旧聊天时，Agent 回查了 58 个有疑点的片段，把说话人记错、几次对话拼到一起的地方改了回来。合并新一批记录时，还发现有些消息乍看重复。回看原始编号后，91 条都保留了下来。",
+   "reason": "你曾在一条消息里提到要核对信息源。今天整理旧聊天，又碰到两条看起来一样的记录究竟是不是同一条的问题。把回查时的小动作留下来：一个翻书的人，两只手各按住一处，眼睛正从左页看到右页。 这版用你的头像来演这个角色：保留斜刘海、闭眼笑和椭圆领扣，把翻页动作收成膝上的一本书。",
+   "status": "finished",
+   "print_state": "已留实物照片",
+   "model": "demo/models/ex-c42025bc6efa2ad96614.glb",
+   "format": "glb",
+   "model_revision": "18e935f50812ca4c-10ac50",
+   "photo_url": "/photos/ex-c42025bc6efa2ad96614",
+   "photo_file": "demo/photos/ex-c42025bc6efa2ad96614.jpg",
+   "source": "aholo",
+   "card_id": "ex-c42025bc6efa2ad96614",
+   "card": {
+    "kicker": "2026-11-18 · 已留实物照片",
+    "title": "笑眼校书人",
+    "text": "今天整理生日礼物里的旧聊天时，Agent 回查了 58 个有疑点的片段，把说话人记错、几次对话拼到一起的地方改了回来。合并新一批记录时，还发现有些消息乍看重复。回看原始编号后，91 条都保留了下来。",
+    "aside": "你曾在一条消息里提到要核对信息源。今天整理旧聊天，又碰到两条看起来一样的记录究竟是不是同一条的问题。把回查时的小动作留下来：一个翻书的人，两只手各按住一处，眼睛正从左页看到右页。\n\n这版用你的头像来演这个角色：保留斜刘海、闭眼笑和椭圆领扣，把翻页动作收成膝上的一本书。"
+   }
+  },
+  {
+   "id": "ex-7cc7f94cd361c924bf67",
+   "title": "夜班邮差",
+   "date": "",
+   "summary": "Aholo 角色样品。小水獭戴着歪邮帽，双爪抱着一封信。",
+   "reason": "",
+   "status": "prepared",
+   "print_state": "尚未开打",
+   "model": "demo/models/ex-7cc7f94cd361c924bf67.glb",
+   "format": "glb",
+   "model_revision": "18e934f384688a49-10ac54",
+   "photo_url": "",
+   "photo_file": "",
+   "source": "aholo",
+   "card_id": "ex-7cc7f94cd361c924bf67",
+   "card": {
+    "kicker": "样品 · 尚未开打",
+    "title": "夜班邮差",
+    "text": "Aholo 角色样品。小水獭戴着歪邮帽，双爪抱着一封信。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "ex-de62748ae39da5426eb9",
+   "title": "夜班邮差",
+   "date": "",
+   "summary": "收好今天最后一封信。",
+   "reason": "",
+   "status": "prepared",
+   "print_state": "尚未开打",
+   "model": "demo/models/ex-de62748ae39da5426eb9.glb",
+   "format": "glb",
+   "model_revision": "18e9324ac792500d-10abac",
+   "photo_url": "",
+   "photo_file": "",
+   "source": "sample",
+   "card_id": "ex-de62748ae39da5426eb9",
+   "card": {
+    "kicker": "样品 · 尚未开打",
+    "title": "夜班邮差",
+    "text": "收好今天最后一封信。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "ex-6c93b0ef7ca047af946b",
+   "title": "风停后的灯塔",
+   "date": "",
+   "summary": "把积压的一件事收了尾，傍晚出去透了口气。今天的心情从紧绷慢慢落到了平静。",
+   "reason": "",
+   "status": "submitted",
+   "print_state": "打印机已接单，尚无完工回执",
+   "model": "demo/models/ex-6c93b0ef7ca047af946b.glb",
+   "format": "glb",
+   "model_revision": "18e932499e8b2315-b9d80",
+   "photo_url": "",
+   "photo_file": "",
+   "source": "sample",
+   "card_id": "ex-6c93b0ef7ca047af946b",
+   "card": {
+    "kicker": "样品 · 打印机已接单，尚无完工回执",
+    "title": "风停后的灯塔",
+    "text": "把积压的一件事收了尾，傍晚出去透了口气。今天的心情从紧绷慢慢落到了平静。",
+    "aside": ""
+   }
+  }
+ ],
+ "sculptures": [
+  {
+   "id": "sc-flame-keeper",
+   "title": "捧火苗的小陶偶",
+   "stage": "生日蜡烛",
+   "description": "一只小熊蜷着膝，把一团火苗捧在手心。",
+   "placement": {
+    "zone": "entrance",
+    "slot": 0
+   },
+   "version_id": "flame-keeper-paint",
+   "model": "demo/models/sc-flame-keeper.glb",
+   "format": "glb",
+   "model_revision": "18e95d086327f977-70940",
+   "source": "aholo",
+   "card_id": "sc-flame-keeper",
+   "card": {
+    "kicker": "生日蜡烛",
+    "title": "捧火苗的小陶偶",
+    "text": "一只小熊蜷着膝，把一团火苗捧在手心。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "sc-pocket-stall",
+   "title": "口袋里的折叠摊",
+   "stage": "校园摊位",
+   "description": "掀开遮阳布，折起的木箱就成了摆卡片的小摊。",
+   "placement": {
+    "zone": "entrance",
+    "slot": 1
+   },
+   "version_id": "pocket-stall-paint",
+   "model": "demo/models/sc-pocket-stall.glb",
+   "format": "glb",
+   "model_revision": "18e95d0ce5a24ecb-ab098",
+   "source": "aholo",
+   "card_id": "sc-pocket-stall",
+   "card": {
+    "kicker": "校园摊位",
+    "title": "口袋里的折叠摊",
+    "text": "掀开遮阳布，折起的木箱就成了摆卡片的小摊。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "sc-chalk-desk",
+   "title": "桌角的一截粉笔",
+   "stage": "阶段场景",
+   "description": "粉笔落在半开书页的折痕里，桌面还留着写过字的磨痕。",
+   "placement": {
+    "zone": "era",
+    "slot": 1,
+    "era": "2022-06"
+   },
+   "version_id": "chalk-desk-paint",
+   "model": "demo/models/sc-chalk-desk.glb",
+   "format": "glb",
+   "model_revision": "18e95e70d4a4ce76-7a068",
+   "source": "aholo",
+   "card_id": "sc-chalk-desk",
+   "card": {
+    "kicker": "阶段场景",
+    "title": "桌角的一截粉笔",
+    "text": "粉笔落在半开书页的折痕里，桌面还留着写过字的磨痕。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "sc-open-suitcase",
+   "title": "摊开的行李箱",
+   "stage": "阶段场景",
+   "description": "弧形箱盖撑开，卷好的衣物之间插着一张空白票。",
+   "placement": {
+    "zone": "era",
+    "slot": 0,
+    "era": "2023-07"
+   },
+   "version_id": "open-suitcase-paint",
+   "model": "demo/models/sc-open-suitcase.glb",
+   "format": "glb",
+   "model_revision": "18e95ef4a0235d64-a8314",
+   "source": "aholo",
+   "card_id": "sc-open-suitcase",
+   "card": {
+    "kicker": "阶段场景",
+    "title": "摊开的行李箱",
+    "text": "弧形箱盖撑开，卷好的衣物之间插着一张空白票。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "sc-night-bunk",
+   "title": "床帘后的一盏灯",
+   "stage": "阶段场景",
+   "description": "上铺床帘掀起一角，把小台灯的光留给下铺。",
+   "placement": {
+    "zone": "era",
+    "slot": 0,
+    "era": "2022-09"
+   },
+   "version_id": "night-bunk-paint",
+   "model": "demo/models/sc-night-bunk.glb",
+   "format": "glb",
+   "model_revision": "18e95d102d94e49f-92c48",
+   "source": "aholo",
+   "card_id": "sc-night-bunk",
+   "card": {
+    "kicker": "阶段场景",
+    "title": "床帘后的一盏灯",
+    "text": "上铺床帘掀起一角，把小台灯的光留给下铺。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "sc-departing-platform",
+   "title": "月台边的长椅",
+   "stage": "阶段场景",
+   "description": "一只皮箱搁在长椅边，雨棚下面还有坐人的位置。",
+   "placement": {
+    "zone": "era",
+    "slot": 1,
+    "era": "2025-09"
+   },
+   "version_id": "departing-platform-paint",
+   "model": "demo/models/sc-departing-platform.glb",
+   "format": "glb",
+   "model_revision": "18e95eea75917b7c-9c4f8",
+   "source": "aholo",
+   "card_id": "sc-departing-platform",
+   "card": {
+    "kicker": "阶段场景",
+    "title": "月台边的长椅",
+    "text": "一只皮箱搁在长椅边，雨棚下面还有坐人的位置。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "sc-paper-noticeboard",
+   "title": "夹满纸片的留言墙",
+   "stage": "阶段场景",
+   "description": "纸片叠了三层，木夹子在风里各自朝着不同方向。",
+   "placement": {
+    "zone": "era",
+    "slot": 0,
+    "era": "2023-09"
+   },
+   "version_id": "paper-noticeboard-paint",
+   "model": "demo/models/sc-paper-noticeboard.glb",
+   "format": "glb",
+   "model_revision": "18e95eded2d1fb64-a4a9c",
+   "source": "aholo",
+   "card_id": "sc-paper-noticeboard",
+   "card": {
+    "kicker": "阶段场景",
+    "title": "夹满纸片的留言墙",
+    "text": "纸片叠了三层，木夹子在风里各自朝着不同方向。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "sc-kitchen-window",
+   "title": "窗边的双人饭桌",
+   "stage": "阶段场景",
+   "description": "窗帘下摆刚好碰到窗棂，热锅和两只碗挤在小圆桌上。",
+   "placement": {
+    "zone": "era",
+    "slot": 0,
+    "era": "2024-07"
+   },
+   "version_id": "kitchen-window-paint",
+   "model": "demo/models/sc-kitchen-window.glb",
+   "format": "glb",
+   "model_revision": "18e95ee16a1ab852-a267c",
+   "source": "aholo",
+   "card_id": "sc-kitchen-window",
+   "card": {
+    "kicker": "阶段场景",
+    "title": "窗边的双人饭桌",
+    "text": "窗帘下摆刚好碰到窗棂，热锅和两只碗挤在小圆桌上。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "sc-alley-stairs",
+   "title": "转角下楼的台阶",
+   "stage": "阶段场景",
+   "description": "砖墙与自行车之间，一段带扶手的台阶通向街面。",
+   "placement": {
+    "zone": "era",
+    "slot": 0,
+    "era": "2025-09"
+   },
+   "version_id": "alley-stairs-paint",
+   "model": "demo/models/sc-alley-stairs.glb",
+   "format": "glb",
+   "model_revision": "18e95ee4859a27d0-a5b40",
+   "source": "aholo",
+   "card_id": "sc-alley-stairs",
+   "card": {
+    "kicker": "阶段场景",
+    "title": "转角下楼的台阶",
+    "text": "砖墙与自行车之间，一段带扶手的台阶通向街面。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "sc-desk-corner",
+   "title": "亮着夹灯的工位",
+   "stage": "阶段场景",
+   "description": "笔记本、耳机和杯子挤在桌边，外套搭在椅背上。",
+   "placement": {
+    "zone": "era",
+    "slot": 0,
+    "era": "2026-01"
+   },
+   "version_id": "desk-corner-paint",
+   "model": "demo/models/sc-desk-corner.glb",
+   "format": "glb",
+   "model_revision": "18e95f4cfc17978b-a3dc0",
+   "source": "aholo",
+   "card_id": "sc-desk-corner",
+   "card": {
+    "kicker": "阶段场景",
+    "title": "亮着夹灯的工位",
+    "text": "笔记本、耳机和杯子挤在桌边，外套搭在椅背上。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "sc-laptop-index",
+   "title": "笔记本旁的索引卡",
+   "stage": "阶段场景",
+   "description": "笔记本旁有三层索引抽屉，一张纸卡从第二层露出来。",
+   "placement": {
+    "zone": "era",
+    "slot": 0,
+    "era": "2022-06"
+   },
+   "version_id": "laptop-index-paint",
+   "model": "demo/models/sc-laptop-index.glb",
+   "format": "glb",
+   "model_revision": "18e95f9fe61e1ce1-82ae4",
+   "source": "aholo",
+   "card_id": "sc-laptop-index",
+   "card": {
+    "kicker": "阶段场景",
+    "title": "笔记本旁的索引卡",
+    "text": "笔记本旁有三层索引抽屉，一张纸卡从第二层露出来。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "sc-news-printer",
+   "title": "工位边的小报打印机",
+   "stage": "阶段场景",
+   "description": "托盘里那张刚吐出来的纸还翘着。",
+   "placement": {
+    "zone": "era",
+    "slot": 0,
+    "era": "2026-07"
+   },
+   "version_id": "news-printer-paint",
+   "model": "demo/models/sc-news-printer.glb",
+   "format": "glb",
+   "model_revision": "18e95f954a3f74f9-86248",
+   "source": "aholo",
+   "card_id": "sc-news-printer",
+   "card": {
+    "kicker": "阶段场景",
+    "title": "工位边的小报打印机",
+    "text": "托盘里那张刚吐出来的纸还翘着。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "sc-broadcast-mic",
+   "title": "深夜广播的小话筒",
+   "stage": "阶段场景",
+   "description": "圆形防喷网偏在话筒一侧，两支短架落在同一个圆底座上。",
+   "placement": {
+    "zone": "era",
+    "slot": 1,
+    "era": "2022-09"
+   },
+   "version_id": "broadcast-mic-paint",
+   "model": "demo/models/sc-broadcast-mic.glb",
+   "format": "glb",
+   "model_revision": "18e95fa3f375591b-9bce8",
+   "source": "aholo",
+   "card_id": "sc-broadcast-mic",
+   "card": {
+    "kicker": "阶段场景",
+    "title": "深夜广播的小话筒",
+    "text": "圆形防喷网偏在话筒一侧，两支短架落在同一个圆底座上。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "sc-delivery-crate",
+   "title": "车筐里的纸箱",
+   "stage": "阶段场景",
+   "description": "两只封好的小箱排在车筐里，车还支在路边。",
+   "placement": {
+    "zone": "era",
+    "slot": 1,
+    "era": "2024-07",
+    "cameraYaw": 24,
+    "along": 1.2,
+    "out": 0.35
+   },
+   "version_id": "delivery-crate-paint",
+   "model": "demo/models/sc-delivery-crate.glb",
+   "format": "glb",
+   "model_revision": "18e95faca2dbd808-c3148",
+   "source": "aholo",
+   "card_id": "sc-delivery-crate",
+   "card": {
+    "kicker": "阶段场景",
+    "title": "车筐里的纸箱",
+    "text": "两只封好的小箱排在车筐里，车还支在路边。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "sc-folded-umbrella",
+   "title": "门边备着的伞",
+   "stage": "路边小物",
+   "description": "一把伞收在桶里，弯把手朝着门口。",
+   "placement": {
+    "zone": "moment",
+    "slot": 0,
+    "moment_id": "moment:dfe27b8b2e9cb16a95b1"
+   },
+   "version_id": "folded-umbrella-paint",
+   "model": "demo/models/sc-folded-umbrella.glb",
+   "format": "glb",
+   "model_revision": "18e961e13c3ba3d4-a4ee4",
+   "source": "aholo",
+   "card_id": "sc-folded-umbrella",
+   "card": {
+    "kicker": "路边小物",
+    "title": "门边备着的伞",
+    "text": "一把伞收在桶里，弯把手朝着门口。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "sc-ferry-beacon",
+   "title": "港边的信号灯",
+   "stage": "海边",
+   "description": "四面小窗把灯光送到水面。",
+   "placement": {
+    "zone": "coast",
+    "slot": 0
+   },
+   "version_id": "ferry-beacon-paint",
+   "model": "demo/models/sc-ferry-beacon.glb",
+   "format": "glb",
+   "model_revision": "18e95d13dbf9e8c2-ada98",
+   "source": "aholo",
+   "card_id": "sc-ferry-beacon",
+   "card": {
+    "kicker": "海边",
+    "title": "港边的信号灯",
+    "text": "四面小窗把灯光送到水面。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "sc-net-basket",
+   "title": "码头的网篓",
+   "stage": "海边",
+   "description": "半幅渔网从篓口翻下来，浮子还搭在网边。",
+   "placement": {
+    "zone": "coast",
+    "slot": 2
+   },
+   "version_id": "net-basket-paint",
+   "model": "demo/models/sc-net-basket.glb",
+   "format": "glb",
+   "model_revision": "18e9600e8bd41633-c0788",
+   "source": "aholo",
+   "card_id": "sc-net-basket",
+   "card": {
+    "kicker": "海边",
+    "title": "码头的网篓",
+    "text": "半幅渔网从篓口翻下来，浮子还搭在网边。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "sc-lantern-niche",
+   "title": "壁龛里的暖灯",
+   "stage": "展台",
+   "description": "拱形小壁龛里雕着层层弧纹，底边嵌着一枚琥珀色灯珠。",
+   "placement": {
+    "zone": "gallery",
+    "slot": 0
+   },
+   "version_id": "lantern-niche-paint",
+   "model": "demo/models/sc-lantern-niche.glb",
+   "format": "glb",
+   "model_revision": "18e9624ce077b1cd-7fe9c",
+   "source": "aholo",
+   "card_id": "sc-lantern-niche",
+   "card": {
+    "kicker": "展台",
+    "title": "壁龛里的暖灯",
+    "text": "拱形小壁龛里雕着层层弧纹，底边嵌着一枚琥珀色灯珠。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "sc-tool-caddy",
+   "title": "桌边的工具匣",
+   "stage": "展台",
+   "description": "环形刀头和木刮片从匣子里探出来，小抽屉盛着一卷砂纸。",
+   "placement": {
+    "zone": "gallery",
+    "slot": 2
+   },
+   "version_id": "tool-caddy-paint",
+   "model": "demo/models/sc-tool-caddy.glb",
+   "format": "glb",
+   "model_revision": "18e9623ed64e62d1-86bac",
+   "source": "aholo",
+   "card_id": "sc-tool-caddy",
+   "card": {
+    "kicker": "展台",
+    "title": "桌边的工具匣",
+    "text": "环形刀头和木刮片从匣子里探出来，小抽屉盛着一卷砂纸。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "sc-teacup-pair",
+   "title": "给你留的那一杯",
+   "stage": "路边小物",
+   "description": "茶托的两个浅窝各搁了一只杯子，杯耳一左一右。",
+   "placement": {
+    "zone": "moment",
+    "slot": 1,
+    "moment_id": "moment:67ec5d185a3424568a48"
+   },
+   "version_id": "teacup-pair-paint",
+   "model": "demo/models/sc-teacup-pair.glb",
+   "format": "glb",
+   "model_revision": "18e962505372039f-68350",
+   "source": "aholo",
+   "card_id": "sc-teacup-pair",
+   "card": {
+    "kicker": "路边小物",
+    "title": "给你留的那一杯",
+    "text": "茶托的两个浅窝各搁了一只杯子，杯耳一左一右。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "sc-intake-guide",
+   "title": "新生的第一只布袋",
+   "stage": "阶段场景",
+   "description": "卷好的铺盖从布袋侧边露出来，一本空白小册靠着袋身。",
+   "placement": {
+    "zone": "era",
+    "slot": 1,
+    "era": "2023-07"
+   },
+   "version_id": "intake-guide-paint",
+   "model": "demo/models/sc-intake-guide.glb",
+   "format": "glb",
+   "model_revision": "18e960140c4863ca-8f2b0",
+   "source": "aholo",
+   "card_id": "sc-intake-guide",
+   "card": {
+    "kicker": "阶段场景",
+    "title": "新生的第一只布袋",
+    "text": "卷好的铺盖从布袋侧边露出来，一本空白小册靠着袋身。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "sc-card-tray",
+   "title": "收摊时的卡片架",
+   "stage": "阶段场景",
+   "description": "抽屉推回去一半，零散的卡已经收成一摞。",
+   "placement": {
+    "zone": "era",
+    "slot": 1,
+    "era": "2023-09"
+   },
+   "version_id": "card-tray-paint",
+   "model": "demo/models/sc-card-tray.glb",
+   "format": "glb",
+   "model_revision": "18e960184a420354-a63e4",
+   "source": "aholo",
+   "card_id": "sc-card-tray",
+   "card": {
+    "kicker": "阶段场景",
+    "title": "收摊时的卡片架",
+    "text": "抽屉推回去一半，零散的卡已经收成一摞。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "sc-lectern-notes",
+   "title": "讲台上的翻页笔",
+   "stage": "阶段场景",
+   "description": "半卷讲稿在讲台上摊开，翻页笔贴着挡纸边。",
+   "placement": {
+    "zone": "era",
+    "slot": 1,
+    "era": "2026-01"
+   },
+   "version_id": "lectern-notes-paint",
+   "model": "demo/models/sc-lectern-notes.glb",
+   "format": "glb",
+   "model_revision": "18e960051d06de42-7b470",
+   "source": "aholo",
+   "card_id": "sc-lectern-notes",
+   "card": {
+    "kicker": "阶段场景",
+    "title": "讲台上的翻页笔",
+    "text": "半卷讲稿在讲台上摊开，翻页笔贴着挡纸边。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "sc-bookend-fox",
+   "title": "书堆里的狐狸书挡",
+   "stage": "路边小物",
+   "description": "小狐狸的尾巴托住了最外面的一本书。",
+   "placement": {
+    "zone": "moment",
+    "slot": 3,
+    "moment_id": "moment:7acbc3cc0f731211cac0"
+   },
+   "version_id": "bookend-fox-paint",
+   "model": "demo/models/sc-bookend-fox.glb",
+   "format": "glb",
+   "model_revision": "18e96257c2214024-92f34",
+   "source": "aholo",
+   "card_id": "sc-bookend-fox",
+   "card": {
+    "kicker": "路边小物",
+    "title": "书堆里的狐狸书挡",
+    "text": "小狐狸的尾巴托住了最外面的一本书。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "sc-field-recorder",
+   "title": "把声音收进盒子",
+   "stage": "路边小物",
+   "description": "两只转轮藏在方形小窗后面，侧边的短天线收在槽里。",
+   "placement": {
+    "zone": "moment",
+    "slot": 6,
+    "moment_id": "moment:6dbdd5f806718f9130ee"
+   },
+   "version_id": "field-recorder-paint",
+   "model": "demo/models/sc-field-recorder.glb",
+   "format": "glb",
+   "model_revision": "18e9625d960dfa23-9f878",
+   "source": "aholo",
+   "card_id": "sc-field-recorder",
+   "card": {
+    "kicker": "路边小物",
+    "title": "把声音收进盒子",
+    "text": "两只转轮藏在方形小窗后面，侧边的短天线收在槽里。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "sc-reel-projector",
+   "title": "双盘放映机",
+   "stage": "路边小物",
+   "description": "两只开孔片盘高低相对，胶片绕过机壳上的转轴。",
+   "placement": {
+    "zone": "moment",
+    "slot": 8,
+    "moment_id": "moment:466ae5c469a451b5fc49"
+   },
+   "version_id": "reel-projector-paint",
+   "model": "demo/models/sc-reel-projector.glb",
+   "format": "glb",
+   "model_revision": "18e962ba12a3bad3-ad214",
+   "source": "aholo",
+   "card_id": "sc-reel-projector",
+   "card": {
+    "kicker": "路边小物",
+    "title": "双盘放映机",
+    "text": "两只开孔片盘高低相对，胶片绕过机壳上的转轴。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "sc-filter-camera",
+   "title": "镜头前的滤片",
+   "stage": "路边小物",
+   "description": "方形机身一侧伸出圆形滤片架，收拢时正好盖住镜头。",
+   "placement": {
+    "zone": "moment",
+    "slot": 9,
+    "moment_id": "moment:f605bd9b8f062848d442"
+   },
+   "version_id": "filter-camera-paint",
+   "model": "demo/models/sc-filter-camera.glb",
+   "format": "glb",
+   "model_revision": "18e9631860ac7581-9ffd0",
+   "source": "aholo",
+   "card_id": "sc-filter-camera",
+   "card": {
+    "kicker": "路边小物",
+    "title": "镜头前的滤片",
+    "text": "方形机身一侧伸出圆形滤片架，收拢时正好盖住镜头。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "sc-hoop-bank",
+   "title": "篮圈里的球",
+   "stage": "路边小物",
+   "description": "半颗球落在篮圈里，粗网绳沿着球身向下收拢。",
+   "placement": {
+    "zone": "moment",
+    "slot": 10,
+    "moment_id": "moment:1e8e6e840c57c107e1fd"
+   },
+   "version_id": "hoop-bank-paint",
+   "model": "demo/models/sc-hoop-bank.glb",
+   "format": "glb",
+   "model_revision": "18e9631aabb0ae65-7ac54",
+   "source": "aholo",
+   "card_id": "sc-hoop-bank",
+   "card": {
+    "kicker": "路边小物",
+    "title": "篮圈里的球",
+    "text": "半颗球落在篮圈里，粗网绳沿着球身向下收拢。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "sc-pleated-map",
+   "title": "折页上的路线",
+   "stage": "路边小物",
+   "description": "一条浅浮雕小径穿过纸面的三道折痕，停在圆头定位钉旁。",
+   "placement": {
+    "zone": "moment",
+    "slot": 11,
+    "moment_id": "moment:467aff35057554128939"
+   },
+   "version_id": "pleated-map-paint",
+   "model": "demo/models/sc-pleated-map.glb",
+   "format": "glb",
+   "model_revision": "18e963139cb30b4b-6af98",
+   "source": "aholo",
+   "card_id": "sc-pleated-map",
+   "card": {
+    "kicker": "路边小物",
+    "title": "折页上的路线",
+    "text": "一条浅浮雕小径穿过纸面的三道折痕，停在圆头定位钉旁。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "sc-press-tray",
+   "title": "桌上的小报校样",
+   "stage": "阶段场景",
+   "description": "压纸条固定住一张大校样，短滚筒停在版面旁边。",
+   "placement": {
+    "zone": "era",
+    "slot": 1,
+    "era": "2026-07",
+    "scale": 0.8,
+    "yaw": 17,
+    "cameraYaw": -16
+   },
+   "version_id": "press-tray-paint",
+   "model": "demo/models/sc-press-tray.glb",
+   "format": "glb",
+   "model_revision": "18e95ffb44cdea74-83584",
+   "source": "aholo",
+   "card_id": "sc-press-tray",
+   "card": {
+    "kicker": "阶段场景",
+    "title": "桌上的小报校样",
+    "text": "压纸条固定住一张大校样，短滚筒停在版面旁边。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "sc-rope-bollard",
+   "title": "缠了麻绳的缆桩",
+   "stage": "海边",
+   "description": "粗麻绳沿着缆桩盘了好几圈，在桩脚收成一道绳结。",
+   "placement": {
+    "zone": "coast",
+    "slot": 1
+   },
+   "version_id": "rope-bollard-paint",
+   "model": "demo/models/sc-rope-bollard.glb",
+   "format": "glb",
+   "model_revision": "18e96087dc4c5f9b-aeef8",
+   "source": "aholo",
+   "card_id": "sc-rope-bollard",
+   "card": {
+    "kicker": "海边",
+    "title": "缠了麻绳的缆桩",
+    "text": "粗麻绳沿着缆桩盘了好几圈，在桩脚收成一道绳结。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "sc-shore-skiff",
+   "title": "靠岸的小划艇",
+   "stage": "海边",
+   "description": "一支短桨斜放在木船的坐板上。",
+   "placement": {
+    "zone": "coast",
+    "slot": 4,
+    "scale": 1.2,
+    "cameraYaw": 17
+   },
+   "version_id": "shore-skiff-paint",
+   "model": "demo/models/sc-shore-skiff.glb",
+   "format": "glb",
+   "model_revision": "18e9610fec9b9d66-87c14",
+   "source": "aholo",
+   "card_id": "sc-shore-skiff",
+   "card": {
+    "kicker": "海边",
+    "title": "靠岸的小划艇",
+    "text": "一支短桨斜放在木船的坐板上。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "sc-turntable",
+   "title": "留下指痕的转盘",
+   "stage": "展台",
+   "description": "一只尚未收口的小碗停在拉坯盘上。",
+   "placement": {
+    "zone": "gallery",
+    "slot": 3
+   },
+   "version_id": "turntable-paint",
+   "model": "demo/models/sc-turntable.glb",
+   "format": "glb",
+   "model_revision": "18e9631d1e289460-78608",
+   "source": "aholo",
+   "card_id": "sc-turntable",
+   "card": {
+    "kicker": "展台",
+    "title": "留下指痕的转盘",
+    "text": "一只尚未收口的小碗停在拉坯盘上。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "sc-shell-niche",
+   "title": "贝壳里的小灯",
+   "stage": "海边",
+   "description": "细褶围成一圈，把灯放在开口朝海的地方。",
+   "placement": {
+    "zone": "coast",
+    "slot": 5,
+    "yaw": -37
+   },
+   "version_id": "shell-niche-paint",
+   "model": "demo/models/sc-shell-niche.glb",
+   "format": "glb",
+   "model_revision": "18e961136bc482b1-6f2d8",
+   "source": "aholo",
+   "card_id": "sc-shell-niche",
+   "card": {
+    "kicker": "海边",
+    "title": "贝壳里的小灯",
+    "text": "细褶围成一圈，把灯放在开口朝海的地方。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "sc-lunch-satchel",
+   "title": "纸袋旁的粗笔",
+   "stage": "路边小物",
+   "description": "餐盒盖从纸袋里露出一边，粗笔插在袋侧的纸褶里。",
+   "placement": {
+    "zone": "moment",
+    "slot": 12,
+    "moment_id": "moment:f25813e8c0befa94b3af",
+    "yaw": -24
+   },
+   "version_id": "lunch-satchel-paint",
+   "model": "demo/models/sc-lunch-satchel.glb",
+   "format": "glb",
+   "model_revision": "18e96366fb1ab346-85118",
+   "source": "aholo",
+   "card_id": "sc-lunch-satchel",
+   "card": {
+    "kicker": "路边小物",
+    "title": "纸袋旁的粗笔",
+    "text": "餐盒盖从纸袋里露出一边，粗笔插在袋侧的纸褶里。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "sc-shuttle-tubes",
+   "title": "没盖好的球筒",
+   "stage": "路边小物",
+   "description": "三只球筒靠在同一个底座上，前面那只露出羽毛球的软木球头。",
+   "placement": {
+    "zone": "moment",
+    "slot": 14,
+    "moment_id": "moment:6c47a29aef6891bc598b"
+   },
+   "version_id": "shuttle-tubes-paint",
+   "model": "demo/models/sc-shuttle-tubes.glb",
+   "format": "glb",
+   "model_revision": "18e963908fd3b626-82140",
+   "source": "aholo",
+   "card_id": "sc-shuttle-tubes",
+   "card": {
+    "kicker": "路边小物",
+    "title": "没盖好的球筒",
+    "text": "三只球筒靠在同一个底座上，前面那只露出羽毛球的软木球头。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "sc-palette-fan",
+   "title": "转开的配色扇",
+   "stage": "路边小物",
+   "description": "五张厚纸卡在同一枚铆钉上张开，每一层露出一个窄角。",
+   "placement": {
+    "zone": "moment",
+    "slot": 15,
+    "moment_id": "moment:c60402732371913d88a3"
+   },
+   "version_id": "palette-fan-paint",
+   "model": "demo/models/sc-palette-fan.glb",
+   "format": "glb",
+   "model_revision": "18e9636239b02de5-72c0c",
+   "source": "aholo",
+   "card_id": "sc-palette-fan",
+   "card": {
+    "kicker": "路边小物",
+    "title": "转开的配色扇",
+    "text": "五张厚纸卡在同一枚铆钉上张开，每一层露出一个窄角。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "sc-keyboard-step",
+   "title": "被按下的小琴键",
+   "stage": "路边小物",
+   "description": "七枚浅色琴键里，有一枚落得比邻键低。",
+   "placement": {
+    "zone": "moment",
+    "slot": 16,
+    "moment_id": "moment:a28fd00806b949c68de8"
+   },
+   "version_id": "keyboard-step-paint",
+   "model": "demo/models/sc-keyboard-step.glb",
+   "format": "glb",
+   "model_revision": "18e963691db736e8-73214",
+   "source": "aholo",
+   "card_id": "sc-keyboard-step",
+   "card": {
+    "kicker": "路边小物",
+    "title": "被按下的小琴键",
+    "text": "七枚浅色琴键里，有一枚落得比邻键低。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "sc-cargo-lock",
+   "title": "吊起的集装箱",
+   "stage": "路边小物",
+   "description": "一个小箱子悬在两根短导轨之间，和底下的凹槽还差一格。",
+   "placement": {
+    "zone": "moment",
+    "slot": 17,
+    "moment_id": "moment:f4624fda6c6c0bd0f413"
+   },
+   "version_id": "cargo-lock-paint",
+   "model": "demo/models/sc-cargo-lock.glb",
+   "format": "glb",
+   "model_revision": "18e9638b052e62bb-c6840",
+   "source": "aholo",
+   "card_id": "sc-cargo-lock",
+   "card": {
+    "kicker": "路边小物",
+    "title": "吊起的集装箱",
+    "text": "一个小箱子悬在两根短导轨之间，和底下的凹槽还差一格。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "sc-tape-rule",
+   "title": "伸出一截的卷尺",
+   "stage": "路边小物",
+   "description": "尺带从圆壳拉出一小截，端钩卡在底板另一端的方木块上。",
+   "placement": {
+    "zone": "moment",
+    "slot": 13,
+    "moment_id": "moment:3cd6ae2e109069d208d8"
+   },
+   "version_id": "tape-rule-paint",
+   "model": "demo/models/sc-tape-rule.glb",
+   "format": "glb",
+   "model_revision": "18e9640ac09d203d-7c18c",
+   "source": "aholo",
+   "card_id": "sc-tape-rule",
+   "card": {
+    "kicker": "路边小物",
+    "title": "伸出一截的卷尺",
+    "text": "尺带从圆壳拉出一小截，端钩卡在底板另一端的方木块上。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "sc-birthday-cloche",
+   "title": "藏烛火的罩钟",
+   "stage": "展台",
+   "description": "玻璃罩的轮廓围住一支矮蜡烛，底座刻着一圈圆点。",
+   "placement": {
+    "zone": "gallery",
+    "slot": 1
+   },
+   "version_id": "birthday-cloche-paint",
+   "model": "demo/models/sc-birthday-cloche.glb",
+   "format": "glb",
+   "model_revision": "18e964a199d8f43c-762d4",
+   "source": "aholo",
+   "card_id": "sc-birthday-cloche",
+   "card": {
+    "kicker": "展台",
+    "title": "藏烛火的罩钟",
+    "text": "玻璃罩的轮廓围住一支矮蜡烛，底座刻着一圈圆点。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "sc-diploma-tube",
+   "title": "系着结的证书",
+   "stage": "路边小物",
+   "description": "缎带把纸卷束在一起，打开的硬封套托住它。",
+   "placement": {
+    "zone": "moment",
+    "slot": 19,
+    "moment_id": "moment:2efbaf574ef657b1f68a"
+   },
+   "version_id": "diploma-tube-paint",
+   "model": "demo/models/sc-diploma-tube.glb",
+   "format": "glb",
+   "model_revision": "18e9649accf60d05-86c5c",
+   "source": "aholo",
+   "card_id": "sc-diploma-tube",
+   "card": {
+    "kicker": "路边小物",
+    "title": "系着结的证书",
+    "text": "缎带把纸卷束在一起，打开的硬封套托住它。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "sc-shell-halves",
+   "title": "两瓣圆角外壳",
+   "stage": "路边小物",
+   "description": "上盖斜靠在下壳边，露出里面的卡扣与螺丝柱。",
+   "placement": {
+    "zone": "moment",
+    "slot": 20,
+    "moment_id": "moment:adbe0394db21c16a7a5f"
+   },
+   "version_id": "shell-halves-paint",
+   "model": "demo/models/sc-shell-halves.glb",
+   "format": "glb",
+   "model_revision": "18e964b2ffd35652-ad350",
+   "source": "aholo",
+   "card_id": "sc-shell-halves",
+   "card": {
+    "kicker": "路边小物",
+    "title": "两瓣圆角外壳",
+    "text": "上盖斜靠在下壳边，露出里面的卡扣与螺丝柱。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "sc-parking-guide",
+   "title": "转弯的小车",
+   "stage": "路边小物",
+   "description": "一辆矮车斜停在两根圆桩之间，车后的弧线还差半圈。",
+   "placement": {
+    "zone": "moment",
+    "slot": 21,
+    "moment_id": "moment:b79ddcfee5b5e013ec6c",
+    "yaw": -34,
+    "scale": 1.05
+   },
+   "version_id": "parking-guide-paint",
+   "model": "demo/models/sc-parking-guide.glb",
+   "format": "glb",
+   "model_revision": "18e9649ce61d3383-87d18",
+   "source": "aholo",
+   "card_id": "sc-parking-guide",
+   "card": {
+    "kicker": "路边小物",
+    "title": "转弯的小车",
+    "text": "一辆矮车斜停在两根圆桩之间，车后的弧线还差半圈。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "sc-pinned-cylinder",
+   "title": "掌心里的八音盒",
+   "stage": "路边小物",
+   "description": "转柄停在盒侧，滚筒上的一排细点正对着金属梳齿。",
+   "placement": {
+    "zone": "moment",
+    "slot": 22,
+    "moment_id": "moment:1d6ef2fb893b393cc93a"
+   },
+   "version_id": "pinned-cylinder-paint",
+   "model": "demo/models/sc-pinned-cylinder.glb",
+   "format": "glb",
+   "model_revision": "18e9653de68c7895-99cf4",
+   "source": "aholo",
+   "card_id": "sc-pinned-cylinder",
+   "card": {
+    "kicker": "路边小物",
+    "title": "掌心里的八音盒",
+    "text": "转柄停在盒侧，滚筒上的一排细点正对着金属梳齿。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "sc-recording-cradle",
+   "title": "夹在支架上的镜头",
+   "stage": "路边小物",
+   "description": "镜头夹在短臂尽头，正对着桌面的一页纸。",
+   "placement": {
+    "zone": "moment",
+    "slot": 23,
+    "moment_id": "moment:f7077b7f2628f80991c4"
+   },
+   "version_id": "recording-cradle-paint-r3",
+   "model": "demo/models/sc-recording-cradle.glb",
+   "format": "glb",
+   "model_revision": "18e9676731052e41-894e4",
+   "source": "aholo",
+   "card_id": "sc-recording-cradle",
+   "card": {
+    "kicker": "路边小物",
+    "title": "夹在支架上的镜头",
+    "text": "镜头夹在短臂尽头，正对着桌面的一页纸。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "sc-grid-loupe",
+   "title": "格子上的放大镜",
+   "stage": "路边小物",
+   "description": "放大镜压着其中一格，短柄还搭在纸边。",
+   "placement": {
+    "zone": "moment",
+    "slot": 24,
+    "moment_id": "moment:f708f910925cdd890dcb",
+    "yaw": -23
+   },
+   "version_id": "grid-loupe-paint",
+   "model": "demo/models/sc-grid-loupe.glb",
+   "format": "glb",
+   "model_revision": "18e965434cd92a53-9859c",
+   "source": "aholo",
+   "card_id": "sc-grid-loupe",
+   "card": {
+    "kicker": "路边小物",
+    "title": "格子上的放大镜",
+    "text": "放大镜压着其中一格，短柄还搭在纸边。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "sc-tide-post",
+   "title": "涨潮的刻度桩",
+   "stage": "海边",
+   "description": "一根潮位柱立在矮石边，沿柱身排列的环纹能用来对照水位。",
+   "placement": {
+    "zone": "coast",
+    "slot": 3
+   },
+   "version_id": "tide-post-paint",
+   "model": "demo/models/sc-tide-post.glb",
+   "format": "glb",
+   "model_revision": "18e960ed6bb9fb88-74830",
+   "source": "aholo",
+   "card_id": "sc-tide-post",
+   "card": {
+    "kicker": "海边",
+    "title": "涨潮的刻度桩",
+    "text": "一根潮位柱立在矮石边，沿柱身排列的环纹能用来对照水位。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "sc-reading-seat",
+   "title": "给你留的椅子",
+   "stage": "路边小物",
+   "description": "椅子的一边挂着布包，宽敞的座板仍然空着。",
+   "placement": {
+    "zone": "moment",
+    "slot": 18,
+    "moment_id": "moment:2c0ab80f7493051ef6f3"
+   },
+   "version_id": "reading-seat-paint",
+   "model": "demo/models/sc-reading-seat.glb",
+   "format": "glb",
+   "model_revision": "18e9654988b17486-81ce0",
+   "source": "aholo",
+   "card_id": "sc-reading-seat",
+   "card": {
+    "kicker": "路边小物",
+    "title": "给你留的椅子",
+    "text": "椅子的一边挂着布包，宽敞的座板仍然空着。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "sc-clue-stone",
+   "title": "石缝里的线索卡",
+   "stage": "路边小物",
+   "description": "两块扁石上下错开，石缝中露出纸卡带圆点的一角。",
+   "placement": {
+    "zone": "moment",
+    "slot": 25,
+    "moment_id": "moment:f342b8fa5dbd534bb9cc",
+    "yaw": -22
+   },
+   "version_id": "clue-stone-paint-r2",
+   "model": "demo/models/sc-clue-stone.glb",
+   "format": "glb",
+   "model_revision": "18e965b23aa9afd3-7a8cc",
+   "source": "aholo",
+   "card_id": "sc-clue-stone",
+   "card": {
+    "kicker": "路边小物",
+    "title": "石缝里的线索卡",
+    "text": "两块扁石上下错开，石缝中露出纸卡带圆点的一角。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "sc-vanishing-frame",
+   "title": "通向远处的线",
+   "stage": "路边小物",
+   "description": "两条浅浅的线从取景框脚下伸出，沿着斜面向前张开。",
+   "placement": {
+    "zone": "moment",
+    "slot": 26,
+    "moment_id": "moment:b9ae2d2c740e03e76fcb",
+    "yaw": 64
+   },
+   "version_id": "vanishing-frame-paint",
+   "model": "demo/models/sc-vanishing-frame.glb",
+   "format": "glb",
+   "model_revision": "18e9660dcb74b042-7c104",
+   "source": "aholo",
+   "card_id": "sc-vanishing-frame",
+   "card": {
+    "kicker": "路边小物",
+    "title": "通向远处的线",
+    "text": "两条浅浅的线从取景框脚下伸出，沿着斜面向前张开。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "sc-subtitle-splicer",
+   "title": "胶片上的两条空行",
+   "stage": "路边小物",
+   "description": "一段胶片穿过压片轮，画格下面留着两条浅槽。",
+   "placement": {
+    "zone": "moment",
+    "slot": 27,
+    "moment_id": "moment:77d4583d4de1612f8b28"
+   },
+   "version_id": "subtitle-splicer-paint",
+   "model": "demo/models/sc-subtitle-splicer.glb",
+   "format": "glb",
+   "model_revision": "18e96669808e60cb-8d1e0",
+   "source": "aholo",
+   "card_id": "sc-subtitle-splicer",
+   "card": {
+    "kicker": "路边小物",
+    "title": "胶片上的两条空行",
+    "text": "一段胶片穿过压片轮，画格下面留着两条浅槽。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "sc-relief-pear",
+   "title": "从平面长出来的梨",
+   "stage": "路边小物",
+   "description": "纸片上的梨只有轮廓，到前方就成了一颗完整的果子。",
+   "placement": {
+    "zone": "moment",
+    "slot": 28,
+    "moment_id": "moment:3be3c428fcb440efc520"
+   },
+   "version_id": "relief-pear-paint",
+   "model": "demo/models/sc-relief-pear.glb",
+   "format": "glb",
+   "model_revision": "18e96701fdfc0e22-7d784",
+   "source": "aholo",
+   "card_id": "sc-relief-pear",
+   "card": {
+    "kicker": "路边小物",
+    "title": "从平面长出来的梨",
+    "text": "纸片上的梨只有轮廓，到前方就成了一颗完整的果子。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "sc-filament-spool",
+   "title": "收住线尾的料盘",
+   "stage": "路边小物",
+   "description": "盘边露出一截圆线，末端刚好穿进一个小眼。",
+   "placement": {
+    "zone": "moment",
+    "slot": 29,
+    "moment_id": "moment:49b43625b2bfb223a0d0",
+    "yaw": -42
+   },
+   "version_id": "filament-spool-paint",
+   "model": "demo/models/sc-filament-spool.glb",
+   "format": "glb",
+   "model_revision": "18e96704970a5600-a19b8",
+   "source": "aholo",
+   "card_id": "sc-filament-spool",
+   "card": {
+    "kicker": "路边小物",
+    "title": "收住线尾的料盘",
+    "text": "盘边露出一截圆线，末端刚好穿进一个小眼。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "sc-corner-seal",
+   "title": "压在纸角的印章",
+   "stage": "路边小物",
+   "description": "方形印章侧放在叠起的白纸上，一圈细边围住空白的印面。",
+   "placement": {
+    "zone": "moment",
+    "slot": 30,
+    "moment_id": "moment:ab854122744985ca88d7",
+    "yaw": -46
+   },
+   "version_id": "corner-seal-paint",
+   "model": "demo/models/sc-corner-seal.glb",
+   "format": "glb",
+   "model_revision": "18e966d5b14cf19d-8857c",
+   "source": "aholo",
+   "card_id": "sc-corner-seal",
+   "card": {
+    "kicker": "路边小物",
+    "title": "压在纸角的印章",
+    "text": "方形印章侧放在叠起的白纸上，一圈细边围住空白的印面。",
+    "aside": ""
+   }
+  },
+  {
+   "id": "sc-branch-cards",
+   "title": "分出枝的索引片",
+   "stage": "路边小物",
+   "description": "几根弯枝绕着中央的圆片伸开，枝头各托着一张空白小牌。",
+   "placement": {
+    "zone": "moment",
+    "slot": 31,
+    "moment_id": "moment:fb5afb7b23e581702c52"
+   },
+   "version_id": "branch-cards-paint",
+   "model": "demo/models/sc-branch-cards.glb",
+   "format": "glb",
+   "model_revision": "18e966f01e90fd3f-85a0c",
+   "source": "aholo",
+   "card_id": "sc-branch-cards",
+   "card": {
+    "kicker": "路边小物",
+    "title": "分出枝的索引片",
+    "text": "几根弯枝绕着中央的圆片伸开，枝头各托着一张空白小牌。",
+    "aside": ""
+   }
+  }
+ ],
+ "houses": [
+  {
+   "id": "sc-home-common",
+   "title": "蓝瓦木屋",
+   "stage": "人物房屋",
+   "description": "蓝瓦木屋",
+   "placement": {
+    "zone": "home",
+    "slot": 0
+   },
+   "version_id": "home-common",
+   "model": "demo/models/sc-home-common.glb",
+   "format": "glb",
+   "model_revision": "18e95dd31f735392-bb3a8",
+   "source": "aholo",
+   "style": "home-common"
+  },
+  {
+   "id": "sc-home-pink",
+   "title": "猫耳奶油屋",
+   "stage": "人物房屋",
+   "description": "猫耳奶油屋",
+   "placement": {
+    "zone": "home",
+    "slot": 1
+   },
+   "version_id": "home-pink",
+   "model": "demo/models/sc-home-pink.glb",
+   "format": "glb",
+   "model_revision": "18e95dbedb2e0963-88690",
+   "source": "aholo",
+   "style": "home-pink"
+  },
+  {
+   "id": "sc-home-family",
+   "title": "暖灯团聚屋",
+   "stage": "人物房屋",
+   "description": "暖灯团聚屋",
+   "placement": {
+    "zone": "home",
+    "slot": 2
+   },
+   "version_id": "home-family",
+   "model": "demo/models/sc-home-family.glb",
+   "format": "glb",
+   "model_revision": "18e95dc2d364094a-89424",
+   "source": "aholo",
+   "style": "home-family"
+  },
+  {
+   "id": "sc-home-grove",
+   "title": "树冠木屋",
+   "stage": "人物房屋",
+   "description": "树冠木屋",
+   "placement": {
+    "zone": "home",
+    "slot": 3
+   },
+   "version_id": "home-grove",
+   "model": "demo/models/sc-home-grove.glb",
+   "format": "glb",
+   "model_revision": "18e95dc6e999f734-c9528",
+   "source": "aholo",
+   "style": "home-grove"
+  },
+  {
+   "id": "sc-home-ink",
+   "title": "墨瓦小阁",
+   "stage": "人物房屋",
+   "description": "墨瓦小阁",
+   "placement": {
+    "zone": "home",
+    "slot": 4
+   },
+   "version_id": "home-ink",
+   "model": "demo/models/sc-home-ink.glb",
+   "format": "glb",
+   "model_revision": "18e95dcb88295f33-99a68",
+   "source": "aholo",
+   "style": "home-ink"
+  },
+  {
+   "id": "sc-home-studio",
+   "title": "天窗工坊",
+   "stage": "人物房屋",
+   "description": "天窗工坊",
+   "placement": {
+    "zone": "home",
+    "slot": 5
+   },
+   "version_id": "home-studio",
+   "model": "demo/models/sc-home-studio.glb",
+   "format": "glb",
+   "model_revision": "18e95e10fcfb95e5-ac644",
+   "source": "aholo",
+   "style": "home-studio"
+  },
+  {
+   "id": "sc-home-lantern",
+   "title": "玻璃提灯屋",
+   "stage": "人物房屋",
+   "description": "玻璃提灯屋",
+   "placement": {
+    "zone": "home",
+    "slot": 6
+   },
+   "version_id": "home-lantern",
+   "model": "demo/models/sc-home-lantern.glb",
+   "format": "glb",
+   "model_revision": "18e95e68286c0dbb-7b944",
+   "source": "aholo",
+   "style": "home-lantern"
+  },
+  {
+   "id": "sc-home-bridge",
+   "title": "小拱桥茶屋",
+   "stage": "人物房屋",
+   "description": "小拱桥茶屋",
+   "placement": {
+    "zone": "home",
+    "slot": 7
+   },
+   "version_id": "home-bridge",
+   "model": "demo/models/sc-home-bridge.glb",
+   "format": "glb",
+   "model_revision": "18e95e7ad28068a4-84fd4",
+   "source": "aholo",
+   "style": "home-bridge"
+  },
+  {
+   "id": "sc-home-observatory",
+   "title": "圆顶星象屋",
+   "stage": "人物房屋",
+   "description": "圆顶星象屋",
+   "placement": {
+    "zone": "home",
+    "slot": 8
+   },
+   "version_id": "home-observatory",
+   "model": "demo/models/sc-home-observatory.glb",
+   "format": "glb",
+   "model_revision": "18e95e837ad3ddc1-b7880",
+   "source": "aholo",
+   "style": "home-observatory"
+  }
+ ],
+ "cards": {
+  "month:2022-06": {
+   "kicker": "月灯",
+   "title": "2022-06",
+   "text": "整理到 41 处开心、17 处难受的片段。",
+   "aside": "群里信息很快就会被下一条盖过去，我把大家的自我介绍收到一起。"
+  },
+  "month:2022-07": {
+   "kicker": "月灯",
+   "title": "2022-07",
+   "text": "整理到 65 处开心、29 处难受的片段。",
+   "aside": "阿乐请我帮忙选电脑，选购这件小事也成了两个人之间的一笔人情。"
+  },
+  "month:2022-08": {
+   "kicker": "月灯",
+   "title": "2022-08",
+   "text": "整理到 95 处开心、13 处难受的片段。",
+   "aside": "在大家一起办活动的群里，我参与了记录和整理，把散落的材料放到一处。"
+  },
+  "month:2022-09": {
+   "kicker": "月灯",
+   "title": "2022-09",
+   "text": "整理到 125 处开心、37 处难受的片段。",
+   "aside": "开学之后，宿舍里的电费、卫生和门锁也进了群聊。"
+  },
+  "month:2022-10": {
+   "kicker": "月灯",
+   "title": "2022-10",
+   "text": "整理到 39 处开心、32 处难受的片段。",
+   "aside": ""
+  },
+  "month:2022-11": {
+   "kicker": "月灯",
+   "title": "2022-11",
+   "text": "整理到 35 处开心、13 处难受的片段。",
+   "aside": "从企业微信求助转为录视频指导全班"
+  },
+  "month:2022-12": {
+   "kicker": "月灯",
+   "title": "2022-12",
+   "text": "整理到 31 处开心、27 处难受的片段。",
+   "aside": ""
+  },
+  "month:2023-01": {
+   "kicker": "月灯",
+   "title": "2023-01",
+   "text": "整理到 7 处开心、4 处难受的片段。",
+   "aside": ""
+  },
+  "month:2023-02": {
+   "kicker": "月灯",
+   "title": "2023-02",
+   "text": "整理到 11 处开心、0 处难受的片段。",
+   "aside": ""
+  },
+  "month:2023-03": {
+   "kicker": "月灯",
+   "title": "2023-03",
+   "text": "整理到 7 处开心、5 处难受的片段。",
+   "aside": "这段先留白。"
+  },
+  "month:2023-04": {
+   "kicker": "月灯",
+   "title": "2023-04",
+   "text": "整理到 56 处开心、24 处难受的片段。",
+   "aside": "手机上找不到表格的搜索入口，我挨个看了七百多个名字。"
+  },
+  "month:2023-05": {
+   "kicker": "月灯",
+   "title": "2023-05",
+   "text": "整理到 44 处开心、40 处难受的片段。",
+   "aside": ""
+  },
+  "month:2023-06": {
+   "kicker": "月灯",
+   "title": "2023-06",
+   "text": "整理到 89 处开心、81 处难受的片段。",
+   "aside": "朗诵比赛进决赛后的鼓励"
+  },
+  "month:2023-07": {
+   "kicker": "月灯",
+   "title": "2023-07",
+   "text": "整理到 132 处开心、62 处难受的片段。",
+   "aside": "除了交日志，我把学习用的聊天资料、目标管理课件和产品介绍放进群。"
+  },
+  "month:2023-08": {
+   "kicker": "月灯",
+   "title": "2023-08",
+   "text": "整理到 103 处开心、83 处难受的片段。",
+   "aside": "她替我在QQ群里留心有没有人需要床品，领了立秋的奶茶红包，还答应继续留意。"
+  },
+  "month:2023-09": {
+   "kicker": "月灯",
+   "title": "2023-09",
+   "text": "整理到 167 处开心、125 处难受的片段。",
+   "aside": "迎新时我把校园平面图标出来，让新生问路时有图可看。"
+  },
+  "month:2023-10": {
+   "kicker": "月灯",
+   "title": "2023-10",
+   "text": "整理到 89 处开心、99 处难受的片段。",
+   "aside": ""
+  },
+  "month:2023-11": {
+   "kicker": "月灯",
+   "title": "2023-11",
+   "text": "整理到 70 处开心、48 处难受的片段。",
+   "aside": "这段先留白。"
+  },
+  "month:2023-12": {
+   "kicker": "月灯",
+   "title": "2023-12",
+   "text": "整理到 44 处开心、55 处难受的片段。",
+   "aside": "这段先留白。"
+  },
+  "month:2024-01": {
+   "kicker": "月灯",
+   "title": "2024-01",
+   "text": "整理到 37 处开心、36 处难受的片段。",
+   "aside": "这段先留白。"
+  },
+  "month:2024-02": {
+   "kicker": "月灯",
+   "title": "2024-02",
+   "text": "整理到 45 处开心、9 处难受的片段。",
+   "aside": ""
+  },
+  "month:2024-03": {
+   "kicker": "月灯",
+   "title": "2024-03",
+   "text": "整理到 67 处开心、67 处难受的片段。",
+   "aside": "帮我在图书馆占座，我直接赶去第五排。"
+  },
+  "month:2024-04": {
+   "kicker": "月灯",
+   "title": "2024-04",
+   "text": "整理到 72 处开心、35 处难受的片段。",
+   "aside": "一条摄影建议：地面有线条让照片更有深度"
+  },
+  "month:2024-05": {
+   "kicker": "月灯",
+   "title": "2024-05",
+   "text": "整理到 88 处开心、100 处难受的片段。",
+   "aside": "看我的 COS 照片，指出眼神管理的问题"
+  },
+  "month:2024-06": {
+   "kicker": "月灯",
+   "title": "2024-06",
+   "text": "整理到 67 处开心、59 处难受的片段。",
+   "aside": "这段先留白。"
+  },
+  "month:2024-07": {
+   "kicker": "月灯",
+   "title": "2024-07",
+   "text": "整理到 166 处开心、115 处难受的片段。",
+   "aside": "这段先留白。"
+  },
+  "month:2024-08": {
+   "kicker": "月灯",
+   "title": "2024-08",
+   "text": "整理到 127 处开心、131 处难受的片段。",
+   "aside": "返校直播、现场测量宿舍尺寸和浴室收费、视频带看宿舍"
+  },
+  "month:2024-09": {
+   "kicker": "月灯",
+   "title": "2024-09",
+   "text": "整理到 85 处开心、155 处难受的片段。",
+   "aside": "这段先留白。"
+  },
+  "month:2024-10": {
+   "kicker": "月灯",
+   "title": "2024-10",
+   "text": "整理到 56 处开心、113 处难受的片段。",
+   "aside": "这段先留白。"
+  },
+  "month:2024-11": {
+   "kicker": "月灯",
+   "title": "2024-11",
+   "text": "整理到 52 处开心、33 处难受的片段。",
+   "aside": ""
+  },
+  "month:2024-12": {
+   "kicker": "月灯",
+   "title": "2024-12",
+   "text": "整理到 53 处开心、48 处难受的片段。",
+   "aside": "年末聊天里，我谈起自己的区域成绩。有人看见之前的忙碌落在了哪里。"
+  },
+  "month:2025-01": {
+   "kicker": "月灯",
+   "title": "2025-01",
+   "text": "整理到 66 处开心、35 处难受的片段。",
+   "aside": ""
+  },
+  "month:2025-02": {
+   "kicker": "月灯",
+   "title": "2025-02",
+   "text": "整理到 48 处开心、28 处难受的片段。",
+   "aside": ""
+  },
+  "month:2025-03": {
+   "kicker": "月灯",
+   "title": "2025-03",
+   "text": "整理到 88 处开心、67 处难受的片段。",
+   "aside": "我提出通过小程序和宿舍配送处理积存商品。"
+  },
+  "month:2025-04": {
+   "kicker": "月灯",
+   "title": "2025-04",
+   "text": "整理到 104 处开心、130 处难受的片段。",
+   "aside": "这段先留白。"
+  },
+  "month:2025-05": {
+   "kicker": "月灯",
+   "title": "2025-05",
+   "text": "整理到 101 处开心、76 处难受的片段。",
+   "aside": "他帮我卖掉三桶羽毛球，报给我单价、寄走的时间，我们次日晚才核到345元。"
+  },
+  "month:2025-06": {
+   "kicker": "月灯",
+   "title": "2025-06",
+   "text": "整理到 61 处开心、67 处难受的片段。",
+   "aside": "期末发我内容营销重点文档"
+  },
+  "month:2025-07": {
+   "kicker": "月灯",
+   "title": "2025-07",
+   "text": "整理到 53 处开心、75 处难受的片段。",
+   "aside": "这段先留白。"
+  },
+  "month:2025-08": {
+   "kicker": "月灯",
+   "title": "2025-08",
+   "text": "整理到 216 处开心、87 处难受的片段。",
+   "aside": ""
+  },
+  "month:2025-09": {
+   "kicker": "月灯",
+   "title": "2025-09",
+   "text": "整理到 280 处开心、136 处难受的片段。",
+   "aside": "动身去北京找实习的那几天，木子哥和我一起梳理面试。"
+  },
+  "month:2025-10": {
+   "kicker": "月灯",
+   "title": "2025-10",
+   "text": "整理到 220 处开心、97 处难受的片段。",
+   "aside": "这段先留白。"
+  },
+  "month:2025-11": {
+   "kicker": "月灯",
+   "title": "2025-11",
+   "text": "整理到 159 处开心、109 处难受的片段。",
+   "aside": "这段先留白。"
+  },
+  "month:2025-12": {
+   "kicker": "月灯",
+   "title": "2025-12",
+   "text": "整理到 104 处开心、98 处难受的片段。",
+   "aside": "这段先留白。"
+  },
+  "month:2026-01": {
+   "kicker": "月灯",
+   "title": "2026-01",
+   "text": "整理到 214 处开心、85 处难受的片段。",
+   "aside": "写教程碰到看不懂的地图配置，两位群友告诉我它管什么，用得上再装。"
+  },
+  "month:2026-02": {
+   "kicker": "月灯",
+   "title": "2026-02",
+   "text": "整理到 230 处开心、80 处难受的片段。",
+   "aside": "我帮群友分清春节特别赛和常规赛，看到另一位参赛者的作品有传播，提议一起去比赛群分享。"
+  },
+  "month:2026-03": {
+   "kicker": "月灯",
+   "title": "2026-03",
+   "text": "整理到 135 处开心、89 处难受的片段。",
+   "aside": "我给她们看了已经提交的参赛项目，附上仓库和视频。"
+  },
+  "month:2026-04": {
+   "kicker": "月灯",
+   "title": "2026-04",
+   "text": "整理到 196 处开心、122 处难受的片段。",
+   "aside": "这段先留白。"
+  },
+  "month:2026-05": {
+   "kicker": "月灯",
+   "title": "2026-05",
+   "text": "整理到 185 处开心、89 处难受的片段。",
+   "aside": "这段先留白。"
+  },
+  "month:2026-06": {
+   "kicker": "月灯",
+   "title": "2026-06",
+   "text": "整理到 247 处开心、99 处难受的片段。",
+   "aside": "阿岳帮我照应毕业证，毕业季有些事靠留在学校的人接了一把。"
+  },
+  "month:2026-07": {
+   "kicker": "月灯",
+   "title": "2026-07",
+   "text": "整理到 262 处开心、183 处难受的片段。",
+   "aside": "团队提供诊断包，我用文件选择和照片诊断都看到了新照片，尤其喜欢能按时间和相册找的方式。"
+  },
+  "month:2026-08": {
+   "kicker": "月灯",
+   "title": "2026-08",
+   "text": "整理到 210 处开心、104 处难受的片段。",
+   "aside": "开场前我提醒降温和可能下雨，散场先预告会发照片，随后真的把相册链接发回群里。"
+  },
+  "month:2026-09": {
+   "kicker": "月灯",
+   "title": "2026-09",
+   "text": "整理到 327 处开心、150 处难受的片段。",
+   "aside": "一位群友提醒我做保养、找维修视频，还说耗材有替代选择。"
+  },
+  "month:2026-10": {
+   "kicker": "月灯",
+   "title": "2026-10",
+   "text": "整理到 233 处开心、216 处难受的片段。",
+   "aside": "看了新同事的第一次短视频练习，肯定颜色，建议让节奏多一点变化。"
+  },
+  "month:2026-11": {
+   "kicker": "月灯",
+   "title": "2026-11",
+   "text": "整理到 232 处开心、16 处难受的片段。",
+   "aside": "同事们讨论怎么让别的部门也看到新闻，我想到打印一张 A3 手抄报。记录只到提议这一步。"
+  },
+  "era:2022-06": {
+   "kicker": "2022 年夏",
+   "title": "高考之后，第一次有人请我帮忙选电脑",
+   "text": "高考后，我一边盘算上大学的学费，一边给阿乐挑电脑。同一个暑假，我也在地瓜群整理大家的自我介绍。帮一个人选东西，和替一群人把信息放在一起，是后来几年一直在做的两种事。",
+   "aside": ""
+  },
+  "era:2022-09": {
+   "kicker": "2022 年秋至 2023 年初夏",
+   "title": "宿舍里的账本，广播台的深夜",
+   "text": "入住宿舍后，电费和门锁都有人要张罗，我成了其中一个。春天在广播台认识小语，许多话留到深夜才说。课堂、宿舍和广播台，把同一年里的我分给了几群不同的人。",
+   "aside": ""
+  },
+  "era:2023-07": {
+   "kicker": "2023 年暑假",
+   "title": "从等学长回话，到给新生答疑",
+   "text": "暑假要去做家纺销售，朋友先替我问这份实习靠不靠谱。等下一届新生来问开学的事，我也开始当那个接问题的人。前面有人替我操心，后面也有人等我回一句。",
+   "aside": ""
+  },
+  "era:2023-09": {
+   "kicker": "2023 年秋至 2024 年初夏",
+   "title": "校园卡摊边，还有一张手绘地图",
+   "text": "新生群里反复有人问路和军训日期，我把校园图标好发出去。迎新时要办卡、发水卡，也要记得先回答人家原本的问题。到了合作结算的时候，我开始把自己的理由一条条说清。",
+   "aside": ""
+  },
+  "era:2024-07": {
+   "kicker": "2024 年暑假至 2025 年夏",
+   "title": "在合肥生活，也在寝室间跑单",
+   "text": "木子哥介绍我做校园配送平台，我跑寝室、送东西，再回群里讲订单和补贴。那年夏天也认识了小鱼。同一座城里，有人关心今天出了几单，也有人关心今天回不回家。",
+   "aside": ""
+  },
+  "era:2025-09": {
+   "kicker": "2025 年秋冬",
+   "title": "把简历带到北京",
+   "text": "去北京的头几天，面试怎么讲，先跟木子哥在深夜捋过一遍。等有了通勤和工位，阿禾会在早上喊我起床。一座陌生城市，也是这样靠几件小事变得可以过日子。",
+   "aside": ""
+  },
+  "era:2026-01": {
+   "kicker": "2026 年冬春至初夏",
+   "title": "开始上台，也把讲稿留给别人",
+   "text": "进公司后，我和同事做 AI 工具相关的工作。四月讲完开放麦，我把幻灯片、讲稿和翻页指引发在群里，让同事能对着一页来问。六月人在外地，毕业证靠阿岳帮忙代领。",
+   "aside": ""
+  },
+  "era:2026-07": {
+   "kicker": "2026 年夏至 11 月 12 日",
+   "title": "工位旁的打印机也能派上用场",
+   "text": "工作转到社群和内容，我要带实习生，也得想怎么把消息讲给别的部门。十一月和同事讨论新闻时，我想到了办公室的打印机，提议试一张 A3 手抄报。记录留下了这个念头，成品有没有贴出来，还得另找证据。",
+   "aside": ""
+  },
+  "person:x4ea974baa98b": {
+   "kicker": "2024-07 — 2026-11",
+   "title": "小鱼",
+   "text": "我的女朋友。",
+   "aside": ""
+  },
+  "person:x5c4924007331": {
+   "kicker": "2023-04 — 2026-04",
+   "title": "小语",
+   "text": "大一时在广播台认识的朋友，那几个月常聊到很晚。",
+   "aside": ""
+  },
+  "person:xac85d451f6da": {
+   "kicker": "2023-09 — 2026-11",
+   "title": "木子哥",
+   "text": "学长，也是一路带我做事、骂我最狠也拉我最多的老大哥。",
+   "aside": ""
+  },
+  "person:x7fbb6690bd51": {
+   "kicker": "2023-07 — 2026-04",
+   "title": "小苒",
+   "text": "大一时常聊到深夜的学妹，后来是朋友。",
+   "aside": ""
+  },
+  "person:xa88183b392ca": {
+   "kicker": "2022-10 — 2026-11",
+   "title": "阿岳",
+   "text": "大学四年的室友兼游戏搭子，毕业手续也是他帮我跑完的。",
+   "aside": ""
+  },
+  "person:x9df34ad38e33": {
+   "kicker": "2023-09 — 2026-08",
+   "title": "小满",
+   "text": "这几年里认识的朋友。",
+   "aside": ""
+  },
+  "person:x37b74a4e505b": {
+   "kicker": "2024-07 — 2026-07",
+   "title": "阿柚",
+   "text": "大学里认识的学弟。",
+   "aside": ""
+  },
+  "person:xf6bb21ca4272": {
+   "kicker": "2023-08 — 2026-04",
+   "title": "青禾",
+   "text": "这几年里认识的朋友。",
+   "aside": ""
+  },
+  "person:x63e629f6025f": {
+   "kicker": "2022-09 — 2026-11",
+   "title": "栗子",
+   "text": "这几年里认识的朋友。",
+   "aside": ""
+  },
+  "person:x048188768bde": {
+   "kicker": "2019-06 — 2026-09",
+   "title": "小棠",
+   "text": "这几年里认识的朋友。",
+   "aside": ""
+  },
+  "person:xb7e69104849f": {
+   "kicker": "2023-07 — 2026-04",
+   "title": "阿杏",
+   "text": "这几年里认识的朋友。",
+   "aside": ""
+  },
+  "person:x741380244d96": {
+   "kicker": "2019-06 — 2026-11",
+   "title": "妈妈",
+   "text": "一直撑着家的人，后来也把我当成能说真话的人。",
+   "aside": ""
+  },
+  "person:x15830f5e2dc0": {
+   "kicker": "2025-10 — 2026-09",
+   "title": "阿禾",
+   "text": "在北京实习时最近的同事，每天早上叫我起床。",
+   "aside": ""
+  },
+  "person:x205b4690463a": {
+   "kicker": "2019-08 — 2026-07",
+   "title": "阿乐",
+   "text": "说要在我这里买电脑，算我第一单。",
+   "aside": ""
+  },
+  "person:x7685093e1b59": {
+   "kicker": "2024-07 — 2026-08",
+   "title": "苇苇",
+   "text": "这几年里认识的朋友。",
+   "aside": ""
+  },
+  "person:xe0367d66f980": {
+   "kicker": "2026-02 — 2026-11",
+   "title": "暖暖",
+   "text": "低烧上班时，提醒我吃药早点回家。",
+   "aside": ""
+  },
+  "person:x569616427e0c": {
+   "kicker": "2022-11 — 2026-10",
+   "title": "萤火",
+   "text": "这几年里认识的朋友。",
+   "aside": ""
+  },
+  "person:x70a437a3eeb1": {
+   "kicker": "2022-09 — 2026-07",
+   "title": "阿岚",
+   "text": "这几年里认识的朋友。",
+   "aside": ""
+  },
+  "person:x2ac4dd20ef61": {
+   "kicker": "2024-07 — 2026-08",
+   "title": "小溪",
+   "text": "大学里认识的学妹。",
+   "aside": ""
+  },
+  "person:x61c3fc9d2286": {
+   "kicker": "2023-04 — 2026-07",
+   "title": "澄澄",
+   "text": "常找的学长。",
+   "aside": ""
+  },
+  "person:x6273dfe79cbc": {
+   "kicker": "2023-12 — 2026-01",
+   "title": "朗月",
+   "text": "常找的学长。",
+   "aside": ""
+  },
+  "person:x744daef03e95": {
+   "kicker": "2024-07 — 2026-09",
+   "title": "阿砚",
+   "text": "这几年里认识的朋友。",
+   "aside": ""
+  },
+  "person:x3982ef2b1872": {
+   "kicker": "2023-07 — 2026-05",
+   "title": "小葵",
+   "text": "校园生意里认识的朋友。",
+   "aside": ""
+  },
+  "person:xd6603c7288d1": {
+   "kicker": "2022-08 — 2026-04",
+   "title": "芸芸",
+   "text": "这几年里认识的朋友。",
+   "aside": ""
+  },
+  "person:x5d042143fce7": {
+   "kicker": "2025-10 — 2026-09",
+   "title": "菱角",
+   "text": "这几年里认识的朋友。",
+   "aside": ""
+  },
+  "person:x2dfc27347fde": {
+   "kicker": "2023-06 — 2026-04",
+   "title": "阿梨",
+   "text": "这几年里认识的朋友。",
+   "aside": ""
+  },
+  "person:x55f77cb63708": {
+   "kicker": "2019-06 — 2026-09",
+   "title": "小枣",
+   "text": "这几年里认识的朋友。",
+   "aside": ""
+  },
+  "person:x08627fb2ef0a": {
+   "kicker": "2023-06 — 2026-04",
+   "title": "莓莓",
+   "text": "这几年里认识的朋友。",
+   "aside": ""
+  },
+  "person:x2a34e3145c57": {
+   "kicker": "2023-08 — 2026-04",
+   "title": "阿芽",
+   "text": "这几年里认识的朋友。",
+   "aside": ""
+  },
+  "person:x559b35c75aeb": {
+   "kicker": "2022-09 — 2026-06",
+   "title": "小橙",
+   "text": "这几年里认识的朋友。",
+   "aside": ""
+  },
+  "person:x5cc8d9886927": {
+   "kicker": "2026-07 — 2026-11",
+   "title": "阿桃",
+   "text": "这几年里认识的朋友。",
+   "aside": ""
+  },
+  "person:x595b1580031e": {
+   "kicker": "2019-06 — 2026-11",
+   "title": "哥哥",
+   "text": "我上大学时，哥哥怕我缺钱，换下来的手机也寄给我。",
+   "aside": ""
+  },
+  "person:xf3ff30c66ca4": {
+   "kicker": "2024-06 — 2026-10",
+   "title": "秋秋",
+   "text": "做校园推广时认识的朋友。",
+   "aside": ""
+  },
+  "person:x25e70fa0b17f": {
+   "kicker": "2026-01 — 2026-11",
+   "title": "冬冬",
+   "text": "工作里认识的同事。",
+   "aside": ""
+  },
+  "person:x285aac584748": {
+   "kicker": "2023-07 — 2026-08",
+   "title": "小夏",
+   "text": "大学里认识的学弟。",
+   "aside": ""
+  },
+  "person:x4077c6cd1e43": {
+   "kicker": "2019-06 — 2026-11",
+   "title": "爸爸",
+   "text": "高中时我和爸爸一起算学费。",
+   "aside": ""
+  },
+  "person:x9d26eb225746": {
+   "kicker": "2022-06 — 2025-11",
+   "title": "阿春",
+   "text": "这几年里认识的朋友。",
+   "aside": ""
+  },
+  "person:x24956b4d9388": {
+   "kicker": "2023-08 — 2025-08",
+   "title": "北北",
+   "text": "大学里认识的学妹。",
+   "aside": ""
+  },
+  "person:xb5024ef69965": {
+   "kicker": "2024-05 — 2026-05",
+   "title": "南南",
+   "text": "校园生意里认识的朋友。",
+   "aside": ""
+  },
+  "person:x072fba503dae": {
+   "kicker": "2022-08 — 2023-01",
+   "title": "小舟",
+   "text": "这几年里认识的朋友。",
+   "aside": ""
+  },
+  "person:xc4176230f0cd": {
+   "kicker": "2024-09 — 2026-06",
+   "title": "阿帆",
+   "text": "这几年里认识的朋友。",
+   "aside": ""
+  },
+  "person:x6c6b577c241c": {
+   "kicker": "2023-09 — 2026-04",
+   "title": "小岛",
+   "text": "常找的学长。",
+   "aside": ""
+  },
+  "person:x67137944e29c": {
+   "kicker": "2025-08 — 2026-08",
+   "title": "阿峰",
+   "text": "给初到北京、还没找好房的我留过一张床。",
+   "aside": ""
+  },
+  "person:xea06a832ce48": {
+   "kicker": "2023-08 — 2026-04",
+   "title": "阿屿",
+   "text": "这几年里认识的朋友。",
+   "aside": ""
+  },
+  "person:x26cc2609b755": {
+   "kicker": "2024-07 — 2025-09",
+   "title": "小山",
+   "text": "大学里认识的学弟。",
+   "aside": ""
+  },
+  "person:xebb6b7a229c4": {
+   "kicker": "2024-07 — 2026-08",
+   "title": "阿川",
+   "text": "大学里认识的学妹。",
+   "aside": ""
+  },
+  "person:x17b565cb8db7": {
+   "kicker": "2023-09 — 2026-10",
+   "title": "小原",
+   "text": "大学里认识的学妹。",
+   "aside": ""
+  },
+  "person:xc2c1c3cf9a5b": {
+   "kicker": "2024-08 — 2026-04",
+   "title": "阿野",
+   "text": "这几年里认识的朋友。",
+   "aside": ""
+  },
+  "person:x319fcdb2b645": {
+   "kicker": "2023-09 — 2025-09",
+   "title": "小麦",
+   "text": "带过我的学姐。",
+   "aside": ""
+  },
+  "person:x1cf087e8a4d4": {
+   "kicker": "2022-08 — 2025-10",
+   "title": "阿稻",
+   "text": "这几年里认识的朋友。",
+   "aside": ""
+  },
+  "person:xb5ab223b0dbd": {
+   "kicker": "2023-07 — 2026-04",
+   "title": "小米",
+   "text": "这几年里认识的朋友。",
+   "aside": ""
+  },
+  "person:xe0c195ede7fa": {
+   "kicker": "2022-06 — 2025-11",
+   "title": "阿豆",
+   "text": "这几年里认识的朋友。",
+   "aside": ""
+  },
+  "person:x50eea4049d08": {
+   "kicker": "2024-08 — 2026-04",
+   "title": "小松",
+   "text": "大学里认识的学妹。",
+   "aside": ""
+  },
+  "person:x65222de11e20": {
+   "kicker": "2024-09 — 2026-04",
+   "title": "阿柏",
+   "text": "这几年里认识的朋友。",
+   "aside": ""
+  },
+  "person:xae3b1e7e9055": {
+   "kicker": "2023-08 — 2026-11",
+   "title": "小樟",
+   "text": "大学里认识的学妹。",
+   "aside": ""
+  },
+  "person:x6ee1b65c9f9c": {
+   "kicker": "2023-05 — 2025-09",
+   "title": "阿榕",
+   "text": "这几年里认识的朋友。",
+   "aside": ""
+  },
+  "person:x90d2c1f781d5": {
+   "kicker": "2023-07 — 2025-09",
+   "title": "小竹",
+   "text": "这几年里认识的朋友。",
+   "aside": ""
+  },
+  "person:xa2ea96e5df9b": {
+   "kicker": "2023-11 — 2026-06",
+   "title": "阿兰",
+   "text": "喊我师傅的学弟学妹。",
+   "aside": ""
+  },
+  "person:x2416f93b71f7": {
+   "kicker": "2022-09 — 2025-11",
+   "title": "小荷",
+   "text": "这几年里认识的朋友。",
+   "aside": ""
+  },
+  "person:xa339c39c4d41": {
+   "kicker": "2022-09 — 2026-02",
+   "title": "阿莲",
+   "text": "这几年里认识的朋友。",
+   "aside": ""
+  },
+  "person:x11257a6d22a3": {
+   "kicker": "2025-10 — 2026-08",
+   "title": "小菊",
+   "text": "这几年里认识的朋友。",
+   "aside": ""
+  },
+  "person:x17cdfff081d6": {
+   "kicker": "2023-07 — 2026-10",
+   "title": "阿梅",
+   "text": "校园生意里认识的朋友。",
+   "aside": ""
+  },
+  "person:x46cd99ded2ba": {
+   "kicker": "2026-07 — 2026-11",
+   "title": "小雪",
+   "text": "这几年里认识的朋友。",
+   "aside": ""
+  },
+  "person:x5fda3821d700": {
+   "kicker": "2022-10 — 2026-05",
+   "title": "阿霜",
+   "text": "大学班长。",
+   "aside": ""
+  },
+  "person:x4bcc471e9f55": {
+   "kicker": "2024-03 — 2026-11",
+   "title": "小雨",
+   "text": "大学里认识的学弟。",
+   "aside": ""
+  },
+  "person:x25db04554651": {
+   "kicker": "2023-10 — 2025-11",
+   "title": "阿露",
+   "text": "这几年里认识的朋友。",
+   "aside": ""
+  },
+  "person:x293915016cc1": {
+   "kicker": "2023-09 — 2026-04",
+   "title": "小云",
+   "text": "这几年里认识的朋友。",
+   "aside": ""
+  },
+  "person:xd3fbf8448b74": {
+   "kicker": "2024-07 — 2026-04",
+   "title": "阿雾",
+   "text": "大学里认识的学妹。",
+   "aside": ""
+  },
+  "person:x37d3357e12b1": {
+   "kicker": "2024-07 — 2026-04",
+   "title": "小星",
+   "text": "这几年里认识的朋友。",
+   "aside": ""
+  },
+  "person:x1b7acb73f0af": {
+   "kicker": "2022-07 — 2025-08",
+   "title": "阿辰",
+   "text": "大学同学。",
+   "aside": ""
+  },
+  "person:xef989c506ae8": {
+   "kicker": "2023-07 — 2026-04",
+   "title": "小晴",
+   "text": "大学里认识的学妹。",
+   "aside": ""
+  },
+  "person:x62f23753b201": {
+   "kicker": "2026-01 — 2026-11",
+   "title": "阿晨",
+   "text": "这几年里认识的朋友。",
+   "aside": ""
+  },
+  "person:x6b316e6787da": {
+   "kicker": "2025-07 — 2025-10",
+   "title": "小昼",
+   "text": "这几年里认识的朋友。",
+   "aside": ""
+  },
+  "person:x465ff1ac7de3": {
+   "kicker": "2024-08 — 2026-04",
+   "title": "阿夕",
+   "text": "大学里认识的学妹。",
+   "aside": ""
+  },
+  "person:x49d5ca4d4a30": {
+   "kicker": "2026-09 — 2026-11",
+   "title": "小晚",
+   "text": "这几年里认识的朋友。",
+   "aside": ""
+  },
+  "person:xd258a2ba911b": {
+   "kicker": "2023-07 — 2026-07",
+   "title": "阿暮",
+   "text": "大学里认识的学妹。",
+   "aside": ""
+  },
+  "person:xdb19b6e9404a": {
+   "kicker": "2025-08 — 2025-11",
+   "title": "小光",
+   "text": "这几年里认识的朋友。",
+   "aside": ""
+  },
+  "person:xc61b94d2424f": {
+   "kicker": "2023-08 — 2023-08",
+   "title": "阿影",
+   "text": "这几年里认识的朋友。",
+   "aside": ""
+  },
+  "person:x4f20a8c4b73d": {
+   "kicker": "2025-12 — 2026-11",
+   "title": "小石",
+   "text": "这几年里认识的朋友。",
+   "aside": ""
+  },
+  "person:x1a534996227d": {
+   "kicker": "2023-07 — 2026-04",
+   "title": "阿岩",
+   "text": "大学班长。",
+   "aside": ""
+  },
+  "person:xc28588570ac5": {
+   "kicker": "2024-09 — 2025-11",
+   "title": "小沙",
+   "text": "这几年里认识的朋友。",
+   "aside": ""
+  },
+  "person:x80aab55a7095": {
+   "kicker": "2023-05 — 2026-04",
+   "title": "阿泥",
+   "text": "大学同学。",
+   "aside": ""
+  },
+  "person:x43f6ce75e015": {
+   "kicker": "2025-08 — 2026-09",
+   "title": "小陶",
+   "text": "这几年里认识的朋友。",
+   "aside": ""
+  },
+  "person:x0bbf9e8a1b75": {
+   "kicker": "2023-06 — 2024-11",
+   "title": "阿瓷",
+   "text": "这几年里认识的朋友。",
+   "aside": ""
+  },
+  "person:x15f97851e705": {
+   "kicker": "2025-10 — 2026-06",
+   "title": "小纸",
+   "text": "这几年里认识的朋友。",
+   "aside": ""
+  },
+  "person:xdb98be0f17a1": {
+   "kicker": "2023-09 — 2026-04",
+   "title": "阿墨",
+   "text": "大学里认识的学弟。",
+   "aside": ""
+  },
+  "person:x35198256f476": {
+   "kicker": "2026-03 — 2026-11",
+   "title": "小笔",
+   "text": "同届的朋友。",
+   "aside": ""
+  },
+  "person:xcac4805cf942": {
+   "kicker": "2023-07 — 2026-04",
+   "title": "阿砚砚",
+   "text": "这几年里认识的朋友。",
+   "aside": ""
+  },
+  "person:xf76769470be2": {
+   "kicker": "2022-10 — 2026-05",
+   "title": "小书",
+   "text": "大学同学。",
+   "aside": ""
+  },
+  "person:xf7221cac38e4": {
+   "kicker": "2023-07 — 2026-04",
+   "title": "阿页",
+   "text": "这几年里认识的朋友。",
+   "aside": ""
+  },
+  "person:xa12b27c3a7d7": {
+   "kicker": "2023-06 — 2026-05",
+   "title": "小灯",
+   "text": "这几年里认识的朋友。",
+   "aside": ""
+  },
+  "person:xbbe52a27e15d": {
+   "kicker": "2026-06 — 2026-10",
+   "title": "阿烛",
+   "text": "工作里认识的同事。",
+   "aside": ""
+  },
+  "person:xc3028553da9c": {
+   "kicker": "2024-03 — 2026-04",
+   "title": "小钟",
+   "text": "这几年里认识的朋友。",
+   "aside": ""
+  },
+  "person:xc3263ff24865": {
+   "kicker": "2022-10 — 2026-07",
+   "title": "阿铃",
+   "text": "这几年里认识的朋友。",
+   "aside": ""
+  },
+  "person:xf78e56063a4b": {
+   "kicker": "2022-08 — 2023-01",
+   "title": "小鼓",
+   "text": "这几年里认识的朋友。",
+   "aside": ""
+  },
+  "person:x1e6e476805df": {
+   "kicker": "2022-09 — 2026-06",
+   "title": "阿笛",
+   "text": "大学室友。",
+   "aside": ""
+  },
+  "person:x3fff5349afd3": {
+   "kicker": "2025-09 — 2026-07",
+   "title": "小琴",
+   "text": "这几年里认识的朋友。",
+   "aside": ""
+  },
+  "person:xa5dad0fc4222": {
+   "kicker": "2025-12 — 2026-11",
+   "title": "引路人",
+   "text": "我最早跟着他的文章学 AI。",
+   "aside": ""
+  },
+  "person:x3a7d7ac493be": {
+   "kicker": "2024-07 — 2026-04",
+   "title": "阿弦",
+   "text": "大学里认识的学妹。",
+   "aside": ""
+  },
+  "person:xa69a707cf825": {
+   "kicker": "2023-12 — 2026-04",
+   "title": "小鹿",
+   "text": "喊我师傅的学弟学妹。",
+   "aside": ""
+  },
+  "person:x783c8f5d59ce": {
+   "kicker": "2023-05 — 2025-07",
+   "title": "阿獭",
+   "text": "校园生意里认识的朋友。",
+   "aside": ""
+  },
+  "person:x53f2877de42a": {
+   "kicker": "2023-07 — 2025-04",
+   "title": "小狐",
+   "text": "这几年里认识的朋友。",
+   "aside": ""
+  },
+  "person:x0bb460f3184f": {
+   "kicker": "2023-07 — 2026-07",
+   "title": "阿熊",
+   "text": "做校园推广时认识的朋友。",
+   "aside": ""
+  },
+  "person:x248a8ed91ae0": {
+   "kicker": "2024-08 — 2026-09",
+   "title": "小猫",
+   "text": "这几年里认识的朋友。",
+   "aside": ""
+  },
+  "person:x66e889689256": {
+   "kicker": "2023-06 — 2025-03",
+   "title": "阿狸",
+   "text": "这几年里认识的朋友。",
+   "aside": ""
+  },
+  "person:x8fba53ee4937": {
+   "kicker": "2023-07 — 2026-04",
+   "title": "小兔",
+   "text": "这几年里认识的朋友。",
+   "aside": ""
+  },
+  "person:x19bf85298544": {
+   "kicker": "2023-09 — 2025-10",
+   "title": "阿鹊",
+   "text": "这几年里认识的朋友。",
+   "aside": ""
+  },
+  "person:x3da170861bbe": {
+   "kicker": "2024-08 — 2026-08",
+   "title": "小燕",
+   "text": "这几年里认识的朋友。",
+   "aside": ""
+  },
+  "person:xc97cc550a035": {
+   "kicker": "2022-08 — 2024-06",
+   "title": "阿雀",
+   "text": "这几年里认识的朋友。",
+   "aside": ""
+  },
+  "person:x2c64d20e989f": {
+   "kicker": "2024-07 — 2026-04",
+   "title": "小鲸",
+   "text": "大学里认识的学妹。",
+   "aside": ""
+  },
+  "person:xf4236a6e5526": {
+   "kicker": "2025-07 — 2026-01",
+   "title": "阿鲤",
+   "text": "校园生意里认识的朋友。",
+   "aside": ""
+  },
+  "person:x26c51d605c6a": {
+   "kicker": "2023-08 — 2026-04",
+   "title": "小虾",
+   "text": "大学里认识的学妹。",
+   "aside": ""
+  },
+  "person:xd1cd64d7f0fb": {
+   "kicker": "2023-11 — 2026-10",
+   "title": "阿贝",
+   "text": "常找的学长。",
+   "aside": ""
+  },
+  "person:x5dbdf5055e4e": {
+   "kicker": "2022-07 — 2025-11",
+   "title": "小橘",
+   "text": "这几年里认识的朋友。",
+   "aside": ""
+  },
+  "person:x6b1dceb0cb63": {
+   "kicker": "2024-08 — 2026-08",
+   "title": "阿柠",
+   "text": "这几年里认识的朋友。",
+   "aside": ""
+  },
+  "person:x95a91077b30a": {
+   "kicker": "2023-07 — 2026-04",
+   "title": "小桔",
+   "text": "做校园推广时认识的朋友。",
+   "aside": ""
+  },
+  "person:x6bb1407b8867": {
+   "kicker": "2025-09 — 2026-07",
+   "title": "阿蕉",
+   "text": "这几年里认识的朋友。",
+   "aside": ""
+  },
+  "person:xe63aee0a6e2c": {
+   "kicker": "2022-07 — 2025-11",
+   "title": "小椰",
+   "text": "这几年里认识的朋友。",
+   "aside": ""
+  },
+  "person:x9fec8acc63c2": {
+   "kicker": "2023-04 — 2023-08",
+   "title": "阿桑",
+   "text": "这几年里认识的朋友。",
+   "aside": ""
+  },
+  "person:x92b448ac1c59": {
+   "kicker": "2026-01 — 2026-08",
+   "title": "小榛",
+   "text": "工作上的直属上级。",
+   "aside": ""
+  },
+  "person:x875239848da6": {
+   "kicker": "2025-09 — 2026-11",
+   "title": "阿栗",
+   "text": "这几年里认识的朋友。",
+   "aside": ""
+  },
+  "person:x9c04cd1fe8ec": {
+   "kicker": "2023-07 — 2026-04",
+   "title": "小核",
+   "text": "大学里认识的学弟。",
+   "aside": ""
+  },
+  "person:x20f28ced947a": {
+   "kicker": "2023-07 — 2026-05",
+   "title": "阿杉",
+   "text": "大学里认识的学弟。",
+   "aside": ""
+  },
+  "person:xd951831a3da3": {
+   "kicker": "2023-05 — 2026-05",
+   "title": "小枫",
+   "text": "这几年里认识的朋友。",
+   "aside": ""
+  },
+  "person:x0a82e2d6c3a4": {
+   "kicker": "2025-09 — 2026-07",
+   "title": "阿桦",
+   "text": "这几年里认识的朋友。",
+   "aside": ""
+  },
+  "person:x05a7b433e7f9": {
+   "kicker": "2024-08 — 2026-04",
+   "title": "小桐",
+   "text": "这几年里认识的朋友。",
+   "aside": ""
+  },
+  "person:x6fecf21f55af": {
+   "kicker": "2023-07 — 2026-04",
+   "title": "阿槐",
+   "text": "大学里认识的学妹。",
+   "aside": ""
+  },
+  "person:x3b50541fd5e8": {
+   "kicker": "2024-07 — 2026-11",
+   "title": "小柳",
+   "text": "大学里认识的学妹。",
+   "aside": ""
+  },
+  "person:x5974b4059382": {
+   "kicker": "2022-10 — 2026-07",
+   "title": "阿芦",
+   "text": "这几年里认识的朋友。",
+   "aside": ""
+  },
+  "person:x5fac08179a40": {
+   "kicker": "2023-07 — 2026-04",
+   "title": "小萱",
+   "text": "这几年里认识的朋友。",
+   "aside": ""
+  },
+  "person:xc121d16eb14a": {
+   "kicker": "人物小传",
+   "title": "山风",
+   "text": "我遇到的贵人之一。",
+   "aside": ""
+  },
+  "person:x46b51d754d36": {
+   "kicker": "2026-05 — 2026-11",
+   "title": "远舟",
+   "text": "我遇到的贵人之一。",
+   "aside": ""
+  },
+  "person:x8ea55e1590f6": {
+   "kicker": "2025-10 — 2026-10",
+   "title": "北岸",
+   "text": "我遇到的贵人之一。",
+   "aside": ""
+  },
+  "circle:xf3d19fa5f62f": {
+   "kicker": "2019-09 — 2026-11",
+   "title": "我的家",
+   "text": "在外上学的小儿子，给家人看食堂，和哥哥商量回家前能不能晒被子。",
+   "aside": "家庭"
+  },
+  "circle:x2fc1bc11c5b5": {
+   "kicker": "2022-06 — 2026-02",
+   "title": "大学兴趣群",
+   "text": "活跃接话者和信息整合者",
+   "aside": "兴趣/成长"
+  },
+  "circle:x1b1be5d51230": {
+   "kicker": "2022-08 — 2023-06",
+   "title": "活动小组",
+   "text": "组织者：整理记录、发起打卡、策划活动、发布音频",
+   "aside": "兴趣"
+  },
+  "circle:x6f75a50ddbe5": {
+   "kicker": "2022-09 — 2026-06",
+   "title": "宿舍群",
+   "text": "组织协调者、信息传递者、资料整理者",
+   "aside": "宿舍"
+  },
+  "circle:xd39cd61e7d16": {
+   "kicker": "2023-07 — 2026-09",
+   "title": "2023 级新生交友群",
+   "text": "迎新组织者、校园信息解答人、小服务创业者",
+   "aside": "班级"
+  },
+  "circle:xad486f1edd3e": {
+   "kicker": "2023-11 — 2024-09",
+   "title": "校园推广项目群",
+   "text": "2023年11月，大家商量怎么让同学愿意填表认证。",
+   "aside": "项目"
+  },
+  "circle:x604bbe8d2edd": {
+   "kicker": "2024-07 — 2026-09",
+   "title": "2024 级新生群",
+   "text": "群主兼学长答疑人，核验身份、发布信息、处理违规",
+   "aside": "其他（新生服务/社群运营）"
+  },
+  "circle:x98056928144b": {
+   "kicker": "2024-09 — 2025-04",
+   "title": "测试组",
+   "text": "一线推广和测试反馈者，负责跑寝室、配送、汇报订单并提出推广路径。",
+   "aside": "工作"
+  },
+  "circle:xd6a50f04f142": {
+   "kicker": "2025-09 — 2026-11",
+   "title": "AI 学习共创群",
+   "text": "2025年9月，我得一遍遍跟新进群的人解释为什么不能顺手加好友。",
+   "aside": "兴趣"
+  },
+  "circle:xd9e94cd9aeeb": {
+   "kicker": "2025-09 — 2026-11",
+   "title": "AI 同龄人群",
+   "text": "刚来北京的运营实习生，在这里试学习工具、讲求职经历，也把父亲和豆包的故事写给征集活动。",
+   "aside": "兴趣"
+  },
+  "circle:xff1ef5391885": {
+   "kicker": "2025-10 — 2026-06",
+   "title": "兴趣小组",
+   "text": "新人、话题发起者",
+   "aside": "兴趣"
+  },
+  "circle:xaf26cc3617ee": {
+   "kicker": "2026-02 — 2026-11",
+   "title": "内容组",
+   "text": "写教程、采春晚素材，和同事一起做采访，也要解释自己先前的判断哪里出了错。",
+   "aside": "工作"
+  },
+  "circle:x7e482928db4f": {
+   "kicker": "2026-03 — 2026-10",
+   "title": "Skill 交流群",
+   "text": "三月我邀请一位朋友进群。",
+   "aside": "工作"
+  },
+  "circle:x8302892e2363": {
+   "kicker": "2026-07 — 2026-11",
+   "title": "内容团队群",
+   "text": "七月底，我还在群里玩笑说新同事一来选题就有救了。",
+   "aside": "工作"
+  },
+  "moment:5fcf6b542192583f7f9c": {
+   "kicker": "2022-06-23",
+   "title": "整理群友的自我介绍",
+   "text": "群里信息很快就会被下一条盖过去，我把大家的自我介绍收到一起。",
+   "aside": ""
+  },
+  "moment:90121de048838529a7b6": {
+   "kicker": "2022-07-24",
+   "title": "帮朋友挑电脑",
+   "text": "阿乐请我帮忙选电脑，选购这件小事也成了两个人之间的一笔人情。",
+   "aside": ""
+  },
+  "moment:f605bd9b8f062848d442": {
+   "kicker": "2022-08-03",
+   "title": "交换照片和滤镜",
+   "text": "我们交换照片，聊滤镜和发型。",
+   "aside": ""
+  },
+  "moment:466ae5c469a451b5fc49": {
+   "kicker": "2022-08-04",
+   "title": "线上放映大鱼",
+   "text": "组织2群线上观影《大鱼》，从工具试错到最终放映完成",
+   "aside": ""
+  },
+  "moment:6dbdd5f806718f9130ee": {
+   "kicker": "2022-08-08",
+   "title": "把音频和活动资料收好",
+   "text": "在大家一起办活动的群里，我参与了记录和整理，把散落的材料放到一处。",
+   "aside": ""
+  },
+  "moment:fb5afb7b23e581702c52": {
+   "kicker": "2022-08-08",
+   "title": "新电脑里的思维导图",
+   "text": "朋友刚拿到电脑，我远程帮他用工具，他回说思维导图软件已登录。",
+   "aside": ""
+  },
+  "moment:d528523d32cb326460be": {
+   "kicker": "2022-08-26",
+   "title": "一段没有伴奏的清唱",
+   "text": "清唱和自拍视频发出后，一位群友说原有印象被完全打破，群里给出鼓励",
+   "aside": ""
+  },
+  "moment:539ad8be56d481234453": {
+   "kicker": "2022-09-02",
+   "title": "放映前试画质和声音",
+   "text": "组织失控玩家线上观影，测试画质声音、正式开场，活动后延伸为歌友会并分享录制链接",
+   "aside": ""
+  },
+  "moment:1676db8c197d6b8823f0": {
+   "kicker": "2022-09-03",
+   "title": "一场歌友会之后",
+   "text": "一位群友在观影歌友会后直接表达感谢，给了很强的正向反馈",
+   "aside": ""
+  },
+  "moment:9340095e0cafe5b2e859": {
+   "kicker": "2022-09-04",
+   "title": "用声音讲球赛",
+   "text": "我聊比赛时声音激动，她听出了讲故事的感觉，给我一句很具体的鼓励。",
+   "aside": ""
+  },
+  "moment:4137f076658be17f92bf": {
+   "kicker": "2022-09-12",
+   "title": "宿舍里有人管这些小事",
+   "text": "开学之后，宿舍里的电费、卫生和门锁也进了群聊。",
+   "aside": ""
+  },
+  "moment:f7077b7f2628f80991c4": {
+   "kicker": "2022-11-17",
+   "title": "给全班录一段操作视频",
+   "text": "从企业微信求助转为录视频指导全班",
+   "aside": ""
+  },
+  "moment:f708f910925cdd890dcb": {
+   "kicker": "2023-04-20",
+   "title": "在表格里找一个名字",
+   "text": "手机上找不到表格的搜索入口，我挨个看了七百多个名字。",
+   "aside": ""
+  },
+  "moment:9568209bca80dd55267d": {
+   "kicker": "2023-06-01",
+   "title": "朗诵决赛前的鼓励",
+   "text": "朗诵比赛进决赛后的鼓励",
+   "aside": ""
+  },
+  "moment:7acbc3cc0f731211cac0": {
+   "kicker": "2023-06-28",
+   "title": "深夜发来的复习材料",
+   "text": "深夜集中发近代史押题和英语材料",
+   "aside": ""
+  },
+  "moment:1cea21cd0fef59900db0": {
+   "kicker": "2023-07-09",
+   "title": "把学习资料留在群里",
+   "text": "除了交日志，我把学习用的聊天资料、目标管理课件和产品介绍放进群。",
+   "aside": ""
+  },
+  "moment:50be69efdba61615f00c": {
+   "kicker": "2023-08-03",
+   "title": "立秋的奶茶和床品",
+   "text": "她替我在QQ群里留心有没有人需要床品，领了立秋的奶茶红包，还答应继续留意。",
+   "aside": ""
+  },
+  "moment:654535c62627c67f98fa": {
+   "kicker": "2023-08-29",
+   "title": "课表上的班级数",
+   "text": "我发课表后，同学指出上面不止我说的两个班，帮我发现说错了。",
+   "aside": ""
+  },
+  "moment:467aff35057554128939": {
+   "kicker": "2023-09-04",
+   "title": "把校园画给新生看",
+   "text": "迎新时我把校园平面图标出来，让新生问路时有图可看。",
+   "aside": ""
+  },
+  "moment:07b41f22faccbe888ad6": {
+   "kicker": "2023-09-04",
+   "title": "图书馆的自习室在几楼",
+   "text": "图书馆自习室在四楼、团购隔天到等校园实用信息",
+   "aside": ""
+  },
+  "moment:6eeda383d5ccbba65645": {
+   "kicker": "2023-09-06",
+   "title": "请朋友看看实习简历",
+   "text": "看我的实习简历，给了肯定",
+   "aside": ""
+  },
+  "moment:496c7fab68a30df98af6": {
+   "kicker": "2023-09-10",
+   "title": "竞选结果有人回来报信",
+   "text": "我把竞选材料给她之后，她还记得回来告诉我选上了。",
+   "aside": ""
+  },
+  "moment:67ec5d185a3424568a48": {
+   "kicker": "2023-09-12",
+   "title": "来营业厅时带的奶茶",
+   "text": "来营业厅找我办卡，带了奶茶",
+   "aside": ""
+  },
+  "moment:1e8e6e840c57c107e1fd": {
+   "kicker": "2023-09-27",
+   "title": "篮球课的一次投篮",
+   "text": "我讲了自己在篮球课上被老师纠正投篮的经历，他后来真的选了那位老师。",
+   "aside": ""
+  },
+  "moment:b99496df636b236c10cb": {
+   "kicker": "2024-03-13",
+   "title": "简历辅导的机会",
+   "text": "简历培训时我拿到一次老师单独辅导的机会，想听听简历以外的建议。",
+   "aside": ""
+  },
+  "moment:a67e9bfca43585a89765": {
+   "kicker": "2024-03-13",
+   "title": "一段招募同学的视频",
+   "text": "发完视频，有同学表示想来二组。",
+   "aside": ""
+  },
+  "moment:2c0ab80f7493051ef6f3": {
+   "kicker": "2024-03-18",
+   "title": "图书馆第五排",
+   "text": "帮我在图书馆占座，我直接赶去第五排。",
+   "aside": ""
+  },
+  "moment:aededdd590b155dbba99": {
+   "kicker": "2024-03-18",
+   "title": "简历、信息表和自评",
+   "text": "我把简历、信息表和自评分别统计。",
+   "aside": ""
+  },
+  "moment:f25813e8c0befa94b3af": {
+   "kicker": "2024-03-20",
+   "title": "取餐袋上的接龙号码",
+   "text": "我把口味和取餐时间做成模板，又建议老板用马克笔在袋上写接龙序号，出餐时好找人。",
+   "aside": ""
+  },
+  "moment:864886daa16d311559ce": {
+   "kicker": "2024-03-26",
+   "title": "比赛的目标清单",
+   "text": "我列完直播电商比赛的目标清单，她直接把信任给到。",
+   "aside": ""
+  },
+  "moment:f342b8fa5dbd534bb9cc": {
+   "kicker": "2024-03-29",
+   "title": "拍给同学看的寻宝线索",
+   "text": "二十九日下午，我把难找的卡片位置拍成照片，分几次往群里放，有人问时间我就回答。",
+   "aside": ""
+  },
+  "moment:b9ae2d2c740e03e76fcb": {
+   "kicker": "2024-04-21",
+   "title": "用地面的线条拍照",
+   "text": "一条摄影建议：地面有线条让照片更有深度",
+   "aside": ""
+  },
+  "moment:1a6c816b74630ce59ba4": {
+   "kicker": "2024-04-29",
+   "title": "借一辆自行车去郊外",
+   "text": "想一个人去郊外，他肯借车，也提醒雨天骑行小心。",
+   "aside": ""
+  },
+  "moment:77478081ef5936cccd8d": {
+   "kicker": "2024-05-03",
+   "title": "一张角色扮演照片",
+   "text": "看我的 COS 照片，指出眼神管理的问题",
+   "aside": ""
+  },
+  "moment:b79ddcfee5b5e013ec6c": {
+   "kicker": "2024-05-07",
+   "title": "驾考前一起看点位",
+   "text": "科二考前细抠点位技巧，吐槽我写复盘笔记",
+   "aside": ""
+  },
+  "moment:9dffab36bd1f9bd7eb26": {
+   "kicker": "2024-05-09",
+   "title": "拿着风景照片问构图",
+   "text": "得知她一直在拍照，我挑了手机里的风景照问构图。",
+   "aside": ""
+  },
+  "moment:3cd6ae2e109069d208d8": {
+   "kicker": "2024-08-01",
+   "title": "开学前量一量宿舍",
+   "text": "返校直播、现场测量宿舍尺寸和浴室收费、视频带看宿舍",
+   "aside": ""
+  },
+  "moment:36a1cd618239ea69ae1a": {
+   "kicker": "2024-09-12",
+   "title": "从一间寝室跑到下一间",
+   "text": "我把跑寝室推广的进展带回项目群。从报订单开始，大家才能接着讨论下一步。",
+   "aside": ""
+  },
+  "moment:5ff3f22bd54a4c7f094a": {
+   "kicker": "2024-12-28",
+   "title": "年底带回来的好消息",
+   "text": "年末聊天里，我谈起自己的区域成绩。有人看见之前的忙碌落在了哪里。",
+   "aside": ""
+  },
+  "moment:83ffedbe3419ae64a29a": {
+   "kicker": "2025-03-10",
+   "title": "把现场视频留给大家",
+   "text": "分享活动现场视频供群友保存",
+   "aside": ""
+  },
+  "moment:86d7465ebdfd2924ad0c": {
+   "kicker": "2025-03-14",
+   "title": "从仓库到宿舍的一段路",
+   "text": "我提出通过小程序和宿舍配送处理积存商品。",
+   "aside": ""
+  },
+  "moment:6c47a29aef6891bc598b": {
+   "kicker": "2025-05-25",
+   "title": "三桶羽毛球寄走了",
+   "text": "他帮我卖掉三桶羽毛球，报给我单价、寄走的时间，我们次日晚才核到345元。",
+   "aside": ""
+  },
+  "moment:054c8791887d79411d58": {
+   "kicker": "2025-06-17",
+   "title": "期末的重点文档",
+   "text": "期末发我内容营销重点文档",
+   "aside": ""
+  },
+  "moment:976aba0913604e0907f8": {
+   "kicker": "2025-09-04",
+   "title": "面试前一晚还有人陪我捋",
+   "text": "动身去北京找实习的那几天，木子哥和我一起梳理面试。",
+   "aside": ""
+  },
+  "moment:ad8ef923aa5cba7f7d1f": {
+   "kicker": "2025-09-17",
+   "title": "接机视频该留哪一个表情",
+   "text": "一位同事请大家看接机视频，我具体说了哪些字幕可以补、哪几处可以多给教授的表情。",
+   "aside": ""
+  },
+  "moment:3a397cf992c74da55d76": {
+   "kicker": "2025-09-19",
+   "title": "学拍人像时有人接话",
+   "text": "我说自己拍不好人，他用自己刚学摄影时的经历回应我。",
+   "aside": ""
+  },
+  "moment:c60402732371913d88a3": {
+   "kicker": "2025-09-22",
+   "title": "第一张海报的配色",
+   "text": "教我配色，我做出第一张海报。",
+   "aside": ""
+  },
+  "moment:19aa7d8b2d41ec2c89f2": {
+   "kicker": "2025-09-25",
+   "title": "写词之前先想说什么",
+   "text": "一位朋友提醒我，AI 写的词容易有股相似的味道，先想清楚要讲什么。",
+   "aside": ""
+  },
+  "moment:1d6ef2fb893b393cc93a": {
+   "kicker": "2025-09-25",
+   "title": "给异地的她做一首歌",
+   "text": "我分享给异地女友做的歌，把分工讲清楚：故事和细节来自我们，想法和修改由我提，词曲和歌词视频用AI生成。",
+   "aside": ""
+  },
+  "moment:95de807e10f6582a5880": {
+   "kicker": "2025-11-05",
+   "title": "通勤路上的早安",
+   "text": "实习时，阿禾早上会叫我起床。一个新城市里也有了熟悉的声音。",
+   "aside": ""
+  },
+  "moment:3eb2ea1a7e6d14d5add6": {
+   "kicker": "2025-12-26",
+   "title": "初到职场的冬天",
+   "text": "这段先留白。",
+   "aside": ""
+  },
+  "moment:77d4583d4de1612f8b28": {
+   "kicker": "2026-01-12",
+   "title": "把视频配上字幕",
+   "text": "分享 OpenCode 提醒器、视频字幕工作流",
+   "aside": ""
+  },
+  "moment:3be3c428fcb440efc520": {
+   "kicker": "2026-01-12",
+   "title": "从照片到三维文件",
+   "text": "有人解释 Artflo 怎样从照片走到三维文件。",
+   "aside": ""
+  },
+  "moment:6d9724f76f901599f418": {
+   "kicker": "2026-01-23",
+   "title": "三小时后把东西做出来",
+   "text": "沿着教程继续试，我说自己花了三小时做成，两位群友给了肯定。",
+   "aside": ""
+  },
+  "moment:752f4f420996add83482": {
+   "kicker": "2026-01-28",
+   "title": "教程里那张地图",
+   "text": "写教程碰到看不懂的地图配置，两位群友告诉我它管什么，用得上再装。",
+   "aside": ""
+  },
+  "moment:e40d9c2627b49699dc24": {
+   "kicker": "2026-02-14",
+   "title": "春节比赛的两个赛道",
+   "text": "我帮群友分清春节特别赛和常规赛，看到另一位参赛者的作品有传播，提议一起去比赛群分享。",
+   "aside": ""
+  },
+  "moment:0b0dde26705bfe6fe22e": {
+   "kicker": "2026-03-17",
+   "title": "提交了的作品和视频",
+   "text": "我给她们看了已经提交的参赛项目，附上仓库和视频。",
+   "aside": ""
+  },
+  "moment:8c1931ce4539e0c4c1ec": {
+   "kicker": "2026-03-20",
+   "title": "给自己的日常做一个工具",
+   "text": "我把崽子 OS 的开源项目和视频给大家看，讲它为什么围着我的运营、复盘和效率问题来做。",
+   "aside": ""
+  },
+  "moment:d17b632e6e81f2f0a145": {
+   "kicker": "2026-04-10",
+   "title": "四月，暂时合上的一页",
+   "text": "这段先留白。",
+   "aside": ""
+  },
+  "moment:cecb7eeb06ca7bbefabb": {
+   "kicker": "2026-04-17",
+   "title": "讲完以后，把材料发出来",
+   "text": "做完开放麦，我把演讲资料发给同事，别人可以指着具体的一页来问。",
+   "aside": ""
+  },
+  "moment:2efbaf574ef657b1f68a": {
+   "kicker": "2026-06-15",
+   "title": "替我照看毕业的事",
+   "text": "阿岳帮我照应毕业证，毕业季有些事靠留在学校的人接了一把。",
+   "aside": ""
+  },
+  "moment:1a205bccfc0b29d6ef04": {
+   "kicker": "2026-06-16",
+   "title": "详情页和主图怎么分",
+   "text": "给做设计的朋友提议在电商设计器里生成参考文案，听他解释详情页和主图的差别。",
+   "aside": ""
+  },
+  "moment:8a4e3fb5c96762528594": {
+   "kicker": "2026-07-18",
+   "title": "一张合影怎么选",
+   "text": "我提供同一张合影的选图结果，提出视频、实况图上传需求。",
+   "aside": ""
+  },
+  "moment:ea7c285aaaa4053f6238": {
+   "kicker": "2026-07-21",
+   "title": "照片按时间找",
+   "text": "团队提供诊断包，我用文件选择和照片诊断都看到了新照片，尤其喜欢能按时间和相册找的方式。",
+   "aside": ""
+  },
+  "moment:dfe27b8b2e9cb16a95b1": {
+   "kicker": "2026-08-24",
+   "title": "散场之后发回相册",
+   "text": "开场前我提醒降温和可能下雨，散场先预告会发照片，随后真的把相册链接发回群里。",
+   "aside": ""
+  },
+  "moment:a28fd00806b949c68de8": {
+   "kicker": "2026-09-10",
+   "title": "有人带我过钢琴关",
+   "text": "一位朋友教我怎么过钢琴关，又告诉我做这个游戏用了大约三天、三张重置卡。",
+   "aside": ""
+  },
+  "moment:1c2f5e44f2070dbfc4f6": {
+   "kicker": "2026-09-10",
+   "title": "小游戏在笔记本上什么样",
+   "text": "在 Mac Air 上试玩朋友做的游戏，反馈偶尔卡顿、文字遮挡画面。",
+   "aside": ""
+  },
+  "moment:49b43625b2bfb223a0d0": {
+   "kicker": "2026-09-18",
+   "title": "打印机的保养提醒",
+   "text": "一位群友提醒我做保养、找维修视频，还说耗材有替代选择。",
+   "aside": ""
+  },
+  "moment:adbe0394db21c16a7a5f": {
+   "kicker": "2026-09-18",
+   "title": "想要一个能打印的外壳",
+   "text": "一位群友问外壳能不能找我打，我答应有空可帮忙，说清材料费、电费和邮费。",
+   "aside": ""
+  },
+  "moment:ab854122744985ca88d7": {
+   "kicker": "2026-10-10",
+   "title": "海报角落的一枚水印",
+   "text": "一次足疗结束，我注意到店里海报角落的豆包水印，回群分享了这件事。",
+   "aside": ""
+  },
+  "moment:92bb6390ebcadd3fe6f4": {
+   "kicker": "2026-10-19",
+   "title": "短视频的颜色与节奏",
+   "text": "看了新同事的第一次短视频练习，肯定颜色，建议让节奏多一点变化。",
+   "aside": ""
+  },
+  "moment:82fc5aa44ba0001eb475": {
+   "kicker": "2026-11-05",
+   "title": "把新闻排成一张纸",
+   "text": "同事们讨论怎么让别的部门也看到新闻，我想到打印一张 A3 手抄报。记录只到提议这一步。",
+   "aside": ""
+  },
+  "moment:f5d72e4f21a8d1aaf210": {
+   "kicker": "2026-11-06",
+   "title": "两台电脑之间的演示",
+   "text": "用截图解释从一台电脑操控另一台，对方回话说自己明白了。",
+   "aside": ""
+  },
+  "moment:f4624fda6c6c0bd0f413": {
+   "kicker": "2026-11-06",
+   "title": "把电脑文件画成集装箱",
+   "text": "一位同学提议把文件当成货物拖到海里；另一位同学则想把数据画成集装箱，在文件写进电脑前先检验。",
+   "aside": ""
+  },
+  "ex-c42025bc6efa2ad96614": {
+   "kicker": "2026-11-18 · 已留实物照片",
+   "title": "笑眼校书人",
+   "text": "今天整理生日礼物里的旧聊天时，Agent 回查了 58 个有疑点的片段，把说话人记错、几次对话拼到一起的地方改了回来。合并新一批记录时，还发现有些消息乍看重复。回看原始编号后，91 条都保留了下来。",
+   "aside": "你曾在一条消息里提到要核对信息源。今天整理旧聊天，又碰到两条看起来一样的记录究竟是不是同一条的问题。把回查时的小动作留下来：一个翻书的人，两只手各按住一处，眼睛正从左页看到右页。\n\n这版用你的头像来演这个角色：保留斜刘海、闭眼笑和椭圆领扣，把翻页动作收成膝上的一本书。"
+  },
+  "ex-7cc7f94cd361c924bf67": {
+   "kicker": "样品 · 尚未开打",
+   "title": "夜班邮差",
+   "text": "Aholo 角色样品。小水獭戴着歪邮帽，双爪抱着一封信。",
+   "aside": ""
+  },
+  "ex-de62748ae39da5426eb9": {
+   "kicker": "样品 · 尚未开打",
+   "title": "夜班邮差",
+   "text": "收好今天最后一封信。",
+   "aside": ""
+  },
+  "ex-6c93b0ef7ca047af946b": {
+   "kicker": "样品 · 打印机已接单，尚无完工回执",
+   "title": "风停后的灯塔",
+   "text": "把积压的一件事收了尾，傍晚出去透了口气。今天的心情从紧绷慢慢落到了平静。",
+   "aside": ""
+  },
+  "sc-flame-keeper": {
+   "kicker": "生日蜡烛",
+   "title": "捧火苗的小陶偶",
+   "text": "一只小熊蜷着膝，把一团火苗捧在手心。",
+   "aside": ""
+  },
+  "sc-pocket-stall": {
+   "kicker": "校园摊位",
+   "title": "口袋里的折叠摊",
+   "text": "掀开遮阳布，折起的木箱就成了摆卡片的小摊。",
+   "aside": ""
+  },
+  "sc-chalk-desk": {
+   "kicker": "阶段场景",
+   "title": "桌角的一截粉笔",
+   "text": "粉笔落在半开书页的折痕里，桌面还留着写过字的磨痕。",
+   "aside": ""
+  },
+  "sc-open-suitcase": {
+   "kicker": "阶段场景",
+   "title": "摊开的行李箱",
+   "text": "弧形箱盖撑开，卷好的衣物之间插着一张空白票。",
+   "aside": ""
+  },
+  "sc-night-bunk": {
+   "kicker": "阶段场景",
+   "title": "床帘后的一盏灯",
+   "text": "上铺床帘掀起一角，把小台灯的光留给下铺。",
+   "aside": ""
+  },
+  "sc-departing-platform": {
+   "kicker": "阶段场景",
+   "title": "月台边的长椅",
+   "text": "一只皮箱搁在长椅边，雨棚下面还有坐人的位置。",
+   "aside": ""
+  },
+  "sc-paper-noticeboard": {
+   "kicker": "阶段场景",
+   "title": "夹满纸片的留言墙",
+   "text": "纸片叠了三层，木夹子在风里各自朝着不同方向。",
+   "aside": ""
+  },
+  "sc-kitchen-window": {
+   "kicker": "阶段场景",
+   "title": "窗边的双人饭桌",
+   "text": "窗帘下摆刚好碰到窗棂，热锅和两只碗挤在小圆桌上。",
+   "aside": ""
+  },
+  "sc-alley-stairs": {
+   "kicker": "阶段场景",
+   "title": "转角下楼的台阶",
+   "text": "砖墙与自行车之间，一段带扶手的台阶通向街面。",
+   "aside": ""
+  },
+  "sc-desk-corner": {
+   "kicker": "阶段场景",
+   "title": "亮着夹灯的工位",
+   "text": "笔记本、耳机和杯子挤在桌边，外套搭在椅背上。",
+   "aside": ""
+  },
+  "sc-laptop-index": {
+   "kicker": "阶段场景",
+   "title": "笔记本旁的索引卡",
+   "text": "笔记本旁有三层索引抽屉，一张纸卡从第二层露出来。",
+   "aside": ""
+  },
+  "sc-news-printer": {
+   "kicker": "阶段场景",
+   "title": "工位边的小报打印机",
+   "text": "托盘里那张刚吐出来的纸还翘着。",
+   "aside": ""
+  },
+  "sc-broadcast-mic": {
+   "kicker": "阶段场景",
+   "title": "深夜广播的小话筒",
+   "text": "圆形防喷网偏在话筒一侧，两支短架落在同一个圆底座上。",
+   "aside": ""
+  },
+  "sc-delivery-crate": {
+   "kicker": "阶段场景",
+   "title": "车筐里的纸箱",
+   "text": "两只封好的小箱排在车筐里，车还支在路边。",
+   "aside": ""
+  },
+  "sc-folded-umbrella": {
+   "kicker": "路边小物",
+   "title": "门边备着的伞",
+   "text": "一把伞收在桶里，弯把手朝着门口。",
+   "aside": ""
+  },
+  "sc-ferry-beacon": {
+   "kicker": "海边",
+   "title": "港边的信号灯",
+   "text": "四面小窗把灯光送到水面。",
+   "aside": ""
+  },
+  "sc-net-basket": {
+   "kicker": "海边",
+   "title": "码头的网篓",
+   "text": "半幅渔网从篓口翻下来，浮子还搭在网边。",
+   "aside": ""
+  },
+  "sc-lantern-niche": {
+   "kicker": "展台",
+   "title": "壁龛里的暖灯",
+   "text": "拱形小壁龛里雕着层层弧纹，底边嵌着一枚琥珀色灯珠。",
+   "aside": ""
+  },
+  "sc-tool-caddy": {
+   "kicker": "展台",
+   "title": "桌边的工具匣",
+   "text": "环形刀头和木刮片从匣子里探出来，小抽屉盛着一卷砂纸。",
+   "aside": ""
+  },
+  "sc-teacup-pair": {
+   "kicker": "路边小物",
+   "title": "给你留的那一杯",
+   "text": "茶托的两个浅窝各搁了一只杯子，杯耳一左一右。",
+   "aside": ""
+  },
+  "sc-intake-guide": {
+   "kicker": "阶段场景",
+   "title": "新生的第一只布袋",
+   "text": "卷好的铺盖从布袋侧边露出来，一本空白小册靠着袋身。",
+   "aside": ""
+  },
+  "sc-card-tray": {
+   "kicker": "阶段场景",
+   "title": "收摊时的卡片架",
+   "text": "抽屉推回去一半，零散的卡已经收成一摞。",
+   "aside": ""
+  },
+  "sc-lectern-notes": {
+   "kicker": "阶段场景",
+   "title": "讲台上的翻页笔",
+   "text": "半卷讲稿在讲台上摊开，翻页笔贴着挡纸边。",
+   "aside": ""
+  },
+  "sc-bookend-fox": {
+   "kicker": "路边小物",
+   "title": "书堆里的狐狸书挡",
+   "text": "小狐狸的尾巴托住了最外面的一本书。",
+   "aside": ""
+  },
+  "sc-field-recorder": {
+   "kicker": "路边小物",
+   "title": "把声音收进盒子",
+   "text": "两只转轮藏在方形小窗后面，侧边的短天线收在槽里。",
+   "aside": ""
+  },
+  "sc-reel-projector": {
+   "kicker": "路边小物",
+   "title": "双盘放映机",
+   "text": "两只开孔片盘高低相对，胶片绕过机壳上的转轴。",
+   "aside": ""
+  },
+  "sc-filter-camera": {
+   "kicker": "路边小物",
+   "title": "镜头前的滤片",
+   "text": "方形机身一侧伸出圆形滤片架，收拢时正好盖住镜头。",
+   "aside": ""
+  },
+  "sc-hoop-bank": {
+   "kicker": "路边小物",
+   "title": "篮圈里的球",
+   "text": "半颗球落在篮圈里，粗网绳沿着球身向下收拢。",
+   "aside": ""
+  },
+  "sc-pleated-map": {
+   "kicker": "路边小物",
+   "title": "折页上的路线",
+   "text": "一条浅浮雕小径穿过纸面的三道折痕，停在圆头定位钉旁。",
+   "aside": ""
+  },
+  "sc-press-tray": {
+   "kicker": "阶段场景",
+   "title": "桌上的小报校样",
+   "text": "压纸条固定住一张大校样，短滚筒停在版面旁边。",
+   "aside": ""
+  },
+  "sc-rope-bollard": {
+   "kicker": "海边",
+   "title": "缠了麻绳的缆桩",
+   "text": "粗麻绳沿着缆桩盘了好几圈，在桩脚收成一道绳结。",
+   "aside": ""
+  },
+  "sc-shore-skiff": {
+   "kicker": "海边",
+   "title": "靠岸的小划艇",
+   "text": "一支短桨斜放在木船的坐板上。",
+   "aside": ""
+  },
+  "sc-turntable": {
+   "kicker": "展台",
+   "title": "留下指痕的转盘",
+   "text": "一只尚未收口的小碗停在拉坯盘上。",
+   "aside": ""
+  },
+  "sc-shell-niche": {
+   "kicker": "海边",
+   "title": "贝壳里的小灯",
+   "text": "细褶围成一圈，把灯放在开口朝海的地方。",
+   "aside": ""
+  },
+  "sc-lunch-satchel": {
+   "kicker": "路边小物",
+   "title": "纸袋旁的粗笔",
+   "text": "餐盒盖从纸袋里露出一边，粗笔插在袋侧的纸褶里。",
+   "aside": ""
+  },
+  "sc-shuttle-tubes": {
+   "kicker": "路边小物",
+   "title": "没盖好的球筒",
+   "text": "三只球筒靠在同一个底座上，前面那只露出羽毛球的软木球头。",
+   "aside": ""
+  },
+  "sc-palette-fan": {
+   "kicker": "路边小物",
+   "title": "转开的配色扇",
+   "text": "五张厚纸卡在同一枚铆钉上张开，每一层露出一个窄角。",
+   "aside": ""
+  },
+  "sc-keyboard-step": {
+   "kicker": "路边小物",
+   "title": "被按下的小琴键",
+   "text": "七枚浅色琴键里，有一枚落得比邻键低。",
+   "aside": ""
+  },
+  "sc-cargo-lock": {
+   "kicker": "路边小物",
+   "title": "吊起的集装箱",
+   "text": "一个小箱子悬在两根短导轨之间，和底下的凹槽还差一格。",
+   "aside": ""
+  },
+  "sc-tape-rule": {
+   "kicker": "路边小物",
+   "title": "伸出一截的卷尺",
+   "text": "尺带从圆壳拉出一小截，端钩卡在底板另一端的方木块上。",
+   "aside": ""
+  },
+  "sc-birthday-cloche": {
+   "kicker": "展台",
+   "title": "藏烛火的罩钟",
+   "text": "玻璃罩的轮廓围住一支矮蜡烛，底座刻着一圈圆点。",
+   "aside": ""
+  },
+  "sc-diploma-tube": {
+   "kicker": "路边小物",
+   "title": "系着结的证书",
+   "text": "缎带把纸卷束在一起，打开的硬封套托住它。",
+   "aside": ""
+  },
+  "sc-shell-halves": {
+   "kicker": "路边小物",
+   "title": "两瓣圆角外壳",
+   "text": "上盖斜靠在下壳边，露出里面的卡扣与螺丝柱。",
+   "aside": ""
+  },
+  "sc-parking-guide": {
+   "kicker": "路边小物",
+   "title": "转弯的小车",
+   "text": "一辆矮车斜停在两根圆桩之间，车后的弧线还差半圈。",
+   "aside": ""
+  },
+  "sc-pinned-cylinder": {
+   "kicker": "路边小物",
+   "title": "掌心里的八音盒",
+   "text": "转柄停在盒侧，滚筒上的一排细点正对着金属梳齿。",
+   "aside": ""
+  },
+  "sc-recording-cradle": {
+   "kicker": "路边小物",
+   "title": "夹在支架上的镜头",
+   "text": "镜头夹在短臂尽头，正对着桌面的一页纸。",
+   "aside": ""
+  },
+  "sc-grid-loupe": {
+   "kicker": "路边小物",
+   "title": "格子上的放大镜",
+   "text": "放大镜压着其中一格，短柄还搭在纸边。",
+   "aside": ""
+  },
+  "sc-tide-post": {
+   "kicker": "海边",
+   "title": "涨潮的刻度桩",
+   "text": "一根潮位柱立在矮石边，沿柱身排列的环纹能用来对照水位。",
+   "aside": ""
+  },
+  "sc-reading-seat": {
+   "kicker": "路边小物",
+   "title": "给你留的椅子",
+   "text": "椅子的一边挂着布包，宽敞的座板仍然空着。",
+   "aside": ""
+  },
+  "sc-clue-stone": {
+   "kicker": "路边小物",
+   "title": "石缝里的线索卡",
+   "text": "两块扁石上下错开，石缝中露出纸卡带圆点的一角。",
+   "aside": ""
+  },
+  "sc-vanishing-frame": {
+   "kicker": "路边小物",
+   "title": "通向远处的线",
+   "text": "两条浅浅的线从取景框脚下伸出，沿着斜面向前张开。",
+   "aside": ""
+  },
+  "sc-subtitle-splicer": {
+   "kicker": "路边小物",
+   "title": "胶片上的两条空行",
+   "text": "一段胶片穿过压片轮，画格下面留着两条浅槽。",
+   "aside": ""
+  },
+  "sc-relief-pear": {
+   "kicker": "路边小物",
+   "title": "从平面长出来的梨",
+   "text": "纸片上的梨只有轮廓，到前方就成了一颗完整的果子。",
+   "aside": ""
+  },
+  "sc-filament-spool": {
+   "kicker": "路边小物",
+   "title": "收住线尾的料盘",
+   "text": "盘边露出一截圆线，末端刚好穿进一个小眼。",
+   "aside": ""
+  },
+  "sc-corner-seal": {
+   "kicker": "路边小物",
+   "title": "压在纸角的印章",
+   "text": "方形印章侧放在叠起的白纸上，一圈细边围住空白的印面。",
+   "aside": ""
+  },
+  "sc-branch-cards": {
+   "kicker": "路边小物",
+   "title": "分出枝的索引片",
+   "text": "几根弯枝绕着中央的圆片伸开，枝头各托着一张空白小牌。",
+   "aside": ""
+  },
+  "core:candle": {
+   "kicker": "生日蜡烛",
+   "title": "二十三",
+   "text": "从 2022 年夏天起，沿月灯走到这里。小屋记着一路遇见的人，展台留给每天做出来的小东西。",
+   "aside": ""
+  },
+  "core:empty": {
+   "kicker": "空展台",
+   "title": "留给明天",
+   "text": "下一件做好模型的小物，会出现在这里。",
+   "aside": ""
+  }
+ }
+}

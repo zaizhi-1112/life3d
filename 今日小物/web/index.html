@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f4f1ed">
+<title>今日小物</title>
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/viewer.css">
+<script src="/viewer.js" defer></script>
+<script src="/ui.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">跳到内容</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/" aria-label="今日小物首页"><span class="brand-mark" aria-hidden="true">✳</span>今日小物</a>
+    <nav aria-label="主导航">
+      <button type="button" class="nav-btn current" id="today-link" aria-current="page">今天</button>
+      <button type="button" class="nav-btn" id="history-link">收藏</button>
+      <button type="button" class="nav-btn" id="settings-link" aria-haspopup="dialog">设置</button>
+    </nav>
+  </div>
+</header>
+<main id="main" class="wrap" tabindex="-1">
+  <div id="connection-notice" class="notice" role="status" hidden><p id="connection-message"></p><button type="button" class="text-button" id="retry-load">重新连接</button></div>
+  <section id="today-view" aria-labelledby="page-heading">
+    <div class="day-bar">
+      <div class="day-heading"><time id="date-label"></time><h1 id="page-heading">今天的小物</h1></div>
+      <div class="day-navigation">
+        <button id="previous-day" class="icon-button" type="button" aria-label="上一条记录">←</button>
+        <label for="day-select" class="sr-only">选择日期</label><select id="day-select"><option>正在读取</option></select>
+        <button id="next-day" class="icon-button" type="button" aria-label="下一条记录">→</button>
+        <button id="back-today" class="text-button" type="button" hidden>今天</button>
+      </div>
+    </div>
+    <div class="creation-canvas">
+      <section id="workbench" class="journal-stage" aria-labelledby="record-heading">
+        <div class="stage-heading"><h2 id="record-heading">经历摘要</h2><span id="record-label" class="micro"></span></div>
+        <form id="record-form">
+          <label for="summary" class="sr-only">今天的工作和心情</label>
+          <textarea id="summary" name="summary" rows="4" maxlength="4000" placeholder="今天做了什么，有什么想留下的感受？" required></textarea>
+          <fieldset id="moods"><legend class="sr-only">心情</legend>
+            <label><input name="mood" type="radio" value="平静"><span>平静</span></label><label><input name="mood" type="radio" value="有劲"><span>有劲</span></label><label><input name="mood" type="radio" value="疲惫"><span>疲惫</span></label><label><input name="mood" type="radio" value="松一口气"><span>松一口气</span></label><label><input name="mood" type="radio" value="烦乱"><span>烦乱</span></label>
+          </fieldset>
+          <details id="design-fields" class="design-fields"><summary>名称和造型</summary>
+            <label for="design-title">名称</label><input id="design-title" name="title" maxlength="40" placeholder="例如 夜班邮差">
+            <label for="design-idea">造型</label><textarea id="design-idea" name="idea" rows="3" maxlength="600" placeholder="圆脸小水獭，抱着信封，尾巴弯到脚边"></textarea>
+            <label for="design-reason-edit">造型缘由</label><textarea id="design-reason-edit" name="design_reason" rows="2" maxlength="500"></textarea>
+          </details>
+          <div class="form-actions">
+            <button class="button primary" id="save-record" type="submit">保存记录</button>
+            <button class="button secondary" id="organize-record" type="button" hidden>自动整理今天</button>
+            <button class="button secondary" id="unlock-record" type="button" hidden>解锁编辑</button>
+            <button class="text-button" id="cancel-edit" type="button" hidden>取消编辑</button>
+            <span class="micro" id="draft-status" role="status"></span>
+          </div>
+          <p class="micro" id="record-source" aria-live="polite"></p>
+          <p class="error" id="organize-error" role="status" hidden></p>
+        </form>
+        <div id="sample-story" hidden><p id="sample-summary"></p></div>
+        <div class="inspiration"><h3>原话依据</h3><div id="inspiration-list"></div><p id="no-inspiration" class="micro"></p></div>
+      </section>
+      <section class="prompt-stage" aria-labelledby="prompt-heading">
+        <div class="stage-heading"><h2 id="prompt-heading">造型提示词</h2><span id="prompt-state" class="micro"></span></div>
+        <p id="design-reason" class="design-reason" hidden></p>
+        <p id="idea" class="idea"></p>
+        <label for="design-prompt" class="sr-only">完整造型提示词</label>
+        <textarea id="design-prompt" class="prompt-text" rows="6" maxlength="2000" placeholder="留空会按造型生成提示词" readonly hidden></textarea>
+        <p id="prompt-empty" class="micro"></p>
+        <a id="concept-link" class="text-button" target="_blank" rel="noopener" hidden>查看造型参考图 ↗</a>
+        <div class="form-actions"><button id="save-prompt" class="button primary" type="submit" form="record-form" hidden>保存修改</button><button id="generate" class="button primary" type="button" hidden>用 Aholo 生成并切片</button><button id="connect-aholo" class="button secondary" type="button" hidden>连接 Aholo</button></div>
+      </section>
+      <section class="model-stage" aria-labelledby="job-heading">
+        <div class="stage-heading"><h2 id="job-heading">3D 模型</h2><span id="status" class="status" role="status">正在读取</span></div>
+        <div class="model-surface">
+          <span id="photo-tag" class="photo-label"></span>
+          <model-orbit id="model-viewer" hidden></model-orbit>
+          <a id="preview-link" class="poster" target="_blank" rel="noopener" aria-label="打开完整预览"><img id="showcase" src="/lighthouse.jpg" alt="灯塔摆件渲染"></a>
+          <div id="model-empty" class="model-empty" hidden><strong id="model-empty-title"></strong><p id="model-empty-text"></p></div>
+        </div>
+        <p id="image-error" class="image-error" hidden>预览暂未加载。<button type="button" class="text-button" id="retry-image">重试</button></p>
+        <div class="model-caption"><strong id="photo-caption"></strong><span id="photo-meta"></span></div>
+        <section id="usage-panel" class="usage-panel" aria-labelledby="usage-title" hidden>
+          <div class="usage-summary"><h3 id="usage-title">Aholo 积分</h3><strong id="usage-total"></strong></div>
+          <div id="usage-lines"></div>
+        </section>
+        <p id="progress-note" class="progress-note" hidden></p><p id="job-error" class="error" role="status" hidden></p>
+        <div id="job-empty"><button id="jump-record" class="text-button" type="button">写下今天的记录 ↖</button></div>
+        <div id="job-detail" hidden>
+          <dl id="metrics" class="metrics" hidden>
+            <div><dt>宽 × 深 × 高</dt><dd id="print-size"></dd></div><div><dt>预计打印</dt><dd id="print-time"></dd></div>
+            <div id="print-weight-row" hidden><dt>预计用料</dt><dd id="print-weight"></dd></div><div id="print-scale-row" hidden><dt>相对基础尺寸</dt><dd id="print-scale"></dd></div>
+            <div><dt>层高</dt><dd id="print-layer"></dd></div><div><dt>支撑</dt><dd id="print-support"></dd></div>
+          </dl>
+          <p id="size-comparison" class="size-comparison" hidden></p>
+          <div id="job-links" class="links" hidden><a id="stl" download>下载 STL</a><a id="print-file" download>下载切片</a></div>
+          <section id="color-review" class="color-review" aria-labelledby="color-heading" hidden>
+            <div class="color-heading"><h3 id="color-heading">打印颜色</h3><span id="color-status" role="status"></span></div>
+            <p id="color-message" class="color-message"></p>
+            <ul id="color-options" class="color-options" aria-label="可用耗材" hidden></ul>
+            <button id="color-request" class="text-button" type="button" hidden>发飞书选色</button>
+            <form id="color-confirm" hidden>
+              <div><label for="confirm-source">本件颜色</label><select id="confirm-source" required></select></div>
+              <div><label for="confirm-code">飞书确认码</label><input id="confirm-code" type="text" maxlength="16" autocomplete="one-time-code" autocapitalize="characters" spellcheck="false" required></div>
+              <button id="confirm-color-button" type="submit" class="button primary" disabled>确认这个颜色</button>
+            </form>
+          </section>
+          <div id="print-controls" class="print-controls" hidden>
+            <label class="checkbox-label"><input id="ready" type="checkbox"><span id="ready-description">平台已清空，0.4 mm 喷嘴和纹理 PEI 板已就绪。</span></label>
+            <button id="send-print" class="button primary" type="button">发送到 P2S 开始打印</button>
+          </div>
+          <button id="connect-printer" class="text-button" type="button" hidden>连接 P2S 后可发送打印 ↗</button>
+        </div>
+        <div class="sample-entry"><button id="sample-button" class="text-button" type="button">查看样品 ↗</button><p id="sample-progress" role="status" hidden></p></div>
+      </section>
+      <section class="finished-stage" aria-labelledby="finished-heading">
+        <div class="stage-heading"><h2 id="finished-heading">成品照片</h2><span id="finished-state" class="micro"></span></div>
+        <div id="finished-empty" class="finished-empty"><span class="photo-outline" aria-hidden="true"></span><p id="finished-empty-message">模型切片后，可以上传实物照片。</p></div>
+        <a id="finished-link" class="finished-image" target="_blank" rel="noopener" hidden><img id="finished-image" alt=""></a>
+        <p id="finished-note" class="micro">还没有记录成品</p>
+        <input id="finished-file" type="file" accept="image/jpeg,image/png" hidden>
+        <button id="upload-finished" class="button secondary" type="button">上传成品照片</button>
+        <p id="finished-error" class="error" role="status" hidden></p>
+        <details id="previous-editions" class="design-fields" hidden><summary>旧版文件</summary><div id="edition-links"></div></details>
+      </section>
+    </div>
+  </section>
+  <section id="collection" aria-labelledby="collection-title" hidden>
+    <div class="day-bar"><h1 id="collection-title">收藏</h1></div>
+    <div id="sample-list" class="sample-list"></div><div id="history-list" class="history-list"></div>
+  </section>
+</main>
+<footer class="wrap footer"><span id="printer-footer">拓竹 P2S</span><a href="/guide" target="_blank" rel="noopener">使用与接入 ↗</a></footer>
+<dialog id="settings-dialog" aria-labelledby="settings-title">
+  <div class="dialog-header"><h2 id="settings-title">设置</h2><button id="close-settings" type="button" class="icon-button" aria-label="关闭设置">×</button></div>
+  <section><h3>每天的安排</h3>
+    <p id="settings-error" class="error" role="status" hidden></p>
+    <form id="schedule-form">
+      <label for="schedule-time">开始准备时间</label><input id="schedule-time" type="time" value="20:30" required>
+      <label class="checkbox-label"><input id="auto-prepare" type="checkbox"><span>每天用 Aholo 准备摆件</span></label>
+      <label class="checkbox-label"><input id="auto-print" type="checkbox"><span>清盘并在飞书选色后，自动发送到 P2S</span></label>
+      <label class="checkbox-label"><input id="prepare-after-ready" type="checkbox"><span>等这件小物确认清盘后，再使用 Aholo 积分</span></label>
+      <p class="micro">按 UTC+8 运行。保持应用打开，Agent 在当天交接摘要。生成参考图和 3D 模型会消耗 Aholo 积分。</p>
+      <button class="button primary" type="submit">保存安排</button>
+    </form>
+  </section>
+  <section id="history-sources"><h3>原话来源</h3><p id="personal-history" class="micro"></p></section>
+  <section aria-labelledby="feishu-title"><h3 id="feishu-title">飞书选色</h3>
+    <p id="feishu-status" class="micro" role="status"></p>
+    <button id="feishu-bind" class="button secondary" type="button">连接飞书工作岛通知</button>
+    <p id="feishu-instruction" class="micro" aria-live="polite" hidden></p>
+    <details><summary>使用我自己的飞书群通知机器人</summary>
+      <form id="webhook-form" autocomplete="off">
+        <label for="webhook-url">飞书 Webhook 地址</label><input type="password" id="webhook-url" required autocomplete="new-password">
+        <label for="webhook-secret">签名密钥（若已启用签名）</label><input type="password" id="webhook-secret" autocomplete="new-password">
+        <label class="checkbox-label"><input type="checkbox" id="webhook-only-me" required><span>这个通知群只有我本人接收消息</span></label>
+        <button class="button secondary" type="submit">保存通知机器人</button>
+      </form>
+    </details>
+  </section>
+  <section><h3>服务连接</h3>
+    <form id="connection-form" autocomplete="off">
+      <p class="micro" id="connection-help">已保存的值会隐藏。只填需要替换的项目，留空保留原值。 <a href="/guide" target="_blank" rel="noopener">接入步骤</a></p>
+      <div class="connection-field"><div class="label-row"><label for="lux-key">Aholo API Key</label><span class="connection-status" id="lux-key-status"></span></div><input type="password" id="lux-key" name="LUX3D_API_KEY" maxlength="256" autocomplete="new-password" aria-describedby="lux-key-status connection-help"></div>
+      <fieldset class="printer-fields"><legend>拓竹 P2S</legend>
+        <div class="connection-field"><div class="label-row"><label for="printer-ip">局域网 IP</label><span class="connection-status" id="printer-ip-status"></span></div><input id="printer-ip" name="BAMBU_IP" maxlength="15" aria-describedby="printer-ip-status connection-help"></div>
+        <div class="connection-field"><div class="label-row"><label for="printer-serial">打印机序列号</label><span class="connection-status" id="printer-serial-status"></span></div><input id="printer-serial" name="BAMBU_SERIAL" type="password" maxlength="32" autocomplete="new-password" aria-describedby="printer-serial-status connection-help"></div>
+        <div class="connection-field"><div class="label-row"><label for="printer-code">局域网访问码</label><span class="connection-status" id="printer-code-status"></span></div><input id="printer-code" name="BAMBU_ACCESS_CODE" type="password" maxlength="16" autocomplete="new-password" aria-describedby="printer-code-status connection-help"></div>
+      </fieldset>
+      <div class="form-actions"><button class="button primary" type="submit">保存连接</button><button class="button secondary" type="button" id="printer-check">测试 P2S 连接</button></div>
+    </form>
+  </section>
+</dialog>
+<div id="toast" role="status" hidden></div>
+</body>
+</html>

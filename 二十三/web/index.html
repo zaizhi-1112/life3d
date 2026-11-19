@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>二十三</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="people-manager.css">
+<script type="importmap">
+{"imports": {"three": "./vendor/three/three.module.js", "three/addons/": "./vendor/three/addons/"}}
+</script>
+</head>
+<body>
+<div id="stage"></div>
+<header class="mark">二十三</header>
+<nav class="views" aria-label="小岛">
+  <button data-view="walk">走进去</button>
+  <button data-view="fly">从 2022 飞过</button>
+  <button data-view="hall">展台</button>
+  <button data-view="overview" aria-pressed="true">全岛</button>
+  <button id="open-people" aria-haspopup="dialog">小屋管理</button>
+  <button id="open-workbench" aria-haspopup="dialog">今日小物</button>
+</nav>
+<div class="era" id="era" aria-live="polite"></div>
+<aside class="card" id="card" aria-labelledby="card-title" hidden>
+  <button class="close" aria-label="关闭卡片">×</button>
+  <div id="card-reading">
+    <p class="kicker" id="card-kicker"></p>
+    <h2 id="card-title"></h2>
+    <p id="card-text"></p>
+    <p class="aside" id="card-aside"></p>
+    <img id="card-photo" alt="这件小物的实物照片" hidden>
+    <button type="button" class="quiet" id="edit-card">编辑</button>
+    <section class="linked-card" id="linked-card" hidden>
+      <p class="kicker" id="linked-kicker"></p>
+      <h3 id="linked-title"></h3>
+      <p id="linked-text"></p>
+      <p class="aside" id="linked-aside"></p>
+      <button type="button" class="quiet" id="edit-linked">编辑这段记录</button>
+    </section>
+  </div>
+  <form id="card-form" hidden>
+    <label>分类和日期<input name="kicker" maxlength="240"></label>
+    <label>标题<input name="title" required maxlength="240"></label>
+    <label>正文<textarea name="text" rows="5" maxlength="8000"></textarea></label>
+    <label>补充说明<textarea name="aside" rows="3" maxlength="4000"></textarea></label>
+    <div class="form-actions"><button type="submit">保存</button><button type="button" id="cancel-edit">取消</button><button type="button" class="quiet" id="reset-edit">恢复原文</button></div>
+  </form>
+  <p id="card-status" role="status" hidden></p>
+</aside>
+<dialog id="people-manager" aria-labelledby="people-heading">
+  <header class="people-header">
+    <h2 id="people-heading">小屋管理</h2>
+    <button type="button" id="people-close">回到岛上</button>
+  </header>
+  <div class="people-workspace">
+    <aside class="people-directory" aria-label="人物名单">
+      <div class="people-scopes" aria-label="人物分组">
+        <button type="button" data-scope="house" aria-pressed="true">小屋</button>
+        <button type="button" data-scope="mail" aria-pressed="false">信箱</button>
+      </div>
+      <input type="search" id="people-search" aria-label="搜索人物" placeholder="搜索姓名或简介" autocomplete="off">
+      <div class="people-list" id="people-list" aria-label="搜索结果"></div>
+    </aside>
+    <main class="people-detail">
+      <form id="people-form" hidden>
+        <fieldset id="people-fields">
+          <label class="people-title-field">卡片名称<input name="title" required maxlength="240"></label>
+          <label>日期或分类<input name="kicker" maxlength="240"></label>
+          <label>人物介绍<textarea name="text" rows="5" maxlength="8000"></textarea></label>
+          <label>补充说明<textarea name="aside" rows="2" maxlength="4000"></textarea></label>
+        </fieldset>
+        <footer class="people-actions">
+          <button type="submit" class="people-save">保存</button>
+          <button type="button" id="people-next" title="⌘ / Ctrl + Enter">保存并切到下一位</button>
+          <button type="button" id="people-visit">去看小屋</button>
+          <button type="button" id="people-discard" hidden>撤销未保存修改</button>
+        </footer>
+      </form>
+      <p id="people-status" role="status" aria-live="polite"></p>
+      <button type="button" id="people-retry" hidden>重新读取名单</button>
+    </main>
+  </div>
+</dialog>
+<dialog id="workbench" aria-labelledby="workbench-title">
+  <header><h2 id="workbench-title">今日小物</h2><button id="close-workbench" autofocus>回到岛上</button></header>
+  <div id="workbench-status" role="status"></div>
+  <iframe id="workbench-frame" title="今日小物工作台" hidden></iframe>
+</dialog>
+<div class="crosshair" aria-hidden="true"></div>
+<p class="hint" id="hint" hidden>WASD 走 · ←→ 转头 · Shift 跑 · 拖动或鼠标看 · E 查看</p>
+<div class="loading" id="loading">正在点灯</div>
+<script type="module" src="world.js"></script>
+<script type="module" src="people-manager.js"></script>
+</body>
+</html>

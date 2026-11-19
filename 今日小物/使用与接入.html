@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>今日小物 · 使用与接入</title>
+<style>
+  :root {
+    color-scheme: light;
+    --paper: #f4f0f6;
+    --ink: #30263c;
+    --muted: #655b70;
+    --accent: #644682;
+    --rule: #dcd3e2;
+    --panel: #fcfafc;
+    --reading-size: 20px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-padding-top: 20px; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font: var(--reading-size)/1.8 "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; }
+  main { max-width: 850px; margin: auto; padding: 28px 30px 64px; }
+  header { padding-bottom: 18px; border-bottom: 1px solid var(--rule); }
+  h1, h2, h3 { line-height: 1.45; letter-spacing: -.025em; font-weight: 700; }
+  h1 { font-size: 30px; margin: 0 0 12px; }
+  h2 { font-size: 25px; margin: 0 0 16px; }
+  h3 { font-size: 21px; margin: 24px 0 10px; }
+  p { margin: 0 0 17px; overflow-wrap: anywhere; }
+  header p { margin-bottom: 14px; }
+  section { padding: 28px 0; border-bottom: 1px solid var(--rule); scroll-margin-top: 18px; }
+  section > :last-child { margin-bottom: 0; }
+  a { color: var(--accent); text-underline-offset: .2em; }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+  button { font: inherit; font-size: 18px; line-height: 1.4; color: var(--accent); background: var(--panel); border: 1px solid #cbbbd4; padding: 8px 12px; border-radius: 7px; cursor: pointer; min-height: 42px; }
+  .tools { display: flex; align-items: flex-start; gap: 10px 18px; flex-wrap: wrap; font-size: 18px; }
+  .tools > a { padding: 6px 0; }
+  .contents { flex-basis: 100%; }
+  summary { cursor: pointer; color: var(--accent); width: fit-content; font-size: 18px; }
+  nav { display: flex; gap: 7px 20px; flex-wrap: wrap; padding-top: 10px; font-size: 18px; }
+  nav a { padding: 2px 0; }
+  .handoff { margin: 18px 0; border-left: 3px solid #b39ac8; padding: 14px 18px; background: var(--panel); }
+  pre { white-space: pre-wrap; overflow-wrap: anywhere; margin: 0 0 14px; }
+  code { font: .9em/1.75 "IBM Plex Mono", Menlo, monospace; }
+  #copy-status { font-size: 18px; color: var(--muted); margin-left: 8px; }
+  ol { padding-left: 1.4em; margin: 16px 0; }
+  li { padding-left: .15em; margin-bottom: 14px; }
+  .note { color: var(--muted); }
+  footer { padding-top: 24px; }
+  footer details { margin-top: 14px; }
+  footer details > p { margin-top: 14px; }
+  @media (max-width: 600px) {
+    main { padding: 20px 20px 44px; }
+    h1 { font-size: 28px; }
+    h2 { font-size: 24px; }
+    section { padding: 25px 0; }
+    .handoff { padding: 12px 14px; }
+    nav { display: grid; grid-template-columns: 1fr; gap: 6px; }
+  }
+  @media print {
+    body { background: #fff; }
+    .tools, #copy, #copy-status { display: none; }
+    main { max-width: none; padding: 0; }
+    a { color: inherit; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>今日小物 · 使用与接入</h1>
+    <p>当天还没保存记录时，可以点「自动整理今天」。每天 20:00 也有定时整理。20:30 起，工作台会等你确认平台已清空、允许这件作品使用 Aholo 积分，再生成模型、切片。普通飞书机器人会发来尺寸和选色链接。选定本件颜色后，工作台才会发送到 P2S。</p>
+    <div class="tools" aria-label="阅读工具">
+      <a href="http://127.0.0.1:17868/">打开本机工作台</a>
+      <button type="button" id="larger" aria-pressed="false">放大字号</button>
+      <details class="contents" id="contents">
+        <summary>目录</summary>
+        <nav aria-label="目录">
+          <a href="#canvas">作品画布</a>
+          <a href="#sample">三件样品</a>
+          <a href="#agent">每日交接</a>
+          <a href="#sources">本人历史来源</a>
+          <a href="#aholo">连接 Aholo</a>
+          <a href="#printer">接入 P2S</a>
+          <a href="#daily">每天自动准备</a>
+          <a href="#records">记录与草稿</a>
+        </nav>
+      </details>
+    </div>
+  </header>
+  <section id="canvas">
+    <h2>在画布上看一件作品</h2>
+    <p>双击「打开今日小物.command」。顶部日期和左右箭头可以翻看每天的作品，在「收藏」里也能找到样品。宽屏把经历、造型、模型和成品放在同一幅画布上，手机窄屏可以向下浏览。</p>
+    <p><strong>经历与造型。</strong>「经历摘要」收录这一天的事和心情。「原话依据」显示 Agent 从本人文字中选用的节选与来源。「造型提示词」保留选题缘由及生成参考图的完整文字。提交状态会标出待调用、已使用或结果待确认。旧档只显示当时保存的内容，缺少完整提示词会明确标记。已有参考图可以单独打开。</p>
+    <p><strong>这件用了多少积分？</strong>模型下方显示 Aholo 用量。生成前可以看到预计费用；结算后按参考图、G1 建模分别显示实际扣分。同一天换过造型，旧版和当前版分行显示，总数按每笔任务只算一次。</p>
+    <p><strong>360° 看模型。</strong>点「360° 查看模型」打开实际用于切片的 STL。默认选中「平移」，直接拖动模型就能上下左右移动，触控板也可以双指滑动。点「旋转」再拖动，可以看背面和底部。点 ＋ / − 或双指捏合可缩放；在「旋转」下也可以用滚轮缩放。选中模型后，方向键跟随当前模式，加减键缩放，Home 复位。点「收起」返回预览图。浏览器无法开启 3D 时，仍可以看图和下载模型。</p>
+    <p><strong>成品留档。</strong>拿到实物后，在「成品照片」里上传自己拍的 JPG 或 PNG，每张不超过 12 MiB。照片保存在本机，对应作品标记为「已有成品」，以后可以更换照片。还没有照片时会保留空位。「P2S 已接单」表示机器已接受任务。新版会在接单后 24 小时内定期读取设备状态；只有本次任务身份匹配，画布才显示进度或「P2S 已报完成」。旧任务、断线或身份无法核对时，可以在机身屏幕查看。成品格留给实际拍下的照片。</p>
+  </section>
+  <section id="sample">
+    <h2>三件样品</h2>
+    <p>在「收藏」里可以查看两只水獭和灯塔，下载各自的 STL 和切片。</p>
+    <p><strong>Aholo 水獭邮差。</strong>从造型参考图生成的水獭模型已完成本机切片。尺寸为 40.33 × 40.14 × 60 mm，使用 P2S 的 0.12 mm 层高，切片估时为 99 分 50 秒。该样品尚未实打，成品细节和支撑拆除效果仍需打印验证。</p>
+    <p><strong>本地造型水獭。</strong>手工构造的抱信水獭，用于比较角色轮廓与立体细节。它和 Aholo 水獭是两件独立样品。</p>
+    <p><strong>灯塔。</strong>「风停后的灯塔」是可直接试切的离线样品，方便先查看整个准备和切片流程。</p>
+    <p class="note">新摆件以最长边约 6 厘米为基准，应用在 8 厘米以内尝试等比放大，以实际切片估时选出 3 小时以内的尺寸。使用 0.4 毫米喷嘴、0.12 毫米层高和单色 PLA。页面的模型渲染和切片预览帮助检查造型，实际耗时与表面效果以打印结果为准。</p>
+  </section>
+  <section id="agent">
+    <h2>自动整理当天的经历</h2>
+    <p>在今日画布点「自动整理今天」，工作台会读取本机飞书工作岛的新建和完成待办，以及本机 Codex 的工作结果。已登录的 Codex 会根据这些材料生成经历摘要、摆件名称和造型描述，工作台保存后自动写出造型提示词。页面会显示读到的来源。当天已有记录时直接编辑。</p>
+    <p>每天 20:00（UTC+8），已有的 Codex 定时任务也会整理。它会按当天主题检索相关的本人原话，选取合适的节选解释造型缘由。两类来源都查到且确定没有当天材料时，可从已核实的生日礼物片段里选一件往事。</p>
+    <p>需要在现有 Agent 中复用这套交接时，可以复制下面的提示。命令在这台 Mac 上运行。</p>
+    <div class="handoff">
+      <pre><code id="handoff-text">每天 20:00（UTC+8）整理当天内容。进入「3D 打印每日心情」项目目录：
+
+cd 今日小物
+
+读取当天待办事件、Codex 工作主题和可用的完成记录：
+
+.venv/bin/python -B daily_inputs.py
+
+如果当天没有记录且返回了 birthday_inspiration，就用这段生日礼物往事构思。保留往事原来的日期，摘要注明取材于生日礼物，造型缘由只留本机。这种情况下跳过下一步的原话检索。
+
+有当天主题时，在本地索引找本人原话，把“当天主题词”换成实际关键词：
+
+.venv/bin/python -B history_context.py search '当天主题词' --limit 6
+
+仅采用有关联的真实节选，最多 3 条。缺少来源时如实省略。写出角色或物品的形状、姿态和稳定底座，保留可打印的细节。对外的造型描述去掉姓名、工作项目、链接和个人原话。
+
+先确认本机工作台已启动，需要时由命令后台打开：
+
+.venv/bin/python -B app.py --ensure-running
+
+然后将当天完整的单个 JSON 对象通过标准输入交接：
+
+.venv/bin/python -B app.py --submit -
+
+summary 为当天摘要，最多 4000 字。mood 可用平静、有劲、疲惫、松一口气、烦乱、未标记。可带 date（YYYY-MM-DD）、title（最多 40 字）和 idea（最多 600 字）。inspiration_refs 填搜索结果中原有的 ref 编号数组；design_reason 用一两句解释原话或当天经历如何影响造型，最多 500 字。最小记录形如 {"summary":"完成了一件事。","mood":"平静"}。不填写 date 时采用台北时区的今天。
+
+保持本次成功交接的 JSON，相同日期重试时原样提交。自动化只交接内容，生成与实机发送由工作台的设置和就绪状态控制。</code></pre>
+      <button type="button" id="copy">复制交接提示</button>
+      <span id="copy-status" role="status" aria-live="polite"></span>
+    </div>
+    <p>你也可以手写记录，打开「名称和造型」填写造型，或在「造型提示词」里直接修改用于参考图的文字。留空时，工作台按心情选一个造型，并尽量避开最近两条记录的选题。你保存过的内容会优先保留。摘要和造型缘由存放在本机，发给 Aholo 的内容用于描述外形。</p>
+    <p>制作或发送结束后，可以点「解锁编辑」。修改摘要、心情或名称会沿用当前模型。修改造型或完整提示词会建立新版，旧模型、切片和实物照片可在「旧版文件」查看。新版要重新确认积分、清盘和飞书选色。编辑期间暂停这件作品的自动制作与发送，取消编辑后可以按原安排继续。</p>
+  </section>
+  <section id="sources">
+    <h2>原话来自哪里</h2>
+    <p>「设置 → 原话来源」显示本机可检索的节选与来源数量。现有来源支持从你指定的微信导出中核对本人身份，仅索引本人发送的文字，也支持明确核实为本人创作的笔记。Agent 按词搜索，提交引用编号，工作台根据编号核对并显示原文节选、来源和可用的日期信息。</p>
+    <p>以后想加入自己的文章、日记或书稿，先指定一份文件并核实作者。项目支持单个不超过 16 MiB 的 UTF-8 TXT、Markdown 或 JSONL。让 Agent 在项目目录替换真实路径和写作日期后执行下列命令。<code>--verified-self</code> 表示这份材料已由你核实为本人所写。</p>
+    <pre><code>.venv/bin/python -B history_context.py import-file '本人文件的完整路径.md' --verified-self --date YYYY-MM-DD</code></pre>
+    <p>导入完成后即可按词检索。日常任务使用本机已有索引；新材料由你指定文件后再加入。向 Aholo 发送造型描述和用于建模的参考图，历史引用及成品照片保存在本机作品中。</p>
+  </section>
+  <section id="aholo">
+    <h2>连接 Aholo Lux3D</h2>
+    <p>登录 Aholo 中国区，创建 API Key，填入工作台的「设置」。生成时，Aholo 先画一张单色造型参考图，再由 G1 根据图生成 3D 模型。画布会在生成前显示预计积分。任务结算后，模型下方会列出参考图、G1 建模的实际扣分，保留多版时会显示各版和总计；暂未收到平台账目时显示「待结算」。<a href="https://labs.aholo.cn/api-keys">Aholo 中国区 API Key</a> · <a href="https://labs.aholo.ai/api-docs/intro">Lux3D 开发文档</a></p>
+    <p>点击「用 Aholo 生成并切片」前，页面会展示将使用的造型描述并确认。参考图完成后可单独查看。切片完成后，工作台展示实际模型、宽深高、与银行卡短边的比较、切片估时、层高和支撑情况。点开 3D 视图可以查看每个角度。下载切片后，可在 Bambu Studio 中查看打印路径。</p>
+    <p>模型生成在云端完成。本机使用 Blender 处理模型，再由 Bambu Studio 按 P2S 预设切片。任务中断后可查看提示并「继续准备」，已有生成任务会尽量接续。</p>
+  </section>
+  <section id="printer">
+    <h2>接入拓竹 P2S</h2>
+    <ol>
+      <li>让 Mac 和 P2S 连到同一局域网。插入可用的 FAT32 或 exFAT U 盘，本应用使用打印机的外置存储接收切片。在 P2S 屏幕设置中开启「仅局域网」，再开启「开发者模式」。仅局域网模式下，Bambu Handy 的异地云端查看和控制不可用。<a href="https://csm.bblcdn.cn/hub/79f028a6cf6f429b9f09ef91f41a85c3.pdf#page=69">P2S 官方手册</a></li>
+      <li>在工作台「设置」中填入局域网 IP、打印机序列号和局域网访问码，点击「保存连接」。各字段会分别显示「已保存」或「待填写」。已保存的值隐藏，输入框留空会保留原值，只填需要更换的项目。</li>
+      <li>点击「测试 P2S 连接」，读取设备、所选 PLA 和上传目录的当前状态。页脚的「已配置」表示连接信息齐全，实时状态由连接测试和发送前检查确认。</li>
+      <li>应用使用 0.4 mm 喷嘴、纹理 PEI 板和通用 PLA。清空平台后勾选本件已就绪。当天摆件切片完成后会发飞书通知，样品则点击工作台的飞书选色按钮。在 Mac 上打开通知中的链接，选料槽并点击确认。也可以按手机上的消息，把本件确认码填到 Mac 的工作台里。开打前工作台再次读取该料槽，换色或切片有变时会要求重新确认。第一次开打时在机器旁看首层。</li>
+    </ol>
+    <p><strong>一次清盘对应一件。</strong>标记某件小物就绪，会取消当天其他小物和样品的就绪标记。开始发送时会消耗本件就绪确认。下一件需要清空平台，再为它标记。就绪只在当天、对当时选中的那台打印机有效。</p>
+    <p><strong>飞书通知。</strong>「设置 → 飞书选色」显示当前通知渠道。在这台 Mac 上可使用飞书工作岛向本人发送私聊，或填入自己专用通知群的自定义机器人 Webhook。通知使用固定模板，每件都有自己的确认码。选色和清盘各自只对当次打印有效。</p>
+    <p>工作台显示「P2S 已接单」后，会跟踪同一件的机身进度。如果提示发送结果未知，先在 P2S 屏幕确认当前任务。应用会保留待核实状态；有歧义时请保留当前任务，核实后再操作。</p>
+  </section>
+  <section id="daily">
+    <h2>每天自动准备</h2>
+    <p><strong>这台 Mac 的日常安排。</strong>Codex Agent 每天 20:00 交接，工作台从 20:30 起检查当天记录，两处都按 UTC+8。自动准备和自动发送开启，同时启用「先确认清盘，再使用积分生成」的条件。当天没有记录就跳过。保持 Mac 唤醒，Aholo 生成时需要联网。</p>
+    <p>想让今天这件自动打印，就在画布上核对造型，清空平台，并勾选确认这件作品已就绪、允许使用本次积分。到点后，应用会向 Aholo 生成一张参考图，再建一次模型。切片完成后，飞书通知会列出尺寸、实物参照、时间和机身可用的 PLA 颜色。只有你用飞书通知中的码确认本件颜色，并通过实机检查，才会发送到 P2S。你晚些交接或勾选也可以，只要仍在当天、已经到设定时间，应用会继续处理。</p>
+    <p>没有勾选时，工作台会保留摘要和待用提示词，不会自动消耗积分。你也可以点「用 Aholo 生成并切片」，在手动确认后先看模型。如果希望每天先生成再决定打印，可在「设置」里取消等待清盘才生成的选项，保存安排。这样会按时使用积分，手动和定时开打都需要本件的飞书确认码选色和当日清盘确认。</p>
+    <p><strong>全新安装。</strong>每天自动准备和自动发送初始均关闭。连接 Aholo 后可开启准备，保存 P2S 连接后可开启发送。设定时间和开关可在「设置」中查看或更改。设备忙碌或存储、耗材检查未通过时，应用保留切片并提示原因；处理后再为这件作品确认就绪。</p>
+    <p>自动运行只处理今天。往日补录、样品和失败任务可在页面手动操作。失败后查看提示并处理原因；发送结果未知时先确认实机任务，避免重复开打。</p>
+  </section>
+  <section id="records">
+    <h2>记录与草稿</h2>
+    <p>点击「保存记录」后，摘要和选题会写入本机，可从「收藏」回看。制作前可以修改记录。过往日期可以补录，也可以手动生成模型、查看和下载产物；工作台直接发送限当天摆件及样品。</p>
+    <p>输入后出现「尚未保存」时，内容只保留在当前打开的页面。切换日期或进入收藏后，可以在这一页找回草稿继续填写。刷新、关闭页面或重启浏览器会丢失这些草稿，请先点击「保存记录」。</p>
+    <p>记录或图片加载失败时，页面会给出提示和重试入口。已有记录读取异常时保留原文件，处理原因后再继续。</p>
+  </section>
+  <footer>
+    <p class="note">本说明可双击离线阅读。工作台运行在当前 Mac 的 127.0.0.1:17868，Aholo 生成模型时需要联网。</p>
+    <details>
+      <summary>迁移到另一台 Mac</summary>
+      <p>在另一台 Mac 安装 Blender、Bambu Studio 和 uv，复制项目后，在项目目录建立 Python 环境，再双击启动文件。连接信息保存在本机配置中，换机时在设置中核对并补全。</p>
+      <pre><code>uv venv .venv &amp;&amp; uv pip install --python .venv/bin/python -r requirements.txt</code></pre>
+    </details>
+  </footer>
+</main>
+<script>
+  const larger = document.getElementById('larger');
+  larger.addEventListener('click', () => {
+    const active = larger.getAttribute('aria-pressed') === 'true';
+    larger.setAttribute('aria-pressed', String(!active));
+    document.documentElement.style.setProperty('--reading-size', active ? '20px' : '24px');
+    larger.textContent = active ? '放大字号' : '恢复字号';
+  });
+  document.querySelector('nav').addEventListener('click', (event) => {
+    if (event.target.closest('a') && window.matchMedia('(max-width: 600px)').matches) {
+      document.getElementById('contents').open = false;
+    }
+  });
+  const copy = document.getElementById('copy');
+  const text = document.getElementById('handoff-text');
+  const status = document.getElementById('copy-status');
+  copy.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(text.textContent);
+      status.textContent = '已复制';
+    } catch {
+      const range = document.createRange();
+      range.selectNodeContents(text);
+      const selection = window.getSelection();
+      selection.removeAllRanges();
+      selection.addRange(range);
+      status.textContent = document.execCommand('copy') ? '已复制' : '已选中，请按 ⌘C';
+    }
+  });
+</script>
+</body>
+</html>
