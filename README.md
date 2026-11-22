@@ -123,6 +123,11 @@ cd 今日小物
 .venv/bin/python -B -m unittest discover -s tests
 ```
 
+## 一起做这个项目的 AI
+
+- **GPT（Codex）**：搭起了今日小物工作台的大部分流程，包括 Aholo 生成、切片、打印机和飞书确认，也跑完了生日礼物几百万条记录的整理和世界数据。
+- **Claude**：负责规划和整合，做了记忆宫殿、会动的海、声音和动效，以及三端读取的经历摘要。
+
 ## 特别鸣谢
 
 <p align="center"><a href="https://www.aholo.cn/"><img src="docs/media/aholo.svg" alt="AHOLO" width="180"></a></p>
