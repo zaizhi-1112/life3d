@@ -180,3 +180,11 @@ body:has(#workbench[open]) .crosshair, body:has(.card:not([hidden])) .crosshair 
 .repo-link:active { transform: scale(.94); }
 .repo-link ~ .sound-toggle { right: 168px; }
 @media (max-width: 650px) { .repo-link { right: 12px; bottom: 12px; font-size: 12px; } .repo-link ~ .sound-toggle { right: 150px; bottom: 12px; } }
+
+/* 第一次进岛时提示触控板手势，几秒后淡出 */
+.nav-hint { position: fixed; left: 50%; bottom: 18px; transform: translateX(-50%); margin: 0; z-index: 4; pointer-events: none; white-space: nowrap;
+  font-size: 13px; color: var(--ink); background: rgba(24,22,34,.62); border: 1px solid var(--line); border-radius: 999px; padding: 5px 15px;
+  backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); animation: nav-hint 9s ease 1.2s both; }
+@keyframes nav-hint { 0% { opacity: 0; transform: translate(-50%, 8px); } 8%, 82% { opacity: 1; transform: translate(-50%, 0); } 100% { opacity: 0; } }
+body.arranging .nav-hint, body:has(.hint:not([hidden])) .nav-hint { display: none; }
+@media (max-width: 650px) { .nav-hint { font-size: 11px; white-space: normal; width: calc(100% - 24px); text-align: center; } }

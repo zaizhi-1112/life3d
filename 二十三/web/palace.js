@@ -9,6 +9,7 @@ import { workbenchPanel, readOnly } from "./island-panels.js";
 import { FURNITURE, buildFurniture, kit, mat, resin } from "./palace-furniture.js";
 import { createOcean } from "./ocean.js";
 import { sound, soundToggle } from "./sound.js";
+import { trackpad } from "./trackpad.js";
 
 const $ = id => document.getElementById(id);
 const WORKBENCH = "http://127.0.0.1:17868";
@@ -585,7 +586,7 @@ function blocked(x, z, pad = 0.28) {
   return false;
 }
 const walkHint = () => arranging ? "WASD 走 · 拖空白处看四周 · 拖物件或家具换位置 · Shift 跑" : "WASD 走 · 拖动看四周 · ←→ 转头 · Shift 跑 · 点物件看故事";
-const orbitHint = () => arranging ? "拖动物件或家具换位置 · Q / E 转向 · ⌘Z 撤销" : readOnly ? "点物件看它的故事 · 拖动转视角 · 「走进去」逛一圈" : "点物件看它的故事 · 拖动转视角 · 打开「资产管理」才能布置";
+const orbitHint = () => arranging ? "拖动物件或家具换位置 · Q / E 转向 · ⌘Z 撤销" : "双指滑动移动 · 捏合缩放 · 拖动旋转 · 双击飞过去" + (readOnly ? " · 「走进去」逛一圈" : " · 打开「资产管理」才能布置");
 function enterWalk() {
   const [x, z] = env.fp.pos;
   fp = { x, z, yaw: env.fp.yaw, pitch: -0.1 };
@@ -920,6 +921,19 @@ document.addEventListener("click", e => {
   if (b && !b.dataset.scene && !b.dataset.filter && !["card-close", "open-shelf", "shelf-done", "arrange"].includes(b.id)) sound.tap();
 }, true);
 
+// 触控板：双指滑动平移、捏合缩放、Shift+滑动转向、双击飞过去；方向键平移（见 trackpad.js）
+const pad = trackpad({
+  controls, camera, dom: renderer.domElement,
+  active: () => !fp && !drag?.moved,
+  onInput: () => { flight = null; },
+  clamp: t => {
+    if (current === "garden") { const r = Math.hypot(t.x, t.z); if (r > 26) { t.x *= 26 / r; t.z *= 26 / r; } }
+    else { t.x = THREE.MathUtils.clamp(t.x, -11, 11); t.z = THREE.MathUtils.clamp(t.z, -8.5, 8.5); }
+    t.y = THREE.MathUtils.clamp(t.y, 0, 3);
+  },
+  rotateKeys: () => !(arranging && selected),
+});
+
 let paused = false;
 const bench = workbenchPanel({ pause: () => { paused = true; }, resume: () => { paused = false; }, refresh: () => load(true) });
 
@@ -951,7 +965,7 @@ function frame(now) {
     camera.position.lerpVectors(flight.from, flight.to, s); controls.target.lerpVectors(flight.a, flight.b, s);
     if (k >= 1) flight = null;
   }
-  if (fp) updateWalk(dt); else controls.update();
+  if (fp) updateWalk(dt); else { pad.update(dt); controls.update(); }
   const animating = new Set();
   for (let i = anims.length - 1; i >= 0; i--) {
     const an = anims[i], s = (now - an.t0) / an.dur;

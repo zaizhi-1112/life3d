@@ -33,9 +33,9 @@ function lumpy(radius, sx, sy, sz, seed, detail = 2) {
 }
 
 const PALETTES = {
-  tree_round: { dark: "#33492c", mid: "#6a8a47", light: "#c9d58a", bark: "#6b4a36" },
-  tree_round_b: { dark: "#3c5540", mid: "#678a5a", light: "#a9c48a", bark: "#7a6150" },
-  tree_autumn: { dark: "#8a3f24", mid: "#cf7a36", light: "#f3c46a", bark: "#5e4031" },
+  tree_round: { dark: "#2a4226", mid: "#4f7638", light: "#a6c464", bark: "#5e4030" },
+  tree_round_b: { dark: "#3a5530", mid: "#7f9e48", light: "#d6dc86", bark: "#d9cfbf" },
+  tree_autumn: { dark: "#6e2c16", mid: "#c25a26", light: "#f2b24e", bark: "#4f382b" },
   tree_pine: { dark: "#24403a", mid: "#3f6650", light: "#7fa27a", bark: "#5a3f30" },
 };
 
@@ -55,29 +55,78 @@ function trunk(height, base, top, seed, bark) {
   return paint(clean(g), (v, c) => c.copy(dark).lerp(light, Math.min(1, v.y / height)));
 }
 
-// 阔叶树：一团团树冠，底部和里侧偏暗，顶上被夕阳照亮
-function broadleaf(kind, seed, { height = 2.3, spread = 1.0, tall = 1.0 } = {}) {
-  const pal = PALETTES[kind], r = rng(seed), blobs = [];
-  const center = new THREE.Vector3(0, height + 0.55 * tall, 0);
-  const count = 6 + Math.floor(r() * 2);
-  for (let i = 0; i < count; i++) {
-    const a = (i / count) * Math.PI * 2 + r() * 0.6, ring = i === 0 ? 0 : 0.55 + r() * 0.35;
-    const rad = (i === 0 ? 0.95 : 0.55 + r() * 0.3) * spread;
-    const g = lumpy(rad, 1, 0.82 * tall, 1, seed * 13 + i, 2);
-    g.translate(Math.cos(a) * ring * spread, center.y + (r() - 0.3) * 0.55 * tall + (i === 0 ? 0.25 : 0), Math.sin(a) * ring * spread);
-    blobs.push(g);
+// 叶片贴图：一小簇尖叶，白色带透明边，靠顶点色上色
+let leafTexture = null;
+function leaves() {
+  if (leafTexture) return leafTexture;
+  const c = document.createElement("canvas"); c.width = c.height = 128;
+  const x = c.getContext("2d"), r = rng(5);
+  for (let i = 0; i < 9; i++) {
+    const cx = 64 + (r() - 0.5) * 70, cy = 64 + (r() - 0.5) * 70, a = r() * Math.PI * 2, len = 22 + r() * 14, w = 9 + r() * 5;
+    x.save(); x.translate(cx, cy); x.rotate(a);
+    const g = x.createLinearGradient(-len, 0, len, 0); g.addColorStop(0, "#d9d9d9"); g.addColorStop(0.5, "#ffffff"); g.addColorStop(1, "#cfcfcf");
+    x.fillStyle = g; x.beginPath(); x.moveTo(-len, 0); x.quadraticCurveTo(0, -w, len, 0); x.quadraticCurveTo(0, w, -len, 0); x.fill();
+    x.strokeStyle = "rgba(150,150,150,.55)"; x.lineWidth = 1.2; x.beginPath(); x.moveTo(-len * 0.9, 0); x.lineTo(len * 0.9, 0); x.stroke();
+    x.restore();
   }
-  const top = lumpy(0.6 * spread, 1, 0.8 * tall, 1, seed * 7 + 3, 2); top.translate(0.1, center.y + 0.85 * tall, -0.05); blobs.push(top);
-  const crown = mergeGeometries(blobs.map(g => g.toNonIndexed()));  // 各团自带平滑法线，不重算
+  leafTexture = new THREE.CanvasTexture(c); leafTexture.colorSpace = THREE.SRGBColorSpace; leafTexture.anisotropy = 4;
+  return leafTexture;
+}
+
+// 阔叶树：几团叶簇，每团由许多叶片卡组成，法线朝外像一个球，所以光影柔和、轮廓却是一片片叶子
+function broadleaf(kind, seed, { height = 1.7, spread = 1.0, tall = 1.0, clumps = 4 } = {}) {
+  const pal = PALETTES[kind], r = rng(seed);
   const dark = new THREE.Color(pal.dark), mid = new THREE.Color(pal.mid), light = new THREE.Color(pal.light);
-  const hue = (r() - 0.5) * 0.03;
-  paint(clean(crown), (v, c) => {
-    const h = THREE.MathUtils.clamp((v.y - (center.y - 0.9 * tall)) / (1.9 * tall), 0, 1);
-    const out = Math.min(1, Math.hypot(v.x, v.z, (v.y - center.y) * 0.6) / (1.3 * spread));
-    const sun = THREE.MathUtils.clamp(h * 0.75 + out * 0.35 + (-v.x - v.z) * 0.08, 0, 1);
-    c.copy(dark).lerp(mid, Math.min(1, sun * 1.35)).lerp(light, Math.max(0, sun - 0.55) * 1.5).offsetHSL(hue, 0, 0);
-  });
-  return [trunk(height + 0.3, 0.26, 0.13, seed, pal.bark), crown];
+  const centers = [];
+  for (let i = 0; i < clumps; i++) {
+    const a = (i / clumps) * Math.PI * 2 + r() * 0.8, ring = i === 0 ? 0 : 0.55 * spread;
+    centers.push({ c: new THREE.Vector3(Math.cos(a) * ring, height + 0.75 * tall + (i === 0 ? 0.35 * tall : (r() - 0.4) * 0.45 * tall), Math.sin(a) * ring),
+      rad: (i === 0 ? 0.95 : 0.72 + r() * 0.2) * spread });
+  }
+  const top = centers[0].c.y + centers[0].rad * tall, bottom = height + 0.1;
+  const cards = [], cores = [];
+  const pos = [], nrm = [], col = [], uv = [], idx = [];
+  const q = new THREE.Quaternion(), e = new THREE.Euler(), v = new THREE.Vector3(), n = new THREE.Vector3();
+  const shade = (p, out) => {
+    const h = THREE.MathUtils.clamp((p.y - bottom) / (top - bottom), 0, 1);
+    const sun = THREE.MathUtils.clamp(h * 0.7 + out * 0.45 + (-p.x - p.z) * 0.06, 0, 1);
+    return tmp.copy(dark).lerp(mid, Math.min(1, sun * 1.5)).lerp(light, Math.max(0, sun - 0.6) * 1.6);
+  };
+  let k = 0;
+  for (const { c, rad } of centers) {
+    const count = Math.round(70 * rad * rad + 20);
+    for (let i = 0; i < count; i++) {
+      // 卡片中心落在椭球表面附近，外层多、里层少
+      v.set(r() * 2 - 1, r() * 2 - 1, r() * 2 - 1).normalize().multiplyScalar(rad * (0.7 + r() * 0.35));
+      v.y *= 0.85 * tall;
+      const center = v.clone().add(c), size = (0.34 + r() * 0.16) * spread;
+      q.setFromEuler(e.set(r() * 6.28, r() * 6.28, r() * 6.28));
+      const hue = (r() - 0.5) * 0.04, light2 = (r() - 0.5) * 0.06;
+      for (const [cx, cy, u, w] of [[-1, -1, 0, 0], [1, -1, 1, 0], [1, 1, 1, 1], [-1, 1, 0, 1]]) {
+        const p = new THREE.Vector3(cx * size / 2, cy * size / 2, 0).applyQuaternion(q).add(center);
+        pos.push(p.x, p.y, p.z);
+        n.copy(p).sub(c).normalize(); n.y = n.y * 0.8 + 0.2; n.normalize();
+        nrm.push(n.x, n.y, n.z);
+        shade(p, Math.min(1, p.clone().sub(c).length() / rad)).offsetHSL(hue, 0, light2).toArray(col, col.length);
+        uv.push(u, w);
+      }
+      idx.push(k, k + 1, k + 2, k, k + 2, k + 3); k += 4;
+    }
+    const core = lumpy(rad * 0.55, 1, 0.8 * tall, 1, seed + k, 1); core.translate(c.x, c.y, c.z);
+    paint(core, (p, cc) => cc.copy(dark).lerp(mid, THREE.MathUtils.clamp((p.y - bottom) / (top - bottom), 0, 1) * 0.35));
+    core.setAttribute("uv", new THREE.Float32BufferAttribute(new Float32Array(core.attributes.position.count * 2).fill(0.5), 2));
+    cores.push(core.toNonIndexed());
+  }
+  const leavesGeo = new THREE.BufferGeometry();
+  leavesGeo.setAttribute("position", new THREE.Float32BufferAttribute(pos, 3));
+  leavesGeo.setAttribute("normal", new THREE.Float32BufferAttribute(nrm, 3));
+  leavesGeo.setAttribute("color", new THREE.Float32BufferAttribute(col, 3));
+  leavesGeo.setAttribute("uv", new THREE.Float32BufferAttribute(uv, 2));
+  leavesGeo.setIndex(idx);
+  cards.push(leavesGeo.toNonIndexed());
+  const crown = mergeGeometries([...cards, ...cores]);
+  const bark = trunk(height + 0.55 * tall, 0.2, 0.09, seed, pal.bark);
+  return { crown, bark };
 }
 
 // 松树：一层层下垂的锥形，边缘有起伏，尖上颜色浅
@@ -105,18 +154,30 @@ function pine(seed) {
   return [trunk(base + 0.9, 0.16, 0.08, seed, pal.bark), crown];
 }
 
-const leafMaterial = () => { const m = new THREE.MeshStandardMaterial({ vertexColors: true, roughness: 0.9 }); m.name = "paint"; return m; };
+const leafMaterial = () => {
+  const m = new THREE.MeshStandardMaterial({ vertexColors: true, roughness: 0.88, map: leaves(), alphaTest: 0.45, side: THREE.DoubleSide });
+  // 叶片两面都按「朝外」打光：不让背面翻转法线，否则一半叶子会发黑
+  const begin = THREE.ShaderChunk.normal_fragment_begin.replace(/normal\s*=\s*normal\s*\*\s*faceDirection\s*;|normal\s*\*=\s*faceDirection\s*;/g, "");
+  m.onBeforeCompile = shader => { shader.fragmentShader = shader.fragmentShader.replace("#include <normal_fragment_begin>", begin); };
+  m.customProgramCacheKey = () => "leaf-cards";
+  m.name = "paint"; return m;
+};
+const solidMaterial = () => { const m = new THREE.MeshStandardMaterial({ vertexColors: true, roughness: 0.9 }); m.name = "paint"; return m; };
 
 export function buildTree(kind, seed = 1) {
-  const group = new THREE.Group(), material = leafMaterial();
-  const parts = kind === "tree_pine" ? pine(seed)
-    : kind === "tree_round_b" ? broadleaf(kind, seed, { height: 1.9, spread: 1.0, tall: 1.45 })
-    : kind === "tree_autumn" ? broadleaf(kind, seed, { height: 1.55, spread: 1.35, tall: 1.05 })
-    : broadleaf(kind, seed, { height: 1.55, spread: 1.4, tall: 1.1 });
-  const geometry = mergeGeometries(parts.map(g => g.index ? g.toNonIndexed() : g));
-  const mesh = new THREE.Mesh(geometry, material);
-  mesh.castShadow = mesh.receiveShadow = true;
-  group.add(mesh);
+  const group = new THREE.Group();
+  const add = (geometry, material) => { const mesh = new THREE.Mesh(geometry, material); mesh.castShadow = mesh.receiveShadow = true; group.add(mesh); };
+  if (kind === "tree_pine") {
+    const [bark, crown] = pine(seed);
+    add(mergeGeometries([bark, crown.index ? crown.toNonIndexed() : crown]), solidMaterial());
+    return group;
+  }
+  const shape = kind === "tree_round_b" ? { height: 2.0, spread: 0.85, tall: 1.45, clumps: 4 }
+    : kind === "tree_autumn" ? { height: 1.5, spread: 1.15, tall: 1.0, clumps: 5 }
+    : { height: 1.55, spread: 1.2, tall: 1.05, clumps: 5 };
+  const { crown, bark } = broadleaf(kind, seed, shape);
+  add(bark, solidMaterial());
+  add(crown, leafMaterial());
   return group;
 }
 

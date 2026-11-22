@@ -9,6 +9,7 @@ import { workbenchPanel, objectCard, readOnly } from "./island-panels.js";
 import { assetPanel } from "./asset-manager.js";
 import { STLLoader } from "three/addons/loaders/STLLoader.js";
 import { createOcean } from "./ocean.js";
+import { trackpad } from "./trackpad.js";
 import { buildTree, buildBoat, fitLike } from "./nice-props.js";
 import { sound, soundToggle } from "./sound.js";
 
@@ -153,10 +154,7 @@ async function loadAssets() {
   }));
   // 树和小船换成代码生成的新造型（nice-props.js），大小对齐原模型，摆放和点选范围不变。
   ["tree_round","tree_round_b","tree_autumn","tree_pine"].forEach((name,i)=>{
-    const tree=fitLike(buildTree(name,11+i*7),assets[name]);
-    tree.updateMatrixWorld(true);
-    tree.traverse(m=>{if(m.isMesh){const far=distantGeometry(m.geometry,5,200);if(far)simplerProps.set(m.geometry,far);}});
-    assets[name]=tree;
+    assets[name]=fitLike(buildTree(name,11+i*7),assets[name]);  // 叶片卡很省，不再做远景简化
   });
   assets.boat=buildBoat();
 }
@@ -1618,6 +1616,15 @@ addEventListener("keydown", (e) => {
 addEventListener("keyup", (e) => keys.delete(e.code));
 addEventListener("blur", () => keys.clear());
 
+// 触控板：双指滑动平移、捏合缩放、Shift+滑动转向；键盘方向键平移（见 trackpad.js）
+const pad = trackpad({
+  controls, camera, dom: renderer.domElement,
+  active: () => mode === "orbit" && !card.active() && !document.querySelector("dialog[open]"),
+  onInput: () => { tween = null; housePortrait = null; },
+  clamp: t => { const r = Math.hypot(t.x, t.z), lim = ISLAND + 30; if (r > lim) { t.x *= lim / r; t.z *= lim / r; } t.y = THREE.MathUtils.clamp(t.y, -0.5, TOP + 6); },
+  rotateKeys: () => !(arranging && selectedAsset),
+});
+
 function blockedAt(x, z) {
   if (Math.hypot(x, z) > ISLAND - 0.6) return true; // 不下海（栈桥除外）
   return colliders.some((c) => (c.x - x) ** 2 + (c.z - z) ** 2 < (c.r + 0.28) ** 2);
@@ -2109,7 +2116,7 @@ async function main() {
       }
     }
     updateCamera(now,dt);
-    if(mode==="orbit")controls.update();
+    if(mode==="orbit"){pad.update(dt);controls.update();}
     lanternGlow.uniforms.time.value=elapsed;
     ocean.update(elapsed);
     for(const b of boats){const p=b.obj.position,tl=ocean.tilt(p.x,p.z);p.y=ocean.height(p.x,p.z)+.02;b.obj.rotation.x=tl.x*.8;b.obj.rotation.z=tl.z*.8;}
