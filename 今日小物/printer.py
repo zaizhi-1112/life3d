@@ -79,6 +79,10 @@ class PrintStatusUnknown(PrinterError):
     """A start may already have been accepted. Verify on the printer before retrying."""
 
 
+class PrinterUnreachable(PrinterError):
+    """This Mac is not on the printer's LAN, so nothing was sent."""
+
+
 class ColorChanged(PrinterError):
     """The selected spool or the reviewed slice changed before dispatch."""
 
@@ -151,7 +155,7 @@ def _check_cache(host, serial, code):
         with _ftps(host, serial, code, timeout=8) as ftp:
             _require_cache(ftp)
     except all_errors:
-        raise PrinterError("无法访问 P2S 的文件传输服务。请检查局域网和开发者模式。") from None
+        raise _unreachable(host, "无法访问 P2S 的文件传输服务。请检查局域网和开发者模式。") from None
 
 
 def _upload(host, serial, code, remote_path, source, size):
@@ -307,6 +311,31 @@ class _PrinterConnection:
         return self.status
 
 
+def _local_address(host):
+    """The address this Mac would use to reach the printer, without sending anything."""
+    try:
+        with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as probe:
+            probe.connect((host, 8883))
+            return probe.getsockname()[0]
+    except OSError:
+        return None
+
+
+def _away_message(host):
+    # A proxy's virtual interface can accept the TCP connection and then fail
+    # TLS, which used to surface as a misleading certificate error.
+    local = _local_address(host)
+    if local and local.split(".")[:3] == host.split(".")[:3]:
+        return None
+    return (f"连不上 P2S：这台 Mac 现在不在打印机所在的局域网（打印机 {host}）。"
+            "连回同一个 Wi-Fi，或让代理软件绕过局域网地址，工作台会自动重试。")
+
+
+def _unreachable(host, otherwise):
+    away = _away_message(host)
+    return PrinterUnreachable(away) if away else PrinterError(otherwise)
+
+
 @contextmanager
 def _connect(host, serial, code):
     try:
@@ -326,9 +355,9 @@ def _connect(host, serial, code):
         connection.wait(lambda: connection.subscribed, 8)
         yield connection
     except ssl.SSLError:
-        raise PrinterError("无法验证 P2S 的局域网证书，请检查序列号与 Bambu Studio 安装。") from None
+        raise _unreachable(host, "无法验证 P2S 的局域网证书，请检查序列号与 Bambu Studio 安装。") from None
     except OSError:
-        raise PrinterError("无法访问或验证 P2S。请检查局域网、序列号、访问码和开发者模式。") from None
+        raise _unreachable(host, "无法访问或验证 P2S。请检查局域网、序列号、访问码和开发者模式。") from None
     finally:
         with suppress(OSError):
             client.disconnect()

@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import fcntl
+import re
 import json
 import mimetypes
 import os
@@ -128,6 +129,129 @@ class Gallery:
             return {"card": world["cards"][key]}
 
 
+LAYOUT_LIMITS = {"x": 59.0, "scale": (0.6, 1.6), "yaw": 360.0}
+# 非 Aholo 模型：展台长椅（固定编号）和从资产面板放上岛的 Blender 装饰。
+DECOR = {"tree_round", "tree_autumn", "tree_pine", "rock_a", "flowers", "grass", "lantern", "bench", "fence", "boat", "cottage_small"}
+PROP_ID = re.compile(r"prop-bench-[0-3]")
+DECO_ID = re.compile(r"deco-([a-z_]+)-[a-z0-9]{4,12}")
+
+
+def read_layout():
+    layout = data.load(data.LAYOUT, None)
+    if layout is None:
+        layout = data.load(ROOT / "demo/layout.json", {"items": {}}) if SNAPSHOT else {"items": {}}
+    return layout if isinstance(layout, dict) and isinstance(layout.get("items"), dict) else {"items": {}}
+
+
+def save_layout(request):
+    """只接受当前登记的展品，坐标须在岛内。整份替换。"""
+    items = request.get("items") if isinstance(request, dict) and set(request) == {"items"} else None
+    if not isinstance(items, dict) or len(items) > 600:
+        raise ValueError("摆放格式不正确，请刷新后再试。")
+    with gallery.guard:
+        world = gallery.read()
+        known = {r["id"] for group in ("exhibits", "sculptures") for r in world[group]}
+    previous = read_layout()["items"]
+    clean = {key: value for key, value in previous.items()
+             if key not in known and not PROP_ID.fullmatch(key) and not DECO_ID.fullmatch(key)}  # 已撤下展品的摆放原样保留
+    for key, entry in items.items():
+        deco = DECO_ID.fullmatch(key) if isinstance(key, str) else None
+        allowed = {"x", "z", "yaw", "scale", "hidden"} | ({"asset"} if deco else set())
+        if (key not in known and not PROP_ID.fullmatch(key) and not deco) or not isinstance(entry, dict) or not set(entry) <= allowed:
+            raise ValueError("有一件展品已变化，请刷新后再试。")
+        row = {}
+        if deco:
+            if entry.get("asset") != deco.group(1) or deco.group(1) not in DECOR or "x" not in entry:
+                raise ValueError("这件装饰的格式不正确，请刷新后再试。")
+            row["asset"] = entry["asset"]
+        for field in ("x", "z", "yaw", "scale"):
+            if field in entry:
+                value = entry[field]
+                if isinstance(value, bool) or not isinstance(value, (int, float)) or value != value or abs(value) == float("inf"):
+                    raise ValueError("摆放数值不正确。")
+                row[field] = round(float(value), 3)
+        if ("x" in row) != ("z" in row) or ("x" in row and (row["x"] ** 2 + row["z"] ** 2) ** .5 > LAYOUT_LIMITS["x"]):
+            raise ValueError("请把展品放在岛上。")
+        if "scale" in row and not LAYOUT_LIMITS["scale"][0] <= row["scale"] <= LAYOUT_LIMITS["scale"][1]:
+            raise ValueError("大小超出范围。")
+        if "yaw" in row and abs(row["yaw"]) > LAYOUT_LIMITS["yaw"]:
+            raise ValueError("朝向超出范围。")
+        if "hidden" in entry:
+            if not isinstance(entry["hidden"], bool):
+                raise ValueError("摆放格式不正确。")
+            if entry["hidden"]:
+                row["hidden"] = True
+        if row:
+            clean[key] = row
+    saved = {"items": clean}
+    with (data.DATA / ".layout.lock").open("a") as lock:
+        fcntl.flock(lock, fcntl.LOCK_EX)
+        data.save(data.LAYOUT, saved)
+    return saved
+
+
+PALACE_SCENES = ("room", "garden")
+# 宫殿家具：默认家具编号（f-bookcase-a）和用户新添的家具（f-<类型>-<随机>，需带 type）。
+FURNITURE_TYPES = {"bookcase", "wallshelf", "desk", "vitrine", "cabinet", "printer", "sofa", "armchair", "coffee", "rug",
+                   "floorlamp", "plant", "pedestal", "sidetable", "gplinth", "pergola", "bench", "lantern", "tree", "flowerbed", "arch"}
+FURNITURE_ID = re.compile(r"f-[a-z0-9-]{2,40}")
+
+
+def read_palace():
+    palace = data.load(data.DATA / "palace.json", None)
+    if not isinstance(palace, dict):
+        return {"scene": "auto", "rooms": {}}
+    rooms = palace.get("rooms") if isinstance(palace.get("rooms"), dict) else {}
+    return {"scene": palace.get("scene") if palace.get("scene") in ("auto", *PALACE_SCENES) else "auto",
+            "rooms": {k: v for k, v in rooms.items() if k in PALACE_SCENES and isinstance(v, dict)}}
+
+
+def save_palace(request):
+    """记忆宫殿的摆放：只收登记过的展品 id，坐标在场景内。整份替换当前场景，其余场景保留。"""
+    if not isinstance(request, dict) or not set(request) <= {"scene", "room", "items"}:
+        raise ValueError("摆放格式不正确，请刷新后再试。")
+    palace = read_palace()
+    if "scene" in request:
+        if request["scene"] not in ("auto", *PALACE_SCENES):
+            raise ValueError("没有这个场景。")
+        palace["scene"] = request["scene"]
+    if "room" in request or "items" in request:
+        room, items = request.get("room"), request.get("items")
+        if room not in PALACE_SCENES or not isinstance(items, dict) or len(items) > 400:
+            raise ValueError("摆放格式不正确，请刷新后再试。")
+        with gallery.guard:
+            world = gallery.read()
+            known = {r["id"] for group in ("exhibits", "sculptures") for r in world[group]}
+        limits = {"x": (-24, 24), "z": (-24, 24), "y": (0, 4), "yaw": (-360, 360), "scale": (0.5, 2)}
+        clean = {}
+        for key, entry in items.items():
+            furniture = isinstance(key, str) and FURNITURE_ID.fullmatch(key)
+            allowed = {*limits, "hidden"} | ({"type"} if furniture else set())
+            if (key not in known and not furniture) or not isinstance(entry, dict) or not set(entry) <= allowed:
+                raise ValueError("有一件展品已变化，请刷新后再试。")
+            row = {}
+            if "type" in entry:
+                if entry["type"] not in FURNITURE_TYPES:
+                    raise ValueError("没有这种家具。")
+                row["type"] = entry["type"]
+            for field, (low, high) in limits.items():
+                if field in entry:
+                    value = entry[field]
+                    if isinstance(value, bool) or not isinstance(value, (int, float)) or not low <= value <= high:
+                        raise ValueError("摆放数值超出场景范围。")
+                    row[field] = round(float(value), 3)
+            if "hidden" in entry:
+                if not isinstance(entry["hidden"], bool):
+                    raise ValueError("摆放格式不正确。")
+                row["hidden"] = entry["hidden"]
+            clean[key] = row
+        palace["rooms"][room] = {"items": clean}
+    with (data.DATA / ".layout.lock").open("a") as lock:
+        fcntl.flock(lock, fcntl.LOCK_EX)
+        data.save(data.DATA / "palace.json", palace)
+    return palace
+
+
 def online():
     try:
         with urlopen(f"http://127.0.0.1:{WORKBENCH_PORT}/health", timeout=1.5) as response:
@@ -184,7 +308,7 @@ class Handler(SimpleHTTPRequestHandler):
         try:
             if path == "/api/workbench/start":
                 return self.reply(200, start_workbench())
-            if path != "/api/edits":
+            if path not in ("/api/edits", "/api/layout", "/api/palace"):
                 return self.send_error(404)
             size = int(self.headers.get("Content-Length", 0))
             if not 0 < size <= 64 * 1024 or self.headers.get_content_type() != "application/json":
@@ -192,6 +316,10 @@ class Handler(SimpleHTTPRequestHandler):
             payload = json.loads(self.rfile.read(size))
             if not isinstance(payload, dict):
                 raise ValueError("卡片修改格式不正确。")
+            if path == "/api/layout":
+                return self.reply(200, {"layout": save_layout(payload)})
+            if path == "/api/palace":
+                return self.reply(200, {"palace": save_palace(payload)})
             self.reply(200, gallery.edit(payload))
         except EditConflict as exc:
             self.reply(409, {"error": "卡片文字已在另一处更新。", "card": exc.card})
@@ -212,6 +340,8 @@ class Handler(SimpleHTTPRequestHandler):
             for group in ("exhibits", "sculptures", "houses"):
                 world[group] = [{k: v for k, v in r.items() if k not in {"original", "photo_file", "model"}}
                                 | {"model": f"/models/{r['id']}?format={r['format']}&v={r['model_revision']}"} for r in world[group]]
+            world["layout"] = read_layout()
+            world["palace"] = read_palace()
             return self.reply(200, world)
         if path.startswith("/assets/"):
             name = path.removeprefix("/assets/")

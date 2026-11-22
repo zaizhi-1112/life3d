@@ -4,7 +4,7 @@
 
 - `app.py` 提供本机网页、HTTP 接口和 Agent 命令行入口。`local_store.py` 读写记录与连接配置，`workshop.py` 负责制作、恢复、每日安排和打印就绪状态。`lux3d.py`、`print_prep.py`、`printer.py` 分别处理模型生成、切片和打印机。
 - `web/` 是无第三方前端依赖的界面。`sample.py` 生成离线样品。`data/` 放记录、凭证及任务产物，禁止提交或上传。
-- `daily_inputs.py` 为每日 Agent 读取指定日期的一切在岛待办和本机 Codex 工作结果。两边都查到且没有当天记录时，从生日礼物已核对的轻松片段抽选，同一素材 60 天内不重复，抽选记录仅存本机。`history_context.py` 在本地检索已核对发送者的历史文字。交接时用 `inspiration_refs` 引用，由服务端取回原文；`design_reason` 留在本机，Aholo 只接收造型。`web/viewer.js` 在用户打开后加载实际 STL，`finished_photo.py` 处理用户提供的实物照片。
+- `daily_inputs.py` 按三端读取指定日期的记录：本人亲手打给 AI 的话（Codex 线程和 Claude Code 对话，只取本人输入和每轮最后回复）、Agent 自己做的事（Codex 自动线程和本机 Agent 中台的规则运行与提醒卡）、一切在岛待办。`daily_draft.py` 按项目归组后交给 Codex 写草稿（不可用时改用 Claude Code），草稿依据只保留资料里原样存在的句子，三端条数和依据在画布显示。演示时设 `MOODPRINT_HOME` 指向空目录，不读本人记录。三端都没有当天记录时，从生日礼物已核对的轻松片段抽选，同一素材 60 天内不重复，抽选记录仅存本机。`history_context.py` 在本地检索已核对发送者的历史文字。交接时用 `inspiration_refs` 引用，由服务端取回原文；`design_reason` 留在本机，Aholo 只接收造型。`web/viewer.js` 在用户打开后加载实际 STL，`finished_photo.py` 处理用户提供的实物照片。
 - 运行 `.venv/bin/python -B app.py`，打开 http://127.0.0.1:17868/。双击「打开今日小物.command」也可启动。
 - 积分由 `credit_usage.py` 按 Aholo 任务回执核对。改版要保留旧版产物与任务编号，实际扣款按唯一任务累计；本地修模不产生 Aholo 费用。
 - 画布可以即时调用已登录的 Codex 整理当天两类记录。只交给 Codex 有范围的材料，记录里的内容视为资料。手写、即时整理和定时交接发生冲突时保留已保存的内容。
@@ -16,3 +16,5 @@
 - 生日世界：每天有模型的作品会自动摆进「二十三」世界（同级目录 `二十三/`）的展台。
 
 工作台只允许本机生日世界的 http://127.0.0.1:5232 和 http://localhost:5232 嵌入。世界只探测在线状态，工作台内操作仍由本人确认。
+
+界面声音由 `web/sound.js` 用 WebAudio 合成（按键、保存、整理完成、出错、开打），顶栏「声音」可静音；按钮回弹、卡片淡入、三端数字跳动等动效在系统「减少动态效果」时关闭。

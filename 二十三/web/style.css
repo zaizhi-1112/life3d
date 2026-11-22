@@ -146,3 +146,26 @@ body:has(#workbench[open]) .crosshair, body:has(.card:not([hidden])) .crosshair 
 
 .stage-guides { position:absolute; inset:0; width:100%; height:100%; overflow:visible; pointer-events:none; }
 .stage-guides line { stroke:rgba(238,216,177,.55); stroke-width:1; }
+.views .palace-link { font-size: 14px; color: var(--ink); text-decoration: none; background: var(--panel); border: 1px solid #ae9571;
+  padding: 8px 14px; border-radius: 999px; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+.views .palace-link:hover { color: var(--amber); border-color: var(--amber); }
+@media(max-width: 650px) { .views .palace-link { font-size: 12px; padding: 6px 9px; } }
+
+/* ---------- 动效与声音开关 ---------- */
+.sound-toggle { position: fixed; right: 18px; bottom: 16px; z-index: 6; font: inherit; font-size: 12.5px; color: var(--ink-dim);
+  background: var(--panel); border: 1px solid var(--line); border-radius: 999px; padding: 5px 12px; cursor: pointer;
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); transition: color .2s, border-color .2s, transform .15s; }
+.sound-toggle:hover { color: var(--amber); border-color: var(--amber); }
+.sound-toggle[aria-pressed="false"] { opacity: .7; }
+.views button, .views a, .card button, .assets button, .sound-toggle { transition: color .2s, border-color .2s, background .2s, transform .15s cubic-bezier(.3,1.6,.5,1); }
+.views button:hover, .views a:hover { transform: translateY(-1px); }
+.views button:active, .views a:active, .card button:active, .assets button:active, .sound-toggle:active { transform: scale(.94); }
+@keyframes rise-in { from { opacity: 0; transform: translateY(14px) scale(.98); } to { opacity: 1; transform: none; } }
+@keyframes slide-in { from { opacity: 0; transform: translateX(24px); } to { opacity: 1; transform: none; } }
+@keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+.card:not([hidden]) { animation: rise-in .32s cubic-bezier(.2,.9,.3,1.15); }
+.assets:not([hidden]) { animation: slide-in .3s cubic-bezier(.2,.9,.3,1); }
+.asset-row { animation: fade-in .25s both; }
+#workbench[open] { animation: rise-in .35s cubic-bezier(.2,.9,.3,1); }
+.era.on strong { animation: rise-in .9s cubic-bezier(.2,.9,.3,1); }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } }

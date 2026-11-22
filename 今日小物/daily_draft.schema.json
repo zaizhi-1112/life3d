@@ -6,7 +6,19 @@
     "mood": {"type": "string", "enum": ["平静", "有劲", "疲惫", "松一口气", "烦乱", "未标记"]},
     "title": {"type": "string"},
     "idea": {"type": "string"},
-    "design_reason": {"type": "string"}
+    "design_reason": {"type": "string"},
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "from": {"type": "string", "enum": ["你说", "Agent", "待办"]},
+          "text": {"type": "string"}
+        },
+        "required": ["from", "text"]
+      }
+    }
   },
-  "required": ["summary", "mood", "title", "idea", "design_reason"]
+  "required": ["summary", "mood", "title", "idea", "design_reason", "evidence"]
 }

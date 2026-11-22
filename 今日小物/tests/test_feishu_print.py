@@ -48,6 +48,7 @@ class TestOrdinaryBot(TestCase):
     def test_bind_without_sending_or_reading_any_chat(self):
         self.assertFalse(feishu.configured())
         self.assertEqual(feishu.begin_pairing(), {"bound": True, "mode": "one_way", "bot_name": "飞书工作岛"})
+        self.assertFalse(feishu.cards_enabled())
         self.api.assert_called_once_with("GET", "/bot/v3/info")
         self.assertTrue(feishu.configured())
         self.assertFalse(self.posted)
@@ -92,6 +93,68 @@ class TestOrdinaryBot(TestCase):
         with self.assertRaises(feishu.FeishuError):
             feishu.notify_colors(**self.params)
         self.api.assert_not_called()
+
+    def test_native_card_uses_verified_spools_one_click_and_a_separate_delivery_id(self):
+        feishu.begin_pairing()
+        with self.assertRaises(feishu.FeishuError):
+            feishu.notify_card(**self.params)
+        self.assertFalse(self.posted)
+        feishu.enable_cards()
+        self.assertTrue(feishu.cards_enabled())
+        feishu.notify_colors(**self.params)
+        receipt = feishu.notify_card(**self.params)
+        self.assertEqual(feishu.notify_card(**self.params), receipt)
+        self.assertNotEqual(self.posted[0]["uuid"], self.posted[1]["uuid"])
+        self.assertEqual(self.posted[1]["uuid"], self.posted[2]["uuid"])
+        self.assertEqual(receipt["interaction"], "card")
+        self.assertEqual(receipt["chat_id"], "oc_room")
+        self.assertEqual(receipt["identity"], feishu.bound_identity())
+        self.assertEqual(self.posted[1]["msg_type"], "interactive")
+        card = json.loads(self.posted[1]["content"])
+        self.assertEqual(card["schema"], "2.0")
+        self.assertIn(self.params["title"], card["header"]["title"]["content"])
+        self.assertNotIn("http", self.posted[1]["content"])
+        elements = card["body"]["elements"]
+        self.assertEqual(elements[0]["text"]["content"], self.params["print_details"])
+        buttons = [el for el in elements if el["tag"] == "button"]
+        self.assertEqual(len(buttons), len(self.params["choices"]))
+        for button, source in zip(buttons, self.params["choices"]):
+            self.assertIn("已清盘", button["text"]["content"])
+            self.assertIn("打印", button["text"]["content"])
+            self.assertEqual(button["behaviors"], [{"type":"callback", "value":{
+                "action":"moodprint_print", "day":self.params["day"], "code":self.params["code"], "source":source}}])
+        self.profiles(self.profile | {"users":[{"userOpenId":"ou_changed"}]})
+        self.assertFalse(feishu.cards_enabled())
+        with self.assertRaises(feishu.FeishuError):
+            feishu.bound_identity()
+        with self.assertRaises(feishu.FeishuError):
+            feishu.enable_cards()
+        self.assertEqual(len(self.posted), 3)
+
+    def test_feedback_retains_choices_only_for_retry(self):
+        feishu.begin_pairing()
+        feishu.enable_cards()
+        self.api.side_effect = lambda method, *args, **kwargs: self.bot if method == "GET" else {}
+        for retry in (self.params, None):
+            feishu.card_feedback("test-callback", "打印状态示例", retry=retry)
+            args, kwargs = self.api.call_args
+            self.assertEqual(args, ("POST", "/interactive/v1/card/update"))
+            self.assertEqual(kwargs["body"]["token"], "test-callback")
+            elements = kwargs["body"]["card"]["body"]["elements"]
+            self.assertTrue(any(el.get("text", {}).get("content") == "打印状态示例" for el in elements))
+            self.assertEqual(sum(el["tag"] == "button" for el in elements), 2 if retry else 0)
+
+    def test_generate_feedback_redraws_the_single_consent_button(self):
+        feishu.begin_pairing()
+        feishu.enable_cards()
+        self.api.side_effect = lambda method, *args, **kwargs: self.bot if method == "GET" else {}
+        retry = dict(kind="generate", day="2026-11-20", title="相机", code="A1B2C3D4", idea="一台相机", credits=32)
+        feishu.card_feedback("test-callback", "Aholo 暂时不可用", retry=retry)
+        elements = self.api.call_args.kwargs["body"]["card"]["body"]["elements"]
+        buttons = [el for el in elements if el["tag"] == "button"]
+        self.assertEqual(len(buttons), 1)
+        self.assertEqual(buttons[0]["behaviors"][0]["value"]["action"], "moodprint_generate")
+        self.assertIn("32", buttons[0]["text"]["content"])
 
     def test_isolated_workbench_never_accesses_the_live_robot(self):
         with patch.dict(os.environ, {"MOODPRINT_DATA": str(self.data / "fixture")}):

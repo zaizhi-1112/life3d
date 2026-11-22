@@ -224,3 +224,37 @@ dialog #toast { position: sticky; right: auto; bottom: 0; max-width: 100%; margi
 .usage-summary strong { color: var(--accent); font-size: 15px; font-variant-numeric: tabular-nums }
 #usage-lines { margin-top: 4px; color: var(--muted); font-size: 13px; line-height: 1.65; overflow-wrap: anywhere }
 #usage-lines p { margin: 0 }
+
+.three-ends { margin-top: 14px; display: grid; gap: 10px }
+.three-ends .ends { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--line); border-radius: 12px; overflow: hidden }
+.three-ends .end { padding: 10px 12px; display: grid; gap: 2px; min-width: 0 }
+.three-ends .end + .end { border-left: 1px solid var(--line) }
+.three-ends .end span { font-size: 12px; color: var(--muted) }
+.three-ends .end strong { font-size: 22px; line-height: 1.2; font-variant-numeric: tabular-nums }
+.three-ends .end strong small { font-size: 12px; font-weight: 400; margin-left: 2px; color: var(--muted) }
+.three-ends .end em { font-style: normal; font-size: 11px; color: var(--muted); line-height: 1.5; overflow-wrap: anywhere }
+.three-ends .trail { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px }
+.three-ends .trail li { display: flex; gap: 8px; font-size: 13px; line-height: 1.6; align-items: baseline }
+.three-ends .trail b { flex: none; font-size: 11px; font-weight: 600; padding: 1px 7px; border-radius: 999px; background: var(--canvas); color: var(--muted) }
+.three-ends .trail q { quotes: "「" "」" }
+
+/* 动效：按下回弹、卡片淡入、三端数字跳动、提示条滑入 */
+.button, .text-button, .icon-button, button { transition: transform .15s cubic-bezier(.3,1.6,.5,1), background-color .2s, border-color .2s, color .2s, box-shadow .2s; }
+.button:active, .icon-button:active, button:active { transform: scale(.95); }
+.button.primary:hover { box-shadow: 0 6px 18px rgba(109,74,133,.25); }
+@keyframes rise { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+.creation-canvas > section { animation: rise .45s cubic-bezier(.2,.9,.3,1) both; }
+.creation-canvas > section:nth-child(2) { animation-delay: .06s; }
+.creation-canvas > section:nth-child(3) { animation-delay: .12s; }
+.three-ends.enter .end { animation: rise .45s cubic-bezier(.2,.9,.3,1) both; }
+.three-ends.enter .end:nth-child(2) { animation-delay: .08s; }
+.three-ends.enter .end:nth-child(3) { animation-delay: .16s; }
+.three-ends.enter .trail li { animation: rise .45s both; animation-delay: .3s; }
+.three-ends.enter .trail li + li { animation-delay: .42s; }
+#toast:not([hidden]) { animation: rise .3s cubic-bezier(.2,.9,.3,1); }
+#moods label span { transition: transform .15s cubic-bezier(.3,1.6,.5,1), background .2s; }
+#moods label:active span { transform: scale(.9); }
+.sound-toggle { margin-left: 6px; align-self: center; font: inherit; font-size: 12px; color: var(--muted);
+  background: rgba(252,250,246,.9); border: 1px solid var(--line); border-radius: 999px; padding: 4px 11px; cursor: pointer; }
+.sound-toggle:hover { color: var(--accent); border-color: var(--accent); }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } }

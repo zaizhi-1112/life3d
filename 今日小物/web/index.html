@@ -7,6 +7,7 @@
 <title>今日小物</title>
 <link rel="stylesheet" href="/style.css">
 <link rel="stylesheet" href="/viewer.css">
+<script src="/sound.js" defer></script>
 <script src="/viewer.js" defer></script>
 <script src="/ui.js" defer></script>
 </head>
@@ -39,7 +40,7 @@
         <div class="stage-heading"><h2 id="record-heading">经历摘要</h2><span id="record-label" class="micro"></span></div>
         <form id="record-form">
           <label for="summary" class="sr-only">今天的工作和心情</label>
-          <textarea id="summary" name="summary" rows="4" maxlength="4000" placeholder="今天做了什么，有什么想留下的感受？" required></textarea>
+          <textarea id="summary" name="summary" rows="6" maxlength="4000" placeholder="今天做了什么，有什么想留下的感受？" required></textarea>
           <fieldset id="moods"><legend class="sr-only">心情</legend>
             <label><input name="mood" type="radio" value="平静"><span>平静</span></label><label><input name="mood" type="radio" value="有劲"><span>有劲</span></label><label><input name="mood" type="radio" value="疲惫"><span>疲惫</span></label><label><input name="mood" type="radio" value="松一口气"><span>松一口气</span></label><label><input name="mood" type="radio" value="烦乱"><span>烦乱</span></label>
           </fieldset>
@@ -56,6 +57,7 @@
             <span class="micro" id="draft-status" role="status"></span>
           </div>
           <p class="micro" id="record-source" aria-live="polite"></p>
+          <div id="three-ends" class="three-ends" hidden></div>
           <p class="error" id="organize-error" role="status" hidden></p>
         </form>
         <div id="sample-story" hidden><p id="sample-summary"></p></div>
@@ -149,6 +151,7 @@
   <section aria-labelledby="feishu-title"><h3 id="feishu-title">飞书选色</h3>
     <p id="feishu-status" class="micro" role="status"></p>
     <button id="feishu-bind" class="button secondary" type="button">连接飞书工作岛通知</button>
+    <button id="feishu-enable-cards" class="button secondary" type="button" hidden>启用飞书内选色</button>
     <p id="feishu-instruction" class="micro" aria-live="polite" hidden></p>
     <details><summary>使用我自己的飞书群通知机器人</summary>
       <form id="webhook-form" autocomplete="off">

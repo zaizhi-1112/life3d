@@ -169,5 +169,6 @@ class CanvasTests(unittest.TestCase):
         db.close()
         r = collect(day, island, self.data, exclude_thread="daily-bot")
         self.assertEqual(len(r["todos"]),2)
-        self.assertEqual(r["agent_work"],[{"topic":"任务","agent_reports":["测试完成并给出结果"]}])
+        self.assertEqual(r["agent_work"],[{"topic":"任务","agent_reports":["测试完成并给出结果"], "harness": "Codex",
+                                           "project": "日常对话", "by": "你", "prompts": []}])
         self.assertEqual(r["unavailable"], [])

@@ -2,6 +2,7 @@
 import secrets
 import sqlite3
 from datetime import datetime, timedelta
+from hashlib import file_digest
 from pathlib import Path
 from tempfile import TemporaryDirectory
 from threading import Event, RLock, Thread
@@ -10,7 +11,9 @@ from time import monotonic
 import history_context
 import feishu_print
 import feishu_webhook
-from color_review import ColorReviews, approved, public_review
+from color_review import ColorReviews, approved, can_resume_color, can_retry_color, public_review
+from feishu_card_listener import CardListener
+from generation_card import GenerationCards, feishu_consent, gated, mac_consent, public_card
 from credit_usage import CreditLedger
 from daily_draft import draft_for_day
 from finished_photo import prepare_photo
@@ -21,7 +24,7 @@ from local_store import (
 )
 from lux3d import generate_model, Lux3DError
 from print_prep import prepare_print, size_comparison, with_filament_usage, PreparationError
-from printer import read_idle_bed, send_print, printer_status, valid_studio_name, ColorChanged, PrinterError, PrintStatusUnknown
+from printer import available_spools, read_idle_bed, send_print, printer_status, valid_studio_name, ColorChanged, PrinterError, PrintStatusUnknown
 from sample import IDEA, SUMMARY, TITLE, make_sample
 
 
@@ -42,15 +45,22 @@ def concept_prompt(idea):
     )
 
 
-def present(job, today):
+def present(job, today, key):
     view = public_job(job, today)
     if view is None:
         return None
     if job.get("print"):
         view["print"] = job["print"] | {"size_comparison": size_comparison(job["print"].get("dimensions_mm"))}
-    review = public_review(job, today)
+    if can_resume_color(key, job, today=today):
+        view["resume_color"] = True
+    elif can_retry_color(key, job, today=today):
+        view["retry_color"] = True
+    review = public_review(job, today, key)
     if review is not None:
         view["color_review"] = review
+    card = public_card(job, key) if job["status"] == "recorded" else None
+    if card:
+        view["generation_card"] = card
     if job.get("design_prompt"):
         if job.get("lux3d_concept_task_id"):
             status = "sent"
@@ -68,7 +78,7 @@ def present(job, today):
 
 
 def clear_approval(job):
-    for field in ("ready_date", "ready_device", "ready_bed", "color_review"):
+    for field in ("ready_date", "ready_device", "ready_bed", "color_review", "generation_card"):
         job.pop(field, None)
     job.update(ready=False, ready_for_generation=False)
 
@@ -109,6 +119,7 @@ class App:
         self.store = JobStore(data)
         self.credits = CreditLedger(data)
         self.colors = ColorReviews(self)
+        self.generation_cards = GenerationCards(self)
         self.guard = RLock()
         self.worker = None
         self.working_key = None
@@ -117,9 +128,11 @@ class App:
         self.organize_errors = {}
         self.checking_printer = False
         self.bed_check_key = None
+        self.resumed_bed_key = None
         self.tracked_key = None
         self.next_observation = 0
         self.stop = Event()
+        self.card_listener = CardListener(self)
         self.settings, self.settings_error = load_settings(data)
         self.recover()
 
@@ -163,7 +176,12 @@ class App:
 
     def recover(self):
         latest = ""
+        today = now().date().isoformat()
         for key, job in self.store.load_existing():
+            # Keep track of the reservation even while the work is unlocked or
+            # the device disconnected, so the next clearance can revoke it.
+            if key not in DEMO_KEYS and key < today and job.get("ready") and job.get("ready_date") == today:
+                self.resumed_bed_key = key
             if (job.get("device_ticket") or studio_observation(job)) and job["status"] == "submitted" and job.get("submitted_at", "") > latest:
                 self.tracked_key, latest = key, job["submitted_at"]
             if job["status"] not in ACTIVE:
@@ -184,9 +202,9 @@ class App:
         except (sqlite3.Error, OSError, ValueError):
             history_status = {"count": 0, "sources": 0, "error": "个人历史索引暂时无法读取"}
         with self.guard:
-            samples = {name: present(self.job(name), today) for name in DEMO_KEYS}
+            samples = {name: present(self.job(name), today, name) for name in DEMO_KEYS}
             stored = self.job(key)
-            job = samples[key] if key in DEMO_KEYS else present(stored, today)
+            job = samples[key] if key in DEMO_KEYS else present(stored, today, key)
             if job and job.get("print"):
                 job["print"] = with_filament_usage(job["print"], self.files(key, stored))
             if stored and stored["status"] != "unreadable" and key not in {"sample", "character"}:
@@ -207,6 +225,8 @@ class App:
                 "sample": samples["sample"], "character": samples["character"],
                 "aholo_character": samples["aholo-character"], "settings": self.settings, "settings_error": self.settings_error,
                 "connection": connection_state(), "feishu_bound": self.personal_chat and feishu_print.configured(),
+                "feishu_cards": self.personal_chat and feishu_print.cards_enabled(),
+                "feishu_cards_online": self.card_listener.ready.is_set(),
                 "feishu_webhook": feishu_webhook.configured(self.data),
                 "busy": self.working_key, "checking_printer": self.checking_printer,
                 "organizing": self.organizing_key == key, "organize_error": self.organize_errors.get(key),
@@ -411,11 +431,16 @@ class App:
 
     def clear_other_ready_jobs(self, key, today):
         # All these jobs share one physical bed. A single clearance is for one job.
-        for other in (DEMO_KEYS | {today}) - {key}:
+        candidates = DEMO_KEYS | {today}
+        if self.resumed_bed_key and self.resumed_bed_key != key:
+            candidates.add(self.resumed_bed_key)
+        for other in candidates - {key}:
             job = self.job(other)
             if job and job.get("ready"):
                 job.update(ready=False, ready_date=None, ready_bed=None)
                 self.save(other, job)
+        if self.resumed_bed_key != key:
+            self.resumed_bed_key = None
 
     def clearance_job(self, key, ready, prepare_ok):
         job = self.job(key)
@@ -428,20 +453,26 @@ class App:
         return job
 
     def mark_ready(self, key, ready, source, prepare_ok=False):
+        checked_job_key(key)
         if source is not None:
             checked_source(source)
         today = now().date().isoformat()
-        if key not in DEMO_KEYS | {today} or type(ready) is not bool:
+        if type(ready) is not bool:
             raise Problem("打印机就绪只对当天有效。")
         with self.guard:
             job = self.clearance_job(key, ready, prepare_ok)
+            historical = key not in DEMO_KEYS | {today}
+            if historical and not can_resume_color(key, job, today=today):
+                raise Problem("这件作品没有可继续使用的飞书选色通知。")
             if not ready:
                 if self.bed_check_key == key:
                     self.bed_check_key = None
-                if source is not None and not approved(job, today):
+                if source is not None and not approved(job, today, key):
                     job["source"] = source
                 job.update(ready=False, ready_date=None, ready_device=None, ready_bed=None, ready_for_generation=False)
                 self.save(key, job)
+                if self.resumed_bed_key == key:
+                    self.resumed_bed_key = None
                 return
             if self.checking_printer:
                 raise Problem("正在核对 P2S，请稍后确认清盘。")
@@ -459,13 +490,18 @@ class App:
             with self.guard:
                 latest = self.clearance_job(key, ready, prepare_ok)
                 if (self.bed_check_key != key or today != now().date().isoformat() or device != printer_identity()
-                        or latest.get("idea") != job.get("idea") or latest.get("artifact_version") != job.get("artifact_version")):
+                        or latest.get("idea") != job.get("idea") or latest.get("artifact_version") != job.get("artifact_version")
+                        or latest.get("revision") != job.get("revision")
+                        or (historical and (not can_resume_color(key, latest, today=today)
+                            or latest["print"]["slice_sha256"] != job["print"]["slice_sha256"]))):
                     raise Problem("作品或清盘状态已改变，请检查后重新确认。")
-                if source is not None and not approved(latest, today):
+                if source is not None and not approved(latest, today, key):
                     latest["source"] = source
                 latest.update(ready=True, ready_date=today, ready_device=device, ready_bed=signature,
                               ready_for_generation=prepare_ok is True)
                 self.save(key, latest)
+                if historical:
+                    self.resumed_bed_key = key
         except PrinterError as exc:
             raise Problem(str(exc)) from None
         finally:
@@ -500,23 +536,135 @@ class App:
                 self.begin_dispatch(key, job)
             else:
                 raise Problem("找不到操作。")
-            job.pop("error", None)
-            self.save(key, job)
-            self.working_key = key
-            self.worker = Thread(target=self.work, args=(key, job, action), daemon=True)
-            self.worker.start()
+            self.start_worker(key, job, action)
 
-    def begin_dispatch(self, key, job):
+    def start_worker(self, key, job, action):
+        # Caller holds guard. Persist dispatching before the first printer command.
+        job.pop("error", None)
+        self.save(key, job)
+        self.working_key = key
+        self.worker = Thread(target=self.work, args=(key, job, action), daemon=True)
+        try:
+            self.worker.start()
+        except RuntimeError:
+            self.working_key = None
+            if action == "print":
+                job.pop("ready_bed", None)
+                job.update(status="prepared", ready=False, error="无法启动发送任务，请重新确认打印。")
+            else:
+                job.update(status="failed", error="无法启动制作任务，请稍后重试。")
+            self.save(key, job)
+            raise Problem("无法启动制作或发送任务，请稍后重试。") from None
+        return self.worker
+
+    def print_from_card(self, key, code, source, *, message_id, chat_id, event_id, identity, clicked_at):
+        checked_job_key(key)
+        checked_source(source)
+        received = now()
+        day = received.date().isoformat()
+        if (not isinstance(clicked_at, datetime) or clicked_at.utcoffset() is None
+                or clicked_at.astimezone(received.tzinfo).date() != received.date()
+                or not -90 <= (received - clicked_at).total_seconds() <= 300):
+            raise Problem("这次点击已过期，请看过打印板后重新点颜色。")
+        if not all(isinstance(value, str) and 0 < len(value) <= 256 for value in (code, message_id, chat_id, event_id, identity)):
+            raise Problem("无法核对这次飞书点击。")
+        with self.guard:
+            job = self.job(key) or {}
+            review = job.get("color_review") or {}
+            receipt = review.get("card_receipt") or review.get("receipt") or {}
+            if (receipt.get("interaction") != "card" or receipt.get("identity") != identity
+                    or receipt.get("chat_id") != chat_id or receipt.get("message_id") != message_id
+                    or receipt.get("code") != code or review.get("code") != code or review.get("channel") != "private"):
+                raise Problem("这张卡片与本人或当前作品不匹配。")
+            if job["status"] in {"dispatching", "submitted", "finished", "print_unknown"}:
+                return self.card_print_result(job)
+            if (job["status"] != "prepared" or job.get("edit_token") or review.get("status") not in {"sent", "confirmed"}
+                    or review.get("day") != (day if key in DEMO_KEYS else key)):
+                raise Problem("当前作品或选色通知已改变，请使用最新的卡片。")
+            device = printer_identity()
+            digest = review.get("slice_sha256")
+            result = job.get("print") or {}
+            if (not device or review.get("device") != device or not digest or result.get("slice_sha256") != digest
+                    or result.get("artifact") != "print.gcode.3mf"):
+                raise Problem("打印机或切片已改变，请重新获取选色通知。")
+            selected = next((option for option in review.get("options", []) if option.get("source") == source), None)
+            if not selected or not selected.get("rgba"):
+                raise Problem("所选料槽不在这张卡片里，请重新选色。")
+            if review.get("status") == "confirmed":
+                previous = review.get("selected") or {}
+                if (previous.get("source"), previous.get("rgba")) != (source, selected["rgba"]):
+                    raise Problem("本件已确认其他耗材，请使用卡片上已选的颜色。")
+            seen = review.get("card_events", [])
+            if event_id in seen:
+                if self.checking_printer and self.bed_check_key == key:
+                    return "正在核对打印板和所选耗材。"
+                raise Problem("这次点击已处理。如需再试，请确认打印板后重新点一次。")
+            if self.working_key is not None or self.checking_printer:
+                raise Problem("工作台正在处理其他操作，请稍后重新点颜色。")
+            # Claim the event without granting permission to dispatch. This also
+            # prevents a previous clearance from being used if this check fails.
+            review["card_events"] = [*seen, event_id]
+            job.update(ready=False, ready_bed=None, ready_date=None, ready_for_generation=False)
+            self.save(key, job)
+            self.checking_printer = True
+            self.bed_check_key = key
+        try:
+            with (self.files(key, job) / "print.gcode.3mf").open("rb") as sliced:
+                if file_digest(sliced, "sha256").hexdigest() != digest:
+                    raise Problem("本机切片已改变，请恢复原切片或重新切片。")
+            bed = read_idle_bed()
+            if not any(option["source"] == source and option["rgba"] == selected["rgba"] for option in available_spools()):
+                raise Problem("所选料槽的 PLA 或颜色已改变，请核对耗材后重新选色。")
+            with self.guard:
+                latest = self.job(key) or {}
+                if (self.bed_check_key != key or self.working_key is not None or latest != job
+                        or printer_identity() != device or now().date().isoformat() != day):
+                    raise Problem("核对期间作品、设备或清盘状态发生变化，请重新点颜色。")
+                # begin_dispatch consumes readiness and start_worker persists it
+                # in a single save. A crash can never leave a ready-to-send job.
+                review.update(status="confirmed", can_confirm=False, selected=selected, reply_id=event_id,
+                              message="你已在飞书卡片确认颜色和清盘。")
+                job.update(source=source, ready=True, ready_date=day, ready_device=device, ready_bed=bed)
+                self.begin_dispatch(key, job, checked_card=True)
+                worker = self.start_worker(key, job, "print")
+        except PrinterError as exc:
+            raise Problem(str(exc) + " 核对打印机后重新点颜色。") from None
+        except OSError:
+            raise Problem("无法核对或保存本机切片信息，请检查工作台后重试。") from None
+        finally:
+            with self.guard:
+                self.checking_printer = False
+                self.bed_check_key = None
+        worker.join()
+        with self.guard:
+            return self.card_print_result(self.job(key) or {})
+
+    @staticmethod
+    def card_print_result(job):
+        status = job.get("status")
+        if status == "dispatching":
+            return "正在向 P2S 发送这件作品。"
+        if status == "submitted":
+            return "P2S 已接单。"
+        if status == "finished":
+            return "这件作品已完成。"
+        if status == "print_unknown":
+            raise Problem("发送结果待核对，请先查看 P2S 屏幕。")
+        raise Problem(job.get("error") or "打印未开始，请检查工作台后重新点颜色。")
+
+    def begin_dispatch(self, key, job, *, checked_card=False):
         today = now().date().isoformat()
-        if key not in DEMO_KEYS | {today} or not job or job["status"] != "prepared":
-            raise Problem("只能发送已完成切片的当天摆件或样品。")
-        if self.checking_printer:
+        if not job or job["status"] != "prepared":
+            raise Problem("只能发送已完成切片的作品。")
+        if key not in DEMO_KEYS | {today} and not can_resume_color(key, job, today=today):
+            raise Problem("这件作品没有可继续使用的飞书选色通知。")
+        if self.checking_printer and not (checked_card and self.bed_check_key == key):
             raise Problem("正在读取打印机状态，完成后可发送。")
         if not connection_state()["printer"]:
             raise Problem("请先在本机配置打印机连接。")
         if not bed_is_ready_to_print(job, today):
             raise Problem("请先清空平台，为本件作品重新确认清盘。")
-        if not approved(job, today):
+        if not approved(job, today, key):
             raise Problem("请先打开本件的飞书通知，在工作台选好 PLA 颜色并确认。")
         result = job.get("print") or {}
         seconds = result.get("estimated_seconds")
@@ -595,6 +743,7 @@ class App:
             self.run_due(now())
             self.observe_latest()
             self.colors.tick()
+            self.generation_cards.tick()
 
     def observe_latest(self):
         # New dispatches supersede old ones on this single printer. Never infer
@@ -635,18 +784,32 @@ class App:
 
     def run_due(self, timestamp):
         with self.guard:
-            if self.working_key or not self.settings["auto_prepare"] or timestamp.strftime("%H:%M") < self.settings["at"]:
+            if self.working_key or not self.settings["auto_prepare"]:
                 return
             key = timestamp.date().isoformat()
+            if self.resumed_bed_key and self.settings["auto_print"]:
+                resumed_key = self.resumed_bed_key
+                resumed = self.job(resumed_key)
+                if not resumed or not resumed.get("ready") or resumed.get("ready_date") != key:
+                    self.resumed_bed_key = None
+                elif bed_is_ready_to_print(resumed, key) and approved(resumed, key, resumed_key) and can_resume_color(resumed_key, resumed, today=key):
+                    try:
+                        self.run(resumed_key, "print")
+                    except Problem:
+                        pass
+                    return
+            if timestamp.strftime("%H:%M") < self.settings["at"]:
+                return
             job = self.job(key)
             if not job or job.get("edit_token"):
                 return
             try:
                 if job["status"] == "recorded":
-                    if (self.settings["prepare_after_ready"] or job.get("needs_credit_consent")) and not (bed_is_ready(job, key) and job.get("ready_for_generation")):
+                    # Credits are spent only after consent on the Mac or the Feishu card.
+                    if gated(job, self.settings) and not (mac_consent(job, key) or feishu_consent(job, key)):
                         return
                     self.run(key, "generate")
-                elif self.settings["auto_print"] and job["status"] == "prepared" and bed_is_ready_to_print(job, key) and approved(job, key):
+                elif self.settings["auto_print"] and job["status"] == "prepared" and bed_is_ready_to_print(job, key) and approved(job, key, key):
                     self.run(key, "print")
             except Problem:
                 # A changed connection or expired clearance will be rechecked next tick.

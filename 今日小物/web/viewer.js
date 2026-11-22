@@ -208,7 +208,7 @@
       this.caption.hidden = !message;
     }
 
-    open() {
+    open(mode = "pan") {
       const src = this.getAttribute("src");
       if (!src || this.canvas) return;
       this.view = viewHome();
@@ -241,7 +241,7 @@
             this.controls(canvas, this.inputs.signal);
             this.poster.hidden = this.openButton.hidden = true;
             canvas.hidden = this.toolbar.hidden = this.caption.hidden = false;
-            this.setMode("pan");
+            this.setMode(mode);
             this.observer = new ResizeObserver(() => this.redraw());
             this.observer.observe(canvas);
             this.redraw();

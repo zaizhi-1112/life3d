@@ -10,6 +10,8 @@ await mkdir(output, { recursive: true });
 const files = [
   "style.css", "people-manager.css", "world.js", "island-panels.js",
   "island-scenes.js", "exhibit-detail.js", "people-manager.js",
+  "asset-manager.js", "asset-manager.css", "ocean.js", "sound.js",
+  "palace.js", "palace-furniture.js", "palace.css",
 ];
 await Promise.all(files.map(file => copyFile(join(island, "web", file), join(output, file))));
 await cp(join(island, "web", "vendor", "three"), join(output, "vendor", "three"), { recursive: true });
@@ -20,6 +22,14 @@ await writeFile(join(output, "index.html"), html
   .replace("<title>二十三</title>", "<title>今日小物：把每一天打印出来，摆进我的人生小岛</title>")
   .replace('id="open-workbench"', 'id="open-workbench" hidden')
   .replaceAll("小屋管理", "小屋与信箱"));
+
+// 记忆宫殿同样只读：能看、能第一人称逛，不能布置，也没有本机工作台入口。
+const palace = await readFile(join(island, "web", "palace.html"), "utf8");
+await writeFile(join(output, "palace.html"), palace
+  .replace('<html lang="zh-CN">', '<html lang="zh-CN" data-read-only>')
+  .replace('<title>记忆宫殿 · 二十三</title>', '<title>记忆宫殿 · 今日小物</title>')
+  .replace('id="open-workbench"', 'id="open-workbench" hidden')
+  .replace('id="open-shelf"', 'id="open-shelf" hidden'));
 
 async function copyDemoFile(source, kind, extension) {
   const relative = source.replace(/^demo\//, "");

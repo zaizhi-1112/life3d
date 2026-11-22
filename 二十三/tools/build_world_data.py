@@ -27,6 +27,7 @@ OUT = DATA / "world.json"
 EDITS = DATA / "edits.json"
 LEDGER = DATA / "aholo_world.json"
 HOUSING = DATA / "housing.json"
+LAYOUT = DATA / "layout.json"  # 布置面板写入的摆放，见 AGENTS.md「布置与资产」
 COMPACT = DATA / "exhibits"  # Blender 减面后的展示版，见 tools/blender/compact_exhibit.py
 START_MONTH = "2022-06"  # 用户确认：2022 年夏天之前记录很少
 EVIDENCE = re.compile(r"\s*\[k:[^\]]*\]")

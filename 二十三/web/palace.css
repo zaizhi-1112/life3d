@@ -1,0 +1,63 @@
+/* 记忆宫殿：沿用小岛的暗色玻璃按钮和资产面板，只补宫殿特有的部分。 */
+body.palace { background: #1b1828; }
+.palace-mark { display: flex; align-items: baseline; gap: 14px; }
+.palace-mark a { color: inherit; text-decoration: none; }
+.palace-mark small { font-size: 13px; letter-spacing: .3em; color: var(--ink-dim); }
+.scene-switch { display: inline-flex; gap: 0; border: 1px solid var(--line); border-radius: 999px; background: var(--panel);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); padding: 2px; }
+.views .scene-switch button, .scene-switch .island-link {
+  border: 1px solid transparent; background: transparent; padding: 6px 13px; font-size: 14px; border-radius: 999px;
+  color: var(--ink); text-decoration: none; font-family: inherit; backdrop-filter: none; }
+.views .scene-switch button[aria-pressed="true"] { border-color: var(--amber); color: var(--amber); }
+.scene-switch .island-link:hover { color: var(--amber); }
+.scene-reason {
+  position: fixed; top: 66px; left: 28px; max-width: min(520px, calc(100vw - 56px)); margin: 0;
+  font-size: 14px; line-height: 1.7; color: var(--ink); text-shadow: 0 1px 10px rgba(0,0,0,.55);
+}
+.tip {
+  position: fixed; left: 0; top: 0; pointer-events: none; z-index: 5;
+  font-size: 13px; padding: 4px 10px; border-radius: 999px; white-space: nowrap;
+  background: rgba(24, 22, 34, .82); border: 1px solid var(--line); color: var(--ink);
+}
+.palace-hint { position: fixed; left: 50%; bottom: 18px; transform: translateX(-50%); margin: 0; font-size: 12.5px;
+  color: var(--ink-dim); text-shadow: 0 1px 8px rgba(0,0,0,.6); pointer-events: none; white-space: nowrap; }
+.palace-card .twin { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; }
+.palace-card .twin span { font-size: 12px; padding: 2px 9px; border-radius: 999px; border: 1px solid var(--line); color: var(--ink-dim); }
+.palace-card .twin span.real { border-color: #c99a5c; color: #f2c88e; }
+.palace-card .card-link { font-size: 14px; color: var(--amber); align-self: center; margin-left: 4px; }
+.palace-card button:not(.close) { font: inherit; font-size: 14px; color: var(--ink); background: transparent; border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; cursor: pointer; }
+.palace-card button:not(.close):hover { color: var(--amber); border-color: var(--amber); }
+.shelf .shelf-actions { display: flex; gap: 6px; }
+.shelf #arrange { flex: 1; border-color: #a07e5f; background: #4a3c33; color: #ffe0b7; }
+.shelf .asset-row { display: grid; grid-template-columns: 1fr auto; gap: 8px; align-items: center; padding: 6px 4px; border-bottom: 1px solid rgba(243,233,218,.08); }
+.shelf .asset-row[aria-current="true"] { background: rgba(255,183,102,.08); border-radius: 8px; }
+.shelf .asset-pick { all: unset; cursor: pointer; display: grid; grid-template-columns: 1fr auto; column-gap: 6px; min-width: 0; }
+.shelf .asset-pick:disabled { cursor: default; opacity: .62; }
+.shelf .asset-pick strong { font-weight: 500; font-size: 14px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.shelf .asset-pick small { grid-column: 1; font-size: 12px; color: var(--soft); }
+.shelf .asset-pick em { grid-row: 1 / span 2; grid-column: 2; align-self: center; font-style: normal; font-size: 11px;
+  padding: 1px 7px; border-radius: 999px; border: 1px solid #c99a5c; color: #f2c88e; }
+.shelf-detail { border-top: 1px solid #574a4c; padding-top: 10px; display: grid; gap: 8px; }
+.shelf-detail label { display: grid; grid-template-columns: 3em 1fr; align-items: center; font-size: 13px; color: var(--soft); }
+.shelf-detail input[type=range] { accent-color: #d2ac86; }
+.shelf-status { margin: 0; font-size: 12px; color: var(--soft); min-height: 1.4em; }
+@media (max-width: 650px) {
+  .scene-reason { top: 92px; left: 14px; font-size: 13px; }
+  .views .scene-switch button, .scene-switch .island-link { padding: 5px 9px; font-size: 12px; }
+  .palace-hint { display: none; }
+}
+#shelf-search { width: 100%; padding: 7px 10px; font-size: 13.5px; border-radius: 7px; border: 1px solid #5e5058; background: #211e27; color: var(--paper); font-family: inherit; }
+
+.veil { position: fixed; inset: 0; z-index: 4; pointer-events: none; background: radial-gradient(circle at 50% 55%, #3a2f45, #141220); opacity: 0; transition: opacity .38s ease; }
+.veil.on { opacity: 1; }
+.shelf-add small { display: block; color: var(--soft); font-size: 12px; margin-bottom: 6px; }
+.shelf-add div { display: flex; flex-wrap: wrap; gap: 5px; }
+.shelf .shelf-add button { padding: 3px 9px; border-radius: 999px; font-size: 12.5px; }
+#detail-remove { color: #ffab98; }
+body.walking .scene-reason { opacity: .0; transition: opacity .4s; }
+body.arranging .palace-hint { color: var(--amber); }
+body.walking::after { content: ""; position: fixed; left: 50%; top: 50%; width: 6px; height: 6px; margin: -3px; border-radius: 50%; background: rgba(255,240,220,.7); pointer-events: none; }
+#walk[aria-pressed="true"], #open-shelf[aria-pressed="true"] { border-color: var(--amber); color: var(--amber); }
+.palace-hint { animation: fade-in .6s both; }
+.palace-hint { background: rgba(24,22,34,.6); border: 1px solid var(--line); padding: 4px 14px; border-radius: 999px; color: var(--ink); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+@media (max-width: 650px) { .scene-reason { top: 130px; } }

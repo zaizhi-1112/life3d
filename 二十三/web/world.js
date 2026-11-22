@@ -6,7 +6,10 @@ import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import { distantGeometry } from "./exhibit-detail.js";
 import { miniature } from "./island-scenes.js";
 import { workbenchPanel, objectCard, readOnly } from "./island-panels.js";
+import { assetPanel } from "./asset-manager.js";
 import { STLLoader } from "three/addons/loaders/STLLoader.js";
+import { createOcean } from "./ocean.js";
+import { sound, soundToggle } from "./sound.js";
 
 // ---------- 岛的形状：外圈低、中央是展台平台 ----------
 const ISLAND = 60, PLATEAU = 9, TOP = 6, BEACH = 4.5;
@@ -213,6 +216,7 @@ function updateFoliage() {
 
 // ---------- 天空、海、星、光 ----------
 const SUN_DIR = new THREE.Vector3(-0.72, 0.1, -0.68).normalize();
+let ocean = null;
 function sky() {
   const material = new THREE.ShaderMaterial({
     side: THREE.BackSide, depthWrite: false, fog: false,
@@ -241,16 +245,9 @@ function sky() {
   stars.setAttribute("position", new THREE.Float32BufferAttribute(points, 3));
   scene.add(new THREE.Points(stars, new THREE.PointsMaterial({ color: "#fff4e6", size: 1.4, sizeAttenuation: false, transparent: true, opacity: 0.75, fog: false })));
 
-  const sea = new THREE.Mesh(new THREE.CircleGeometry(900, 64), new THREE.MeshStandardMaterial({ color: "#2c2c4c", roughness: 0.18, metalness: 0.2 }));
-  sea.rotation.x = -Math.PI / 2;
-  sea.position.y = -0.35;
-  sea.receiveShadow = true;
-  scene.add(sea);
-  // 海岸的浅水带
-  const shallows = new THREE.Mesh(new THREE.RingGeometry(ISLAND - 1, ISLAND + 9, 120), new THREE.MeshBasicMaterial({ color: "#5d6f8c", transparent: true, opacity: 0.28, depthWrite: false }));
-  shallows.rotation.x = -Math.PI / 2;
-  shallows.position.y = -0.3;
-  scene.add(shallows);
+  // 会动的海：代码生成的波浪，靠岸一圈白沫，见 ocean.js
+  ocean = createOcean({ shore: ISLAND - 0.5, shoreWidth: 6 });
+  scene.add(ocean.group);
 
   scene.add(new THREE.HemisphereLight("#efe0f3", "#baa287", 1.65));
   const sunLight = new THREE.DirectionalLight("#ffbf94", 2.1);
@@ -915,7 +912,7 @@ const PAINTED_FRONT={
 };
 const unpaintedClay=new THREE.MeshStandardMaterial({color:"#bea88e",roughness:.89});
 let flameLight, flame, flameGlow;
-const pedestals = new Map(), flashes = [], detailedModels=new Set();
+const pedestals = new Map(), flashes = [], detailedModels=new Set(), assetGroups=new Map();
 
 function hall() {
   const floor = new THREE.Mesh(new THREE.CylinderGeometry(8.4, 8.7, 0.3, 72), new THREE.MeshStandardMaterial({ color: "#cdbd9d", roughness: 0.85 }));
@@ -965,8 +962,15 @@ function hall() {
   for (let i = 0; i < 4; i++) {
     const a = Math.PI / 4 + (i / 4) * Math.PI * 2;
     const pos = new THREE.Vector3(Math.cos(a) * 7.6, TOP + 0.3, Math.sin(a) * 7.6);
-    place("bench", pos, Math.atan2(-pos.x, -pos.z) + Math.PI, 1);
-    colliders.push({ x: pos.x, z: pos.z, r: 0.7 });
+    const id = "prop-bench-" + i;
+    const group = new THREE.Group(); group.position.copy(pos);
+    const bench = place("bench", new THREE.Vector3(), Math.atan2(-pos.x, -pos.z) + Math.PI, 1);
+    bench.removeFromParent(); group.add(bench); scene.add(group);
+    const collider = { x: pos.x, z: pos.z, r: 0.7 }; colliders.push(collider);
+    Object.assign(group.userData, { home: pos.clone(), baseRadius: 0.7, collider });
+    const data = { kicker: "展台外圈", title: "长椅", text: "展台外的长椅，坐下来看看今天的小物。", aside: "" };
+    register(group, data, id);
+    assetGroups.set(id, { group, item: { id, title: "长椅", stage: "展台外圈" }, kind: "prop" });
   }
 
 }
@@ -977,11 +981,16 @@ const emptyGeo=new THREE.TorusGeometry(.34,.025,8,36);
 const brass=new THREE.MeshStandardMaterial({color:"#ffd9a0",emissive:"#ffb766",emissiveIntensity:1});
 const gallerySlots=[];
 let galleryRings=0;
-function slotPosition(index) {
+// 每日小物排成面朝工坊门口的弧：从左到右按日期，前排摆满后绕到工坊背后，再往平台外圈排。
+const SLOT_RADII=[4.35,5.95], SLOT_STEP=1.75;
+function slotRadius(ring){return ring<SLOT_RADII.length?SLOT_RADII[ring]:10.3+(ring-SLOT_RADII.length)*SLOT_STEP;}
+function slotPosition(index,total=index+1) {
   while(gallerySlots.length<=index) {
-    const ring=galleryRings++, radius=3.48+ring*2.13, capacity=8+ring*6;
+    const ring=galleryRings++, radius=slotRadius(ring), capacity=Math.floor(Math.PI*2*radius/SLOT_STEP), step=Math.PI*2/capacity;
+    // 首次打开时让已有的几件居中对着门口；之后新来的接在右边。
+    const start=ring===0?Math.PI/2+Math.min(total-1,capacity-1)/2*step:THREE.MathUtils.degToRad(170);
     for(let i=0;i<capacity;i++) {
-      const angle=Math.PI/2+(i+.5)*Math.PI*2/capacity;
+      const angle=start-i*step;
       const x=Math.cos(angle)*radius,z=Math.sin(angle)*radius;
       // 最外一圈让开四张长椅与平台入口，近距离仍然能走到每个座前。
       if(colliders.some(c=>(c.x-x)**2+(c.z-z)**2<((c.space||c.r)+.80)**2))continue;
@@ -1061,14 +1070,10 @@ function loadModel(item,group,floor,height,yaw=0) {
     let restingHeight=floor;
     if(group.userData.plinth){
       // 用展示版实测的水平包围盒支撑所有着地点。石座向下延到最低一侧的坡面。
-      const width=Math.max(.46,radial*k*2+.14),depth=width;
-      const site=supportLevels(group.position.x,group.position.z,width,depth,LAYOUT.stoneLip);
-      const bottom=site.bottom-group.position.y;
-      restingHeight=site.top-group.position.y;
-      group.userData.plinth.scale.set(width,restingHeight-bottom,depth);
-      group.userData.plinth.position.y=bottom;
-      syncPlinth(group);
+      group.userData.plinthWidth=Math.max(.46,radial*k*2+.14);
+      restingHeight=seatPlinth(group);
     }
+    group.userData.restingHeight=restingHeight;
     orient.position.set(-c.x,restingHeight-box.min.y,-c.z);
     replaceContent(group);group.userData.model=orient;group.add(orient);group.userData.ready=true;
     if(!textured && ["sc-lantern-niche","sc-birthday-cloche"].includes(item.id)){
@@ -1096,25 +1101,30 @@ function loadModel(item,group,floor,height,yaw=0) {
   if(item.format==="glb") new GLTFLoader().load(url,g=>ready(g.scene),undefined,fail);
   else new STLLoader().load(url,geo=>{geo.computeVertexNormals();const mesh=new THREE.Mesh(geo,resin);mesh.rotation.x=-Math.PI/2;ready(mesh);},undefined,fail);
 }
+const datedExhibit=i=>/^\d{4}-\d{2}-\d{2}$/.test(i.date||"");
 function placeExhibits(items,refresh=false) {
-  const real=items.filter(i=>i.model), byId=new Map(real.map(i=>[i.id,i]));
+  // 样品排在弧的起点，之后按日期接下去，明天那件落在最新一件旁边。
+  const real=items.filter(i=>i.model).sort((a,b)=>(datedExhibit(a)-datedExhibit(b))||String(a.date).localeCompare(String(b.date))||a.id.localeCompare(b.id)), byId=new Map(real.map(i=>[i.id,i]));
   const occupied=new Set();
   for(const group of pedestals.values()) if(byId.has(group.userData.itemId)) occupied.add(group.userData.itemId);
   const newcomers=real.filter(i=>!occupied.has(i.id));
   const previous=new Set([...pedestals.values()].map(g=>g.userData.itemId).filter(Boolean));
-  const count=Math.max(8,real.length+1,pedestals.size);
+  const count=Math.max(real.length+1,pedestals.size);
   for(let i=0;i<count;i++) {
     let group=pedestals.get(i);
     if(!group) {
-      group=new THREE.Group();group.position.copy(slotPosition(i));
+      group=new THREE.Group();group.position.copy(slotPosition(i,count));
       const base=new THREE.Mesh(pedestalGeo,pedestalMat);base.position.y=.525;base.castShadow=base.receiveShadow=true;group.add(base);scene.add(group);
-      colliders.push({x:group.position.x,z:group.position.z,r:.67});pedestals.set(i,group);
+      const collider={x:group.position.x,z:group.position.z,r:.67};colliders.push(collider);pedestals.set(i,group);
+      Object.assign(group.userData,{collider,baseRadius:.67,home:group.position.clone(),homeFront:new THREE.Vector3(group.position.x,0,group.position.z).normalize()});
     }
     const old=group.userData.itemId;
     const item=byId.get(old)||newcomers.shift();
     const signature=item?[item.id,item.model,item.format,item.model_revision||""].join("|"):"empty";
     if (old && old!==item?.id) namedObjects.delete(old);
     group.userData.itemId=item?.id;
+    for(const [key,entry] of assetGroups)if(entry.group===group && key!==item?.id)assetGroups.delete(key);
+    if(item)assetGroups.set(item.id,{group,item,kind:"exhibit"});
     const data=item?cardData(item,{kicker:item.date||"今日小物",title:item.title,text:item.summary,aside:item.reason}):coreCard("core:empty",{kicker:"空展台",title:"留给明天",text:"下一件小物会摆到这里。",aside:""});
     if(item?.card) Object.assign(data,item.card);
     if(item?.photo_url) data.photo_url=item.photo_url;else delete data.photo_url;
@@ -1134,14 +1144,24 @@ function placeExhibits(items,refresh=false) {
 }
 const sculptureGeo=new THREE.CylinderGeometry(.485,.5,1,28).translate(0,.5,0);
 const sculptureMat=pathStone;
+// 石座跟着展品所在的坡面和缩放重新落地，返回模型在组内的台面高度。
+function seatPlinth(group) {
+  const s=group.scale.x||1,width=group.userData.plinthWidth,plinth=group.userData.plinth;
+  const site=supportLevels(group.position.x,group.position.z,width*s,width*s,LAYOUT.stoneLip*s);
+  const bottom=(site.bottom-group.position.y)/s,top=(site.top-group.position.y)/s;
+  plinth.scale.set(width,top-bottom,width);plinth.position.y=bottom;
+  syncPlinth(group);
+  return top;
+}
+const HIDDEN_MATRIX=new THREE.Matrix4().makeScale(0,0,0);
 function syncPlinth(group) {
   const {plinth, footBatch, footIndex} = group.userData;
   plinth.updateWorldMatrix(true,false);
-  footBatch.setMatrixAt(footIndex,plinth.matrixWorld);
+  footBatch.setMatrixAt(footIndex,group.visible?plinth.matrixWorld:HIDDEN_MATRIX);
   footBatch.instanceMatrix.needsUpdate=true;
 }
 function sculptures(list, sites) {
-
+  
   const footBatch=new THREE.InstancedMesh(sculptureGeo,sculptureMat,list.length);
   footBatch.castShadow=footBatch.receiveShadow=true;
   footBatch.frustumCulled=false;
@@ -1189,12 +1209,16 @@ function sculptures(list, sites) {
     const plinth=new THREE.Mesh(sculptureGeo,PROXY_MAT);plinth.scale.set(1.1,.24,1.1);
     Object.assign(group.userData,{plinth,footBatch,footIndex:i,expectsModel:true});
     group.add(plinth);scene.add(group);syncPlinth(group);
+    const collider=colliders.find(c=>c.site===site);
+    Object.assign(group.userData,{collider,baseRadius:collider?.r??LAYOUT[site.kind].radius,home:pos.clone()});
+    assetGroups.set(item.id,{group,item,kind:"sculpture"});
     const facing=Math.atan2(look.x-pos.x,look.z-pos.z);
     group.userData.front=new THREE.Vector3(Math.sin(facing),0,Math.cos(facing));
     if(Number.isFinite(pl.cameraYaw) && !Object.hasOwn(PAINTED_FRONT,item.id)){
       group.userData.front.applyAxisAngle(UP,THREE.MathUtils.degToRad(pl.cameraYaw));
       group.userData.fixedFront=true;
     }
+    group.userData.homeFront=group.userData.front.clone();
     sculptureViews.push({origin:pos,front:group.userData.front});
     const data=cardData(item,{kicker:item.stage,title:item.title,text:item.description||"为这座岛做的摆件。",aside:""});
     register(group,data,item.id,h+.28,"moment");
@@ -1221,6 +1245,227 @@ function sculptures(list, sites) {
   }
   next();
 }
+
+
+// ---------- 布置：每日小物和 Aholo 精雕的自由摆放 ----------
+// 只存与系统摆放不同的件；位置是世界坐标，朝向是相对默认朝向的角度。
+let layoutItems={}, arranging=false, selectedAsset=null, draggingAsset=null, layoutHistory=[], saveTimer=0, saveGeneration=0;
+const selectionRing=new THREE.Mesh(new THREE.RingGeometry(.86,1,72),
+  new THREE.MeshBasicMaterial({color:"#ffcf8a",transparent:true,opacity:.92,depthWrite:false,side:THREE.DoubleSide,fog:false}));
+selectionRing.rotation.x=-Math.PI/2;selectionRing.visible=false;selectionRing.renderOrder=4;scene.add(selectionRing);
+const dragPlane=new THREE.Plane(new THREE.Vector3(0,1,0),0), dragHit=new THREE.Vector3(), dragOffset=new THREE.Vector3();
+const PRINTED=/实物|接单|打印中|已打印|完工/;
+function assetFloor(a,x,z){return a.kind==="sculpture"?ground(x,z):finishedSurface(x,z);}
+// 装饰：Blender 生成的免费模型，可以从资产面板随时放到岛上，和展品一样拖动、转向、缩放、收起、删除。
+const DECOR = [["tree_round","圆树",.9],["tree_autumn","秋树",.9],["tree_pine","松树",.8],["rock_a","石头",.6],["flowers","花丛",.5],
+  ["grass","草丛",.4],["lantern","提灯",.35],["bench","长椅",.7],["fence","栅栏",.6],["boat","小船",1],["cottage_small","小木屋",1.4]];
+const DECOR_INFO = new Map(DECOR.map(([name,label,r])=>[name,{label,r}]));
+function spawnDecor(id,name,x,z){
+  if(assetGroups.has(id) || !assets[name] || !DECOR_INFO.has(name))return null;
+  const info=DECOR_INFO.get(name),group=new THREE.Group();
+  group.position.set(x,finishedSurface(x,z),z);
+  const obj=place(name,new THREE.Vector3(),0,1);obj.removeFromParent();group.add(obj);scene.add(group);
+  const collider={x,z,r:info.r};colliders.push(collider);
+  Object.assign(group.userData,{home:new THREE.Vector3(x,0,z),baseRadius:info.r,collider});
+  const data={kicker:"装饰",title:info.label,text:"从资产面板放上岛的装饰，可以随时拖动、转向或收起。",aside:""};
+  register(group,data,id);
+  assetGroups.set(id,{group,item:{id,title:info.label,stage:"装饰",asset:name},kind:"deco"});
+  return group;
+}
+function removeDecor(id){
+  const a=assetGroups.get(id);if(!a || a.kind!=="deco")return;
+  rememberLayout();
+  a.group.removeFromParent();assetGroups.delete(id);
+  const i=pickables.indexOf(a.group);if(i>=0)pickables.splice(i,1);
+  const c=colliders.indexOf(a.group.userData.collider);if(c>=0)colliders.splice(c,1);
+  delete layoutItems[id];if(selectedAsset===id)selectAsset(null);
+  queueSave();assetUI.refresh();
+}
+function assetRadius(a){return a.group.userData.baseRadius*(a.group.scale.x||1);}
+function assetState(id){
+  const a=assetGroups.get(id),e=layoutItems[id]||{};
+  return {yaw:e.yaw||0,scale:e.scale||1,hidden:!!e.hidden,moved:Object.keys(e).length>0,
+    x:e.x??a.group.userData.home.x,z:e.z??a.group.userData.home.z};
+}
+function applyAsset(id){
+  const a=assetGroups.get(id);if(!a)return;
+  const g=a.group,u=g.userData,st=assetState(id),yaw=THREE.MathUtils.degToRad(st.yaw);
+  g.position.set(st.x,assetFloor(a,st.x,st.z),st.z);
+  g.rotation.y=yaw;g.scale.setScalar(st.scale);g.visible=!st.hidden;
+  if(u.homeFront)u.front=u.homeFront.clone().applyAxisAngle(UP,yaw);
+  if(u.collider){u.collider.x=st.x;u.collider.z=st.z;u.collider.r=st.hidden?0:u.baseRadius*st.scale;if("space" in u.collider)u.collider.space=u.collider.r;}
+  if(u.plinth){
+    if(u.plinthWidth && !st.hidden){
+      const top=seatPlinth(g);
+      if(u.model && u.restingHeight!=null){u.model.position.y+=top-u.restingHeight;u.restingHeight=top;}
+    } else syncPlinth(g);
+  }
+  g.updateMatrixWorld(true);
+  if(id===selectedAsset)updateRing();
+  renderer.shadowMap.needsUpdate=true;
+}
+function spotProblem(id,x,z){
+  const a=assetGroups.get(id),r=assetRadius(a),own=a.group.userData.collider;
+  if(Math.hypot(x,z)>ISLAND-1.6)return "太靠海边了";
+  if(pavementGap(x,z)<r*.75)return "压到小路了";
+  if(colliders.some(c=>c!==own && c.r>0 && Math.hypot(c.x-x,c.z-z)<c.r+r*.8))return "和旁边的东西挤在一起";
+  return "";
+}
+function updateRing(){
+  const a=assetGroups.get(selectedAsset);
+  if(!arranging || !a || !a.group.visible){selectionRing.visible=false;return;}
+  const g=a.group,r=assetRadius(a)*1.28;
+  selectionRing.visible=true;selectionRing.scale.setScalar(r);
+  selectionRing.position.set(g.position.x,assetFloor(a,g.position.x,g.position.z)+.06,g.position.z);
+  const problem=spotProblem(selectedAsset,g.position.x,g.position.z);
+  selectionRing.material.color.set(problem?"#ff8a78":"#ffcf8a");
+  assetUI.problem(problem);
+}
+function rememberLayout(){layoutHistory.push(JSON.stringify(layoutItems));if(layoutHistory.length>60)layoutHistory.shift();}
+function setEntry(id,patch){
+  const a=assetGroups.get(id);if(!a)return;
+  const e={...layoutItems[id],...patch};
+  for(const k of Object.keys(e))if(e[k]===undefined)delete e[k];
+  if(e.yaw!==undefined){e.yaw=((e.yaw+540)%360)-180;if(Math.abs(e.yaw)<.5)delete e.yaw;}
+  if(e.scale!==undefined && Math.abs(e.scale-1)<.005)delete e.scale;
+  if(!e.hidden)delete e.hidden;
+  if(a.kind!=="deco" && e.x!==undefined && Math.hypot(e.x-a.group.userData.home.x,e.z-a.group.userData.home.z)<.02){delete e.x;delete e.z;}
+  if(Object.keys(e).length)layoutItems[id]=e;else delete layoutItems[id];
+  applyAsset(id);
+}
+function queueSave(){
+  clearTimeout(saveTimer);assetUI.saving("waiting");
+  saveTimer=setTimeout(saveLayout,450);
+}
+async function saveLayout(){
+  const generation=++saveGeneration;
+  assetUI.saving("saving");
+  try{
+    const r=await fetch("/api/layout",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({items:layoutItems}),signal:AbortSignal.timeout(6000)});
+    const body=await r.json().catch(()=>({}));
+    if(!r.ok)throw new Error(body.error||"没有保存成功");
+    if(generation===saveGeneration)assetUI.saving("saved");
+  }catch(err){
+    if(generation===saveGeneration)assetUI.saving("error",err.name==="TimeoutError"?"本机服务没有回应，稍后自动重试":err.message);
+    clearTimeout(saveTimer);saveTimer=setTimeout(saveLayout,5000);
+  }
+}
+function commit(id,patch){rememberLayout();setEntry(id,patch);queueSave();assetUI.refresh();}
+function undoLayout(){
+  const previous=layoutHistory.pop();if(!previous)return;
+  const before=layoutItems;layoutItems=JSON.parse(previous);
+  for(const [id,e] of Object.entries(layoutItems))if(id.startsWith("deco-") && !assetGroups.has(id))spawnDecor(id,e.asset,e.x,e.z);
+  for(const id of Object.keys(before))if(id.startsWith("deco-") && !layoutItems[id] && assetGroups.has(id)){
+    const a=assetGroups.get(id);a.group.removeFromParent();assetGroups.delete(id);
+    const i=pickables.indexOf(a.group);if(i>=0)pickables.splice(i,1);
+    const c=colliders.indexOf(a.group.userData.collider);if(c>=0)colliders.splice(c,1);
+  }
+  for(const id of new Set([...Object.keys(before),...Object.keys(layoutItems)]))applyAsset(id);
+  queueSave();assetUI.refresh();assetUI.show(selectedAsset);
+}
+function applyLayout(layout){
+  layoutItems=Object.fromEntries(Object.entries(layout?.items||{}).filter(([,v])=>v && typeof v==="object"));
+  for(const [id,e] of Object.entries(layoutItems))if(id.startsWith("deco-") && e.asset && Number.isFinite(e.x))spawnDecor(id,e.asset,e.x,e.z);
+  for(const id of Object.keys(layoutItems))applyAsset(id);
+}
+function freeSpotNear(id,center){
+  const a=assetGroups.get(id),r=a.group.userData.baseRadius;
+  for(let ring=0;ring<40;ring++)for(let k=0;k<Math.max(1,ring*6);k++){
+    const angle=k/Math.max(1,ring*6)*Math.PI*2+ring*.37,x=center.x+Math.cos(angle)*ring*.45,z=center.z+Math.sin(angle)*ring*.45;
+    if(Math.hypot(x,z)>ISLAND-2)continue;
+    if(pavementGap(x,z)<r+.1)continue;
+    if(colliders.some(c=>c!==a.group.userData.collider && c.r>0 && Math.hypot(c.x-x,c.z-z)<c.r+r+.15))continue;
+    return {x,z};
+  }
+  return {x:center.x,z:center.z};
+}
+function focusAsset(id){
+  const a=assetGroups.get(id);if(!a||!a.group.visible)return;
+  housePortrait=null;leaveWalk();stopFly();mode="orbit";controls.enabled=true;lens(false);
+  const g=a.group,target=g.position.clone();target.y+=1.1*(g.scale.x||1);
+  const away=camera.position.clone().sub(controls.target);away.y=0;
+  if(away.lengthSq()<.01)away.set(0,0,1);
+  away.normalize().multiplyScalar(6.4+assetRadius(a)*2.2);away.y=4.2;
+  // 面板盖住右侧时，把展品让到画面左边的空处。
+  const panelWidth=arranging&&innerWidth>720?document.getElementById("assets").getBoundingClientRect().width+22:0;
+  const right=new THREE.Vector3(away.z,0,-away.x).normalize();
+  const halfWidth=away.length()*Math.tan(THREE.MathUtils.degToRad(camera.fov/2))*camera.aspect;
+  const lookAt=target.clone().addScaledVector(right,halfWidth*panelWidth/innerWidth);
+  tween={from:camera.position.clone(),to:lookAt.clone().add(away),fromT:controls.target.clone(),toT:lookAt,start:performance.now(),dur:1100};
+  setPressed(null);
+}
+function selectAsset(id,{focus=false}={}){
+  selectedAsset=id&&assetGroups.has(id)?id:null;
+  updateRing();assetUI.show(selectedAsset);
+  if(focus&&selectedAsset)focusAsset(selectedAsset);
+}
+function assetList(){
+  return [...assetGroups].map(([id,{item,kind}])=>{
+    const st=assetState(id);
+    const printed=kind==="exhibit" && (PRINTED.test(item.print_state||"") || !!item.photo_url);
+    return {id,kind,printed,hidden:st.hidden,moved:st.moved,title:cards.get(item.card_id)?.title||item.title||"未命名",
+      sub:kind==="exhibit"?(item.date||"样品"):(item.stage||"世界精雕"),yaw:st.yaw,scale:st.scale};
+  });
+}
+function addDecor(name){
+  const id="deco-"+name+"-"+Math.random().toString(36).slice(2,8);
+  const center=controls.target.clone();
+  const tmp={x:center.x,z:center.z};
+  if(!spawnDecor(id,name,tmp.x,tmp.z))return;
+  const spot=freeSpotNear(id,center);
+  commit(id,{asset:name,x:spot.x,z:spot.z});
+  sound.place();selectAsset(id,{focus:true});assetUI.show(id);
+}
+if(readOnly)document.getElementById("open-assets").hidden=true;
+const assetUI=assetPanel({
+  list:assetList,
+  open(){
+    arranging=true;card.close();leaveWalk();stopFly();document.body.classList.add("arranging");
+    if(selectedAsset)updateRing();
+  },
+  close(){arranging=false;draggingAsset=null;controls.enabled=mode==="orbit";selectionRing.visible=false;document.body.classList.remove("arranging");},
+  select(id){selectAsset(id,{focus:true});},
+  change(id,patch){
+    if(patch.reset){
+      const deco=assetGroups.get(id)?.kind==="deco";
+      commit(id,deco?{yaw:undefined,scale:undefined,hidden:undefined}:{x:undefined,z:undefined,yaw:undefined,scale:undefined,hidden:undefined});return;
+    }
+    if(patch.hidden===true)sound.store();
+    if(patch.hidden===false)sound.place();
+    if(patch.hidden===false && !assetGroups.get(id).group.visible){
+      const ground0=controls.target.clone(),spot=freeSpotNear(id,ground0);
+      commit(id,{hidden:undefined,x:spot.x,z:spot.z});focusAsset(id);return;
+    }
+    commit(id,patch);
+  },
+  preview(id,patch){setEntry(id,patch);},
+  begin(){rememberLayout();},
+  finish(){queueSave();assetUI.refresh();},
+  undo:undoLayout,
+  canUndo:()=>layoutHistory.length>0,
+  decor:DECOR.map(([name,label])=>({name,label})),
+  add:addDecor,
+  remove:removeDecor,
+});
+function groundUnderPointer(event,y){
+  pointer.set((event.clientX/innerWidth)*2-1,-(event.clientY/innerHeight)*2+1);
+  ray.setFromCamera(pointer,camera);dragPlane.constant=-y;
+  return ray.ray.intersectPlane(dragPlane,dragHit)?dragHit.clone():null;
+}
+// 本机自检：展品在屏幕上的位置和当前摆放。
+window.__assetProbe=id=>{
+  const a=assetGroups.get(id);if(!a)return null;
+  const v=a.group.position.clone();v.y+=(a.group.userData.restingHeight??1)*a.group.scale.x+.3;v.project(camera);
+  return {x:(v.x+1)*innerWidth/2,y:(1-v.y)*innerHeight/2,visible:a.group.visible,pos:a.group.position.toArray(),entry:layoutItems[id]||null,selected:selectedAsset===id};
+};
+window.__assetIds=()=>[...assetGroups.keys()];
+window.__assetProblems=()=>[...assetGroups].map(([id,a])=>[id,a.item.title,a.group.visible?spotProblem(id,a.group.position.x,a.group.position.z):""]).filter(r=>r[2]);
+window.__assetDump=()=>[...assetGroups].map(([id,a])=>({id,kind:a.kind,title:a.item.title,stage:a.item.stage,zone:a.item.placement?.zone,site:a.group.userData.site?.kind,
+  hx:+a.group.userData.home.x.toFixed(3),hz:+a.group.userData.home.z.toFixed(3),front:+Math.atan2(a.group.userData.homeFront?.x??0,a.group.userData.homeFront?.z??1).toFixed(4),
+  lx:a.group.userData.site?.look?.x,lz:a.group.userData.site?.look?.z,
+  x:+a.group.position.x.toFixed(2),z:+a.group.position.z.toFixed(2),r:+(a.group.userData.baseRadius||0).toFixed(2),h:+(a.group.userData.modelHeight||0).toFixed(2)}));
+window.__view=(pos,target)=>{tween=null;stopFly();leaveWalk();mode="orbit";lens(false);camera.position.fromArray(pos);controls.target.fromArray(target);controls.update();refreshDetails();};
+function assetOf(obj){for(const [id,a] of assetGroups)if(a.group===obj)return id;return null;}
 
 // ---------- 镜头：第三人称 ----------
 const VIEWS = {
@@ -1257,6 +1502,7 @@ function flyTo(name) {
   setPressed(name);
 }
 function startFly() {
+  sound.whoosh();
   housePortrait=null;lens(false);leaveWalk();
   tween = null;
   fly = { progress:0, shown:-1 };
@@ -1345,6 +1591,15 @@ document.addEventListener("mousemove", (e) => {
   walk.pitch = THREE.MathUtils.clamp(walk.pitch - e.movementY * 0.0022, -1.2, 1.2);
 });
 addEventListener("keydown", (e) => {
+  if(arranging && !e.target.closest?.("input,textarea,select")){
+    if((e.metaKey||e.ctrlKey) && e.code==="KeyZ"){e.preventDefault();undoLayout();return;}
+    if(selectedAsset){
+      const st=assetState(selectedAsset);
+      if(e.code==="KeyQ"||e.code==="KeyE"){commit(selectedAsset,{yaw:st.yaw+(e.code==="KeyQ"?15:-15)});return;}
+      if(e.code==="BracketLeft"||e.code==="BracketRight"){commit(selectedAsset,{scale:THREE.MathUtils.clamp(+(st.scale+(e.code==="BracketLeft"?-.1:.1)).toFixed(2),.6,1.6)});return;}
+      if(e.code==="Escape"){selectAsset(null);return;}
+    }
+  }
   if (managingPeople || workbench.active() || card.active() || e.target.closest?.("input,textarea,button,dialog")) return;
   keys.add(e.code);
   if (mode === "walk" && e.code === "KeyE" && !e.repeat) activate(nearPortal() ? portal : pickCenter());
@@ -1370,6 +1625,7 @@ function updateWalk(dt) {
   const s = (keys.has("KeyD") ? 1 : 0) - (keys.has("KeyA") ? 1 : 0);
   walk.yaw += ((keys.has("ArrowLeft") || keys.has("KeyQ") ? 1 : 0) - (keys.has("ArrowRight") ? 1 : 0)) * 1.8 * dt; // 左右转头
   if (f || s) {
+    sound.step(keys.has("ShiftLeft") || keys.has("ShiftRight"));
     const forward = new THREE.Vector3(-Math.sin(walk.yaw), 0, -Math.cos(walk.yaw));
     const right = new THREE.Vector3(-forward.z, 0, forward.x);
     const step = forward.multiplyScalar(f).add(right.multiplyScalar(s)).normalize().multiplyScalar(speed);
@@ -1441,6 +1697,8 @@ async function refreshExhibits() {
     const r=await fetch("/data/world.json",{cache:"no-store"});
     if(!r.ok) throw new Error();
     const world=await r.json();placeExhibits(world.exhibits||[],true);
+    for(const id of Object.keys(layoutItems))applyAsset(id);
+    assetUI.refresh();
   } catch {
     const box=document.getElementById("era");box.textContent="展台暂时未更新，刷新小岛可重试。";box.classList.add("on");
     clearTimeout(showEra.timer);showEra.timer=setTimeout(()=>box.classList.remove("on"),4600);
@@ -1465,6 +1723,8 @@ function nearPortal() {
 }
 const ray = new THREE.Raycaster(), pointer = new THREE.Vector2();
 let down = null;
+function shown(o){for(;o;o=o.parent)if(!o.visible)return false;return true;}
+function firstShown(hits){return hits.find(h=>shown(h.object));}
 function resolvePick(hit) {
   let o = hit && hit.object;
   while (o && !o.userData.pick) o = o.parent;
@@ -1474,12 +1734,12 @@ function pickAt(event) {
   pointer.set((event.clientX / innerWidth) * 2 - 1, -(event.clientY / innerHeight) * 2 + 1);
   ray.setFromCamera(pointer, camera);
   ray.far = Infinity;
-  return resolvePick(ray.intersectObjects(pickables, true)[0]);
+  return resolvePick(firstShown(ray.intersectObjects(pickables, true)));
 }
 function pickCenter() {
   ray.setFromCamera(new THREE.Vector2(0, 0), camera);
   ray.far = 7;
-  const o = resolvePick(ray.intersectObjects(pickables, true)[0]);
+  const o = resolvePick(firstShown(ray.intersectObjects(pickables, true)));
   ray.far = Infinity;
   return o;
 }
@@ -1490,15 +1750,43 @@ function activate(o) {
   else if(d?.action==="workbench") {
     if(mode!=="walk" || nearPortal()) workbench.open();
   }
-  else card.open(d,o.userData.linkedCard,o.userData.failed);
+  else {card.open(d,o.userData.linkedCard,o.userData.failed);sound.open();}
 }
 renderer.domElement.addEventListener("pointerdown", (e) => {
+  if(arranging && e.button===0 && selectedAsset){
+    const id=assetOf(pickAt(e));
+    if(id===selectedAsset){
+      const g=assetGroups.get(id).group,hit=groundUnderPointer(e,g.position.y);
+      if(hit){
+        draggingAsset={id,moved:false};dragOffset.set(g.position.x-hit.x,0,g.position.z-hit.z);sound.pick();
+        controls.enabled=false;rememberLayout();renderer.domElement.setPointerCapture(e.pointerId);
+        document.body.classList.add("dragging-asset");
+      }
+    }
+  }
   down = [e.clientX, e.clientY];
   dragged = false;
   if (mode === "fly") stopFly();
   tween = null;
 });
+renderer.domElement.addEventListener("pointermove",(e)=>{
+  if(!draggingAsset)return;
+  const g=assetGroups.get(draggingAsset.id).group,hit=groundUnderPointer(e,g.position.y);
+  if(!hit)return;
+  let x=hit.x+dragOffset.x,z=hit.z+dragOffset.z;
+  const r=Math.hypot(x,z),limit=ISLAND-1.6;if(r>limit){x*=limit/r;z*=limit/r;}
+  draggingAsset.moved=true;setEntry(draggingAsset.id,{x,z});
+});
 renderer.domElement.addEventListener("pointerup", (e) => {
+  if(draggingAsset){
+    const {moved}=draggingAsset;draggingAsset=null;controls.enabled=true;document.body.classList.remove("dragging-asset");
+    if(moved){queueSave();assetUI.refresh();down=null;sound.drop();return;}
+    layoutHistory.pop();
+  }
+  if(arranging && mode!=="walk"){
+    if(!down || Math.hypot(e.clientX-down[0],e.clientY-down[1])>5)return;
+    const id=assetOf(pickAt(e));selectAsset(id);return;
+  }
   if (mode === "walk") {
     if (!dragged) {
       const target=document.pointerLockElement ? pickCenter() : pickAt(e);
@@ -1550,6 +1838,7 @@ function layoutTags(now) {
   const candidates=[], atDoor=mode==="walk"&&nearPortal(), reading=card.active();
   for(const record of tagRecords) {
     const {el,obj,category,label}=record;
+    if(!obj.visible){el.classList.remove("show");continue;}
     if((overview && category!=="era") || (atDoor && obj!==portal)){el.classList.remove("show");continue;}
     if(category==="portal")label.position.set(0,atDoor?1.72:3.05,atDoor?.84:0);
     if(!overview)el.style.translate="";
@@ -1615,6 +1904,7 @@ function layoutTags(now) {
   }
   const panels=[document.querySelector(".views"),document.querySelector(".mark")];
   if(reading)panels.push(document.getElementById("card"));
+  if(arranging)panels.push(document.getElementById("assets"));
   if(eraBox.classList.contains("on"))panels.push(eraBox);
   if(!hint.hidden)panels.push(hint);
   const occupied=panels.map(panel=>{
@@ -1703,10 +1993,17 @@ async function main() {
   eraMarks=planPlazas(months,world.eras);
   sky();const finishPaving=path();gates(eraMarks);
   const sites=momentSites(months,world.moments||[]);
-  hall();sculptures(world.sculptures||[],sites);placeExhibits(world.exhibits||[]);
+  hall();sculptures(world.sculptures||[],sites);applyLayout(world.layout);placeExhibits(world.exhibits||[]);
+  applyLayout(world.layout);
   wayside(sites);lanternsFor(months,world.emotions);homes(months,world.people);finishPaving();island();shore(world.circles||[]);nature();
   lens(true);const view=overviewView();camera.position.fromArray(view.pos);controls.target.fromArray(view.target);controls.update();
   clock=new THREE.Clock();tryFocusHash();
+  sound.ambient("sea");soundToggle();
+  document.addEventListener("click",e=>{
+    const b=e.target.closest?.("button, a.palace-link");if(!b)return;
+    if(b.closest(".card") && b.classList.contains("close"))sound.close();
+    else if(b.closest(".views,.assets,.card,#workbench,.people"))sound.tap();
+  },true);
   const loading=document.getElementById("loading");
   loading.setAttribute("aria-hidden","true");
   loading.addEventListener("transitionend",()=>{loading.hidden=true;},{once:true});
@@ -1805,7 +2102,8 @@ async function main() {
     updateCamera(now,dt);
     if(mode==="orbit")controls.update();
     lanternGlow.uniforms.time.value=elapsed;
-    for(const b of boats){b.obj.position.y=b.y+Math.sin(elapsed*.9+b.phase)*.06;b.obj.rotation.z=Math.sin(elapsed*.7+b.phase)*.04;}
+    ocean.update(elapsed);
+    for(const b of boats){const p=b.obj.position,tl=ocean.tilt(p.x,p.z);p.y=ocean.height(p.x,p.z)+.02;b.obj.rotation.x=tl.x*.8;b.obj.rotation.z=tl.z*.8;}
     const f=1+.08*Math.sin(elapsed*9.1)+.05*Math.sin(elapsed*13.7);flame.scale.set(1,2.1*f,1);flameLight.intensity=26*f;flameGlow.scale.setScalar(3.4*f);
     for(let i=flashes.length-1;i>=0;i--){
       const e=flashes[i],t=(now-e.start)/2400;

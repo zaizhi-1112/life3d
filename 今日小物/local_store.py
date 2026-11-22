@@ -224,7 +224,7 @@ def public_job(job, today):
     if job is None:
         return None
     result = {key: value for key, value in job.items()
-              if not key.startswith("lux3d_") and key not in {"color_review", "ready_device", "ready_bed", "device_ticket", "studio_task_name", "sent_device", "prior_versions", "manual_record"}}
+              if not key.startswith("lux3d_") and key not in {"color_review", "ready_device", "ready_bed", "device_ticket", "studio_task_name", "sent_device", "prior_versions", "manual_record", "generation_card"}}
     ready = bed_is_ready_to_print(job, today) if job.get("print") else bed_is_ready(job, today)
     result.update(design_choices(job), ready=ready)
     concept = job.get("lux3d_concept_filename")

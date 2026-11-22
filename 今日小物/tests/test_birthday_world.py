@@ -160,6 +160,30 @@ class BirthdayHandoff(TestCase):
 
         return server, request
 
+    def test_layout_saves_only_known_assets_inside_the_island(self):
+        server, request = self.start_world()
+        catalog = server.data
+        catalog.COMPACT.mkdir(parents=True)
+        (catalog.COMPACT / "aholo-boat.glb").write_bytes(b"boat fixture")
+        catalog.save(catalog.LEDGER, {"items": [{"id": "boat", "title": "岸边的小船",
+                                                 "placement": {"zone": "coast", "slot": 0}, "model_path": "boat.glb"}]})
+        world = request("/data/world.json")
+        ident = world["sculptures"][0]["id"]
+        self.assertEqual(world["layout"], {"items": {}})
+        saved = request("/api/layout", {"items": {ident: {"x": 3, "z": -4.5, "yaw": 30, "scale": 1.2}}})["layout"]
+        self.assertEqual(saved, {"items": {ident: {"x": 3.0, "z": -4.5, "yaw": 30.0, "scale": 1.2}}})
+        self.assertEqual(request("/data/world.json")["layout"], saved)
+        for bad in ({"sc-missing": {"x": 1, "z": 1}}, {ident: {"x": 80, "z": 0}}, {ident: {"scale": 3}},
+                    {ident: {"x": 1}}, {ident: {"color": "red"}}, {ident: {"yaw": True}}):
+            request("/api/layout", {"items": bad}, status=400)
+        self.assertEqual(catalog.load(catalog.LAYOUT, {}), saved)
+        request("/api/layout", {"items": {ident: {"hidden": True}}})
+        self.assertEqual(catalog.load(catalog.LAYOUT, {}), {"items": {ident: {"hidden": True}}})
+        # 撤下的展品保留原摆放，重新上架时回到原处。
+        catalog.save(catalog.LEDGER, {"items": []})
+        request("/api/layout", {"items": {}})
+        self.assertEqual(catalog.load(catalog.LAYOUT, {}), {"items": {ident: {"hidden": True}}})
+
     def test_person_cards_and_shared_home_models_use_separate_identities(self):
         server, request = self.start_world()
         catalog = server.data

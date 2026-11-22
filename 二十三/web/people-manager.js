@@ -16,7 +16,6 @@ if (readOnly) {
   next.textContent = "下一位";
   next.removeAttribute("title");
 }
-
 let people = [], active = null, scope = "house", busy = false, generation = 0, conflict = false;
 
 function inGroup(person, group) { return Boolean(person.house_style) === (group === "house"); }

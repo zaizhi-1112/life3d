@@ -5,7 +5,7 @@ import hashlib
 import os
 import re
 import secrets
-from datetime import date, datetime, time, timedelta
+from datetime import date, datetime, time, timedelta, timezone
 import json
 from pathlib import Path
 import sqlite3
@@ -43,6 +43,31 @@ def island_inputs(day, workspace):
     return [{"event": kind, "title": title[:220]} for (_, kind), title in found.items() if isinstance(title, str) and title.strip()]
 
 
+INJECTED = ("#", "<", "Message Type", "[Request interrupted", "Caveat:", "本轮通过后台", "Base directory for this skill")
+AUTOMATED = ("本轮通过后台", "Agent 自动化中台", "你是每日整理", "你是这次任务的执行方", "<task-notification>")
+CLAUDE = HOME / ".claude/projects"
+AUTOLOOP = HOME / ".agent-autoloop/hub.db"
+MAX_SESSIONS = 40
+
+
+def _human_text(text, limit=320):
+    """Keep only words a person typed; drop injected context, tags and pasted payloads."""
+    if not isinstance(text, str):
+        return ""
+    text = re.sub(r"\[Image #\d+\]", "", text).strip()
+    if not text or text.startswith(INJECTED):
+        return ""
+    text = re.sub(r"\s+", " ", text)
+    return text[:limit]
+
+
+def _in_day(stamp, day):
+    try:
+        return datetime.fromisoformat(stamp.replace("Z", "+00:00")).astimezone(TZ).date() == day
+    except (AttributeError, TypeError, ValueError):
+        return False
+
+
 def completed_messages(path, day):
     # Inspect only the tail of a dated candidate. Never return tool payloads or reasoning.
     with path.open("rb") as handle:
@@ -51,22 +76,34 @@ def completed_messages(path, day):
         handle.seek(offset)
         if offset:
             handle.readline()
-        messages = []
+        messages, prompts = [], []
         for line in handle:
-            if b'"task_complete"' not in line:
+            complete = b'"task_complete"' in line
+            if not complete and b'"role":"user"' not in line:
                 continue
             try:
                 row = json.loads(line)
                 payload = row.get("payload", {})
-                if row.get("type") != "event_msg" or payload.get("type") != "task_complete":
+                if not _in_day(row.get("timestamp"), day):
                     continue
-                stamp = datetime.fromisoformat(row["timestamp"].replace("Z", "+00:00"))
-                content = payload.get("last_agent_message")
-                if stamp.astimezone(TZ).date() == day and isinstance(content, str) and content.strip():
-                    messages.append(content.split("<oai-mem-citation>")[0].strip()[:1200])
-            except (TypeError, ValueError, KeyError):
+                if complete and row.get("type") == "event_msg" and payload.get("type") == "task_complete":
+                    content = payload.get("last_agent_message")
+                    if isinstance(content, str) and content.strip():
+                        messages.append(content.split("<oai-mem-citation>")[0].strip()[:1200])
+                elif row.get("type") == "response_item" and payload.get("role") == "user":
+                    for block in payload.get("content") or []:
+                        if (text := _human_text(block.get("text"))) and text not in prompts:
+                            prompts.append(text)
+            except (TypeError, ValueError, KeyError, AttributeError):
                 continue
-    return messages[-2:], bool(offset)
+    return messages[-2:], bool(offset), prompts
+
+
+def _project(cwd):
+    name = Path(cwd or "").name
+    if not name or name in {Path.home().name, "tmp", "private"} or re.fullmatch(r"[0-9a-f-]{20,}|scratch-.*", name):
+        return "日常对话"
+    return name[:60]
 
 
 def codex_inputs(day, codex, exclude_thread=""):
@@ -77,34 +114,148 @@ def codex_inputs(day, codex, exclude_thread=""):
         raise FileNotFoundError
     c = sqlite3.connect(db.resolve().as_uri() + "?mode=ro", uri=True, timeout=2)
     try:
-        candidates = c.execute("""
-            SELECT rollout_path, title, created_at, updated_at FROM threads
+        columns = {row[1] for row in c.execute("PRAGMA table_info(threads)")}
+        extra = ", ".join(f"{name} AS {name}" if name in columns else f"NULL AS {name}"
+                          for name in ("cwd", "first_user_message", "thread_source"))
+        # Human threads first: their words are the strongest signal of what the day was about.
+        candidates = c.execute(f"""
+            SELECT rollout_path, title, created_at, updated_at, {extra} FROM threads
             WHERE source IN ('cli','exec','vscode','desktop','appServer')
-                AND (thread_source IS NULL OR thread_source IN ('user','agent_created_thread'))
+                AND (thread_source IS NULL OR thread_source IN ('user','agent_created_thread','automation'))
                 AND created_at < ? AND updated_at >= ? AND id != ?
-            ORDER BY (updated_at < ?) DESC, updated_at DESC LIMIT ?
+            ORDER BY (updated_at < ?) DESC, (thread_source IS NULL OR thread_source = 'user') DESC,
+                     updated_at DESC LIMIT ?
         """, (end, start, exclude_thread, end, MAX_THREADS + 1)).fetchall()
     finally:
         c.close()
     items = []
     partial = len(candidates) > MAX_THREADS
     sessions = (codex / "sessions").resolve()
-    for filename, title, created, updated in candidates[:MAX_THREADS]:
-        messages = []
+    for filename, title, created, updated, cwd, first, source in candidates[:MAX_THREADS]:
+        messages, prompts = [], []
         if filename:
             path = Path(filename).resolve()
             if (path.is_relative_to(sessions) or path.is_relative_to(codex.resolve() / "archived_sessions")) and path.suffix == ".jsonl" and path.is_file():
                 try:
-                    messages, cut = completed_messages(path, day)
+                    messages, cut, prompts = completed_messages(path, day)
                     partial |= cut
                 except OSError:
                     partial = True
             else:
                 partial = True
+        automated = source in ("agent_created_thread", "automation") or (first or "").lstrip().startswith(AUTOMATED)
+        if automated:
+            prompts = []
+        elif start <= created < end and (opening := _human_text(first)) and opening not in prompts:
+            prompts.insert(0, opening)
         active = start <= created < end or start <= updated < end
-        if messages or active:
-            items.append({"topic": (title or "未命名任务")[:140], "agent_reports": messages})
+        if messages or prompts or active:
+            item = {"topic": (title or "未命名任务")[:140], "agent_reports": messages}
+            if cwd is not None or source is not None:
+                item.update(harness="Codex", project=_project(cwd), by="Agent" if automated else "你",
+                            prompts=prompts[:4])
+            items.append(item)
     return items, partial
+
+
+def claude_session(path, day):
+    """One Claude Code transcript: the person's own prompts and the final replies of that day."""
+    title, cwd, prompts, replies, turn = "", "", [], [], ""
+    with path.open(encoding="utf-8", errors="replace") as handle:
+        for line in handle:
+            if '"customTitle"' in line or '"aiTitle"' in line:
+                try:
+                    row = json.loads(line)
+                    title = row.get("customTitle") or row.get("aiTitle") or title
+                except ValueError:
+                    pass
+                continue
+            if '"user"' not in line and '"assistant"' not in line:
+                continue
+            try:
+                row = json.loads(line)
+            except ValueError:
+                continue
+            if (row.get("type") not in ("user", "assistant") or row.get("isSidechain") or row.get("isMeta")
+                    or not _in_day(row.get("timestamp"), day)):
+                continue
+            cwd = row.get("cwd") or cwd
+            content = (row.get("message") or {}).get("content")
+            if row.get("type") == "user":
+                if isinstance(content, list):
+                    if any(block.get("type") == "tool_result" for block in content if isinstance(block, dict)):
+                        continue
+                    content = " ".join(block.get("text", "") for block in content
+                                       if isinstance(block, dict) and block.get("type") == "text")
+                if text := _human_text(content):
+                    if turn:
+                        replies.append(turn)
+                    turn = ""
+                    if text not in prompts:
+                        prompts.append(text)
+            elif isinstance(content, list):
+                said = "".join(block.get("text", "") for block in content
+                               if isinstance(block, dict) and block.get("type") == "text").strip()
+                if said:
+                    turn = said
+    if turn:
+        replies.append(turn)
+    return title, cwd, prompts, replies
+
+
+def claude_inputs(day, projects):
+    start = datetime.combine(day, time.min, TZ).timestamp()
+    if not projects.is_dir():
+        return [], False
+    files = sorted((p for p in projects.glob("*/*.jsonl") if p.stat().st_mtime >= start),
+                   key=lambda p: p.stat().st_mtime, reverse=True)
+    items = []
+    for path in files[:MAX_SESSIONS]:
+        try:
+            title, cwd, prompts, replies = claude_session(path, day)
+        except OSError:
+            continue
+        if not prompts:
+            continue
+        automated = prompts[0].startswith(AUTOMATED)
+        items.append({"topic": (title or prompts[0][:40])[:140], "harness": "Claude Code", "project": _project(cwd),
+                      "by": "Agent" if automated else "你", "prompts": [] if automated else prompts[:4],
+                      "agent_reports": [reply[:1200] for reply in replies[-2:]]})
+    return items, len(files) > MAX_SESSIONS
+
+
+def autoloop_inputs(day, hub):
+    """What the person's always-on Agent hub did by itself that day: rules run and cards raised."""
+    if not hub.is_file():
+        return None
+    start = datetime.combine(day, time.min, TZ).astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S")
+    end = datetime.combine(day + timedelta(days=1), time.min, TZ).astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S")
+    c = sqlite3.connect(hub.resolve().as_uri() + "?mode=ro", uri=True, timeout=2)
+    try:
+        rules = c.execute("""SELECT rule, COUNT(*), SUM(state = 'done'), SUM(state NOT IN ('done','nothing')),
+                                    MAX(summary) FROM runs WHERE created_at >= ? AND created_at < ?
+                             GROUP BY rule ORDER BY COUNT(*) DESC LIMIT 12""", (start, end)).fetchall()
+        notable = c.execute("""SELECT rule, summary FROM runs WHERE created_at >= ? AND created_at < ?
+                                 AND summary IS NOT NULL AND summary != '' GROUP BY summary
+                                 HAVING COUNT(*) <= 2 ORDER BY created_at DESC LIMIT 6""", (start, end)).fetchall()
+        cards = c.execute("""SELECT kind, title, state FROM cards WHERE created_at >= ? AND created_at < ?
+                             ORDER BY id LIMIT 60""", (start, end)).fetchall()
+    finally:
+        c.close()
+    if not rules and not cards:
+        return None
+    merged = {}
+    for kind, title, state in cards:
+        card = merged.setdefault((kind, title), {"kind": kind, "title": (title or "")[:120], "times": 0, "open": 0})
+        card["times"] += 1
+        card["open"] += state not in ("closed", "done", "resolved")
+    return {
+        "runs": sum(row[1] for row in rules),
+        "rules": [{"rule": r[0][:60], "runs": r[1], "unfinished": r[3] or 0} for r in rules],
+        "highlights": [{"rule": r[0][:60], "result": re.sub(r"(?:/[^\s/：，。]+){2,}", "〔本机文件〕", r[1].strip())[:240]}
+                       for r in notable],
+        "cards": list(merged.values()),
+    }
 
 
 GIFT_OUTPUT = HOME / "Desktop/AI 送我的 23 岁生日礼物/output"
@@ -192,7 +343,12 @@ def birthday_input(day, gift, directory, reserve=True):
 
 
 def collect(day, workspace=WORKSPACE, codex=CODEX, exclude_thread="", *, gift=GIFT_OUTPUT,
-            directory=None, reserve=True):
+            directory=None, reserve=True, claude=None, hub=None):
+    # Tests and isolated runs pass their own Codex folder; never mix in the real
+    # Claude Code or Agent hub records unless the caller points at them.
+    real = codex == CODEX
+    claude = claude if claude is not None else (CLAUDE if real else codex / ".claude-projects")
+    hub = hub if hub is not None else (AUTOLOOP if real else codex / ".agent-hub.db")
     result = {"date": day.isoformat(), "todos": [], "agent_work": [], "partial_agent_window": False, "unavailable": []}
     try:
         result["todos"] = island_inputs(day, workspace)
@@ -202,8 +358,20 @@ def collect(day, workspace=WORKSPACE, codex=CODEX, exclude_thread="", *, gift=GI
         result["agent_work"], result["partial_agent_window"] = codex_inputs(day, codex, exclude_thread)
     except (OSError, sqlite3.Error):
         result["unavailable"].append("Codex 工作记录")
+    try:
+        sessions, cut = claude_inputs(day, claude)
+        result["agent_work"] += sessions
+        result["partial_agent_window"] |= cut
+    except OSError:
+        result["unavailable"].append("Claude Code 对话")
+    try:
+        if hub_day := autoloop_inputs(day, hub):
+            result["agent_hub"] = hub_day
+    except (OSError, sqlite3.Error):
+        result["unavailable"].append("Agent 中台记录")
     if (not result["unavailable"] and not result["partial_agent_window"] and
-            not result["todos"] and not any(item["agent_reports"] for item in result["agent_work"])):
+            not result["todos"] and not result.get("agent_hub") and
+            not any(item["agent_reports"] or item.get("prompts") for item in result["agent_work"])):
         store = directory or Path(os.environ.get("MOODPRINT_DATA", Path(__file__).resolve().parent / "data"))
         try:
             result["birthday_inspiration"] = birthday_input(day, gift, store, reserve)
@@ -220,6 +388,10 @@ if __name__ == "__main__":
     args = parser.parse_args()
     result = collect(args.date, exclude_thread=args.exclude_thread, reserve=not args.counts)
     if args.counts:
-        result.update(todos=len(result["todos"]), agent_work=len(result["agent_work"]),
+        work = result["agent_work"]
+        result.update(todos=len(result["todos"]), agent_work=len(work),
+                      your_prompts=sum(len(item.get("prompts", [])) for item in work),
+                      claude_sessions=sum(item.get("harness") == "Claude Code" for item in work),
+                      agent_hub_runs=(result.get("agent_hub") or {}).get("runs", 0),
                       birthday_inspiration=bool(result.get("birthday_inspiration")))
     print(json.dumps(result, ensure_ascii=False))

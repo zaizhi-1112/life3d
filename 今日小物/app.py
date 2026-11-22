@@ -26,7 +26,7 @@ from workshop import App
 
 ROOT = Path(__file__).resolve().parent
 ASSETS = {"/": "index.html", "/style.css": "style.css", "/ui.js": "ui.js",
-          "/viewer.js": "viewer.js", "/viewer.css": "viewer.css", "/viewer-mesh.js": "viewer-mesh.js",
+          "/viewer.js": "viewer.js", "/viewer.css": "viewer.css", "/viewer-mesh.js": "viewer-mesh.js", "/sound.js": "sound.js",
           "/lighthouse.jpg": "lighthouse.jpg", "/guide": "../使用与接入.html"}
 WORLD_ORIGINS = {"http://127.0.0.1:5232", "http://localhost:5232"}
 MAX_RECORD_BYTES = 64 * 1024
@@ -151,6 +151,13 @@ class Handler(BaseHTTPRequestHandler):
                 app.colors.request(checked_job_key(data.get("date")))
             elif self.path == "/color-confirm":
                 app.colors.confirm(checked_job_key(data.get("date")), data.get("code"), checked_source(data.get("source")))
+            elif self.path == "/color-card":
+                app.colors.upgrade_notice(checked_job_key(data.get("date")))
+            elif self.path == "/feishu-cards":
+                if not app.personal_chat:
+                    raise Problem("隔离工作台不连接正式飞书账号。")
+                feishu_print.enable_cards()
+                app.card_listener.start()
             elif self.path == "/feishu-webhook":
                 feishu_webhook.configure(app.data, webhook=data.get("webhook"), secret=data.get("secret"),
                                          only_me=data.get("only_me") is True)
@@ -252,6 +259,8 @@ def main():
             raise SystemExit(f"本机端口 {args.port} 正在使用。可用 --port 指定另一个端口。") from None
         with server:
             app = server.app = App(directory)
+            if app.personal_chat and feishu_print.cards_enabled():
+                app.card_listener.start()
             Thread(target=app.schedule, daemon=True).start()
             print(f"今日小物正在运行  {origin}", flush=True)
             if args.open:
@@ -259,7 +268,10 @@ def main():
             try:
                 server.serve_forever()
             except KeyboardInterrupt:
+                pass
+            finally:
                 app.stop.set()
+                app.card_listener.close()
                 if app.worker:
                     app.worker.join()
     return 0

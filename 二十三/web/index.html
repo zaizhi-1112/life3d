@@ -7,6 +7,7 @@
 <link rel="icon" href="data:,">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="people-manager.css">
+<link rel="stylesheet" href="asset-manager.css">
 <script type="importmap">
 {"imports": {"three": "./vendor/three/three.module.js", "three/addons/": "./vendor/three/addons/"}}
 </script>
@@ -20,6 +21,8 @@
   <button data-view="hall">展台</button>
   <button data-view="overview" aria-pressed="true">全岛</button>
   <button id="open-people" aria-haspopup="dialog">小屋管理</button>
+  <button id="open-assets" aria-pressed="false" aria-controls="assets">资产管理</button>
+  <a class="palace-link" href="/palace.html">记忆宫殿</a>
   <button id="open-workbench" aria-haspopup="dialog">今日小物</button>
 </nav>
 <div class="era" id="era" aria-live="polite"></div>
@@ -88,6 +91,39 @@
   <div id="workbench-status" role="status"></div>
   <iframe id="workbench-frame" title="今日小物工作台" hidden></iframe>
 </dialog>
+<aside class="assets" id="assets" aria-labelledby="assets-heading" hidden>
+  <header class="assets-header">
+    <h2 id="assets-heading">资产管理</h2>
+    <button type="button" id="asset-undo" title="⌘Z" disabled>撤销</button>
+    <button type="button" id="asset-done">完成</button>
+  </header>
+  <div class="asset-filters" role="group" aria-label="分类">
+    <button type="button" data-filter="all" aria-pressed="true">全部 <span></span></button>
+    <button type="button" data-filter="daily" aria-pressed="false">每日小物 <span></span></button>
+    <button type="button" data-filter="printed" aria-pressed="false">已打印 <span></span></button>
+    <button type="button" data-filter="aholo" aria-pressed="false">Aholo <span></span></button>
+    <button type="button" data-filter="model" aria-pressed="false">其他模型 <span></span></button>
+    <button type="button" data-filter="stored" aria-pressed="false">仓库 <span></span></button>
+  </div>
+  <input type="search" id="asset-search" placeholder="搜索名称或阶段" aria-label="搜索展品" autocomplete="off">
+  <div class="asset-decor-box" id="asset-decor-box" hidden><small>放一件装饰到眼前</small><div class="asset-decor" id="asset-decor"></div></div>
+  <div class="asset-list" id="asset-list"></div>
+  <section class="asset-detail" id="asset-detail" hidden>
+    <h3 id="asset-title"></h3>
+    <p class="asset-meta" id="asset-meta"></p>
+    <label class="asset-range">朝向<input type="range" id="asset-yaw" min="-180" max="180" step="5"><output id="asset-yaw-value"></output></label>
+    <label class="asset-range">大小<input type="range" id="asset-scale" min="60" max="160" step="5"><output id="asset-scale-value"></output></label>
+    <p class="asset-hint" id="asset-hint">在岛上拖动它换位置 · Q / E 转向</p>
+    <p class="asset-problem" id="asset-problem" role="status" hidden></p>
+    <div class="asset-actions">
+      <button type="button" id="asset-look">看看它</button>
+      <button type="button" id="asset-store">收进仓库</button>
+      <button type="button" id="asset-reset">放回原处</button>
+      <button type="button" id="asset-remove" hidden>删除</button>
+    </div>
+  </section>
+  <p class="asset-status" id="asset-status" role="status" aria-live="polite"></p>
+</aside>
 <div class="crosshair" aria-hidden="true"></div>
 <p class="hint" id="hint" hidden>WASD 走 · ←→ 转头 · Shift 跑 · 拖动或鼠标看 · E 查看</p>
 <div class="loading" id="loading">正在点灯</div>

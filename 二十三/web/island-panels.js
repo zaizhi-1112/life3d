@@ -1,3 +1,4 @@
+// 公网演示页在 <html> 上带 data-read-only：只能看，不能编辑、布置或打开本机工作台。
 export const readOnly = document.documentElement.hasAttribute("data-read-only");
 
 const $ = id => document.getElementById(id);
@@ -5,7 +6,7 @@ const WORKBENCH = "http://127.0.0.1:17868";
 const command = 'cd 今日小物 && .venv/bin/python -B app.py --port 17868 --ensure-running';
 
 export function workbenchPanel({pause, resume, refresh}) {
-  if (readOnly) return {active: () => false};
+  if (readOnly) return {open() {}, active: () => false};
   const panel = $("workbench"), frame = $("workbench-frame"), status = $("workbench-status");
   let generation = 0;
   async function localStatus(timeout = 1500) {

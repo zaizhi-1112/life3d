@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>记忆宫殿 · 二十三</title>
+<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="./asset-manager.css">
+<link rel="stylesheet" href="./palace.css">
+<script type="importmap">
+{"imports": {"three": "./vendor/three/three.module.js", "three/addons/": "./vendor/three/addons/"}}
+</script>
+</head>
+<body class="palace">
+<div id="stage"></div>
+<header class="mark palace-mark"><a href="/" title="回到小岛">二十三</a><small>记忆宫殿</small></header>
+<nav class="views" aria-label="场景">
+  <span class="scene-switch" role="group" aria-label="场景">
+    <button data-scene="auto" aria-pressed="false">自动</button>
+    <button data-scene="room" aria-pressed="false">小屋</button>
+    <button data-scene="garden" aria-pressed="false">花园</button>
+    <a class="island-link" href="/">小岛</a>
+  </span>
+  <button id="walk" aria-pressed="false">走进去</button>
+  <button id="open-shelf" aria-pressed="false" aria-controls="shelf">资产管理</button>
+  <button id="open-workbench" aria-haspopup="dialog">今日小物</button>
+</nav>
+<p id="scene-reason" class="scene-reason" role="status"></p>
+
+<div id="tip" class="tip" hidden></div>
+<div id="veil" class="veil" aria-hidden="true"></div>
+
+<aside id="card" class="card palace-card" hidden aria-live="polite">
+  <button class="close" id="card-close" aria-label="关闭卡片">×</button>
+  <div class="kicker" id="card-kicker"></div>
+  <h2 id="card-title"></h2>
+  <div class="twin" id="card-twin"></div>
+  <img id="card-photo" alt="打印出来的实物照片" hidden>
+  <p id="card-text"></p>
+  <p class="aside" id="card-aside"></p>
+  <div class="form-actions">
+    <button type="button" id="card-store">收进仓库</button>
+    <a id="card-open" class="card-link" target="_blank" rel="noopener" hidden>在今日小物里打开</a>
+  </div>
+</aside>
+
+<aside id="shelf" class="assets shelf" hidden aria-labelledby="shelf-title">
+  <header class="assets-header">
+    <h2 id="shelf-title">资产管理</h2>
+    <button type="button" id="shelf-done">完成</button>
+  </header>
+  <div class="shelf-actions">
+    <button type="button" id="arrange">重新帮我摆好</button>
+    <button type="button" id="undo" disabled>撤销</button>
+  </div>
+  <div class="asset-filters" role="group" aria-label="筛选">
+    <button data-filter="all" aria-pressed="true">全部<span></span></button>
+    <button data-filter="daily" aria-pressed="false">每日小物<span></span></button>
+    <button data-filter="printed" aria-pressed="false">已打印<span></span></button>
+    <button data-filter="sculpture" aria-pressed="false">世界精雕<span></span></button>
+    <button data-filter="furniture" aria-pressed="false">家具摆设<span></span></button>
+    <button data-filter="stored" aria-pressed="false">仓库<span></span></button>
+  </div>
+  <input id="shelf-search" type="search" placeholder="搜索名称或日期" aria-label="搜索资产">
+  <div id="shelf-add" class="shelf-add" hidden><small>再添一件放到眼前</small><div id="shelf-add-list"></div></div>
+  <div id="shelf-list" class="asset-list"></div>
+  <section id="shelf-detail" class="shelf-detail" hidden>
+    <strong id="detail-title"></strong>
+    <label>朝向 <input id="detail-yaw" type="range" min="-180" max="180" step="5"></label>
+    <label>大小 <input id="detail-scale" type="range" min="50" max="200" step="5"></label>
+    <div class="form-actions">
+      <button type="button" id="detail-store">收进仓库</button>
+      <button type="button" id="detail-reset">回到推荐位置</button>
+      <button type="button" id="detail-remove" hidden>删除</button>
+    </div>
+  </section>
+  <p id="shelf-status" class="shelf-status" role="status"></p>
+</aside>
+
+<p class="hint palace-hint" id="hint"></p>
+
+<dialog id="workbench" aria-labelledby="workbench-title">
+  <header><h2 id="workbench-title">今日小物</h2><button id="close-workbench" autofocus>回到宫殿</button></header>
+  <div id="workbench-status" role="status"></div>
+  <iframe id="workbench-frame" title="今日小物工作台" hidden></iframe>
+</dialog>
+
+<script type="module" src="./palace.js"></script>
+</body>
+</html>

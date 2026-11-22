@@ -1,0 +1,74 @@
+.assets {
+  --paper: #f3ebdc;
+  --soft: #c1b3a6;
+  position: fixed; z-index: 3; top: 70px; right: 22px; bottom: 22px;
+  width: min(340px, calc(100vw - 44px));
+  display: flex; flex-direction: column; gap: 12px;
+  padding: 16px 16px 12px;
+  color: var(--paper); background: rgba(36, 31, 40, .9);
+  border: 1px solid #6b5a52; border-radius: 16px;
+  box-shadow: 0 18px 60px rgba(14, 12, 22, .45);
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  color-scheme: dark; scrollbar-color: #78675e transparent;
+}
+.assets[hidden] { display: none; }
+.assets button, .assets input { font: inherit; color: inherit; }
+.assets button {
+  cursor: pointer; border: 1px solid #675957; border-radius: 7px;
+  background: transparent; padding: 6px 12px; font-size: 13px; line-height: 1.4;
+}
+.assets button:disabled { opacity: .4; cursor: default; }
+.assets button:hover:enabled { border-color: #d2ac86; color: #ffe0b7; }
+.assets :focus-visible { outline: 2px solid #e6b884; outline-offset: 2px; }
+
+.assets-header { display: flex; align-items: center; gap: 8px; }
+.assets-header h2 { flex: 1; margin: 0; font-size: 19px; font-weight: 500; letter-spacing: .12em; }
+#asset-done { border-color: #a07e5f; background: #4a3c33; color: #ffe0b7; }
+
+.asset-filters { display: flex; flex-wrap: wrap; gap: 5px; }
+.assets .asset-filters button { padding: 3px 9px; border-radius: 999px; border-color: #574a4c; color: var(--soft); font-size: 12.5px; }
+.assets .asset-filters button[aria-pressed="true"] { border-color: #b58c63; background: #443932; color: #ffe0b7; }
+.asset-filters span { opacity: .7; margin-left: 2px; }
+
+#asset-search {
+  width: 100%; padding: 7px 10px; font-size: 13.5px;
+  border-radius: 7px; border: 1px solid #5e5058; background: #211e27;
+}
+
+.asset-list { flex: 1; min-height: 120px; overflow-y: auto; margin: 0 -6px; padding: 0 6px; }
+.assets .asset-row {
+  display: grid; grid-template-columns: 1fr auto; align-items: center; column-gap: 8px;
+  width: 100%; padding: 8px 10px; margin-bottom: 3px; text-align: left;
+  border-color: transparent; border-radius: 8px;
+}
+.asset-row strong { font-weight: 500; font-size: 14.5px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.asset-row small { grid-column: 1; color: var(--soft); font-size: 12px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.asset-row em { grid-column: 2; grid-row: 1 / span 2; font-style: normal; font-size: 11.5px; color: #e2b98c; }
+.assets .asset-row[aria-pressed="true"] { border-color: #a07e5f; background: #3e342f; }
+.asset-row.stored strong { color: var(--soft); }
+.asset-empty { color: var(--soft); font-size: 13px; text-align: center; margin: 24px 0; }
+
+.asset-detail { border-top: 1px solid #51444b; padding-top: 12px; display: grid; gap: 8px; }
+.asset-detail h3 { margin: 0; font-size: 17px; font-weight: 500; }
+.asset-meta { margin: -4px 0 2px; color: var(--soft); font-size: 12.5px; }
+.asset-range { display: grid; grid-template-columns: 34px 1fr 44px; align-items: center; gap: 10px; font-size: 13px; color: var(--soft); }
+.asset-range input { accent-color: #e6ae74; width: 100%; }
+.asset-range output { text-align: right; color: var(--paper); font-variant-numeric: tabular-nums; }
+.asset-hint { margin: 0; font-size: 12px; color: var(--soft); }
+.asset-problem { margin: 0; font-size: 12.5px; color: #ffab98; }
+.asset-actions { display: flex; gap: 6px; flex-wrap: wrap; }
+.asset-status { margin: 0; min-height: 1.2em; font-size: 12px; color: var(--soft); text-align: right; }
+.asset-status[data-state="error"] { color: #ffab98; }
+
+body.arranging .hint, body.arranging .era { display: none; }
+body.dragging-asset, body.dragging-asset canvas { cursor: grabbing !important; }
+
+@media (max-width: 720px) {
+  .assets { top: auto; left: 12px; right: 12px; bottom: 12px; width: auto; height: 52dvh; }
+}
+body.arranging .era-tag { visibility: hidden; }
+
+.asset-decor-box small { display: block; color: var(--soft); font-size: 12px; margin-bottom: 6px; }
+.asset-decor { display: flex; flex-wrap: wrap; gap: 5px; }
+.assets .asset-decor button { padding: 3px 9px; border-radius: 999px; font-size: 12.5px; }
+#asset-remove { color: #ffab98; }

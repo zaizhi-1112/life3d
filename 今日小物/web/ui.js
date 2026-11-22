@@ -29,6 +29,8 @@ let historySignature = "";
 let photoTarget;
 let linkedDay = new URLSearchParams(location.search).get("day");
 let linkedCode = new URLSearchParams(location.hash.slice(1)).get("choose");
+let modelLinkDay = new URLSearchParams(location.search).get("view") === "3d" && !linkedCode ? selected : null;
+let openLinkedModel = Boolean(modelLinkDay);
 let choiceEntryDay;
 
 window.addEventListener("hashchange", () => {
@@ -56,11 +58,62 @@ function syncDayUrl() {
   url.search = "";
   url.hash = "";
   if (selected) url.searchParams.set("day", selected);
+  if (selected && selected === modelLinkDay) url.searchParams.set("view", "3d");
   if (url.href !== location.href) history.replaceState(null, "", url);
 }
 
 function show(id, visible) {
   byId(id).hidden = !visible;
+}
+
+// 三端：你对 AI 说的话、Agent 自己做的事、你手写的待办。数字和依据都来自本机记录。
+let threeEndsKey = "", wasOrganizing = false;
+function countUp(el, to) {
+  const start = performance.now(), dur = 700;
+  const step = now => { const k = Math.min(1, (now - start) / dur), e = 1 - Math.pow(1 - k, 3); el.firstChild.textContent = String(Math.round(to * e)); if (k < 1) requestAnimationFrame(step); };
+  requestAnimationFrame(step);
+}
+function renderThreeEnds(sources) {
+  const box = byId("three-ends");
+  box.hidden = !sources;
+  if (!sources) { threeEndsKey = ""; return box.replaceChildren(); }
+  const key = JSON.stringify([state?.date, sources.prompts, sources.agent_work, sources.todos]);
+  if (key === threeEndsKey && box.childElementCount) return;
+  const fresh = key !== threeEndsKey; threeEndsKey = key;
+  const cell = (label, count, unit, note) => {
+    const item = document.createElement("div");
+    item.className = "end";
+    const name = document.createElement("span"); name.textContent = label;
+    const value = document.createElement("strong"); value.textContent = count;
+    const small = document.createElement("small"); small.textContent = unit;
+    value.append(small);
+    const detail = document.createElement("em"); detail.textContent = note;
+    item.append(name, value, detail);
+    return item;
+  };
+  const harnesses = (sources.harnesses || []).join(" · ") || "本机 AI";
+  const agentNote = sources.hub_runs ? "中台自动 " + sources.hub_runs + " 次" + (sources.hub_alerts ? " · 提醒 " + sources.hub_alerts : "") : "AI 交回的结果";
+  const row = document.createElement("div");
+  row.className = "ends";
+  row.append(
+    cell("你说", sources.prompts, "句", sources.projects ? sources.projects + " 个项目 · " + harnesses.replace("Claude Code", "Claude") : harnesses),
+    cell("Agent", sources.agent_work, "项", agentNote),
+    cell("待办", sources.todos, "条", "飞书工作岛"),
+  );
+  const trail = document.createElement("ul");
+  trail.className = "trail";
+  for (const entry of sources.trail || []) {
+    const li = document.createElement("li");
+    const tag = document.createElement("b"); tag.textContent = entry.from;
+    const text = document.createElement("q"); text.textContent = entry.text;
+    li.append(tag, text);
+    trail.append(li);
+  }
+  box.replaceChildren(row, ...(trail.children.length ? [trail] : []));
+  if (fresh) {
+    box.classList.remove("enter"); void box.offsetWidth; box.classList.add("enter");
+    for (const value of row.querySelectorAll("strong")) countUp(value, Number(value.firstChild.textContent) || 0);
+  }
 }
 
 function setText(id, value) {
@@ -124,7 +177,7 @@ async function refresh() {
       say("日期已更新。上一天未保存的记录可以在收藏中继续。");
     }
     state = updated;
-    if (selected === updated.today) selected = null;
+    if (selected === updated.today && selected !== linkedDay) selected = null;
     syncDayUrl();
     navigationPending = false;
     disconnected = false;
@@ -160,8 +213,10 @@ async function action(path, data = {}, done) {
   try {
     const result = await json(path, data);
     if (done) done(result);
+    window.moodSound?.[/print|color|confirm/.test(path) ? "print" : "saved"]?.();
     await refresh();
   } catch (error) {
+    window.moodSound?.error();
     say(error.message);
     await refresh();
   } finally {
@@ -172,6 +227,8 @@ async function action(path, data = {}, done) {
 }
 
 function chooseDay(date = null) {
+  modelLinkDay = null;
+  openLinkedModel = false;
   selected = date === state?.today ? null : date;
   pendingSample = false;
   navigationPending = true;
@@ -274,12 +331,13 @@ function renderColorReview(job, eligible) {
   if (!visible) return;
   const selectedSpool = confirmedSpool(job);
   const status = selectedSpool ? "confirmed" : review?.status === "confirmed" ? "waiting" : review?.status || "waiting";
+  const card = review?.interaction === "card";
   const states = {
     waiting: ["待选色", current && demoKeys.has(state.date) ? "想打印这个样品时，可把选色消息发到飞书。" : "切片已就绪，等待本件的飞书选色通知。"],
     pending: ["准备发飞书", "正在读取 P2S 的 PLA 颜色。"],
-    sent: ["等你选颜色", "选好料槽后，用飞书通知中的确认码提交。"],
+    sent: ["等你选颜色", card ? "清空打印板后，在飞书卡片上点你要的颜色。" : "选好料槽后，用飞书通知中的确认码提交。"],
     error: ["选色遇到问题", "请检查飞书和 P2S 连接，再重试选色。"],
-    confirmed: ["已确认颜色", ""],
+    confirmed: ["已确认颜色", card && prepared && !job.ready ? "清盘后，在飞书卡片上点已选颜色即可开打。" : ""],
   };
   const [title, hint] = states[status] || states.waiting;
   setText("color-status", title);
@@ -308,7 +366,7 @@ function renderColorReview(job, eligible) {
     return item;
   }));
   list.hidden = !options.length;
-  const canConfirm = Boolean(current && review?.can_confirm && !selectedSpool);
+  const canConfirm = Boolean(current && review?.can_confirm && !selectedSpool && (!card || linkedCode));
   show("color-confirm", canConfirm);
   if (canConfirm) {
     const select = byId("confirm-source");
@@ -323,7 +381,7 @@ function renderColorReview(job, eligible) {
     linkedCode = null;
     requestAnimationFrame(() => byId("color-review").scrollIntoView({block: "center"}));
   }
-  show("color-request", Boolean(current && state.connection.printer && ["waiting", "error"].includes(status)));
+  show("color-request", Boolean((current || job?.retry_color) && state.connection.printer && ["waiting", "error"].includes(status)));
   setText("color-request", status === "error" ? "重试飞书选色" : "发飞书选色");
 }
 
@@ -342,7 +400,7 @@ function render() {
   else byId("date-label").removeAttribute("datetime");
   setText("page-heading", job?.title || (readable ? "今天的小物" : "记录读取失败"));
   show("back-today", Boolean(selected));
-  const eligible = readable && job && !editing && (demo || date === today) && !["dispatching", "submitted", "print_unknown", "finished"].includes(job.status);
+  const eligible = readable && job && !editing && (demo || date === today || job.resume_color) && !["dispatching", "submitted", "print_unknown", "finished"].includes(job.status);
   const awaitingColor = job?.status === "prepared" && eligible && !confirmedSpool(job);
   setText("status", deviceStatus(job) || (awaitingColor ? "切片完成 · 待选色" : job?.designing ? "Aholo 正在设计造型" : statuses[job?.status] || "待记录"));
   byId("status").dataset.active = String(activeStatuses.has(job?.status));
@@ -363,7 +421,11 @@ function render() {
     progress = !job ? "等待 Agent 交接或保存今天的摘要。" :
       !state.connection.aholo ? "先连接 Aholo，才能按安排生成。" :
       state.settings.auto_print && !state.connection.printer ? "先连接 P2S，才能确认清盘和自动打印。" :
-      (state.settings.prepare_after_ready || job.needs_credit_consent) && !job.ready ? "等待这版作品的积分确认。" :
+      (state.settings.prepare_after_ready || job.needs_credit_consent) && !job.ready ? (
+        job.generation_card?.status === "confirmed" ? "已在飞书确认，马上开始生成。" :
+        job.generation_card?.message ? job.generation_card.message :
+        state.feishu_cards ? "将在 " + state.settings.at + " 后发飞书生成确认卡，点「生成」即开始。" :
+        "等待这版作品的积分确认。") :
       "将在 " + state.settings.at + " 后按安排准备这件小物。";
   }
   if (editing) progress = "编辑期间暂停这件作品的自动制作和发送。";
@@ -401,10 +463,10 @@ function render() {
   setText("generate", job?.status === "failed" ? "继续准备" : "用 Aholo 生成并切片");
   show("connect-aholo", needsGeneration && !state.connection.aholo);
   renderColorReview(job, eligible);
-  show("print-controls", Boolean(state.connection.printer && eligible && (result || state.settings.auto_print)));
+  show("print-controls", Boolean(state.connection.printer && eligible && job?.color_review?.interaction !== "card" && (result || state.settings.auto_print)));
   show("send-print", job?.status === "prepared");
   setText("send-print", demo ? "发送样品到 P2S" : "发送到 P2S 开始打印");
-  byId("ready").checked = Boolean(job?.ready && (!demo || job.ready_date === today));
+  byId("ready").checked = Boolean(job?.ready && job.ready_date === today);
   const preparingAfterReady = !demo && date === today && job?.status === "recorded" && (state.settings.prepare_after_ready || job.needs_credit_consent);
   setText("ready-description", preparingAfterReady
     ? "平台已清空，0.4 mm 喷嘴和纹理 PEI 板已就绪。允许用 Aholo 积分生成这版的参考图和模型，切片后等我在飞书选色。"
@@ -437,15 +499,20 @@ function render() {
   show("cancel-edit", editing);
   show("organize-record", date === today && !job);
   setText("organize-record", state.organizing ? "正在整理…" : "自动整理今天");
+  if (wasOrganizing && !state.organizing) window.moodSound?.[job ? "success" : "error"]?.();
+  wasOrganizing = Boolean(state.organizing);
   setText("organize-error", state.organize_error || "");
   show("organize-error", Boolean(state.organize_error && !job));
   const sources = job?.daily_sources;
+  const threeEnds = !editing && sources && "prompts" in sources && !sources.birthday;
+  renderThreeEnds(threeEnds ? sources : null);
   const sourceNote = editing ? "改造型或提示词会建立新版本，旧模型、切片和照片仍可查看。" :
     sources?.birthday ? "取材于生日礼物里的往事。" :
+    threeEnds ? (sources.unavailable.length ? "暂未读到 " + sources.unavailable.join("、") + "。" : "") :
     sources ? "整理自飞书工作岛 " + sources.todos + " 条待办记录、Codex " + sources.agent_work + " 项工作结果。" +
       (sources.unavailable.length ? " 暂未读到 " + sources.unavailable.join("、") + "。" : "") +
       (sources.partial ? " 只整理了可读取的近期记录。" : "") :
-    !job && date === today ? "读取今天的飞书工作岛待办和本机 Codex 结果。" : "";
+    !job && date === today ? "读取今天你和 AI 的对话、Agent 交回的结果和飞书工作岛待办。" : "";
   setText("record-source", sourceNote);
   show("record-source", Boolean(sourceNote));
   setText("draft-status", editable && drafts.has(date) ? "尚未保存" : "");
@@ -620,6 +687,11 @@ function renderScene() {
   setAttributeIfChanged(viewer, "poster", model ? url : null);
   setAttributeIfChanged(viewer, "label", title || "3D 模型");
   show("model-viewer", Boolean(model));
+  if (openLinkedModel && result && key === modelLinkDay && view === "today") {
+    openLinkedModel = false;
+    viewer.open("rotate");
+    viewer.scrollIntoView({block: "center"});
+  }
   show("preview-link", !model && !waitingForModel);
   show("model-empty", waitingForModel);
   setText("model-empty-title", waitingForModel ? title : "");
@@ -692,8 +764,12 @@ function renderDates() {
 function renderControls() {
   const paired = Boolean(state?.feishu_bound);
   const webhook = Boolean(state?.feishu_webhook);
-  setText("feishu-status", webhook ? "已使用你的专用群通知机器人。" : paired ? "飞书工作岛会私聊你尺寸、可选颜色和确认链接。" : "连接普通消息机器人后，摆件切片时会收到飞书通知。");
+  const cards = state?.feishu_cards;
+  setText("feishu-status", webhook ? "已使用你的专用群通知机器人。" : cards
+    ? (state.feishu_cards_online ? "已连接。清盘后，直接在飞书私聊点颜色打印。" : "飞书卡片接收器正在连接。")
+    : paired ? "已连接飞书工作岛。启用卡片前，请在飞书开发者后台配置长连接和「卡片回传交互」。" : "连接普通消息机器人后，摆件切片时会收到飞书通知。");
   show("feishu-bind", !paired && !webhook);
+  show("feishu-enable-cards", paired && !cards && !webhook);
   if (paired || webhook) show("feishu-instruction", false);
   const unavailable = waiting || disconnected || navigationPending || !state;
   const machineBusy = Boolean(state?.busy || state?.checking_printer);
@@ -807,6 +883,7 @@ function openSettings() {
 byId("feishu-bind").addEventListener("click", () => action("/feishu-pair", {}, result => {
   if (result.bound) say("已连接飞书工作岛的普通私聊通知。");
 }));
+byId("feishu-enable-cards").addEventListener("click", () => action("/feishu-cards", {}));
 byId("webhook-form").addEventListener("submit", event => {
   event.preventDefault();
   action("/feishu-webhook", {webhook: byId("webhook-url").value.trim(), secret: byId("webhook-secret").value.trim(),
