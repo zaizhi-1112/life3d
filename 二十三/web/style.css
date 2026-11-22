@@ -169,3 +169,14 @@ body:has(#workbench[open]) .crosshair, body:has(.card:not([hidden])) .crosshair 
 #workbench[open] { animation: rise-in .35s cubic-bezier(.2,.9,.3,1); }
 .era.on strong { animation: rise-in .9s cubic-bezier(.2,.9,.3,1); }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
+
+/* 公网演示页右下角的 GitHub 仓库入口（只在 build-site.mjs 生成的页面里出现） */
+.repo-link { position: fixed; right: 18px; bottom: 16px; z-index: 6; display: inline-flex; align-items: center; gap: 7px;
+  font-size: 13px; color: var(--ink); text-decoration: none; background: var(--panel); border: 1px solid #ae9571;
+  border-radius: 999px; padding: 6px 13px 6px 10px; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  transition: color .2s, border-color .2s, transform .15s cubic-bezier(.3,1.6,.5,1); }
+.repo-link svg { width: 16px; height: 16px; fill: currentColor; }
+.repo-link:hover { color: var(--amber); border-color: var(--amber); transform: translateY(-1px); }
+.repo-link:active { transform: scale(.94); }
+.repo-link ~ .sound-toggle { right: 168px; }
+@media (max-width: 650px) { .repo-link { right: 12px; bottom: 12px; font-size: 12px; } .repo-link ~ .sound-toggle { right: 150px; bottom: 12px; } }
