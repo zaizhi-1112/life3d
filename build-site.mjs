@@ -11,7 +11,7 @@ const files = [
   "style.css", "people-manager.css", "world.js", "island-panels.js",
   "island-scenes.js", "exhibit-detail.js", "people-manager.js",
   "asset-manager.js", "asset-manager.css", "ocean.js", "sound.js",
-  "palace.js", "palace-furniture.js", "palace.css",
+  "palace.js", "palace-furniture.js", "palace.css", "nice-props.js",
 ];
 await Promise.all(files.map(file => copyFile(join(island, "web", file), join(output, file))));
 await cp(join(island, "web", "vendor", "three"), join(output, "vendor", "three"), { recursive: true });

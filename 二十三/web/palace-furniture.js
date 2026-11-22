@@ -1,6 +1,7 @@
 // 记忆宫殿的家具和摆设：全部用代码生成，每件都是可以在资产管理里移动、转向、缩放、收起的资产。
 // 每个 build 在本地坐标里搭（原点在地面中心，正面朝 +z），返回可摆东西的槽位和占地半宽。
 import * as THREE from "three";
+import { buildTree } from "./nice-props.js";
 
 const materials = new Map();
 export function mat(color, { rough = 0.82, metal = 0, emissive = null, glow = 0, opacity = 1 } = {}) {
@@ -202,9 +203,12 @@ export const FURNITURE = {
     return { half: [0.12, 0.12] };
   } },
   tree: { title: "树", scene: "garden", build(k, night, seed = 0) {
-    const leaf = ["#6f8a5c", "#a07a4a", "#8d9b62", "#b48558", "#7d9566"][seed % 5];
-    k.cyl(0.13, 0.19, 1.6, "#7a5640", 0, 0.8, 0, { seg: 8 });
-    for (const [dx, dy, dz, r] of [[0, 2.05, 0, 0.95], [0.5, 1.75, 0.25, 0.65], [-0.45, 1.8, -0.2, 0.7], [0.1, 2.6, 0.05, 0.6]]) k.ball(r, leaf, dx, dy, dz, { detail: 0 });
+    const kinds = ["tree_round", "tree_autumn", "tree_round_b", "tree_pine", "tree_round"];
+    const tree = buildTree(kinds[seed % kinds.length], 30 + seed * 7);
+    const box = new THREE.Box3().setFromObject(tree), h = box.max.y - box.min.y;
+    tree.scale.setScalar(3.4 / h);
+    tree.traverse(m => { if (m.isMesh) { m.castShadow = true; m.receiveShadow = true; } });
+    k.add.parent?.add(tree);
     return { half: [0.3, 0.3] };
   } },
   flowerbed: { title: "花坛", scene: "garden", build(k, night, seed = 0) {

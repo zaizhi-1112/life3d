@@ -66,7 +66,7 @@ export function createOcean({ size = 520, segments = 300, level = -0.35, shore =
         float r = length(vPlane);
         float near = 1.0 - smoothstep(uShore, uShore + uShoreWidth * 2.6, r);
         vec3 water = mix(uDeep, uShallow, near * 0.85 + 0.12);
-        water = mix(water, uCrest, smoothstep(0.2, 0.42, vLift) * 0.28);
+        water = mix(water, uCrest, smoothstep(0.24, 0.46, vLift) * 0.16);
         float band = sin(r * 2.4 - uTime * 1.6 + sin(atan(vPlane.y, vPlane.x) * 7.0) * 0.6);
         float foamLine = smoothstep(0.82, 1.0, band) * (1.0 - smoothstep(uShore - 1.0, uShore + uShoreWidth, r)) * step(uShore - 2.5, r);
         float edge = 1.0 - smoothstep(uShore - 1.4, uShore + 0.8, r);
@@ -82,7 +82,7 @@ export function createOcean({ size = 520, segments = 300, level = -0.35, shore =
           normal = normalize(normal + (viewMatrix * vec4(ripple.x, 0.0, ripple.y, 0.0)).xyz);
         }`)
       .replace("#include <emissivemap_fragment>", `#include <emissivemap_fragment>
-        totalEmissiveRadiance += uCrest * smoothstep(0.26, 0.45, vLift) * 0.06;`);
+        totalEmissiveRadiance += uCrest * smoothstep(0.3, 0.5, vLift) * 0.03;`);
   };
   const mesh = new THREE.Mesh(geometry, material);
   mesh.position.y = level;

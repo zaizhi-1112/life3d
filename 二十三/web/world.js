@@ -9,6 +9,7 @@ import { workbenchPanel, objectCard, readOnly } from "./island-panels.js";
 import { assetPanel } from "./asset-manager.js";
 import { STLLoader } from "three/addons/loaders/STLLoader.js";
 import { createOcean } from "./ocean.js";
+import { buildTree, buildBoat, fitLike } from "./nice-props.js";
 import { sound, soundToggle } from "./sound.js";
 
 // ---------- 岛的形状：外圈低、中央是展台平台 ----------
@@ -150,6 +151,14 @@ async function loadAssets() {
     const gltf=await loader.loadAsync(`/assets/${name}.glb`);
     assets[name]=assembleProp(gltf.scene,name);
   }));
+  // 树和小船换成代码生成的新造型（nice-props.js），大小对齐原模型，摆放和点选范围不变。
+  ["tree_round","tree_round_b","tree_autumn","tree_pine"].forEach((name,i)=>{
+    const tree=fitLike(buildTree(name,11+i*7),assets[name]);
+    tree.updateMatrixWorld(true);
+    tree.traverse(m=>{if(m.isMesh){const far=distantGeometry(m.geometry,5,200);if(far)simplerProps.set(m.geometry,far);}});
+    assets[name]=tree;
+  });
+  assets.boat=buildBoat();
 }
 function place(name, pos, rotY = 0, scale = 1) {
   const obj = assets[name].clone(true);
